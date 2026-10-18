@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200,initial-scale=1">
+<title>Teton Valley social card — 1200 × 630</title>
+<style>
+@font-face{font-family:Cormorant;src:url('../public/assets/cormorant-garamond-normal.woff2');font-weight:400 500}
+@font-face{font-family:Cormorant;src:url('../public/assets/cormorant-garamond-italic-400.woff2');font-style:italic}
+@font-face{font-family:Lora;src:url('../public/assets/lora-normal.woff2')}
+*{box-sizing:border-box}body{margin:0;width:1200px;height:630px;background:#f3f2f2;color:#201f1d;overflow:hidden;font-family:Lora,Georgia,serif}
+.card{position:relative;width:1200px;height:630px;padding:38px 44px;display:grid;grid-template-columns:530px 1fr;gap:26px}
+.copy{display:flex;flex-direction:column;align-items:flex-start;padding:4px 0 0 4px}
+.eyebrow{font-size:13px;letter-spacing:2.8px;text-transform:uppercase;color:#7d5411;display:flex;align-items:center;gap:14px}
+.star{font-size:29px;line-height:1;color:#b68235}
+h1{font:500 100px/.94 Cormorant,Georgia,serif;letter-spacing:-2px;margin:52px 0 24px}h1 span{display:block}
+.tagline{font:italic 44px/1.1 Cormorant,Georgia,serif;margin:0 0 25px;color:#7d5411}
+.description{font-size:18px;line-height:1.7;max-width:410px;margin:0}
+.footer{margin-top:auto;border-top:1px solid #c5bcb0;width:470px;padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:1px}.domain{font-size:15px;letter-spacing:0}
+.photo{position:relative;border:6px solid #e4e1dc;outline:1px solid #c5bcb0;height:554px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;object-position:49% center;filter:sepia(.18) saturate(.85)}
+.photo:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 75%,rgba(15,25,20,.6))}
+.caption{position:absolute;bottom:16px;left:18px;right:18px;color:#fff;font-size:11px;z-index:1;letter-spacing:.4px}
+</style>
+<main class="card">
+  <section class="copy">
+    <div class="eyebrow"><span class="star">✳</span> A field guide to the good life</div>
+    <h1><span>Teton</span><span>Valley.</span></h1>
+    <p class="tagline">Find your kind of day.</p>
+    <p class="description">Local favorites. Wide-open trails.<br>Four seasons of discovery.</p>
+    <div class="footer"><span>VICTOR & DRIGGS, IDAHO</span><span class="domain">tetoncounty.us ↗</span></div>
+  </section>
+  <div class="photo"><img src="../public/images/hero.webp" alt="The neighboring Teton Range from Snake River Overlook in Wyoming"><span class="caption">The neighboring Teton Range · Photo NPS</span></div>
+</main>
+</html>

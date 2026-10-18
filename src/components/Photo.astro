@@ -1,0 +1,19 @@
+---
+import { imageSources, columnSizes } from '../lib/images.ts';
+interface Props {
+  src: string;
+  alt: string;
+  sizes?: string;
+  priority?: boolean;
+  hidden?: boolean;
+  categoryIndex?: number;
+}
+const { src, alt, sizes = columnSizes, priority = false, hidden = false, categoryIndex } = Astro.props;
+const image = await imageSources(src);
+---
+<picture hidden={hidden} data-category-image={categoryIndex}>
+  <source type="image/avif" srcset={image.avif.srcSet.attribute} sizes={sizes} />
+  <img src={image.webp.src} srcset={image.webp.srcSet.attribute} sizes={sizes} alt={alt}
+    width={image.width} height={image.height} loading={priority ? 'eager' : 'lazy'}
+    decoding="async" fetchpriority={priority ? 'high' : undefined} />
+</picture>

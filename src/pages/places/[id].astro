@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ListingCard from '../../components/ListingCard.astro';
 import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
 import { getListings, category, imageFor, tag } from '../../lib/listings.ts';
 import { reviewedDate, siteUrl } from '../../config.ts';
 export const getStaticPaths = (async () => (await getListings()).map(item => ({ params: { id: item.id }, props: { item } }))) satisfies GetStaticPaths;
@@ -30,7 +31,7 @@ const schema = [
     <div class="detail-grid">
       <article>
         <span class="eyebrow">{c.short} · {item.town}</span><h1>{item.name}</h1><p class="detail-lead">{item.description}</p>
-        {photo && <figure class="plate detail-photo"><img src={photo} alt={item.name} width="800" height="600" /><figcaption class="photo-caption">{item.name} · {item.town}</figcaption></figure>}
+        {photo && <figure class="plate detail-photo"><Photo src={photo} alt={item.name} priority /><figcaption class="photo-caption">{item.name} · {item.town}</figcaption></figure>}
         <h2>A little more to go on.</h2>
         <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
         {item.trail && <p class="notice">Trail figures come from the source guide and can vary by route and measuring method. This page does not report live conditions or confirm current access. Use an authoritative route map and current land-manager information for your trip.</p>}

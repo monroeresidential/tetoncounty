@@ -2,6 +2,8 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Icon from '../components/Icon.astro';
 import ListingCard from '../components/ListingCard.astro';
+import Photo from '../components/Photo.astro';
+import { heroSizes } from '../lib/images.ts';
 import { getListings, tag } from '../lib/listings.ts';
 import type { Listing } from '../lib/listing-schema.ts';
 import { categories, seasons } from '../config.ts';
@@ -13,7 +15,7 @@ const trailCount = listings.filter(l => l.trail).length;
 const categoryPhotos = ['river', 'cafe', 'music', 'valley', 'balloons', 'ski'];
 const homeCategories = categories.slice(0, 6);
 ---
-<SiteLayout title="Things to do in Victor & Driggs, Idaho" description="Find your kind of day in Teton Valley. Explore restaurants, hiking trails, local shops, arts, and things to do in Victor and Driggs, Idaho." hero>
+<SiteLayout title="Things to do in Victor & Driggs, Idaho" description="Your field guide to Teton Valley, Idaho. Discover hiking trails, local restaurants, shops, arts, and four-season adventures in Victor and Driggs." hero>
   <section class="hero section">
     <div class="hero-heading">
       <h1><span>A small valley.</span><span>A whole lot <em>to discover.</em></span></h1>
@@ -27,7 +29,7 @@ const homeCategories = categories.slice(0, 6);
       <button class="btn btn-primary" type="submit">Find your adventure <Icon name="arrow" /></button>
     </form>
     <figure class="plate hero-plate">
-      <img src="/images/hero.webp" alt="The Teton Range and Snake River in neighboring Grand Teton National Park, Wyoming" width="1920" height="1280" fetchpriority="high" />
+      <Photo src="/images/hero.webp" alt="The Teton Range and Snake River in neighboring Grand Teton National Park, Wyoming" sizes={heroSizes} priority />
       <figcaption class="photo-caption"><span>The Teton Range from the Snake River · Photo NPS</span><span>The quiet side of the Tetons ✳</span></figcaption>
     </figure>
   </section>
@@ -40,7 +42,7 @@ const homeCategories = categories.slice(0, 6);
       <a class="text-link category-all" href="/explore/">Explore everything <Icon name="arrow" /></a>
     </div>
     <figure class="plate category-plate" aria-hidden="true">
-      {categoryPhotos.map((photo, i) => <img src={`/images/${photo}.webp`} alt="" width="640" height="800" loading="lazy" class={i === 0 ? 'active' : ''} data-category-image={i} />)}
+      {categoryPhotos.map((photo, i) => <Photo src={`/images/${photo}.webp`} alt="" hidden={i !== 0} categoryIndex={i} />)}
       <figcaption class="photo-caption" id="category-caption">{homeCategories[0].name}</figcaption>
     </figure>
   </section>
@@ -51,7 +53,7 @@ const homeCategories = categories.slice(0, 6);
   <section class="trail-feature">
     <span class="trail-numeral" aria-hidden="true">{trailCount}</span>
     <div class="trail-feature-text"><span class="eyebrow">Take the scenic route</span><h2>Less scrolling.<br />More trail time.</h2><p>From a gentle valley walk to a day in the high country. {trailCount} source-listed routes, each with a map point and the details to start planning.</p><a class="btn btn-primary" href="/hiking/">Find your trail <Icon name="arrow" /></a></div>
-    <figure class="plate trail-feature-photo"><img src="/images/trail.webp" alt="A mountain path through the aspens" width="800" height="600" loading="lazy" /><figcaption class="photo-caption">Aspen Trail · A little fresh air goes a long way</figcaption></figure>
+    <figure class="plate trail-feature-photo"><Photo src="/images/trail.webp" alt="A mountain path through the aspens" /><figcaption class="photo-caption">Aspen Trail · A little fresh air goes a long way</figcaption></figure>
   </section>
   <section class="section towns-section" id="towns">
     <span class="eyebrow">Same valley, their own kind of magic</span>

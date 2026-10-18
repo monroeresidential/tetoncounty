@@ -2,6 +2,7 @@
 import SiteLayout from "../layouts/SiteLayout.astro";
 import SponsorCard from "../components/SponsorCard.astro";
 import Icon from "../components/Icon.astro";
+import Photo from "../components/Photo.astro";
 import { getListings } from "../lib/listings.ts";
 const listings = await getListings();
 const local = listings.filter(l => l.town === "Victor" || l.town === "Driggs").length;
@@ -31,6 +32,6 @@ const local = listings.filter(l => l.town === "Victor" || l.town === "Driggs").l
 <h2>Photography</h2>
 <p>The homepage landscape is from the National Park Service and depicts the neighboring Teton Range from Wyoming. Activity photography is sourced from the sponsoring Teton Flats website. Photos illustrate their named places or the wider region. See <a href="/data/image-sources.json">image provenance</a>.</p>
 </article>
-<div class="about-aside"><figure class="plate about-photo"><img src="/images/valley.webp" alt="A view across Teton Valley toward the mountains" width="640" height="800" loading="lazy" /><figcaption class="photo-caption">Teton Valley · A little closer to the mountains</figcaption></figure><SponsorCard compact /></div>
+<div class="about-aside"><figure class="plate about-photo"><Photo src="/images/valley.webp" alt="A view across Teton Valley toward the mountains" /><figcaption class="photo-caption">Teton Valley · A little closer to the mountains</figcaption></figure><SponsorCard compact /></div>
 </section>
 </SiteLayout>

@@ -52,7 +52,7 @@ const $ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNo
 const $$ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNode = document): T[] => [...root.querySelectorAll<T>(selector)];
 for (const row of $$('[data-category-photo]')) {
     const showPhoto = () => {
-        $$('[data-category-image]').forEach(image => image.classList.toggle('active', image.dataset.categoryImage === row.dataset.categoryPhoto));
+        $$('[data-category-image]').forEach(image => { image.hidden = image.dataset.categoryImage !== row.dataset.categoryPhoto; });
         $('#category-caption').textContent = $('.category-name', row).textContent;
     };
     row.addEventListener('mouseenter', showPhoto);
