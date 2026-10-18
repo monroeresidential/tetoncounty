@@ -5,6 +5,7 @@ Implemented from the October 18, 2026 handoff, `Teton County website redesign.zi
 ## Design system
 
 - `public/assets/styles.css` owns the Classical palette, typography, hairlines, photograph frames, and responsive layouts.
+- The shared layout hashes the stylesheet at build time and versions its public URL, so returning visitors receive updated styles despite the asset cache lifetime.
 - Cormorant Garamond is the display face; Lora is the reading face. Latin WOFF2 files are self-hosted with the SIL Open Font License for each family. Google Fonts served identical normal files for weights 400 and 500, so each family shares one variable normal font file.
 - Gold is used for outlines and decorative large text. Small text uses the darker `--color-accent-700`; secondary labels use `--color-neutral-700` for legibility.
 - Photographs retain the existing provenance in `public/data/image-sources.json`; the frame applies the specified subtle sepia treatment.
