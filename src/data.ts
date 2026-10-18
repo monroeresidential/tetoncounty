@@ -13,7 +13,7 @@ export async function loadListings() {
             throw error;
     }
     const records: Listing[] = [];
-    for (const file of ['tetonflats', 'directory']) {
+    for (const file of ['tetonflats', 'directory', 'curated']) {
         try {
             records.push(...JSON.parse(await readFile(new URL(`../data/${file}.json`, import.meta.url), 'utf8')));
         }

@@ -1,8 +1,10 @@
-# TetonCounty.us
+# Teton County
 
 A modern community guide to Victor, Driggs, and Teton Valley, Idaho, sponsored by Teton Flats. The first release focuses on useful local discovery. Apartment lead generation is a later phase.
 
-The initial inventory contains **426 distinct places and experiences**: 90 Victor, 204 Driggs, 43 wider-valley, and 89 explicitly labeled nearby trips. All **31 hiking-map points** from Teton Flats are included. Records are source-listed, not owner-confirmed; this is a starting market inventory, not a guarantee of completeness or current operations.
+The current inventory contains **458 distinct places and experiences**: 111 Victor, 213 Driggs, 45 wider-valley, and 89 explicitly labeled nearby trips. All **31 hiking-map points** from Teton Flats are included. Records are source-listed, not owner-confirmed; this is a starting market inventory, not a guarantee of completeness or current operations.
+
+The October 18 directory CSV review added 32 source-linked places and resources and enriched four existing listings. Its row-level decisions are recorded in `research/directory-csv-review.json`; the new records live in `data/curated.json` so source-import refreshes do not overwrite them. Residential subdivisions, unsupported listings, and alternate records were not bulk-published.
 
 ## Run locally
 
@@ -27,7 +29,7 @@ This type-checks the Astro and TypeScript source, builds every page, runs conten
 
 ## What is included
 
-- Editorial field-guide design with self-hosted Cormorant Garamond and Lora fonts, framed WebP photography, and gold-outlined controls.
+- Trailhead field-guide design with self-hosted Young Serif, Mulish, and Caveat fonts, pine and parchment colors, responsive AVIF/WebP photography, and matching social and app icons.
 - Instant directory search, town/category/season filters, trail difficulty filters, empty states, and URL-persisted filters.
 - Dedicated Victor, Driggs, category, trail, and individual place pages.
 - Interactive, on-demand Leaflet/OpenStreetMap map using source-provided coordinates.
@@ -74,4 +76,4 @@ Delivery is attempted immediately after saving. A five-minute Worker cron retrie
 
 The source inventory omits disputed addresses and does not invent operating hours, event dates, ratings, prices, or live trail conditions. Some source-linked websites are social pages, Maps, or trail guides rather than operator websites. Source dates describe extraction, not verification by an owner.
 
-Core application payload after the Astro migration: approximately 3.0 KB JavaScript + 6.2 KB CSS, gzip. Fonts, images, and optional map assets are additional. Hashed Astro assets use immutable caching. These are build measurements, not production Core Web Vitals or a Lighthouse score.
+Core application payload after the Trailhead redesign: approximately 3.4 KB JavaScript + 9.1 KB CSS, gzip. Fonts, images, and optional map assets are additional. Hashed Astro assets use immutable caching. These are build measurements, not production Core Web Vitals or a Lighthouse score.

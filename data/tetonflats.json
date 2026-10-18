@@ -1673,9 +1673,10 @@
     "town": "Driggs",
     "category": "food-drink",
     "subcategory": "Casual & Family",
-    "description": "Driggs restaurant offering diner-style breakfast and comfort food.",
+    "description": "A downtown Driggs restaurant serving breakfast dishes, burgers, sandwiches, and comfort-food entrees.",
     "sourceUrls": [
-      "https://tetonflats.com/driggs-idaho-restaurants"
+      "https://tetonflats.com/driggs-idaho-restaurants",
+      "https://tetonmoose.com/"
     ],
     "sourceCheckedAt": "2026-10-18",
     "sourceStatus": "source-listed",
@@ -1689,7 +1690,9 @@
       "casual-family",
       "breakfast",
       "lunch",
-      "dinner"
+      "dinner",
+      "burgers",
+      "sandwiches"
     ],
     "website": "https://tetonmoose.com/",
     "address": "15 S Main St, Driggs, ID 83422"
@@ -5011,23 +5014,31 @@
   },
   {
     "id": "downtown-driggs-community-sledding-hill-primrose-park",
-    "name": "Downtown Driggs Community Sledding Hill (Primrose Park)",
+    "name": "Primrose Park",
     "town": "Driggs",
     "category": "outdoors",
-    "subcategory": "Winter Family Fun",
-    "description": "Seasonal community sledding area at Primrose Park in Driggs.",
+    "subcategory": "City park",
+    "description": "A Driggs park with a playground, sports courts, and a soccer field; the regional guide also lists a seasonal community sledding area here.",
     "sourceUrls": [
-      "https://tetonflats.com/things-to-do-driggs-idaho"
+      "https://tetonflats.com/things-to-do-driggs-idaho",
+      "https://driggsidaho.org/departments/parks-and-recreation/primrose-park/"
     ],
     "sourceCheckedAt": "2026-10-18",
     "sourceStatus": "source-listed",
     "seasons": [
+      "spring",
+      "summer",
+      "fall",
       "winter"
     ],
     "tags": [
-      "winter-family-fun"
+      "winter-family-fun",
+      "park",
+      "pickleball",
+      "playground",
+      "basketball"
     ],
-    "website": "https://downtowndriggs.org/",
+    "website": "https://driggsidaho.org/departments/parks-and-recreation/primrose-park/",
     "locationLabel": "Driggs, ID"
   },
   {
@@ -5306,13 +5317,14 @@
   },
   {
     "id": "teton-arts-driggs-city-center-gallery-studios",
-    "name": "Teton Arts (Driggs City Center Gallery & Studios)",
+    "name": "Teton Arts",
     "town": "Driggs",
     "category": "arts-culture",
     "subcategory": "Arts, Culture & Indoor",
-    "description": "Community arts organization offering classes, studio activities, and gallery exhibitions.",
+    "description": "A community arts organization offering clay and visual-art classes, open studio time, and creative programs for adults and children.",
     "sourceUrls": [
-      "https://tetonflats.com/things-to-do-driggs-idaho"
+      "https://tetonflats.com/things-to-do-driggs-idaho",
+      "https://www.tetonarts.org/"
     ],
     "sourceCheckedAt": "2026-10-18",
     "sourceStatus": "source-listed",
@@ -5323,7 +5335,11 @@
       "fall"
     ],
     "tags": [
-      "arts-culture-indoor"
+      "arts-culture-indoor",
+      "art classes",
+      "pottery",
+      "family activities",
+      "indoor"
     ],
     "website": "https://www.tetonarts.org/",
     "imagePath": "/images/activities/teton-arts-driggs-city-center-gallery-studios.jpg",
@@ -5388,9 +5404,10 @@
     "town": "Victor",
     "category": "outdoors",
     "subcategory": "City Park",
-    "description": "Main Street park in Victor with a pavilion and space for concerts and community events.",
+    "description": "A Main Street park that hosts Music on Main and other community gatherings, with space for a break while exploring downtown Victor.",
     "sourceUrls": [
-      "https://tetonflats.com/things-to-do-victor-idaho"
+      "https://tetonflats.com/things-to-do-victor-idaho",
+      "https://victoridaho.gov/departments/city-parks/city-park"
     ],
     "sourceCheckedAt": "2026-10-18",
     "sourceStatus": "source-listed",
@@ -5400,7 +5417,10 @@
       "fall"
     ],
     "tags": [
-      "city-park"
+      "city-park",
+      "park",
+      "downtown",
+      "community events"
     ],
     "website": "https://victoridaho.gov/departments/city-parks/city-park",
     "imagePath": "/images/activities/victor-city-park-main-street-park.jpg",

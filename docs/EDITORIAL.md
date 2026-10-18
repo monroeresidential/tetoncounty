@@ -4,9 +4,11 @@
 
 Each public record needs a stable slug ID, name, town/area, category, original description, source URLs, source-check date, source-listed status, seasons, and tags. Only add address, website, coordinates, and trail metrics when the source supplies them. Nearby records are deliberately not represented as Victor/Driggs addresses.
 
-The Astro content collection validates records with `src/lib/listing-schema.ts`; invalid categories, URLs, dates, or incomplete coordinates fail the build. Keep curated records in `data/` and edit shared presentation in `src/components/` or `src/pages/`. Restart the development server after inventory edits to refresh both the content collection and correction allowlist.
+The Astro content collection validates records with `src/lib/listing-schema.ts`; invalid categories, URLs, dates, or incomplete coordinates fail the build. Keep reviewed additions in `data/curated.json` and source inventories in the other `data/` files and edit shared presentation in `src/components/` or `src/pages/`. Restart the development server after inventory edits to refresh both the content collection and correction allowlist.
 
 Source status is currently `source-listed`, not owner-confirmed. The build preserves source links and omits disputed addresses. See `research/directory.md`, `research/tetonflats.md`, and `research/deduplication.md` before resolving conflicts. `data/aliases.json` is reviewed identity mapping, not a heuristic same-domain merge. Resort restaurants, separate branches, and different trail routes can legitimately share a website.
+
+The supplied October 18 CSV was screened separately. `research/directory-csv-review.json` records each row’s disposition and links accepted or existing records by ID. The 32 additions and four updated listings were individually checked against published sources; an unselected row is not a claim that the business is unsuitable or closed. No CSV photography, contact emails, scraped operating hours, or Census-geocoded map points were imported.
 
 ## Submission review
 

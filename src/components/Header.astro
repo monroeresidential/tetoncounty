@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import { siteName } from '../config.ts';
 interface Props { path: string }
 const { path } = Astro.props;
 ---
@@ -8,7 +9,7 @@ const { path } = Astro.props;
   <a href="/about/#sponsor" rel="sponsored">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></a>
 </div>
 <header class="header nav">
-  <a class="brand nav-brand" href="/" aria-label="Teton Valley home"><Icon name="mountain" /><span>Teton Valley <small>Idaho · The other side</small></span></a>
+  <a class="brand nav-brand" href="/" aria-label={`${siteName} home`}><Icon name="mountain" /><span>{siteName} <small>Idaho · The other side</small></span></a>
   <button class="menu-toggle btn btn-secondary" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation"><Icon name="menu" /></button>
   <nav id="navigation" aria-label="Main navigation">
     <a aria-current={path === '/explore/' ? 'page' : undefined} href="/explore/">Explore</a>

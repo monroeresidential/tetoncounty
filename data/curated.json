@@ -1,0 +1,797 @@
+[
+  {
+    "id": "act-foundation-of-teton-valley",
+    "name": "ACT Foundation of Teton Valley",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Community theater",
+    "description": "A local nonprofit producing theater and supporting arts, cinema, and creative workshops in Teton Valley.",
+    "website": "https://actfoundationtvi.org/",
+    "sourceUrls": [
+      "https://actfoundationtvi.org/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "theater",
+      "workshops",
+      "performing arts"
+    ]
+  },
+  {
+    "id": "atelier-coffee",
+    "name": "Atelier Coffee",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Coffee shop",
+    "description": "A Victor coffee stop on Highway 33, listed in the city’s visitor guide.",
+    "website": "https://victoridaho.gov/visit-victor",
+    "sourceUrls": [
+      "https://victoridaho.gov/visit-victor"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "address": "7168 S Highway 33, Victor, ID"
+  },
+  {
+    "id": "backcountry-powersports-rentals",
+    "name": "Backcountry Powersports Rentals",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Powersports rentals",
+    "description": "A Driggs operator renting side-by-side vehicles for exploring designated motorized routes in the Teton Valley area.",
+    "website": "https://www.backcountrypowersportsrentals.com/",
+    "sourceUrls": [
+      "https://www.backcountrypowersportsrentals.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "UTV",
+      "side-by-side",
+      "rentals"
+    ],
+    "address": "1420 Highway 33, Driggs, ID 83422"
+  },
+  {
+    "id": "big-hole-arts",
+    "name": "Big Hole Arts",
+    "town": "Teton Valley",
+    "category": "arts-culture",
+    "subcategory": "Arts calendar",
+    "description": "A regional arts calendar connecting visitors with local music, exhibitions, theater, and summer festivals across the valley.",
+    "website": "https://www.bigholearts.org/",
+    "sourceUrls": [
+      "https://www.bigholearts.org/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts calendar",
+      "live music",
+      "theater"
+    ]
+  },
+  {
+    "id": "big-hole-golf",
+    "name": "Big Hole Golf",
+    "town": "Victor",
+    "category": "outdoors",
+    "subcategory": "Indoor golf",
+    "description": "An indoor golf venue in Victor with simulator reservations, leagues, and lessons.",
+    "website": "https://www.bigholeindoorgolf.com/",
+    "sourceUrls": [
+      "https://www.bigholeindoorgolf.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "golf",
+      "indoor",
+      "golf simulator"
+    ],
+    "address": "7570 Lupine Lane, Victor, ID 83455"
+  },
+  {
+    "id": "cattle-creek-ranch-farm-shop",
+    "name": "Cattle Creek Ranch Farm Shop",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Farm shop",
+    "description": "A Victor farm shop selling locally grown greens and vegetables alongside picnic foods, home goods, and gifts.",
+    "website": "https://www.cattle-creek-ranch.com/",
+    "sourceUrls": [
+      "https://www.cattle-creek-ranch.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "local food",
+      "produce",
+      "gifts",
+      "farm shop"
+    ],
+    "address": "25 Arrow Root Lane, Victor, ID 83455"
+  },
+  {
+    "id": "city-of-victor-gallery",
+    "name": "City of Victor Gallery",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Art exhibitions",
+    "description": "Rotating exhibitions at Victor City Hall highlight work by local artists throughout the year.",
+    "website": "https://victoridaho.gov/city-events",
+    "sourceUrls": [
+      "https://victoridaho.gov/city-events"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "local artists",
+      "gallery",
+      "indoor"
+    ],
+    "address": "138 N Main Street, Victor, ID 83455"
+  },
+  {
+    "id": "depot-park-pavilion",
+    "name": "Depot Park Pavilion",
+    "town": "Victor",
+    "category": "outdoors",
+    "subcategory": "Picnic area",
+    "description": "A covered picnic pavilion at Victor’s historic railroad depot, just west of Main Street.",
+    "website": "https://victoridaho.gov/departments/city-parks/depot-pavillion",
+    "sourceUrls": [
+      "https://victoridaho.gov/departments/city-parks/depot-pavillion"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "picnic",
+      "park",
+      "history"
+    ]
+  },
+  {
+    "id": "downtown-sounds",
+    "name": "Downtown Sounds",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Concert series",
+    "description": "An outdoor concert series organized by Downtown Driggs Association, with performances at Driggs Plaza and occasional other venues; check the organizer for the next schedule.",
+    "website": "https://downtowndriggs.org/downtown-sounds",
+    "sourceUrls": [
+      "https://downtowndriggs.org/downtown-sounds"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "live music",
+      "concerts",
+      "community events"
+    ]
+  },
+  {
+    "id": "estate-collectables",
+    "name": "Estate Collectables",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Collectibles and furnishings",
+    "description": "A downtown Victor store with art, jewelry, furniture, rugs, and collectible pieces.",
+    "website": "https://estate-collectables.com/",
+    "sourceUrls": [
+      "https://estate-collectables.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "collectibles",
+      "art",
+      "furniture",
+      "local shopping"
+    ],
+    "address": "116 S Main Street, Victor, ID 83455"
+  },
+  {
+    "id": "festive-living",
+    "name": "Festive Living",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Home furnishings",
+    "description": "A Victor home-furnishings and design shop with furniture, lighting, textiles, and decorative pieces.",
+    "website": "https://www.festive-living.com/",
+    "sourceUrls": [
+      "https://www.festive-living.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "home goods",
+      "furniture",
+      "local shopping"
+    ],
+    "address": "13 S Main Street, Victor, ID 83455"
+  },
+  {
+    "id": "hops-cyclery",
+    "name": "Hops Cyclery",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Bike shop",
+    "description": "A Victor bicycle shop offering repairs, new bikes, accessories, and bike consignment.",
+    "website": "https://www.hopscyclery.com/",
+    "sourceUrls": [
+      "https://www.hopscyclery.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "bikes",
+      "bike repair",
+      "cycling"
+    ],
+    "address": "40 W Birch Street, Victor, ID 83455"
+  },
+  {
+    "id": "horseshoe-canyon-yurt",
+    "name": "Horseshoe Canyon Yurt",
+    "town": "Teton Valley",
+    "category": "stays",
+    "subcategory": "Backcountry yurt",
+    "description": "A reservable winter yurt in Horseshoe Canyon managed by Teton Valley Trails & Pathways, with access for skiing, snowshoeing, or fat biking; review the operator’s route and equipment guidance.",
+    "website": "https://tvtap.org/horseshoe-yurt/",
+    "sourceUrls": [
+      "https://tvtap.org/horseshoe-yurt/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "winter",
+      "spring"
+    ],
+    "tags": [
+      "yurt",
+      "winter",
+      "snowshoeing",
+      "skiing"
+    ]
+  },
+  {
+    "id": "laid-back-car-show",
+    "name": "Laid-Back Car Show",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Car show",
+    "description": "A summer gathering of vehicles at Victor City Park listed by the city; confirm the next edition with the organizer before planning a visit.",
+    "website": "https://victoridaho.gov/visit-victor",
+    "sourceUrls": [
+      "https://victoridaho.gov/visit-victor"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "car show",
+      "community events"
+    ]
+  },
+  {
+    "id": "lions-park",
+    "name": "Lions Park",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "City park",
+    "description": "A neighborhood park in Driggs with green space and a ball field, listed in the city parks directory.",
+    "website": "https://driggsidaho.org/departments/parks-and-recreation/",
+    "sourceUrls": [
+      "https://driggsidaho.org/departments/parks-and-recreation/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "park",
+      "baseball",
+      "family activities"
+    ]
+  },
+  {
+    "id": "modular-training",
+    "name": "Modular Training",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Personal training",
+    "description": "A Victor training studio offering individual and small-group strength, conditioning, and athletic skill sessions.",
+    "website": "https://www.modulartr.com/",
+    "sourceUrls": [
+      "https://www.modulartr.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "strength training",
+      "fitness",
+      "indoor"
+    ],
+    "address": "176 N Main Street, Victor, ID 83455"
+  },
+  {
+    "id": "settlement-park-fields",
+    "name": "Settlement Park Fields",
+    "town": "Victor",
+    "category": "outdoors",
+    "subcategory": "City park",
+    "description": "Open recreation fields used for soccer in Victor, with a small children’s play area and limited shade.",
+    "website": "https://victoridaho.gov/departments/city-parks/settlement-park",
+    "sourceUrls": [
+      "https://victoridaho.gov/departments/city-parks/settlement-park"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "soccer",
+      "park",
+      "playground"
+    ]
+  },
+  {
+    "id": "shakespeare-in-the-parks-driggs",
+    "name": "Shakespeare in the Parks — Driggs",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Outdoor theater",
+    "description": "Downtown Driggs hosts visiting Montana Shakespeare in the Parks performances during summer; consult the organizer for the next production and venue.",
+    "website": "https://downtowndriggs.org/shakespeare-in-the-parks",
+    "sourceUrls": [
+      "https://downtowndriggs.org/shakespeare-in-the-parks"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "theater",
+      "summer events",
+      "family activities"
+    ]
+  },
+  {
+    "id": "straight-blast-gym-teton-valley",
+    "name": "Straight Blast Gym Teton Valley",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Martial arts",
+    "description": "A Driggs martial-arts gym with Brazilian jiu-jitsu instruction and children’s classes.",
+    "website": "https://www.sbgtetonvalley.com/",
+    "sourceUrls": [
+      "https://www.sbgtetonvalley.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "jiu-jitsu",
+      "martial arts",
+      "kids classes",
+      "indoor"
+    ],
+    "address": "528 Valley Centre Drive, Suite 1, Driggs, ID 83422"
+  },
+  {
+    "id": "studio-core-teton-valley",
+    "name": "Studio Core Teton Valley",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Pilates studio",
+    "description": "A downtown Victor Pilates studio offering group classes and private instruction.",
+    "website": "https://www.studiocoretetonvalley.com/",
+    "sourceUrls": [
+      "https://www.studiocoretetonvalley.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "pilates",
+      "fitness",
+      "indoor"
+    ],
+    "address": "170 N Main Street, Victor, ID"
+  },
+  {
+    "id": "teton-basin-ranger-district-office",
+    "name": "Teton Basin Ranger District Office",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Public lands information",
+    "description": "The Forest Service district office in Driggs serving the Teton Basin area of the Caribou-Targhee National Forest.",
+    "website": "https://www.fs.usda.gov/detail/ctnf/about-forest/offices/?cid=fseprd1023682",
+    "sourceUrls": [
+      "https://www.fs.usda.gov/detail/ctnf/about-forest/offices/?cid=fseprd1023682"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "Forest Service",
+      "public lands",
+      "visitor information"
+    ]
+  },
+  {
+    "id": "teton-county-fair",
+    "name": "Teton County Fair",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "County fair",
+    "description": "A summer community fair at the Teton County Idaho Fairgrounds in Driggs; check the current fair program for dates and activities.",
+    "website": "https://downtowndriggs.org/downtown-sounds",
+    "sourceUrls": [
+      "https://downtowndriggs.org/downtown-sounds"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "county fair",
+      "family activities",
+      "community events"
+    ],
+    "address": "372 Fairgrounds Drive, Driggs, ID"
+  },
+  {
+    "id": "teton-reserve-golf-course",
+    "name": "Teton Reserve Golf Course",
+    "town": "Victor",
+    "category": "outdoors",
+    "subcategory": "Golf course",
+    "description": "A Hale Irwin-designed golf course near Victor with mountain views, a pro shop, and a par-72 layout.",
+    "website": "https://tetonreservegolf.com/",
+    "sourceUrls": [
+      "https://tetonreservegolf.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "golf",
+      "mountain views"
+    ],
+    "address": "6660 Reserve Drive, Victor, ID 83455"
+  },
+  {
+    "id": "valley-center-park",
+    "name": "Valley Center Park",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "City park",
+    "description": "A neighborhood park in northwest Driggs with an open field, a perimeter walking trail, and a playground.",
+    "website": "https://driggsidaho.org/departments/parks-and-recreation/valley-center-park/",
+    "sourceUrls": [
+      "https://driggsidaho.org/departments/parks-and-recreation/valley-center-park/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "park",
+      "walking",
+      "playground"
+    ]
+  },
+  {
+    "id": "victor-december-holiday-festival",
+    "name": "Victor December Holiday Festival",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Holiday festival",
+    "description": "A community winter celebration with a tree lighting and seasonal vendors, organized by the City of Victor; confirm the current program with the city.",
+    "website": "https://victoridaho.gov/city-events",
+    "sourceUrls": [
+      "https://victoridaho.gov/city-events"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "winter"
+    ],
+    "tags": [
+      "holiday market",
+      "community events",
+      "family activities"
+    ]
+  },
+  {
+    "id": "victor-farmers-market",
+    "name": "Victor Farmers Market",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Farmers market",
+    "description": "A seasonal Victor market for locally grown produce and other goods; check the city listing for the next market schedule.",
+    "website": "https://victoridaho.gov/visit-victor",
+    "sourceUrls": [
+      "https://victoridaho.gov/visit-victor"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "farmers market",
+      "local food",
+      "produce"
+    ]
+  },
+  {
+    "id": "violet-volumes",
+    "name": "Violet Volumes",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Bookshop",
+    "description": "An independent Victor bookstore with books for different ages, book clubs, and community reading events.",
+    "website": "https://www.violetvolumes.com/",
+    "sourceUrls": [
+      "https://www.violetvolumes.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "books",
+      "book clubs",
+      "indoor",
+      "local shopping"
+    ],
+    "address": "38 W Birch Street, Victor, ID 83455"
+  },
+  {
+    "id": "westside-ski-and-cycle",
+    "name": "Westside Ski & Cycle",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Bike and ski shop",
+    "description": "A Victor shop for bike service, ski tuning, equipment rentals, and guided bike outings.",
+    "website": "https://www.westsideskiandcycle.com/",
+    "sourceUrls": [
+      "https://www.westsideskiandcycle.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "bikes",
+      "ski rentals",
+      "bike repair",
+      "guided rides"
+    ],
+    "address": "255 S Main Street, Victor, ID 83455"
+  },
+  {
+    "id": "wildfire-fitness",
+    "name": "Wildfire Fitness",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Fitness coaching",
+    "description": "A Driggs gym offering personalized strength and fitness coaching, with in-person and remote training options.",
+    "website": "https://www.wildfirecoach.com/",
+    "sourceUrls": [
+      "https://www.wildfirecoach.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "fitness",
+      "personal training",
+      "indoor"
+    ],
+    "address": "18 N Main Street, 2nd Floor, Driggs, ID 83422"
+  },
+  {
+    "id": "work-farm",
+    "name": "Work Farm",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Coworking",
+    "description": "A downtown Victor coworking space with shared work areas, dedicated desks, private offices, and day-pass options.",
+    "website": "https://www.work.farm/",
+    "sourceUrls": [
+      "https://www.work.farm/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "coworking",
+      "remote work",
+      "workspace"
+    ],
+    "address": "10 S Main Street, Suite 106, Victor, ID 83455"
+  },
+  {
+    "id": "wright-training-victor",
+    "name": "Wright Training — Victor",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Fitness training",
+    "description": "The Victor location of Wright Training, offering coached fitness sessions and individual training consultations.",
+    "website": "https://www.jhwrighttraining.com/locations/victor-idaho",
+    "sourceUrls": [
+      "https://www.jhwrighttraining.com/locations/victor-idaho"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "fitness",
+      "personal training",
+      "indoor"
+    ],
+    "address": "293 Cedron Road, Victor, ID 83455"
+  },
+  {
+    "id": "wydaho-lodge",
+    "name": "Wydaho Lodge",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Vacation lodging",
+    "description": "A Victor lodging option with a rental unit and area information for exploring the surrounding mountains.",
+    "website": "https://wydaholodge.com/",
+    "sourceUrls": [
+      "https://wydaholodge.com/"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodging",
+      "vacation rental"
+    ]
+  }
+]

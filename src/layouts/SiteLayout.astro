@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { siteUrl } from '../config.ts';
+import { siteUrl, siteName } from '../config.ts';
 import { safeJson } from '../lib/listings.ts';
 import { imageSources, heroSizes } from '../lib/images.ts';
 interface Props {
@@ -16,16 +16,16 @@ interface Props {
 const { title, description, path = '/', schema, hero = false, noindex = false } = Astro.props;
 const canonical = siteUrl + path;
 const heroImage = hero ? await imageSources('/images/hero.webp') : undefined;
-const socialImage = `${siteUrl}/images/social/teton-valley-trailhead-v2.jpg`;
-const socialImageAlt = 'Go find your valley — the Teton Valley field guide to Victor and Driggs, Idaho, in pine, parchment, and rust with a photograph of the neighboring Teton Range.';
+const socialImage = `${siteUrl}/images/social/teton-county-trailhead-v3.jpg`;
+const socialImageAlt = 'Go find your valley — the Teton County field guide to Victor and Driggs, Idaho, in pine, parchment, and rust with a photograph of the neighboring Teton Range.';
 // Ship the small stylesheet with the HTML so
 // the first screen never waits for a separate render-blocking CSS request.
 const stylesheet = readFileSync('public/assets/styles.css', 'utf8');
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebSite', '@id': siteUrl + '/#website', url: siteUrl + '/', name: 'Teton Valley', description: 'A source-linked guide to Victor, Driggs, and Teton Valley, Idaho.', inLanguage: 'en-US' },
-    { '@type': 'Organization', '@id': siteUrl + '/#publisher', name: 'Teton Valley guide', url: siteUrl + '/', sponsor: { '@type': 'Organization', name: 'Teton Flats', url: 'https://tetonflats.com/' } },
+    { '@type': 'WebSite', '@id': siteUrl + '/#website', url: siteUrl + '/', name: siteName, description: 'A source-linked guide to Victor, Driggs, and Teton Valley, Idaho.', inLanguage: 'en-US' },
+    { '@type': 'Organization', '@id': siteUrl + '/#publisher', name: siteName, url: siteUrl + '/', sponsor: { '@type': 'Organization', name: 'Teton Flats', url: 'https://tetonflats.com/' } },
     ...(schema ? Array.isArray(schema) ? schema : [schema] : []),
   ],
 };
@@ -38,11 +38,11 @@ const structuredData = {
     {heroImage && <link rel="preload" as="image" type="image/avif" href={heroImage.avif.src} imagesrcset={heroImage.avif.srcSet.attribute} imagesizes={heroSizes} fetchpriority="high" />}
     <link rel="preload" href="/assets/fonts/trailhead-v1/young-serif-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/trailhead-v1/mulish-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <title>{title} | Teton Valley</title>
+    <title>{title} | {siteName}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#233d2c" />
-    <meta name="application-name" content="Teton Valley" />
-    <meta name="apple-mobile-web-app-title" content="Teton Valley" />
+    <meta name="application-name" content={siteName} />
+    <meta name="apple-mobile-web-app-title" content={siteName} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex,follow" />}
@@ -50,7 +50,7 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="Teton Valley" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:secure_url" content={socialImage} />
@@ -68,7 +68,7 @@ const structuredData = {
     <link rel="icon" href="/favicon-96x96.png?v=trailhead-2" type="image/png" sizes="96x96" />
     <link rel="icon" href="/favicon.svg?v=trailhead-2" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=trailhead-2" sizes="180x180" />
-    <link rel="manifest" href="/site.webmanifest?v=trailhead-2" />
+    <link rel="manifest" href="/site.webmanifest?v=trailhead-3" />
     <link rel="alternate" type="application/json" href="/data/listings.json" title="Public directory data" />
     <link rel="llms-txt" href="/llms.txt" />
     <style is:inline set:html={stylesheet} />
