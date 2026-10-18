@@ -28,6 +28,7 @@ const schema = { '@type': 'CollectionPage', name: title, url: siteUrl + path, ma
     {defaultTown && <div class="town-links" aria-label="Explore our towns"><a href="/towns/victor/" aria-current={defaultTown === 'Victor' ? 'page' : undefined}>Victor</a><span> / </span><a href="/towns/driggs/" aria-current={defaultTown === 'Driggs' ? 'page' : undefined}>Driggs</a></div>}
   </div>
   <section class="section directory" data-directory data-base-category={defaultCategory} data-base-town={defaultTown}>
+    <h2 class="sr-only">{hiking ? 'Hiking routes' : 'Places and experiences'}</h2>
     <form class="filter-form" action={path} role="search">
       <div class="search-field"><Icon name="search" /><label class="sr-only" for="directory-query">Search places and activities</label><input id="directory-query" type="search" name="q" placeholder="Search by name, activity, or a little inspiration…" /></div>
       <label class="select-field"><span>Town</span><select name="town"><option value="">Everywhere</option>{towns.map(t => <option value={t} selected={t === defaultTown}>{t}</option>)}</select><Icon name="chevron" /></label>

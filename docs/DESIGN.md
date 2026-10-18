@@ -5,7 +5,7 @@ Implemented from the October 18, 2026 handoff, `Teton County website redesign.zi
 ## Design system
 
 - `public/assets/styles.css` owns the Classical palette, typography, hairlines, photograph frames, and responsive layouts.
-- The shared layout hashes the stylesheet at build time and versions its public URL, so returning visitors receive updated styles despite the asset cache lifetime.
+- The shared layout includes the approximately 8 KB compressed stylesheet in the HTML, eliminating a render-blocking network request and keeping styles synchronized with each deployed page.
 - Cormorant Garamond is the display face; Lora is the reading face. Latin WOFF2 files are self-hosted with the SIL Open Font License for each family. Google Fonts served identical normal files for weights 400 and 500, so each family shares one variable normal font file.
 - Gold is used for outlines and decorative large text. Small text uses the darker `--color-accent-700`; secondary labels use `--color-neutral-700` for legibility.
 - Photographs retain the existing provenance in `public/data/image-sources.json`; the frame applies the specified subtle sepia treatment.
@@ -16,7 +16,7 @@ Implemented from the October 18, 2026 handoff, `Teton County website redesign.zi
 
 `Header`, `Footer`, and `SponsorCard` provide shared navigation and sponsor credits. Home adds the category photo index, live inventory counts, favorites, trail feature, towns, and seasonal links. `Directory` and `ListingCard` serve all categories, hiking, towns, and related records. Hiking filters support `difficulty=easy|moderate|hard`, combined with existing search, season, and map state in the URL. Card figures come from the curated inventory, not the prototype's sample data.
 
-The request-type buttons update the existing hidden select. Addition, correction, and contact values, conditional validation, honeypot, Turnstile verification, Worker API, D1 review queue, and Formspree notifications are preserved. The form never turns suggestions into apartment leads. Analytics remains production-only and does not receive form fields.
+The request-type buttons update the existing hidden select. Addition, correction, and contact values, conditional validation, honeypot, Turnstile verification, Worker API, D1 review queue, and Formspree notifications are preserved. The form never turns suggestions into apartment leads. Analytics remains production-only and does not receive form fields. Page-view setup is queued immediately; the Google library downloads at low priority after the load event, using idle time with a bounded fallback.
 
 ## Validation
 

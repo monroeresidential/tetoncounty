@@ -1,5 +1,4 @@
 ---
-import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -19,8 +18,9 @@ const canonical = siteUrl + path;
 const heroImage = hero ? await imageSources('/images/hero.webp') : undefined;
 const socialImage = `${siteUrl}/images/social/teton-valley-v1.jpg`;
 const socialImageAlt = 'Teton Valley — your field guide to Victor and Driggs, Idaho, with a photograph of the neighboring Teton Range.';
-// Public CSS has a long cache lifetime; change its URL whenever its contents change.
-const stylesheetVersion = createHash('sha256').update(readFileSync('public/assets/styles.css')).digest('hex').slice(0, 12);
+// The complete stylesheet is only ~8 KB compressed: ship it with the HTML so
+// the first screen never waits for a separate render-blocking CSS request.
+const stylesheet = readFileSync('public/assets/styles.css', 'utf8');
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -61,7 +61,7 @@ const structuredData = {
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="application/json" href="/data/listings.json" title="Public directory data" />
     <link rel="llms-txt" href="/llms.txt" />
-    <link rel="stylesheet" href={`/assets/styles.css?v=${stylesheetVersion}`} />
+    <style is:inline set:html={stylesheet} />
     <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/v1/lora-normal.woff2" as="font" type="font/woff2" crossorigin />
     {hero && <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-italic-400.woff2" as="font" type="font/woff2" crossorigin />}
