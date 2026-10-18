@@ -43,7 +43,7 @@ The deploy command validates the whole site, rejects placeholder configuration, 
 
 ## 3. GitHub build integration
 
-In the existing `tetoncounty-us` Worker's Settings → Builds, connect `monroeresidential/tetoncounty`. Use:
+Cloudflare Builds is connected to `monroeresidential/tetoncounty`. Pushes to `main` run validation and publish the Worker and generated pages. The existing account build token is reused; no credentials are stored in Git. Current settings in the `tetoncounty-us` Worker's Settings → Builds:
 
 | Setting | Value |
 | --- | --- |
