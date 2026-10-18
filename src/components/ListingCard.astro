@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import Photo from './Photo.astro';
-import { cardSizes } from '../lib/images.ts';
+import { cardSizes, directoryCardSizes } from '../lib/images.ts';
 import type { Listing } from '../lib/listing-schema.ts';
 import { category, imageFor, tag } from '../lib/listings.ts';
 interface Props { item: Listing; feature?: boolean }
@@ -9,8 +9,8 @@ const { item, feature = false } = Astro.props;
 const photo = imageFor(item), c = category(item.category);
 ---
 <article class={`place-card ${feature ? 'featured-card' : 'card'}`} data-listing={item.id} data-town={item.town} data-category={item.category} data-difficulty={item.trail?.difficulty?.toLowerCase() || ''} data-seasons={item.seasons.join(' ')} data-search={[item.name, item.description, item.town, item.subcategory, ...item.tags].join(' ').toLowerCase()}>
-  {feature && <a class={`card-photo plate ${!photo ? 'illustrated' : ''}`} href={`/places/${item.id}/`} tabindex="-1" aria-hidden="true">
-    {photo ? <Photo src={photo} alt="" sizes={cardSizes} /> : <Icon name={c.icon} />}
+  {(feature || photo) && <a class={`card-photo plate ${!feature ? 'directory-photo' : ''} ${!photo ? 'illustrated' : ''}`} href={`/places/${item.id}/`} tabindex="-1" aria-hidden="true">
+    {photo ? <Photo src={photo} alt="" sizes={feature ? cardSizes : directoryCardSizes} /> : <Icon name={c.icon} />}
   </a>}
   <div class="card-body">
     {!feature && <div class="card-meta"><span><Icon name="pin" />{item.town}</span><span>{item.subcategory || c.short}</span></div>}

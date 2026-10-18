@@ -4,12 +4,14 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import ListingCard from '../../components/ListingCard.astro';
 import Icon from '../../components/Icon.astro';
 import Photo from '../../components/Photo.astro';
-import { getListings, category, imageFor, tag } from '../../lib/listings.ts';
+import { getListings, category, tag } from '../../lib/listings.ts';
+import { listingImageFor } from '../../lib/listing-images.ts';
 import { reviewedDate, siteUrl } from '../../config.ts';
 export const getStaticPaths = (async () => (await getListings()).map(item => ({ params: { id: item.id }, props: { item } }))) satisfies GetStaticPaths;
 const { item } = Astro.props;
 const listings = await getListings();
-const c = category(item.category), photo = imageFor(item);
+const c = category(item.category);
+const photograph = listingImageFor(item.id);
 const geo = Number.isFinite(item.latitude) && Number.isFinite(item.longitude);
 const query = geo ? `${item.latitude},${item.longitude}` : [item.name, item.address || item.town, 'Idaho'].join(' ');
 const sourceLabels: Record<string, string> = { 'tetonflats.com': 'Teton Flats', 'downtowndriggs.org': 'Downtown Driggs', 'discovertetonvalley.com': 'Discover Teton Valley' };
@@ -24,6 +26,11 @@ const schema = [
   { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
   { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Explore', item: siteUrl + '/explore/' }, { '@type': 'ListItem', position: 2, name: item.name, item: `${siteUrl}/places/${item.id}/` }] },
 ];
+if (photograph) Object.assign(schema[0], { image: {
+  '@type': 'ImageObject', contentUrl: siteUrl + photograph.src,
+  caption: photograph.alt, width: photograph.width, height: photograph.height,
+  creditText: photograph.credit, isBasedOn: photograph.sourcePage,
+} });
 ---
 <SiteLayout title={`${item.name} — ${item.town}`} description={item.description} path={`/places/${item.id}/`} schema={schema}>
   <div class="detail section">
@@ -31,7 +38,7 @@ const schema = [
     <div class="detail-grid">
       <article>
         <span class="eyebrow">{c.short} · {item.town}</span><h1 class:list={{ 'long-title': item.name.length > 24 }}>{item.name}</h1><p class="detail-lead">{item.description}</p>
-        {photo && <figure class="plate detail-photo"><Photo src={photo} alt={item.name} priority /><figcaption class="photo-caption">{item.name} · {item.town}</figcaption></figure>}
+        {photograph && <figure class="plate detail-photo"><Photo src={photograph.src} alt={photograph.alt} priority /><figcaption class="photo-caption">{item.name}<span class="photo-credit">Image via <a href={photograph.sourcePage} rel="noopener">{photograph.credit}</a></span></figcaption></figure>}
         <h2>A little more to go on.</h2>
         <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
         {item.trail && <p class="notice">Trail figures come from the source guide and can vary by route and measuring method. This page does not report live conditions or confirm current access. Use an authoritative route map and current land-manager information for your trip.</p>}

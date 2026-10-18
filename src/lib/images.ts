@@ -1,13 +1,23 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import { listingImagePaths } from './listing-images.ts';
 
 const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/photos/*.webp', { eager: true });
 export const heroSizes = '(max-width: 760px) calc(100vw - 60px), (max-width: 1100px) 420px, 520px';
 export const columnSizes = '(max-width: 760px) calc(100vw - 44px), (max-width: 1100px) 45vw, 640px';
 export const cardSizes = '(max-width: 760px) calc(50vw - 44px), (max-width: 1100px) 44vw, 300px';
+export const directoryCardSizes = '(max-width: 760px) calc(100vw - 44px), (max-width: 1100px) 44vw, 400px';
 
 // Astro creates content-addressed files at build time; no image server or client JS.
 export async function imageSources(path: string) {
+  const listing = listingImagePaths.get(path);
+  if (listing) {
+    const sources = (format: 'avif' | 'webp') => ({
+      src: listing.variants.at(-1)![format],
+      srcSet: { attribute: listing.variants.map(variant => `${variant[format]} ${variant.width}w`).join(', ') },
+    });
+    return { avif: sources('avif'), webp: sources('webp'), width: listing.width, height: listing.height };
+  }
   const name = path.split('/').pop();
   const source = photos[`../assets/photos/${name}`]?.default;
   if (!source) throw new Error(`Unknown photograph: ${path}`);

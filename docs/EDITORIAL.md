@@ -49,6 +49,16 @@ Existing requests from before the notification migration remain in D1 and are no
 
 ## Refresh sources
 
+### Listing photos
+
+`research/listing-image-review.json` records the image-by-image review, exact listing IDs, original file hashes, and the site owner's October 18 authorization to reuse Teton Flats images. Approval is separate from the raw inventory's `imageUrl`; a source URL alone never publishes a photo. Maps, banners, unrelated subjects, and poor crops are excluded with reasons.
+
+The approved public catalog is `public/data/listing-images.json`. Cards and detail pages use only this catalog, with local WebP/AVIF files, responsive widths, descriptive alt text, and source credits. Directory images load lazily. Exact IDs prevent different activities at one resort from accidentally sharing the same ski photo.
+
+To regenerate reviewed assets, keep originals in an ignored directory and run `node scripts/prepare-listing-images.mjs .local/photo-research/originals`. The script verifies each original's hash and authorization before encoding. Changed source bytes require a fresh visual review. Commit the resulting catalog and local image files; production builds do not fetch photos from other sites.
+
+`research/photo-permission-requests.html` and its JSON companion contain additional official-site candidates and public contact routes. They are research files, not public site pages. Keep their status `permission-needed` until a reply confirms the exact image, permission to use it, and required credits or restrictions. Do not put their image files in `public/` before approval. Outreach has not been sent.
+
 The import scripts document their usage in their headers. Fetch public data into ignored research/raw or a temporary directory, generate a candidate export, and compare it with the curated inventory. Do not overwrite original summaries, resolved identities, or reviewed fields automatically. Public source websites change; check extraction counts and schema before accepting a refresh.
 
 The checked-in data represents sources fetched on October 18, 2026. Source check dates should only change when the source is actually reviewed; a code rebuild must not claim a new verification date.

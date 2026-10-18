@@ -1,0 +1,207 @@
+{
+  "checkedAt": "2026-10-18",
+  "discoveryMethod": "Supplied directory CSV leads, checked against current official business webpages. Firecrawl connection pending.",
+  "publicationPolicy": "Research only. No images in this list have permission to publish; none are copied to public assets or imported by the website. Confirm rights, exact image and requested credit before approval.",
+  "items": [
+    {
+      "listingId": "violet-volumes",
+      "name": "Violet Volumes",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/violet-volumes/",
+      "sourcePage": "https://www.violetvolumes.com/",
+      "contactUrl": "https://www.violetvolumes.com/",
+      "contactEmail": "info@violetvolumes.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6594d96ff5e9b638aaca3f34/1754526035288-HXV1OGFLO7DW80UBSE9A/_92A8566.jpg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6594d96ff5e9b638aaca3f34/5eb32c9e-d7b7-44ed-8f6a-aeb39a5c96f7/_92A8890.jpg",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Bookstore interior and exterior sign; request the original files and photographer credit."
+    },
+    {
+      "listingId": "hops-cyclery",
+      "name": "Hops Cyclery",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/hops-cyclery/",
+      "sourcePage": "https://www.hopscyclery.com/",
+      "contactUrl": "https://www.hopscyclery.com/",
+      "contactEmail": "info@hopscyclery.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6586638d8ca88919a3410d0d/f017c323-329b-4874-994f-9bd4328d7f35/20231224_111145.jpg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6586638d8ca88919a3410d0d/3e060e81-7c09-419d-9946-d7043b3c503d/IMG_3564.JPG",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Shop or bicycle-service photographs from the homepage; confirm the selected image shows the Victor shop."
+    },
+    {
+      "listingId": "cattle-creek-ranch-farm-shop",
+      "name": "Cattle Creek Ranch Farm Shop",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/cattle-creek-ranch-farm-shop/",
+      "sourcePage": "https://www.cattle-creek-ranch.com/",
+      "contactUrl": "https://www.cattle-creek-ranch.com/contact",
+      "contactEmail": "cattlecreekranch208@gmail.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/65ea472e7cb2f41365caf742/c408a1b6-5c2e-487e-b10c-aca083e6913a/IMG_0333+vert.jpg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/65ea472e7cb2f41365caf742/8b008779-d98e-4500-836b-95260f24c354/IMG_3548.jpeg",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Farm-shop imagery from the homepage; choose a shop or produce image rather than the puppy gallery."
+    },
+    {
+      "listingId": "festive-living",
+      "name": "Festive Living",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/festive-living/",
+      "sourcePage": "https://www.festive-living.com/",
+      "contactUrl": "https://www.festive-living.com/contact-us",
+      "contactEmail": "festiveliving@silverstar.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/609363c4e55fe13b0c95bccc/d83da2be-5606-489a-95ec-10c6352f7621/vsYDhCPw.jpeg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/609363c4e55fe13b0c95bccc/1621800282019-U62WNP8ZA5MH8YXS8D4X/Winger_LGVcreative_LR3_2.jpg",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Interior/design photography. Ask whether the photographer permits directory use and confirm which image represents the store versus a client project."
+    },
+    {
+      "listingId": "modular-training",
+      "name": "Modular Training",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/modular-training/",
+      "sourcePage": "https://www.modulartr.com/",
+      "contactUrl": "https://www.modulartr.com/contact",
+      "contactEmail": "info@modulartr.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5df7e467e31abb71f20725d8/7f5efdb4-fd6e-4028-b0ef-084d0411b72f/4A86E86C-E2FC-4D98-8889-D043876E0F2B.jpg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/5df7e467e31abb71f20725d8/2accc70e-5da0-4ccb-b3c8-391244779f98/ModularTraining_101124-16.jpg",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Gym and training photographs; ask for an image they approve for their business listing."
+    },
+    {
+      "listingId": "wildfire-fitness",
+      "name": "Wildfire Fitness",
+      "town": "Driggs",
+      "listingUrl": "https://tetoncounty.us/places/wildfire-fitness/",
+      "sourcePage": "https://www.wildfirecoach.com/",
+      "contactUrl": "https://www.wildfirecoach.com/contact",
+      "contactEmail": null,
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://www.wildfirecoach.com/_next/image?url=https%3A%2F%2Fwildfire-coaching.s3.us-west-2.amazonaws.com%2Fpayload%2F%20a%20Wildfire%20Coaching-22%20copy.jpg&w=3840&q=75",
+          "sourceAlt": "Open gym"
+        },
+        {
+          "url": "https://www.wildfirecoach.com/_next/image?url=https%3A%2F%2Fwildfire-coaching.s3.us-west-2.amazonaws.com%2Fpayload%2FGradient%20Image%20Mobile%20Square.jpg&w=3840&q=75",
+          "sourceAlt": "Woman pushing weights at Wildfire Coaching in Driggs, Idaho"
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Open gym and training photographs from the official site; request permission through its contact form."
+    },
+    {
+      "listingId": "straight-blast-gym-teton-valley",
+      "name": "Straight Blast Gym Teton Valley",
+      "town": "Driggs",
+      "listingUrl": "https://tetoncounty.us/places/straight-blast-gym-teton-valley/",
+      "sourcePage": "https://www.sbgtetonvalley.com/",
+      "contactUrl": "https://www.sbgtetonvalley.com/",
+      "contactEmail": "jc@sbgtetonvalley.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/666d9d9a30a3df44d8c54145/108d2cb0-6226-4a6f-a4a9-ff1e330dfa59/home-03.jpg",
+          "sourceAlt": ""
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/666d9d9a30a3df44d8c54145/bf87bfce-3441-47d4-92fe-9a2b6438c901/01a.jpg",
+          "sourceAlt": ""
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "Martial-arts imagery from the official homepage; confirm local facility and participant permissions."
+    },
+    {
+      "listingId": "studio-core-teton-valley",
+      "name": "Studio Core Teton Valley",
+      "town": "Victor",
+      "listingUrl": "https://tetoncounty.us/places/studio-core-teton-valley/",
+      "sourcePage": "https://www.studiocoretetonvalley.com/",
+      "contactUrl": "https://www.studiocoretetonvalley.com/contact",
+      "contactEmail": "studiocoretetonvalley@gmail.com",
+      "contactCheckedAt": "2026-10-18",
+      "candidateImages": [
+        {
+          "url": "https://static.wixstatic.com/media/111a73_3af84dc8d4a74012ac9ea2530acea4e0~mv2.jpg/v1/fill/w_124,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/111a73_3af84dc8d4a74012ac9ea2530acea4e0~mv2.jpg",
+          "sourceAlt": "StudioCore_2026-79.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/111a73_bb09973ef5bc43f4a483ff798dbbe23a~mv2.jpg/v1/fill/w_83,h_125,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/111a73_bb09973ef5bc43f4a483ff798dbbe23a~mv2.jpg",
+          "sourceAlt": "StudioCore_2026-46.jpg"
+        }
+      ],
+      "status": "permission-needed",
+      "permissionEvidence": null,
+      "requiredCredit": null,
+      "localAsset": null,
+      "editorialNote": "StudioCore_2026-79 and StudioCore_2026-46. The current page exposes small blurred previews; request original, unblurred photos before adding them."
+    }
+  ]
+}

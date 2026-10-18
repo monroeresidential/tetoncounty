@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { listingSchema } from '../src/lib/listing-schema.ts';
 import { loadListings } from '../src/data.ts';
 import { listingIds } from '../src/listing-ids.mjs';
+import sharp from 'sharp';
 
 const listings = await loadListings();
 const read = path => readFile(`dist/${path}`, 'utf8');
@@ -63,5 +64,44 @@ test('hiking and town pages preserve their directory boundaries without JavaScri
     assert.deepEqual(ids, expected.map(l => l.id));
     const points = JSON.parse(html.match(/<script type="application\/json" id="map-data">(.*?)<\/script>/s)[1]);
     assert(points.every(point => ids.includes(point.id)));
+  }
+});
+
+test('listing photos are approved, local, responsive, and attached to exact listing IDs', async () => {
+  const catalog = JSON.parse(await read('data/listing-images.json')).images;
+  const review = JSON.parse(await readFile('research/listing-image-review.json', 'utf8')).items;
+  const photos = new Map(catalog.map(photo => [photo.listingId, photo]));
+  assert.equal(photos.size, catalog.length, 'One approved image per listing');
+  assert.deepEqual(new Set(photos.keys()), new Set(review.filter(item => item.decision === 'approved').map(item => item.listingId)));
+  for (const photo of catalog) {
+    assert(listingIds.has(photo.listingId));
+    assert.equal(photo.status, 'approved');
+    assert.equal(new URL(photo.sourceUrl).hostname, 'tetonflats.com');
+    assert(photo.rightsBasis && photo.alt && photo.credit);
+    assert(photo.variants.some(variant => variant.webp === photo.src));
+    for (const variant of photo.variants) for (const format of ['webp', 'avif']) {
+      assert.match(variant[format], /^\/images\/listings\/[a-z0-9-]+\.(avif|webp)$/);
+      const bytes = await readFile(`dist${variant[format]}`);
+      const dimensions = await sharp(bytes).metadata();
+      assert.equal(bytes.length, variant[`${format}Bytes`]);
+      assert.equal(dimensions.width, variant.width);
+      assert.equal(dimensions.height, variant.height);
+    }
+  }
+  for (const listing of listings) {
+    const html = await read(`places/${listing.id}/index.html`);
+    const place = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(item => item['@type'] === 'Place');
+    assert.equal(place.image?.contentUrl, photos.has(listing.id) ? `https://tetoncounty.us${photos.get(listing.id).src}` : undefined);
+  }
+  const directory = await read('explore/index.html');
+  for (const [image] of directory.matchAll(/<img[^>]+src="\/images\/listings\/[^>]+>/g)) {
+    assert(image.includes('loading="lazy"'), 'Directory thumbnails must not all load eagerly');
+    assert(image.includes('srcset=') && image.includes('sizes='));
+  }
+  const pending = JSON.parse(await readFile('research/photo-permission-requests.json', 'utf8')).items;
+  for (const candidate of pending) {
+    assert.equal(candidate.status, 'permission-needed');
+    assert.equal(candidate.localAsset, null);
+    assert(!photos.has(candidate.listingId), `Unapproved image must stay unpublished: ${candidate.listingId}`);
   }
 });
