@@ -34,7 +34,7 @@ Initial scope: 426 records, including 31 trail points. Categories cover outdoors
 - Events only from authoritative feeds with actual dates, recurrence, cancellation handling, and Event schema.
 - More original town guides and itineraries, links to land managers, seasonal access notes, and better independent photography.
 - Additional quality controls: stale-record reports, external-link checks with safe request limits, duplicate suggestions, geocoding review, and change logs.
-- Google Analytics (`G-W6SWY98HLR`) measures live guide traffic. Future custom events can answer product questions such as searches with no results and source-link clicks; keep contact details and message text out of analytics.
+- Google Analytics (`G-S96WQNBJC4`) measures live guide traffic. Future custom events can answer product questions such as searches with no results and source-link clicks; keep contact details and message text out of analytics.
 
 ## Phase 4 — Teton Flats rental leads
 

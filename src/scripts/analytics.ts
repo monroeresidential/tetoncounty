@@ -12,12 +12,12 @@ if (import.meta.env.PROD && window.location.origin === 'https://tetoncounty.us')
         window.dataLayer.push(arguments);
     };
     window.gtag('js', new Date());
-    window.gtag('config', 'G-W6SWY98HLR');
+    window.gtag('config', 'G-S96WQNBJC4');
 
     // Load asynchronously without adding executable inline scripts to the CSP.
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-W6SWY98HLR';
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-S96WQNBJC4';
     document.head.append(script);
 }
 

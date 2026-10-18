@@ -11,7 +11,7 @@ Astro builds static HTML and hashed browser assets into `dist/`. Use Node 24 or 
 - D1: `tetonvalley-submissions`, bound as `DB`; initial migration applied.
 - Turnstile: managed widget restricted to `tetoncounty.us`; public key in `wrangler.jsonc`, secret stored only in Cloudflare.
 - Formspree: `https://formspree.io/f/meaedrjo`; the form ID is public and configured in `FORMSPREE_FORM_ID`. Notification recipients are managed in Formspree; the intended editor is `drew@monroeresidential.com`.
-- Google Analytics: measurement ID `G-W6SWY98HLR`, initialized in `src/scripts/analytics.ts` through the shared browser bundle. It loads asynchronously only in production builds on `https://tetoncounty.us`; localhost and preview hosts do not report visits. The Analytics property controls enhanced measurement and retention settings. The public privacy page describes this collection.
+- Google Analytics: measurement ID `G-S96WQNBJC4`, initialized in `src/scripts/analytics.ts` through the shared browser bundle. It loads asynchronously only in production builds on `https://tetoncounty.us`; localhost and preview hosts do not report visits. The Analytics property controls enhanced measurement and retention settings. The public privacy page describes this collection.
 - Production configuration is checked into Git. Credentials, local submissions, and build output are ignored.
 
 The setup steps below document provisioning and recovery. Do not create duplicate production resources when deploying updates.
