@@ -59,7 +59,7 @@ This builds every page, runs submission integration tests using SQLite, validate
 
 Production runs on **Cloudflare Workers with Static Assets**, with `https://tetoncounty.us` as its canonical domain. Source is maintained at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Worker, D1 database, initial migration, Turnstile widget, and runtime secret are configured. See [deployment operations](docs/DEPLOYMENT.md) for build settings and release steps.
 
-Cloudflare build settings are configured for `main`, but the dashboard reports a disconnected GitHub App connection; automatic deployment is pending that connection repair and a successful Cloudflare build. The initial site is already published through Wrangler, and GitHub validation passes. Submissions enter a private D1 review queue. They do not send email or appear publicly until reviewed and incorporated into the source data.
+Cloudflare Builds is configured for `main`, with repository access granted to the existing Cloudflare Workers & Pages GitHub App. Each push runs the build, tests, and site checks before publishing. Submissions enter a private D1 review queue. They do not send email or appear publicly until reviewed and incorporated into the source data.
 
 The source inventory omits disputed addresses and does not invent operating hours, event dates, ratings, prices, or live trail conditions. Some source-linked websites are social pages, Maps, or trail guides rather than operator websites. Source dates describe extraction, not verification by an owner.
 

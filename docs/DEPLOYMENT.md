@@ -43,7 +43,7 @@ The deploy command validates the whole site, rejects placeholder configuration, 
 
 ## 3. GitHub build integration
 
-Cloudflare build settings target `monroeresidential/tetoncounty`, with validation and deployment on pushes to `main`. The existing account build token is reused; no credentials are stored in Git. **Pending:** the dashboard reports a disconnected GitHub App connection, and no Cloudflare build has started from the first test pushes. Repair that connection in GitHub's Cloudflare Workers & Pages app settings, then verify a successful native Cloudflare build. The manual Wrangler deployment remains live. Current settings in the `tetoncounty-us` Worker's Settings → Builds:
+Cloudflare Builds targets `monroeresidential/tetoncounty`, with validation and deployment on pushes to `main`. The repository is included in the existing Cloudflare Workers & Pages GitHub App's selected repositories. The existing account build token is reused; no credentials are stored in Git. Current settings in the `tetoncounty-us` Worker's Settings → Builds:
 
 | Setting | Value |
 | --- | --- |
