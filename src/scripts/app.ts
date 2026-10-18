@@ -50,14 +50,6 @@ const $ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNo
     return element;
 };
 const $$ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNode = document): T[] => [...root.querySelectorAll<T>(selector)];
-for (const row of $$('[data-category-photo]')) {
-    const showPhoto = () => {
-        $$('[data-category-image]').forEach(image => { image.hidden = image.dataset.categoryImage !== row.dataset.categoryPhoto; });
-        $('#category-caption').textContent = $('.category-name', row).textContent;
-    };
-    row.addEventListener('mouseenter', showPhoto);
-    row.addEventListener('focus', showPhoto);
-}
 const menu = document.querySelector<HTMLButtonElement>('.menu-toggle');
 menu?.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); $('#navigation').classList.toggle('open', open); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu) {
@@ -89,7 +81,7 @@ function initDirectory(directory: HTMLElement) {
             link.textContent = point.name;
             area.textContent = point.town;
             popup.append(link, area);
-            L.marker([point.latitude, point.longitude], { title: point.name, alt: point.name, icon: L.divIcon({ className: 'map-point', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(popup).addTo(markers);
+            L.marker([point.latitude, point.longitude], { title: point.name, alt: point.name, icon: L.divIcon({ className: 'map-point', html: '<span class="map-pin"></span>', iconSize: [24, 32], iconAnchor: [12, 32] }) }).bindPopup(popup).addTo(markers);
         }
         const bounds = markers.getBounds();
         if (bounds.isValid())

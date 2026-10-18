@@ -16,9 +16,9 @@ interface Props {
 const { title, description, path = '/', schema, hero = false, noindex = false } = Astro.props;
 const canonical = siteUrl + path;
 const heroImage = hero ? await imageSources('/images/hero.webp') : undefined;
-const socialImage = `${siteUrl}/images/social/teton-valley-v1.jpg`;
-const socialImageAlt = 'Teton Valley — your field guide to Victor and Driggs, Idaho, with a photograph of the neighboring Teton Range.';
-// The complete stylesheet is only ~8 KB compressed: ship it with the HTML so
+const socialImage = `${siteUrl}/images/social/teton-valley-trailhead-v2.jpg`;
+const socialImageAlt = 'Go find your valley — the Teton Valley field guide to Victor and Driggs, Idaho, in pine, parchment, and rust with a photograph of the neighboring Teton Range.';
+// Ship the small stylesheet with the HTML so
 // the first screen never waits for a separate render-blocking CSS request.
 const stylesheet = readFileSync('public/assets/styles.css', 'utf8');
 const structuredData = {
@@ -36,12 +36,11 @@ const structuredData = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     {heroImage && <link rel="preload" as="image" type="image/avif" href={heroImage.avif.src} imagesrcset={heroImage.avif.srcSet.attribute} imagesizes={heroSizes} fetchpriority="high" />}
-    <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/v1/lora-normal.woff2" as="font" type="font/woff2" crossorigin />
-    {hero && <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-italic-400.woff2" as="font" type="font/woff2" crossorigin />}
+    <link rel="preload" href="/assets/fonts/trailhead-v1/young-serif-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/trailhead-v1/mulish-normal.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title} | Teton Valley</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f3f2f2" />
+    <meta name="theme-color" content="#233d2c" />
     <meta name="application-name" content="Teton Valley" />
     <meta name="apple-mobile-web-app-title" content="Teton Valley" />
     <meta name="generator" content={Astro.generator} />
@@ -64,12 +63,12 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:image:alt" content={socialImageAlt} />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 256x256" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.ico?v=trailhead-2" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 256x256" />
+    <link rel="icon" href="/favicon-32x32.png?v=trailhead-2" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-96x96.png?v=trailhead-2" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/favicon.svg?v=trailhead-2" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=trailhead-2" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest?v=trailhead-2" />
     <link rel="alternate" type="application/json" href="/data/listings.json" title="Public directory data" />
     <link rel="llms-txt" href="/llms.txt" />
     <style is:inline set:html={stylesheet} />

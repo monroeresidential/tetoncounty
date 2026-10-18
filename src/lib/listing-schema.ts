@@ -8,6 +8,7 @@ export const listingSchema = z.object({
     category: z.enum(['outdoors', 'food-drink', 'arts-culture', 'shopping', 'wellness', 'stays', 'services']),
     subcategory: z.string(),
     description: z.string().min(1).max(600),
+    note: z.string().max(120).optional(),
     sourceUrls: z.array(publicUrl).min(1),
     sourceCheckedAt: z.iso.date(),
     sourceStatus: z.literal('source-listed'),

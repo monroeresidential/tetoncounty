@@ -601,7 +601,8 @@
       "beer",
       "wine",
       "catering"
-    ]
+    ],
+    "note": "make time for coffee"
   },
   {
     "id": "caldera-creative",
@@ -2078,7 +2079,8 @@
     "tags": [
       "beer/wine",
       "libations"
-    ]
+    ],
+    "note": "a local pour, a mountain view"
   },
   {
     "id": "grand-teton-distillery",

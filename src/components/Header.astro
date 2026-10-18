@@ -8,13 +8,13 @@ const { path } = Astro.props;
   <a href="/about/#sponsor" rel="sponsored">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></a>
 </div>
 <header class="header nav">
-  <a class="brand nav-brand" href="/" aria-label="Teton Valley home">Teton Valley <small>A field guide</small></a>
+  <a class="brand nav-brand" href="/" aria-label="Teton Valley home"><Icon name="mountain" /><span>Teton Valley <small>Idaho · The other side</small></span></a>
   <button class="menu-toggle btn btn-secondary" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation"><Icon name="menu" /></button>
   <nav id="navigation" aria-label="Main navigation">
-    <a aria-current={path === '/explore/' ? 'page' : undefined} href="/explore/">Explore the valley</a>
-    <a aria-current={path === '/hiking/' ? 'page' : undefined} href="/hiking/">Trails & outdoors</a>
-    <a aria-current={path.startsWith('/towns/') ? 'page' : undefined} href="/towns/victor/">Our towns</a>
+    <a aria-current={path === '/explore/' ? 'page' : undefined} href="/explore/">Explore</a>
+    <a aria-current={path === '/hiking/' ? 'page' : undefined} href="/hiking/">Trails</a>
+    <a aria-current={path.startsWith('/towns/') ? 'page' : undefined} href="/towns/victor/">Victor & Driggs</a>
     <a aria-current={path === '/about/' ? 'page' : undefined} href="/about/">About</a>
-    <a class="btn btn-primary header-cta" aria-current={path === '/suggest/' ? 'page' : undefined} href="/suggest/">Add a local spot</a>
+    <a class="btn btn-primary header-cta" aria-current={path === '/suggest/' ? 'page' : undefined} href="/suggest/">+ Add a spot</a>
   </nav>
 </header>

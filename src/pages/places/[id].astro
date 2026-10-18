@@ -30,7 +30,7 @@ const schema = [
     <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href={`/categories/${c.id}/`}>{c.short}</a><span>/</span>{item.name}</div>
     <div class="detail-grid">
       <article>
-        <span class="eyebrow">{c.short} · {item.town}</span><h1>{item.name}</h1><p class="detail-lead">{item.description}</p>
+        <span class="eyebrow">{c.short} · {item.town}</span><h1 class:list={{ 'long-title': item.name.length > 24 }}>{item.name}</h1><p class="detail-lead">{item.description}</p>
         {photo && <figure class="plate detail-photo"><Photo src={photo} alt={item.name} priority /><figcaption class="photo-caption">{item.name} · {item.town}</figcaption></figure>}
         <h2>A little more to go on.</h2>
         <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
@@ -48,5 +48,5 @@ const schema = [
       </aside>
     </div>
   </div>
-  {related.length > 0 && <section class="section related"><span class="eyebrow">WHILE YOU’RE HERE</span><h2>Keep exploring {item.town}.</h2><div class="directory-grid">{related.map(listing => <ListingCard item={listing} />)}</div></section>}
+  {related.length > 0 && <section class="section related"><div class="section-title"><h2>Keep exploring {item.town}.</h2><span class="handwritten">while you’re here</span></div><div class="directory-grid">{related.map(listing => <ListingCard item={listing} />)}</div></section>}
 </SiteLayout>

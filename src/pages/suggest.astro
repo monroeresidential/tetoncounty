@@ -9,10 +9,10 @@ const listings = await getListings();
 <section class="section form-page">
 <div class="form-intro">
 <span class="eyebrow">LOCAL KNOWLEDGE GOES A LONG WAY</span>
-<h1>Know a good spot?<br><em>Let’s put it on the map.</em></h1>
+<h1>Know a good spot?<br><em>Put it on the map.</em></h1>
 <p>Share a business, a trail, or a correction. Every request goes into our review queue before anything is published.</p>
 <div class="form-aside">
-<h3>Built with the valley.</h3>
+<h2 class="handwritten">built with the valley</h2>
 <p>Listing suggestions are free. You don’t need to be a sponsor to be included.</p>
 <a href="/about/">How the guide works <Icon name="arrow" />
 </a>
@@ -48,7 +48,7 @@ const listings = await getListings();
 <label>Town / area<select name="town">
 <option value="">Choose an area</option>{towns.map(t => <option>{t}</option>)}</select>
 </label>
-<label>Website <span>(optional)</span>
+<label><span class="form-label-text">Website <small>(optional)</small></span>
 <input type="url" name="website" placeholder="https://" maxlength="500">
 </label>
 </div>

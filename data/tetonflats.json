@@ -323,7 +323,8 @@
       "distanceLabel": "4.6 mi one-way"
     },
     "metricsSource": "Teton Flats hiking map; route measurements are source-reported and vary by itinerary.",
-    "coordinateRole": "source-map-point"
+    "coordinateRole": "source-map-point",
+    "note": "a little fresh air goes a long way"
   },
   {
     "id": "moose-creek-short",
@@ -1292,7 +1293,8 @@
     "website": "https://www.butterinvictor.com/",
     "imagePath": "/images/dining/butter-cafe.jpg",
     "imageUrl": "https://tetonflats.com/images/dining/butter-cafe.jpg",
-    "address": "57 S Main St, Suite 102, Victor, ID 83455"
+    "address": "57 S Main St, Suite 102, Victor, ID 83455",
+    "note": "make time for coffee"
   },
   {
     "id": "alpine-air-cafe-roastery",
@@ -1408,7 +1410,8 @@
     "website": "https://grandtetonbrewing.com/",
     "imagePath": "/images/dining/grand-teton-brewing.jpg",
     "imageUrl": "https://tetonflats.com/images/dining/grand-teton-brewing.jpg",
-    "address": "430 Old Jackson Hwy, Victor, ID 83455"
+    "address": "430 Old Jackson Hwy, Victor, ID 83455",
+    "note": "a local pour, a mountain view"
   },
   {
     "id": "guidepost-brewing-company",
@@ -4148,7 +4151,8 @@
     "website": "https://tetonvalleyfoundation.org/music-on-main/",
     "imagePath": "/images/activities/music-on-main.jpg",
     "imageUrl": "https://tetonflats.com/images/activities/music-on-main.jpg",
-    "locationLabel": "Victor, ID"
+    "locationLabel": "Victor, ID",
+    "note": "a little music under the sky"
   },
   {
     "id": "teton-valley-balloon-rally",

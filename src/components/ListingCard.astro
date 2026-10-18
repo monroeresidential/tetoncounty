@@ -13,13 +13,13 @@ const photo = imageFor(item), c = category(item.category);
     {photo ? <Photo src={photo} alt="" sizes={cardSizes} /> : <Icon name={c.icon} />}
   </a>}
   <div class="card-body">
-    <div class="card-meta"><span>{!feature && <Icon name="pin" />}{item.town}</span><span>{item.subcategory || c.short}</span></div>
-    <h3><a href={`/places/${item.id}/`}>{item.name}{!feature && <Icon name="northeast" />}</a></h3>
-    <p>{item.description}</p>
-    {!feature && (item.trail ? <dl class="trail-facts">
+    {!feature && <div class="card-meta"><span><Icon name="pin" />{item.town}</span><span>{item.subcategory || c.short}</span></div>}
+    <div class="card-title-row"><h3><a href={`/places/${item.id}/`}>{item.name}</a></h3>{feature && <span class="card-town">{item.town}</span>}</div>
+    {!feature && <p>{item.description}</p>}
+    {!feature && item.trail ? <dl class="trail-facts">
       <div><dt>Distance</dt><dd>{item.trail.distanceLabel || (item.trail.distanceMiles != null ? `${item.trail.distanceMiles} mi` : 'Not listed')}</dd></div>
       <div><dt>Gain</dt><dd>{item.trail.elevationFeet != null ? `${item.trail.elevationFeet.toLocaleString('en-US')} ft` : 'Not listed'}</dd></div>
       <div><dt>Difficulty</dt><dd>{item.trail.difficulty ? tag(item.trail.difficulty) : 'Not listed'}</dd></div>
-    </dl> : <span class="tag tag-neutral">{item.subcategory || c.short}</span>)}
+    </dl> : item.note && <p class="card-note handwritten">{item.note}</p>}
   </div>
 </article>
