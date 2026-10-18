@@ -6,6 +6,8 @@ The initial inventory contains **426 distinct places and experiences**: 90 Victo
 
 ## Run locally
 
+The site uses a small Node.js static generator with plain HTML, CSS, and JavaScript; it does not use Astro or React. Cloudflare serves prebuilt pages, while a Worker handles form requests and D1 stores the private review queue.
+
 Use Node 22.13+ (Node 24 LTS recommended).
 
 ```sh
