@@ -1,0 +1,10 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Directory from '../../components/Directory.astro';
+import { getListings } from '../../lib/listings.ts';
+import { categories } from '../../config.ts';
+export const getStaticPaths = (() => categories.map(category => ({ params: { category: category.id }, props: { category } }))) satisfies GetStaticPaths;
+const { category } = Astro.props;
+const listings = await getListings();
+---
+<Directory listings={listings} title={category.name + '.'} description={category.description} path={`/categories/${category.id}/`} defaultCategory={category.id} />

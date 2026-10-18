@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+import type { Listing } from '../lib/listing-schema.ts';
+import { category, imageFor } from '../lib/listings.ts';
+interface Props { item: Listing; feature?: boolean }
+const { item, feature = false } = Astro.props;
+const photo = imageFor(item), c = category(item.category);
+---
+<article class={`place-card ${feature ? 'featured-card' : ''}`} data-listing={item.id} data-town={item.town} data-category={item.category} data-seasons={item.seasons.join(' ')} data-search={[item.name, item.description, item.town, item.subcategory, ...item.tags].join(' ').toLowerCase()}>
+  {feature && <a class={`card-photo ${!photo ? 'illustrated ' + item.category : ''}`} href={`/places/${item.id}/`} tabindex="-1" aria-hidden="true">
+    {photo ? <img src={photo} alt="" loading="lazy" width="640" height="430" /> : <Icon name={c.icon} />}
+    <span class="photo-tag">{item.subcategory || c.short}</span>
+    <span class="photo-arrow"><Icon name="northeast" /></span>
+  </a>}
+  <div class="card-body">
+    <div class="card-meta"><Icon name="pin" />{item.town}<span>{feature ? '' : c.short}</span></div>
+    <h3><a href={`/places/${item.id}/`}>{item.name}{!feature && <Icon name="northeast" />}</a></h3>
+    <p>{item.description}</p>
+    {!feature && <span class="small-tag">{item.subcategory || c.short}</span>}
+  </div>
+</article>

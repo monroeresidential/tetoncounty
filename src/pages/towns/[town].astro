@@ -1,0 +1,9 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Directory from '../../components/Directory.astro';
+import { getListings } from '../../lib/listings.ts';
+export const getStaticPaths = (() => ['Victor', 'Driggs'].map(town => ({ params: { town: town.toLowerCase() }, props: { town } }))) satisfies GetStaticPaths;
+const { town } = Astro.props;
+const listings = await getListings();
+---
+<Directory listings={listings} title={town === 'Victor' ? 'A good day starts in Victor.' : 'Discover your side of Driggs.'} description={`Find restaurants, shops, outdoor activities, and local life in ${town}, Idaho. Browse places, follow your curiosity, and make the day your own.`} path={`/towns/${town.toLowerCase()}/`} defaultTown={town} />

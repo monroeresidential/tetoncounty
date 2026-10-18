@@ -1,0 +1,57 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { siteUrl } from '../config.ts';
+import { safeJson } from '../lib/listings.ts';
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  hero?: boolean;
+  noindex?: boolean;
+}
+const { title, description, path = '/', schema, hero = false, noindex = false } = Astro.props;
+const canonical = siteUrl + path;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': siteUrl + '/#website', url: siteUrl + '/', name: 'Teton Valley', description: 'A source-linked guide to Victor, Driggs, and Teton Valley, Idaho.', inLanguage: 'en-US' },
+    { '@type': 'Organization', '@id': siteUrl + '/#publisher', name: 'Teton Valley guide', url: siteUrl + '/', sponsor: { '@type': 'Organization', name: 'Teton Flats', url: 'https://tetonflats.com/' } },
+    ...(schema ? Array.isArray(schema) ? schema : [schema] : []),
+  ],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title} | Teton Valley</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#183c32" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Teton Valley" />
+    <meta property="og:image" content={`${siteUrl}/images/hero.webp`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/json" href="/data/listings.json" title="Public directory data" />
+    <link rel="llms-txt" href="/llms.txt" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    {hero && <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />}
+    <script type="application/ld+json" set:html={safeJson(structuredData)} />
+    <script src="../scripts/app.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header path={path} />
+    <main id="main"><slot /></main>
+    <Footer />
+  </body>
+</html>

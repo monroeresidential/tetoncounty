@@ -1,0 +1,6 @@
+---
+import { paths } from '../lib/icons.ts';
+interface Props { name: string; class?: string }
+const { name, class: className = '' } = Astro.props;
+---
+<svg class={`icon ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={paths[name] ?? paths.mountain} />

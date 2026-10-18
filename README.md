@@ -6,22 +6,24 @@ The initial inventory contains **426 distinct places and experiences**: 90 Victo
 
 ## Run locally
 
-The site uses a small Node.js static generator with plain HTML, CSS, and JavaScript; it does not use Astro or React. Cloudflare serves prebuilt pages, while a Worker handles form requests and D1 stores the private review queue.
+The site uses **Astro 7 + TypeScript**, with reusable Astro components and schema-validated content collections. Astro generates complete HTML pages; a small TypeScript bundle handles interactive search, maps, and forms. Cloudflare serves the prebuilt pages, while a Worker handles form requests and D1 stores the private review queue.
 
-Use Node 22.13+ (Node 24 LTS recommended).
+Use Node 24 or newer; production builds use Node 24.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:4321`. The dependency-free static builder generates the site before starting the preview. Run `npm run build` after editing templates, CSS, scripts, or data, then reload the browser. The preview saves test form submissions to ignored `.local/submissions.sqlite` and clearly labels them as local. It sends no email and does not publish data.
+Open `http://localhost:4321`. Astro reloads changes to pages, components, styles, and browser scripts. Restart `npm run dev` after editing the curated `data/` inventory so the content collection and correction allowlist refresh together. The development server saves test form submissions to ignored `.local/submissions.sqlite` and clearly labels them as local. It sends no email and does not publish data.
+
+`npm run build` creates production output in `dist/`. `npm run preview` serves that static output for inspection; use `npm run dev` to test the local submission API.
 
 ```sh
 npm run check
 ```
 
-This builds every page, runs submission integration tests using SQLite, validates listing provenance, and checks internal links and JSON-LD. Wrangler is the only development dependency; there is no browser framework or production npm dependency.
+This type-checks the Astro and TypeScript source, builds every page, runs content and submission tests, validates listing provenance, and checks internal links and JSON-LD. Astro runs at build time; visitors receive static HTML and a small browser script. Maps load only when requested.
 
 ## What is included
 
@@ -39,14 +41,19 @@ This builds every page, runs submission integration tests using SQLite, validate
 
 | Path | Purpose |
 | --- | --- |
-| `src/templates.mjs` | Server-generated HTML and structured data |
-| `src/data.mjs` | Cross-source normalization and identity merges |
+| `src/pages/` | Astro routes, static listing pages, and machine-readable exports |
+| `src/components/`, `src/layouts/` | Reusable Astro UI, page metadata, and structured data |
+| `src/content.config.ts`, `src/lib/listing-schema.ts` | Validated content collection and shared listing type |
+| `src/data.ts` | Cross-source normalization and identity merges |
 | `data/*.json` | Curated inventory and reviewed aliases |
-| `public/assets/app.js` | Progressive search, map, navigation, and form behavior |
+| `src/scripts/app.ts` | Typed search, map, navigation, and form behavior |
 | `public/assets/styles.css` | Responsive design |
 | `src/worker.mjs` | Cloudflare submission API |
 | `migrations/` | Private review database schema |
-| `scripts/build.mjs` | Static generation, machine-readable exports, alias redirects |
+| `astro.config.ts`, `tsconfig.json` | Static Astro build and strict TypeScript configuration |
+| `scripts/prepare.mjs` | Generates the submission API's published-listing allowlist |
+| `scripts/local-api.mjs` | Development-only SQLite submission middleware |
+| `tests/` | Content, generated-page, and submission integration tests |
 | `scripts/import-*.mjs` | Repeatable public source extraction |
 | `research/` | Provenance, coverage, deduplication, and unresolved source conflicts |
 | `docs/PLAN.md` | Product and data roadmap |
@@ -63,4 +70,4 @@ Cloudflare Builds is configured for `main`, with repository access granted to th
 
 The source inventory omits disputed addresses and does not invent operating hours, event dates, ratings, prices, or live trail conditions. Some source-linked websites are social pages, Maps, or trail guides rather than operator websites. Source dates describe extraction, not verification by an owner.
 
-Core application payload at initial validation: approximately 3.4 KB JavaScript + 6.2 KB CSS, gzip. Fonts, images, and optional map assets are additional. No production Core Web Vitals or Lighthouse score is claimed before deployment.
+Core application payload after the Astro migration: approximately 3.0 KB JavaScript + 6.2 KB CSS, gzip. Fonts, images, and optional map assets are additional. Hashed Astro assets use immutable caching. These are build measurements, not production Core Web Vitals or a Lighthouse score.

@@ -1,0 +1,51 @@
+---
+import type { GetStaticPaths } from 'astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ListingCard from '../../components/ListingCard.astro';
+import Icon from '../../components/Icon.astro';
+import { getListings, category, imageFor, tag } from '../../lib/listings.ts';
+import { reviewedDate, siteUrl } from '../../config.ts';
+export const getStaticPaths = (async () => (await getListings()).map(item => ({ params: { id: item.id }, props: { item } }))) satisfies GetStaticPaths;
+const { item } = Astro.props;
+const listings = await getListings();
+const c = category(item.category), photo = imageFor(item);
+const geo = Number.isFinite(item.latitude) && Number.isFinite(item.longitude);
+const query = geo ? `${item.latitude},${item.longitude}` : [item.name, item.address || item.town, 'Idaho'].join(' ');
+const sourceLabels: Record<string, string> = { 'tetonflats.com': 'Teton Flats', 'downtowndriggs.org': 'Downtown Driggs', 'discovertetonvalley.com': 'Discover Teton Valley' };
+const related = listings.filter(l => l.id !== item.id && l.category === item.category && l.town === item.town).slice(0, 3);
+const facts = [['Town / area', item.town], ['Category', item.subcategory || c.short], ['Season', item.seasons.length === 4 ? 'Year-round listing' : item.seasons.map(tag).join(', ')]];
+if (item.trail) {
+  for (const [key, label, suffix] of [['distanceMiles', 'Distance', ' miles'], ['elevationFeet', 'Elevation gain', ' ft'], ['difficulty', 'Difficulty', ''], ['routeType', 'Route', '']] as const) {
+    if (item.trail[key] != null) facts.push([label, key === 'distanceMiles' ? (item.trail.distanceLabel || item.trail[key] + suffix) : item.trail[key] + suffix]);
+  }
+}
+const schema = [
+  { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Explore', item: siteUrl + '/explore/' }, { '@type': 'ListItem', position: 2, name: item.name, item: `${siteUrl}/places/${item.id}/` }] },
+];
+---
+<SiteLayout title={`${item.name} — ${item.town}`} description={item.description} path={`/places/${item.id}/`} schema={schema}>
+  <div class="detail section">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href={`/categories/${c.id}/`}>{c.short}</a><span>/</span>{item.name}</div>
+    <div class="detail-grid">
+      <article>
+        <span class="eyebrow green">{c.short} · {item.town}</span><h1>{item.name}</h1><p class="detail-lead">{item.description}</p>
+        {photo && <img class="detail-photo" src={photo} alt={item.name} width="800" height="600" />}
+        <h2>A little more to go on.</h2>
+        <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
+        {item.trail && <p class="notice">Trail figures come from the source guide and can vary by route and measuring method. This page does not report live conditions or confirm current access. Use an authoritative route map and current land-manager information for your trip.</p>}
+        {item.tags.length > 0 && <div class="tags">{item.tags.slice(0, 8).map(t => <span>{t}</span>)}</div>}
+        <div class="source-box"><span class="eyebrow green">WHERE THIS COMES FROM</span><p>Source-listed · Sources checked {item.sourceCheckedAt || reviewedDate}. Business-owner confirmation is still pending.</p>
+          <ul>{item.sourceUrls.map(url => <li><a href={url} rel="noopener">{sourceLabels[new URL(url).hostname] || new URL(url).hostname} <Icon name="northeast" /></a></li>)}</ul>
+          <p>See something that’s changed? <a href={`/suggest/?type=correction&listing=${item.id}`}>Suggest a correction</a>.</p>
+        </div>
+      </article>
+      <aside class="visit-panel"><span class="eyebrow green">MAKE A PLAN</span><h2>Go see for yourself.</h2><p>{item.address || `${item.town} area`}</p>
+        {item.website && <a class="button" href={item.website} rel="noopener">Visit linked website <Icon name="northeast" /></a>}
+        <a class="button secondary" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`} rel="noopener"><Icon name="map" /> Open in Maps</a>
+        <p class="fine-print">Confirm location, hours, reservations, and seasonal availability with the operator before visiting.</p><hr /><a class="text-link" href={`/suggest/?type=correction&listing=${item.id}`}>Suggest a change <Icon name="arrow" /></a>
+      </aside>
+    </div>
+  </div>
+  {related.length > 0 && <section class="section related"><span class="eyebrow green">WHILE YOU’RE HERE</span><h2>Keep exploring {item.town}.</h2><div class="directory-grid">{related.map(listing => <ListingCard item={listing} />)}</div></section>}
+</SiteLayout>

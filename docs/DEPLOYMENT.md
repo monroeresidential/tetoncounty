@@ -2,6 +2,8 @@
 
 This project uses **Cloudflare Workers with Static Assets**, with source at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Sites service is not required.
 
+Astro builds static HTML and hashed browser assets into `dist/`. Use Node 24 or newer. The existing Worker serves the submission API; an Astro Cloudflare server-rendering adapter is not needed. Framework upgrades do not require new D1 resources, DNS changes, or replacement Turnstile credentials.
+
 ## Production resources
 
 - Canonical domain: `https://tetoncounty.us`.
@@ -63,6 +65,8 @@ Cloudflare Builds targets `monroeresidential/tetoncounty`, with validation and d
 Do not replace existing DNS records until their current use has been reviewed. Domain registration with Cloudflare does not itself deploy this Worker or grant this project account access.
 
 ## 5. Production acceptance
+
+Astro migration validation: all 442 HTML paths, the 426-record public inventory, sitemap, alias redirects, and both LLM exports match the previous release. Strict type checking and 15 tests pass. Browser checks cover desktop and mobile navigation, search and filters, lazy map loading, and locally persisted addition, correction, and contact requests.
 
 Initial deployment checks on October 18, 2026: HTTPS homepage, directory, Victor and Driggs pages, a category and listing, hiking guide, sitemap, both LLM text files, public JSON, API configuration, and a real 404 all passed. Canonical URLs and security headers were verified. The D1 schema is applied; the form API is enabled and rejects cross-origin requests and requests without Turnstile verification. The live widget renders. A successful production submission still needs a human Turnstile check; no test submission was inserted into production.
 

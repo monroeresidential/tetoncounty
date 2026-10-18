@@ -1,0 +1,6 @@
+---
+import Directory from '../components/Directory.astro';
+import { getListings } from '../lib/listings.ts';
+const listings = await getListings();
+---
+<Directory listings={listings} title="Find a trail. Make a day of it." description="Valley strolls, aspen groves, and trails into the high country. Explore source-listed hikes near Victor and Driggs, with map points and route details." path="/hiking/" hiking />

@@ -1,0 +1,34 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { getListings } from "../lib/listings.ts";
+const listings = await getListings();
+const local = listings.filter(l => l.town === "Victor" || l.town === "Driggs").length;
+---
+<SiteLayout title="About the guide & our sources" description="How TetonCounty.us gathers, checks, and maintains its community directory, with transparent sponsorship by Teton Flats." path="/about/">
+<section class="section prose">
+<span class="eyebrow green">A LITTLE LOCAL KNOWLEDGE</span>
+<h1>A guide worth<br>getting out for.</h1>
+<p class="lead">Teton Valley is more than a stop on the way somewhere else. This guide helps you discover Victor, Driggs, and the places that make life here a little richer.</p>
+<h2>Good information. Clear sources.</h2>
+<p>Our starting inventory brings together {listings.length} places and experiences from public regional directories and the Teton Flats guides. {local} are classified in Victor or Driggs; the rest are valley-wide or nearby trips. This is a growing inventory, not a claim that every business is included or currently operating.</p>
+<ul>
+<li>
+<a href="https://discovertetonvalley.com/">Discover Teton Valley</a> — regional places, businesses, and activities.</li>
+<li>
+<a href="https://downtowndriggs.org/maps-resources">Downtown Driggs</a> — downtown businesses and community resources.</li>
+<li>
+<a href="https://tetonflats.com/victor-id-hiking-guide">Teton Flats</a> — hiking-map points, restaurant guides, and things to do.</li>
+</ul>
+<p>Listings use original short summaries, link to their sources, and carry a source-check date. “Source-listed” means the place appears in a source; it does not mean an owner has confirmed current hours, prices, or availability. We deliberately leave out details we cannot establish.</p>
+<h2>Help the guide get better.</h2>
+<p>Use <a href="/suggest/">Suggest a place</a> for additions, or “Suggest a change” on any listing for corrections. Requests go into a private review queue. We check supporting information and publish approved changes through the website’s editorial process.</p>
+<h2 id="sponsor">Supported by Teton Flats.</h2>
+<p>
+<a href="https://tetonflats.com/" rel="sponsored">Teton Flats</a>, an apartment community in Victor, sponsors this guide. The guide is free to use, and businesses do not need to be sponsors to be listed. Featured places are starting points chosen for variety, not a rating or ranking.</p>
+<p>Apartment inquiries happen on the Teton Flats website. Guide-submission emails are not apartment leads and are not added to a marketing list.</p>
+<h2>Useful for people and tools.</h2>
+<p>Every listing has a permanent, readable page. The <a href="/data/listings.json">public JSON directory</a>, <a href="/llms.txt">LLM reading guide</a>, and <a href="/sitemap.xml">sitemap</a> make the same information easier to discover and reference. Source attributions remain attached to records.</p>
+<h2>Photography</h2>
+<p>The homepage landscape is from the National Park Service and depicts the neighboring Teton Range from Wyoming. Activity photography is sourced from the sponsoring Teton Flats website. Photos illustrate their named places or the wider region. See <a href="/data/image-sources.json">image provenance</a>.</p>
+</section>
+</SiteLayout>

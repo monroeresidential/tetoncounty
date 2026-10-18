@@ -1,0 +1,28 @@
+---
+import Icon from "./Icon.astro";
+interface Props { path: string }
+const { path } = Astro.props;
+---
+<div class="topline">
+<span>A little closer to the mountains.</span>
+<a href="/about/#sponsor">A community guide, supported by Teton Flats <Icon name="northeast" />
+</a>
+</div>
+  <header class="header">
+<a class="brand" href="/" aria-label="Teton Valley home">
+<Icon name="mountain" />
+<span>TETON VALLEY<small>IDAHO · THE OTHER SIDE</small>
+</span>
+</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+<Icon name="menu" />
+</button>
+<nav id="navigation" aria-label="Main navigation">
+<a aria-current={path === "/explore/" ? "page" : undefined} href="/explore/">Explore the valley</a>
+<a aria-current={path === "/hiking/" ? "page" : undefined} href="/hiking/">Trails & outdoors</a>
+<a href="/towns/victor/">Our towns</a>
+<a aria-current={path === "/about/" ? "page" : undefined} href="/about/">About</a>
+</nav>
+<a class="header-cta" href="/suggest/">Add a local spot <span>+</span>
+</a>
+</header>

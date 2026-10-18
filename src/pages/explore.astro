@@ -1,0 +1,6 @@
+---
+import Directory from '../components/Directory.astro';
+import { getListings } from '../lib/listings.ts';
+const listings = await getListings();
+---
+<Directory listings={listings} />

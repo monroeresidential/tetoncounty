@@ -1,0 +1,18 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout title="Privacy" description="How listing suggestions and contact details are handled by the Teton Valley guide." path="/privacy/">
+<section class="section prose">
+<span class="eyebrow green">YOUR DETAILS STAY YOURS</span>
+<h1>Privacy, plainly.</h1>
+<p>Last updated October 18, 2026.</p>
+<h2>When you send a suggestion</h2>
+<p>We collect the name, email, listing details, and message you submit, plus the request time and review status. These are stored privately for the guide team to review your request and respond. Your email is not published in the directory or added to a rental marketing list.</p>
+<h2>Spam protection and hosting</h2>
+<p>The site uses Cloudflare hosting and, when the submission service is configured, Cloudflare Turnstile to limit automated spam. Cloudflare processes network and browser information to operate these services. The form service stores a short-lived, one-way network identifier for rate limiting rather than storing a raw IP address in the request record.</p>
+<h2>Maps and outside websites</h2>
+<p>Interactive maps load OpenStreetMap tiles only when you choose the map view. Those requests reveal normal connection information to the map provider. Links to business websites and Teton Flats open services with their own privacy policies. This release does not include advertising pixels or behavioral analytics.</p>
+<h2>Retention and requests</h2>
+<p>Submission records are intended to be deleted within 12 months after review. Short-lived rate-limit records expire after one day and are cleaned up as requests arrive. To request access, correction, or deletion, use the <a href="/suggest/?type=contact">contact form</a> and identify your earlier request. Do not include sensitive information.</p>
+</section>
+</SiteLayout>

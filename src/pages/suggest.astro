@@ -1,0 +1,74 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Icon from "../components/Icon.astro";
+import { towns } from "../config.ts";
+import { getListings } from "../lib/listings.ts";
+const listings = await getListings();
+---
+<SiteLayout title="Suggest a place or correction" description="Help improve the Teton Valley guide. Suggest a new listing, correct a detail, or contact the guide team." path="/suggest/">
+<section class="section form-page">
+<div class="form-intro">
+<span class="eyebrow green">LOCAL KNOWLEDGE GOES A LONG WAY</span>
+<h1>Know a good spot?<br>Let’s put it on the map.</h1>
+<p>Share a business, a trail, or a correction. Every request goes into our review queue before anything is published.</p>
+<div class="form-aside">
+<Icon name="heart" />
+<h3>Built with the valley.</h3>
+<p>Listing suggestions are free. You don’t need to be a sponsor to be included.</p>
+<a href="/about/">How the guide works <Icon name="arrow" />
+</a>
+</div>
+</div>
+<form class="suggest-form" id="suggest-form" method="post" action="/api/submissions">
+<div class="form-status" id="form-status" role="status" aria-live="polite">
+</div>
+<label>What would you like to do?<select name="type" id="request-type" required>
+<option value="addition">Suggest a new place</option>
+<option value="correction">Correct an existing listing</option>
+<option value="contact">Contact the guide team</option>
+</select>
+</label>
+<label id="listing-field" hidden>Which listing?<select name="listingId" id="listing-id">
+<option value="">Select a place</option>{listings.map(l => <option value={l.id}>{l.name} · {l.town}</option>)}</select>
+</label>
+<div class="form-row">
+<label>Your name<input name="name" autocomplete="name" required maxlength="100">
+</label>
+<label>Email<input type="email" name="email" autocomplete="email" required maxlength="254">
+</label>
+</div>
+<div id="place-fields">
+<label>Place or business name<input name="placeName" maxlength="160" required>
+</label>
+<div class="form-row">
+<label>Town / area<select name="town">
+<option value="">Choose an area</option>{towns.map(t => <option>{t}</option>)}</select>
+</label>
+<label>Website <span>(optional)</span>
+<input type="url" name="website" placeholder="https://" maxlength="500">
+</label>
+</div>
+</div>
+<label id="message-label">Tell us a little more<textarea name="message" rows="5" required minlength="20" maxlength="4000" placeholder="What should people know? For corrections, include the updated detail and a source we can check.">
+</textarea>
+<span>20–4,000 characters. Please don’t include sensitive personal information.</span>
+</label>
+<div class="honeypot" aria-hidden="true">
+<label>Leave this blank<input name="companyUrl" tabindex="-1" autocomplete="off">
+</label>
+</div>
+<label class="checkbox-label">
+<input type="checkbox" name="consent" value="yes" required>
+<span>I agree that the guide team may use these details to review my request and reply by email. <a href="/privacy/">Privacy details</a>.</span>
+</label>
+<div id="turnstile">
+</div>
+<noscript>
+<p>JavaScript is required to verify and submit this form.</p>
+</noscript>
+<button class="button submit-button" type="submit" disabled>Send for review <Icon name="arrow" />
+</button>
+<p class="fine-print">Your email stays private. Sending a request does not subscribe you to marketing.</p>
+</form>
+</section>
+</SiteLayout>

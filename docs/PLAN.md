@@ -45,6 +45,6 @@ Initial scope: 426 records, including 31 trail points. Categories cover outdoors
 
 ## Architecture decision
 
-A small Node static generator suits this first release: public content changes through reviewed Git commits; visitors receive ready-to-read pages; no hydration or application framework is necessary. Cloudflare serves static pages from its edge. The Worker runs for `/api/*` requests and uses D1 for private submissions. Leaflet and map tiles load only on demand. Migrate to a content CMS or framework when editorial volume or account features justify it, while preserving data schema and public URLs.
+Astro with strict TypeScript provides reusable pages and components while generating ready-to-read HTML. A content collection validates the curated inventory against a shared schema before building. Small TypeScript enhancements handle search and forms; Leaflet and map tiles load only on demand. Cloudflare serves static pages from its edge. The existing Worker runs for `/api/*` requests and uses D1 for private submissions. No server rendering adapter or React runtime is required. A CMS or isolated React component can be added later as editorial or interaction needs grow, while preserving the data schema and public URLs.
 
 GitHub is the source of truth. `data/` contains curated records. Source importers create candidate exports; they do not automatically overwrite edited content or publish unreviewed submissions.

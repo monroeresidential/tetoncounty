@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ListingCard from './ListingCard.astro';
+import MapPanel from './MapPanel.astro';
+import Icon from './Icon.astro';
+import { categories, seasons, towns, siteUrl } from '../config.ts';
+import { category, tag } from '../lib/listings.ts';
+import type { Listing } from '../lib/listing-schema.ts';
+interface Props {
+  listings: Listing[]; title?: string; description?: string; path?: string;
+  defaultCategory?: string; defaultTown?: string; hiking?: boolean;
+}
+const { listings, title = 'Find your kind of day.', description = 'Good food, fresh air, and local places worth knowing. Start here, then see where the day takes you.', path = '/explore/', defaultCategory = '', defaultTown = '', hiking = false } = Astro.props;
+const initial = listings.filter(l => (!defaultCategory || l.category === defaultCategory) && (!defaultTown || l.town === defaultTown) && (!hiking || l.trail));
+const points = initial.filter(l => Number.isFinite(l.latitude) && Number.isFinite(l.longitude));
+const filters: { id: string; short: string; icon?: string }[] = [{ id: '', short: 'Everything' }, ...categories];
+const pageTitle = hiking ? 'Hiking trails near Victor & Driggs, Idaho' : defaultTown ? `Things to do in ${defaultTown}, Idaho` : defaultCategory ? `${category(defaultCategory).short} in Victor & Driggs` : 'Explore Victor & Driggs';
+const schema = { '@type': 'CollectionPage', name: title, url: siteUrl + path, mainEntity: { '@type': 'ItemList', numberOfItems: initial.length, itemListElement: initial.map((l, i) => ({ '@type': 'ListItem', position: i + 1, name: l.name, url: `${siteUrl}/places/${l.id}/` })) } };
+---
+<SiteLayout title={pageTitle} description={description} path={path} schema={schema}>
+  <div class="page-intro section">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span>{hiking ? 'Trails & outdoors' : defaultTown || 'Explore'}</div>
+    <span class="eyebrow green">{hiking ? 'THE TRAIL STARTS HERE' : 'A FIELD GUIDE TO THE GOOD STUFF'}</span>
+    <h1>{title}</h1><p>{description}</p>
+    {hiking && <p class="trail-advisory">Routes and map points are sourced from the <a href="https://tetonflats.com/victor-id-hiking-guide">Teton Flats hiking guide</a>. Mileage and difficulty are planning references. Check current access, weather, and land-manager guidance before heading out.</p>}
+  </div>
+  <section class="section directory" data-directory data-base-category={defaultCategory} data-base-town={defaultTown}>
+    <form class="filter-form" action={path} role="search">
+      <div class="search-field"><Icon name="search" /><label class="sr-only" for="directory-query">Search places and activities</label><input id="directory-query" type="search" name="q" placeholder="Search by name, activity, or a little inspiration…" /></div>
+      <label class="select-field"><span>Town</span><select name="town"><option value="">Everywhere</option>{towns.map(t => <option value={t} selected={t === defaultTown}>{t}</option>)}</select></label>
+      <label class="select-field"><span>Season</span><select name="season"><option value="">Any season</option>{seasons.map(s => <option value={s}>{tag(s)}</option>)}</select></label>
+      <button class="button filter-submit" type="submit">Search</button>
+    </form>
+    <div class="filter-categories" aria-label="Filter by category">
+      {filters.filter(c => !hiking || !c.id || c.id === 'outdoors').map(c => <button type="button" data-category-filter={c.id} aria-pressed={c.id === defaultCategory}>{c.icon && <Icon name={c.icon} />}{c.short}</button>)}
+    </div>
+    <div class="results-bar">
+      <p id="result-count" role="status" aria-live="polite"><strong>{initial.length}</strong> places & experiences</p>
+      <div class="view-controls">
+        {points.length > 0 && <><button type="button" class="view-button active" data-view="list" aria-pressed="true"><Icon name="grid" />List</button><button type="button" class="view-button" data-view="map" aria-pressed="false"><Icon name="map" />Map</button></>}
+        <button type="button" class="clear-filters">Reset filters</button>
+      </div>
+    </div>
+    <noscript><p class="notice">All listings are available below. Enable JavaScript for live search and the map, or browse <a href="/categories/outdoors/">categories</a> and <a href="/towns/victor/">town pages</a>.</p></noscript>
+    <MapPanel listings={initial} />
+    <div class="directory-grid" id="listing-grid">{initial.map(item => <ListingCard item={item} />)}</div>
+    <div class="empty-state" hidden><Icon name="search" /><h2>A little too far off the beaten path.</h2><p>Try a different search or clear a filter to see more places.</p><button type="button" class="button clear-filters">Show all places</button></div>
+    <p class="directory-footnote">Source-listed, not owner-confirmed. Hours, availability, and seasonal access can change. <a href="/about/">How we build the guide</a>.</p>
+  </section>
+</SiteLayout>
