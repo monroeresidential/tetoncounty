@@ -1,4 +1,4 @@
-# TetonValley.us
+# TetonCounty.us
 
 A modern community guide to Victor, Driggs, and Teton Valley, Idaho, sponsored by Teton Flats. The first release focuses on useful local discovery. Apartment lead generation is a later phase.
 
@@ -55,7 +55,9 @@ This builds every page, runs submission integration tests using SQLite, validate
 
 ## Launch status
 
-The implementation and local preview work. Production is **not deployed**. GitHub and Cloudflare CLI connections are available. A GitHub repository destination, D1 database ID, Turnstile keys, and domain binding are still required. The deployment script stops if placeholder configuration remains. The public form fails closed when its production backend is not configured.
+Production runs on **Cloudflare Workers with Static Assets**, with `https://tetoncounty.us` as its canonical domain. Source is maintained at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Worker, D1 database, initial migration, Turnstile widget, and runtime secret are configured. See [deployment operations](docs/DEPLOYMENT.md) for build settings and release steps.
+
+Submissions enter a private D1 review queue. They do not send email or appear publicly until reviewed and incorporated into the source data.
 
 The source inventory omits disputed addresses and does not invent operating hours, event dates, ratings, prices, or live trail conditions. Some source-linked websites are social pages, Maps, or trail guides rather than operator websites. Source dates describe extraction, not verification by an owner.
 

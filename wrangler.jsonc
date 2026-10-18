@@ -1,15 +1,35 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tetonvalley-us",
+  "name": "tetoncounty-us",
+  "account_id": "9441a00a44eb2bc68c2befd68119f256",
   "main": "src/worker.mjs",
   "compatibility_date": "2026-10-18",
+  "workers_dev": true,
+  "preview_urls": false,
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*"],
+    "run_worker_first": [
+      "/api/*"
+    ],
     "not_found_handling": "404-page"
   },
-  "vars": { "SITE_URL": "https://tetonvalley.us", "TURNSTILE_SITE_KEY": "" },
-  // Create the database, then replace this ID before deploying.
-  "d1_databases": [{ "binding": "DB", "database_name": "tetonvalley-submissions", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" }]
+  "vars": {
+    "SITE_URL": "https://tetoncounty.us",
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFaYeLDGByrsxlbY"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tetonvalley-submissions",
+      "database_id": "eb1f2d58-fc6e-40a3-9fa0-0130ee2e3fa5",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "tetoncounty.us",
+      "custom_domain": true
+    }
+  ]
 }

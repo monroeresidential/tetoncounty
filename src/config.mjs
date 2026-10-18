@@ -9,5 +9,5 @@ export const categories = [
 ];
 export const seasons = ['spring','summer','fall','winter'];
 export const towns = ['Victor','Driggs','Teton Valley','Nearby'];
-export const siteUrl = (process.env.SITE_URL || 'https://tetonvalley.us').replace(/\/$/,'');
+export const siteUrl = (process.env.SITE_URL || 'https://tetoncounty.us').replace(/\/$/,'');
 export const reviewedDate = '2026-10-18';

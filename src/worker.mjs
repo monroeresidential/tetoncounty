@@ -29,7 +29,7 @@ export async function handleApi(request,env){
   if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':'production'});
   if(url.pathname!=='/api/submissions')return json({error:'Not found.'},404);
   if(request.method!=='POST')return new Response(null,{status:405,headers:{Allow:'POST','Cache-Control':'no-store'}});
-  const allowedOrigin=env.SITE_URL||'https://tetonvalley.us';
+  const allowedOrigin=env.SITE_URL||'https://tetoncounty.us';
   if(request.headers.get('origin')!==allowedOrigin)return json({error:'Submit this request from the guide website.'},403);
   if(!enabled)return json({error:'The submission service is not configured yet. Please try again after launch.'},503);
   if(!(request.headers.get('content-type')||'').toLowerCase().startsWith('application/json'))return json({error:'Send a JSON request.'},415);

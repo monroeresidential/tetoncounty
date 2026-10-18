@@ -1,10 +1,20 @@
 # Deploy to GitHub and Cloudflare
 
-This project targets **Cloudflare Workers with Static Assets**, using GitHub for source. The Sites service is not required. No Cloudflare resources or public deployment have been created by this initial build.
+This project uses **Cloudflare Workers with Static Assets**, with source at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Sites service is not required.
+
+## Production resources
+
+- Canonical domain: `https://tetoncounty.us`.
+- Worker: `tetoncounty-us`; diagnostic URL: `https://tetoncounty-us.0x3639.workers.dev`.
+- D1: `tetonvalley-submissions`, bound as `DB`; initial migration applied.
+- Turnstile: managed widget restricted to `tetoncounty.us`; public key in `wrangler.jsonc`, secret stored only in Cloudflare.
+- Production configuration is checked into Git. Credentials, local submissions, and build output are ignored.
+
+The setup steps below document provisioning and recovery. Do not create duplicate production resources when deploying updates.
 
 ## 1. GitHub
 
-Create or select the user's chosen repository. From this project, initialize Git if needed, commit reviewed source, set the supplied remote, and push. Never commit `.local`, `.env`, `.dev.vars`, `.wrangler`, raw private submissions, or credentials. The included checks workflow runs on push and pull requests.
+The repository is `monroeresidential/tetoncounty`, with production branch `main`. Commit reviewed source and push to the existing `origin`. Never commit `.local`, `.env`, `.dev.vars`, `.wrangler`, raw private submissions, or credentials. The included GitHub checks workflow runs on push and pull requests.
 
 ## 2. Cloudflare prerequisites
 
@@ -16,7 +26,7 @@ npx wrangler d1 create tetonvalley-submissions
 
 Copy the returned **database ID** into `wrangler.jsonc`. Preserve the `DB` binding. The database name is `tetonvalley-submissions`.
 
-Create a Turnstile widget in the same Cloudflare account, allowing `tetonvalley.us` (and any intended preview host). Put its **public site key** in `vars.TURNSTILE_SITE_KEY` and save its **secret** using:
+Create a Turnstile widget in the same Cloudflare account, allowing `tetoncounty.us` (and any intended preview host). Put its **public site key** in `vars.TURNSTILE_SITE_KEY` and save its **secret** using:
 
 ```sh
 npx wrangler secret put TURNSTILE_SECRET
@@ -33,21 +43,22 @@ The deploy command validates the whole site, rejects placeholder configuration, 
 
 ## 3. GitHub build integration
 
-In Cloudflare Workers & Pages, import the selected GitHub repository as a Worker project. Set:
+In the existing `tetoncounty-us` Worker's Settings → Builds, connect `monroeresidential/tetoncounty`. Use:
 
 | Setting | Value |
 | --- | --- |
 | Build command | `npm run check && node scripts/preflight.mjs` |
 | Deploy command | `npx wrangler deploy` |
 | Root directory | repository root |
-| Node version | 24 LTS |
-| Worker name | `tetonvalley-us` |
+| Production branch | `main` |
+| Node version | `NODE_VERSION=24` |
+| Worker name | `tetoncounty-us` |
 
-Set `TURNSTILE_SECRET` in the Worker's secrets. Keep migrations an explicit release step, separate from pull-request builds. Production bindings should not be reused for a public preview that accepts form submissions; use a separate environment/database and appropriate origin/Turnstile hostname settings if adding previews.
+`TURNSTILE_SECRET` is already stored in the Worker's runtime secrets and persists across deploys. It is not a build variable. Keep migrations an explicit release step, separate from pull-request builds. Disable builds for non-production branches. Use a separate environment/database and appropriate origin/Turnstile hostname settings if adding previews later.
 
 ## 4. Domain
 
-Add **tetonvalley.us** as the Worker's custom domain in Cloudflare. The domain must be in the same accessible account. Allow Cloudflare to provision HTTPS. If adding `www.tetonvalley.us`, create a permanent redirect to the apex; the canonical site URL is `https://tetonvalley.us`.
+**tetoncounty.us** is configured as the Worker's custom domain in `wrangler.jsonc`, which provisions DNS and HTTPS on deployment. If adding `www.tetoncounty.us`, create a permanent redirect to the apex; the canonical site URL is `https://tetoncounty.us`. The `www` alias is not configured in the initial release.
 
 Do not replace existing DNS records until their current use has been reviewed. Domain registration with Cloudflare does not itself deploy this Worker or grant this project account access.
 
