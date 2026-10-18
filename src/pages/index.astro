@@ -4,6 +4,7 @@ import Icon from '../components/Icon.astro';
 import ListingCard from '../components/ListingCard.astro';
 import Photo from '../components/Photo.astro';
 import { heroSizes } from '../lib/images.ts';
+import { listingImageFor } from '../lib/listing-images.ts';
 import { getListings, tag } from '../lib/listings.ts';
 import type { Listing } from '../lib/listing-schema.ts';
 import { categories, seasons } from '../config.ts';
@@ -17,6 +18,7 @@ const localTowns = ['Victor', 'Driggs'].filter(town => listings.some(l => l.town
 const homeCategories = categories.slice(0, 6);
 const seasonNotes = ['runoff, first wildflowers', 'trails, rivers, Music on Main', 'aspens turn, quiet roads', 'Targhee powder, cold mornings'];
 const aspen = featured.find(l => l.name.includes('Aspen'));
+const skiingPhoto = listingImageFor('grand-targhee-resort')!;
 ---
 <SiteLayout title="Things to do in Victor & Driggs, Idaho" description="Go find your valley. Explore hiking trails, local food, shops, arts, and four-season adventures in Victor and Driggs with the Teton County field guide." hero>
   <section class="hero section">
@@ -41,8 +43,17 @@ const aspen = featured.find(l => l.name.includes('Aspen'));
     <div><span>{listings.length}</span><p>Places & experiences</p></div><div><span>{mappedTrails}</span><p>Mapped trails</p></div><div><span>{localTowns.length}</span><p>Towns, one valley</p></div><div><span>{seasons.length}</span><p>Seasons worth the drive</p></div>
   </section>
   <section class="section category-section">
-    <div class="section-title"><h2>Which way<br />today?</h2><a class="text-link" href="/explore/">Explore everything <Icon name="arrow" /></a></div>
-    <div class="signpost">{homeCategories.map((c, i) => <a class="trail-sign" href={`/categories/${c.id}/`} style={`--indent:${[0, 24, 8, 32, 16, 40][i]}px`}><span class="category-name">{c.name}</span><span class="category-count">{listings.filter(l => l.category === c.id).length} places <Icon name="arrow" /></span></a>)}</div>
+    <div class="section-title"><h2>Which way<br />today?</h2></div>
+    <div class="category-layout">
+      <div class="signpost">
+        <a class="trail-sign" href="/explore/" style="--indent:0px"><span class="category-name">Everything</span><span class="category-count">{listings.length} places <Icon name="arrow" /></span></a>
+        {homeCategories.map((c, i) => <a class="trail-sign" href={`/categories/${c.id}/`} style={`--indent:${[24, 8, 32, 16, 40, 12][i]}px`}><span class="category-name">{c.name}</span><span class="category-count">{listings.filter(l => l.category === c.id).length} places <Icon name="arrow" /></span></a>)}
+      </div>
+      <figure class="category-photo">
+        <a class="category-photo-link" href="/places/grand-targhee-resort/" aria-label="Explore Grand Targhee Resort"><Photo src={skiingPhoto.src} alt={skiingPhoto.alt} sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1100px) 600px, 42vw" /></a>
+        <figcaption class="category-photo-caption"><div><span class="handwritten">Powder days this way.</span><span class="category-photo-location">Grand Targhee Resort</span></div><a class="photo-credit" href={skiingPhoto.sourcePage} rel="noopener">Image via Teton Flats</a></figcaption>
+      </figure>
+    </div>
   </section>
   <section class="section favorites">
     <div class="section-title"><h2>Local favorites</h2><span class="handwritten">← start here, honestly</span></div>
