@@ -26,9 +26,11 @@
 /* Preserve the rust palette with AA contrast for small text on filled panels. */
 :root{--rust-on-paper:#9f4421;--on-rust:#fff9ed}
 .topline,.header-cta,.hero-stamp,.sponsor-card .eyebrow,.trail-feature-photo figcaption{color:var(--on-rust)}
-.category-count,.card-town,.card-meta>span:last-child,.visit-panel .eyebrow,.visit-panel .text-link{color:var(--rust-on-paper)}
+.category-count,.card-town,.card-meta>span:last-child,.visit-panel .eyebrow,.visit-panel .text-link,.trail-feature-text .eyebrow,.season-grid>a:hover .season-number{color:var(--rust-on-paper)}
 .trail-sign:focus-visible .category-count{color:var(--rust-on-pine)}
 .about-prose{max-width:64ch}.about-prose p{max-width:64ch}@media(min-width:1101px){.about-prose h1{font-size:80px}}.suggest-form .form-label-text{font-size:13px;font-weight:800;color:var(--pine)}.form-label-text small{font-size:12px;font-weight:400;color:var(--moss)}
 
 .source-list a{display:flex;align-items:center;gap:24px;width:calc(100% - 20px)}.source-list a>span:first-child{flex:1}.source-list a>span:last-child{flex:1;margin-top:0}.sponsor-compact p{font-size:14px;line-height:1.6;color:var(--on-rust)}
 @media(max-width:760px){.source-list a{display:block;width:100%}.source-list a>span:last-child{margin-top:6px}}
+
+.source-list a:focus-visible>span:last-child{color:var(--ink-70)}:is(.topline,.sponsor-card) :focus-visible{outline-color:var(--parchment)}
