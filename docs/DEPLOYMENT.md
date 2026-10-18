@@ -43,7 +43,7 @@ The deploy command validates the whole site, rejects placeholder configuration, 
 
 ## 3. GitHub build integration
 
-Cloudflare Builds is connected to `monroeresidential/tetoncounty`. Pushes to `main` run validation and publish the Worker and generated pages. The existing account build token is reused; no credentials are stored in Git. Current settings in the `tetoncounty-us` Worker's Settings → Builds:
+Cloudflare build settings target `monroeresidential/tetoncounty`, with validation and deployment on pushes to `main`. The existing account build token is reused; no credentials are stored in Git. **Pending:** the dashboard reports a disconnected GitHub App connection, and no Cloudflare build has started from the first test pushes. Repair that connection in GitHub's Cloudflare Workers & Pages app settings, then verify a successful native Cloudflare build. The manual Wrangler deployment remains live. Current settings in the `tetoncounty-us` Worker's Settings → Builds:
 
 | Setting | Value |
 | --- | --- |
@@ -63,6 +63,8 @@ Cloudflare Builds is connected to `monroeresidential/tetoncounty`. Pushes to `ma
 Do not replace existing DNS records until their current use has been reviewed. Domain registration with Cloudflare does not itself deploy this Worker or grant this project account access.
 
 ## 5. Production acceptance
+
+Initial deployment checks on October 18, 2026: HTTPS homepage, directory, Victor and Driggs pages, a category and listing, hiking guide, sitemap, both LLM text files, public JSON, API configuration, and a real 404 all passed. Canonical URLs and security headers were verified. The D1 schema is applied; the form API is enabled and rejects cross-origin requests and requests without Turnstile verification. The live widget renders. A successful production submission still needs a human Turnstile check; no test submission was inserted into production.
 
 Verify the homepage, a listing, a category, `/hiking/`, `/sitemap.xml`, `/llms.txt`, `/data/listings.json`, and an unknown URL (real 404). Check CSP and local font/image delivery. Exercise a new listing, correction, and contact request on the live form; verify each row in D1 and check no contact information appears in public exports. Confirm spam verification and rate limits with separate controlled test data.
 
