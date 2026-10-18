@@ -1,3 +1,4 @@
+import './analytics.ts';
 import type * as Leaflet from 'leaflet';
 declare const L: typeof Leaflet;
 type FormConfig = {
