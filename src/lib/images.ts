@@ -11,7 +11,7 @@ export async function imageSources(path: string) {
   const name = path.split('/').pop();
   const source = photos[`../assets/photos/${name}`]?.default;
   if (!source) throw new Error(`Unknown photograph: ${path}`);
-  const widths = [...new Set([480, 768, 1024, 1440, source.width].filter(width => width <= source.width))].sort((a, b) => a - b);
+  const widths = [...new Set([480, 640, 768, 1024, 1440, source.width].filter(width => width <= source.width))].sort((a, b) => a - b);
   const [avif, webp] = await Promise.all([
     getImage({ src: source, widths, width: Math.min(1024, source.width), format: 'avif', quality: 52 }),
     getImage({ src: source, widths, width: Math.min(1024, source.width), format: 'webp', quality: 72 }),

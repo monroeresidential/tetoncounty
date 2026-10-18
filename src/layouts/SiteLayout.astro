@@ -35,6 +35,10 @@ const structuredData = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    {heroImage && <link rel="preload" as="image" type="image/avif" href={heroImage.avif.src} imagesrcset={heroImage.avif.srcSet.attribute} imagesizes={heroSizes} fetchpriority="high" />}
+    <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/v1/lora-normal.woff2" as="font" type="font/woff2" crossorigin />
+    {hero && <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-italic-400.woff2" as="font" type="font/woff2" crossorigin />}
     <title>{title} | Teton Valley</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f3f2f2" />
@@ -62,10 +66,6 @@ const structuredData = {
     <link rel="alternate" type="application/json" href="/data/listings.json" title="Public directory data" />
     <link rel="llms-txt" href="/llms.txt" />
     <style is:inline set:html={stylesheet} />
-    <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/assets/fonts/v1/lora-normal.woff2" as="font" type="font/woff2" crossorigin />
-    {hero && <link rel="preload" href="/assets/fonts/v1/cormorant-garamond-italic-400.woff2" as="font" type="font/woff2" crossorigin />}
-    {heroImage && <link rel="preload" as="image" type="image/avif" href={heroImage.avif.src} imagesrcset={heroImage.avif.srcSet.attribute} imagesizes={heroSizes} fetchpriority="high" />}
     <script type="application/ld+json" set:html={safeJson(structuredData)} />
     <script src="../scripts/app.ts"></script>
   </head>
