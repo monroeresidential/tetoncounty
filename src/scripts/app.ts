@@ -50,6 +50,14 @@ const $ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNo
     return element;
 };
 const $$ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNode = document): T[] => [...root.querySelectorAll<T>(selector)];
+for (const row of $$('[data-category-photo]')) {
+    const showPhoto = () => {
+        $$('[data-category-image]').forEach(image => image.classList.toggle('active', image.dataset.categoryImage === row.dataset.categoryPhoto));
+        $('#category-caption').textContent = $('.category-name', row).textContent;
+    };
+    row.addEventListener('mouseenter', showPhoto);
+    row.addEventListener('focus', showPhoto);
+}
 const menu = document.querySelector<HTMLButtonElement>('.menu-toggle');
 menu?.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); $('#navigation').classList.toggle('open', open); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu) {
@@ -62,14 +70,14 @@ if (directory)
 function initDirectory(directory: HTMLElement) {
     const form = $<DirectoryForm>('.filter-form', directory), cards = $$('[data-listing]', directory), params = new URLSearchParams(location.search);
     const query = form.elements.q, town = form.elements.town, season = form.elements.season;
-    let activeCategory = directory.dataset.baseCategory || '', activeView = 'list';
+    let activeCategory = directory.dataset.baseCategory || '', activeDifficulty = '', activeView = 'list';
     let map: import('leaflet').Map | undefined;
     let markers: import('leaflet').FeatureGroup;
     let mapLoading: Promise<void> | null = null;
     let visibleIds = new Set<string>(cards.map(c => c.dataset.listing!));
     const points = JSON.parse($('#map-data').textContent || '[]') as MapPoint[];
     const validOption = (select: HTMLSelectElement, value: string | null) => $$<HTMLOptionElement>('option', select).some(o => o.value === value);
-    function readUrl() { const p = new URLSearchParams(location.search); query.value = p.get('q') || ''; town.value = validOption(town, p.get('town')) ? p.get('town')! : directory.dataset.baseTown || ''; season.value = validOption(season, p.get('season')) ? p.get('season')! : ''; const cat = p.get('category'); activeCategory = $$('[data-category-filter]', directory).some(b => b.dataset.categoryFilter === cat) ? cat! : directory.dataset.baseCategory || ''; }
+    function readUrl() { const p = new URLSearchParams(location.search); query.value = p.get('q') || ''; town.value = validOption(town, p.get('town')) ? p.get('town')! : directory.dataset.baseTown || ''; season.value = validOption(season, p.get('season')) ? p.get('season')! : ''; const cat = p.get('category'); activeCategory = $$('[data-category-filter]', directory).some(b => b.dataset.categoryFilter === cat) ? cat! : directory.dataset.baseCategory || ''; const difficulty = p.get('difficulty'); activeDifficulty = $$('[data-difficulty-filter]', directory).some(b => b.dataset.difficultyFilter === difficulty) ? difficulty! : ''; }
     function updateMap() {
         if (!map)
             return;
@@ -81,7 +89,7 @@ function initDirectory(directory: HTMLElement) {
             link.textContent = point.name;
             area.textContent = point.town;
             popup.append(link, area);
-            L.circleMarker([point.latitude, point.longitude], { radius: 7, color: '#fff', weight: 2, fillColor: '#234d3d', fillOpacity: 1 }).bindPopup(popup).addTo(markers);
+            L.marker([point.latitude, point.longitude], { title: point.name, alt: point.name, icon: L.divIcon({ className: 'map-point', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(popup).addTo(markers);
         }
         const bounds = markers.getBounds();
         if (bounds.isValid())
@@ -119,13 +127,15 @@ function initDirectory(directory: HTMLElement) {
         const terms = query.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
         visibleIds = new Set();
         for (const card of cards) {
-            const match = (!activeCategory || card.dataset.category === activeCategory) && (!town.value || card.dataset.town === town.value) && (!season.value || (card.dataset.seasons || '').split(' ').includes(season.value)) && terms.every(t => (card.dataset.search || '').includes(t));
+            const match = (!activeCategory || card.dataset.category === activeCategory) && (!activeDifficulty || card.dataset.difficulty === activeDifficulty) && (!town.value || card.dataset.town === town.value) && (!season.value || (card.dataset.seasons || '').split(' ').includes(season.value)) && terms.every(t => (card.dataset.search || '').includes(t));
             card.hidden = !match;
             if (match)
                 visibleIds.add(card.dataset.listing!);
         }
         $$('[data-category-filter]', directory).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.categoryFilter === activeCategory)));
-        $('#result-count').textContent = `${visibleIds.size} ${visibleIds.size === 1 ? 'place or experience' : 'places & experiences'}`;
+        $$('[data-difficulty-filter]', directory).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.difficultyFilter === activeDifficulty)));
+        $('[data-result-number]').textContent = String(visibleIds.size);
+        $('[data-result-label]').textContent = visibleIds.size === 1 ? 'place or experience' : 'places & experiences';
         $('.empty-state').hidden = visibleIds.size !== 0;
         if (writeUrl) {
             const next = new URLSearchParams();
@@ -137,13 +147,15 @@ function initDirectory(directory: HTMLElement) {
                 next.set('season', season.value);
             if (activeCategory)
                 next.set('category', activeCategory);
+            if (activeDifficulty)
+                next.set('difficulty', activeDifficulty);
             if (activeView === 'map')
                 next.set('view', 'map');
             history.replaceState(null, '', location.pathname + (next.size ? '?' + next : ''));
         }
         updateMap();
     }
-    function reset() { query.value = ''; town.value = directory.dataset.baseTown || ''; season.value = ''; activeCategory = directory.dataset.baseCategory || ''; apply(); }
+    function reset() { query.value = ''; town.value = directory.dataset.baseTown || ''; season.value = ''; activeCategory = directory.dataset.baseCategory || ''; activeDifficulty = ''; apply(); }
     query.addEventListener('input', () => apply());
     town.addEventListener('change', () => { if (directory.dataset.baseTown && town.value !== directory.dataset.baseTown) {
         const p = new URLSearchParams({ town: town.value, q: query.value, season: season.value });
@@ -153,6 +165,7 @@ function initDirectory(directory: HTMLElement) {
         apply(); });
     season.addEventListener('change', () => apply());
     form.addEventListener('submit', e => { e.preventDefault(); apply(); });
+    $$('[data-difficulty-filter]', directory).forEach(b => b.addEventListener('click', () => { activeDifficulty = b.dataset.difficultyFilter || ''; apply(); }));
     $$('[data-category-filter]', directory).forEach(b => b.addEventListener('click', () => { activeCategory = b.dataset.categoryFilter || ''; if (directory.dataset.baseCategory && activeCategory !== directory.dataset.baseCategory) {
         const p = new URLSearchParams({ category: activeCategory, q: query.value, town: town.value, season: season.value });
         location.href = '/explore/?' + p;
@@ -184,6 +197,7 @@ function initSuggestion(suggestion: SuggestionForm) {
     }
     function setType() {
         const correction = type.value === 'correction', addition = type.value === 'addition';
+        $$('[data-request-type]', suggestion).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.requestType === type.value)));
         $('#listing-field').hidden = !correction;
         suggestion.elements.listingId.required = correction;
         suggestion.elements.listingId.disabled = !correction;
@@ -193,6 +207,7 @@ function initSuggestion(suggestion: SuggestionForm) {
     }
     setType();
     type.addEventListener('change', setType);
+    $$('[data-request-type]', suggestion).forEach(b => b.addEventListener('click', () => { type.value = b.dataset.requestType || 'addition'; setType(); }));
     function show(message: string, kind = '') { status.textContent = message; status.className = 'form-status ' + kind; }
     function readiness() { button.disabled = !(config?.mode === 'local-preview' || token); }
     (async () => {

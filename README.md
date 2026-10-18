@@ -27,8 +27,8 @@ This type-checks the Astro and TypeScript source, builds every page, runs conten
 
 ## What is included
 
-- Photo-led, responsive homepage with locally hosted fonts and WebP assets.
-- Instant directory search, town/category/season filters, empty states, and URL-persisted filters.
+- Editorial field-guide design with self-hosted Cormorant Garamond and Lora fonts, framed WebP photography, and gold-outlined controls.
+- Instant directory search, town/category/season filters, trail difficulty filters, empty states, and URL-persisted filters.
 - Dedicated Victor, Driggs, category, trail, and individual place pages.
 - Interactive, on-demand Leaflet/OpenStreetMap map using source-provided coordinates.
 - Addition, correction, and contact requests, validated and saved into a private D1 review queue.

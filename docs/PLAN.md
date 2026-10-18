@@ -4,7 +4,7 @@
 
 Build the most useful, fast, source-linked guide for discovering things to do and local life in Victor and Driggs. Support natural language searches for both “Victor Idaho” and “Victor ID” through readable page titles and copy; avoid duplicate keyword pages. Make the guide useful on its own, with Teton Flats visibly credited as the sponsor.
 
-Visual direction: a mountain field guide, warm paper colors, deep green, restrained orange, generous typography, real regional photography, and simple navigation. Keep essential content in HTML and load optional features only when requested.
+Visual direction: the supplied “Field Guide” redesign, with Cormorant Garamond headings, Lora body text, a pale paper ground, gold outlines, hairline rules, framed regional photography, and sponsor credits on every page. Keep essential content in HTML and load optional features only when requested. The responsive layout uses 1100, 760, and 420px breakpoints; all decorative motion honors reduced-motion preferences.
 
 ## Phase 1 — implemented and deployed
 

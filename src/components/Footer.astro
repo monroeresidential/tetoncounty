@@ -1,38 +1,18 @@
 ---
-import Icon from "./Icon.astro";
-import { reviewedDate } from "../config.ts";
+import Icon from './Icon.astro';
+import SponsorCard from './SponsorCard.astro';
+import { reviewedDate } from '../config.ts';
 ---
-<section class="community">
-<div>
-<Icon name="heart" />
-<div>
-<h2>The best guides are built together.</h2>
-<p>Know a place we’re missing? Have a detail to update? You’re in the right place.</p>
-</div>
-</div>
-<a class="button light" href="/suggest/">Share a local spot <Icon name="arrow" />
-</a>
+<section class="section close-block" aria-label="Be part of the guide">
+  <div class="community-card">
+    <h2>The best guides are built together.</h2>
+    <p>Know a place we’re missing? Have a detail to update? You’re in the right place.</p>
+    <a class="btn btn-primary" href="/suggest/">Share a local spot <Icon name="arrow" /></a>
+  </div>
+  <SponsorCard />
 </section>
-  <footer class="footer">
-<div class="footer-top">
-<a class="brand" href="/">
-<Icon name="mountain" />
-<span>TETON VALLEY<small>GOOD DAYS START HERE.</small>
-</span>
-</a>
-<p>A field guide to the places, people, and wide-open spaces<br>of Victor, Driggs, and the valley in between.</p>
-<div>
-<a href="/explore/">Explore</a>
-<a href="/hiking/">Hiking guide</a>
-<a href="/suggest/?type=contact">Contact</a>
-<a href="/about/">Our sources</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>© {reviewedDate.slice(0,4)} TetonCounty.us · Made for getting out there.</span>
-<span>Supported by <a href="https://tetonflats.com/" rel="sponsored">Teton Flats <Icon name="northeast" />
-</a>
-</span>
-<a href="/privacy/">Privacy</a>
-</div>
+<footer class="footer">
+  <a class="brand" href="/">Teton Valley <small>Good days start here.</small></a>
+  <nav aria-label="Footer navigation"><a href="/explore/">Explore</a><a href="/hiking/">Hiking guide</a><a href="/suggest/?type=contact">Contact</a><a href="/about/">Our sources</a><a href="/privacy/">Privacy</a></nav>
+  <span>© {reviewedDate.slice(0, 4)} TetonCounty.us</span>
 </footer>

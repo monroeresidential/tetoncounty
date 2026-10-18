@@ -1,28 +1,20 @@
 ---
-import Icon from "./Icon.astro";
+import Icon from './Icon.astro';
 interface Props { path: string }
 const { path } = Astro.props;
 ---
 <div class="topline">
-<span>A little closer to the mountains.</span>
-<a href="/about/#sponsor">A community guide, supported by Teton Flats <Icon name="northeast" />
-</a>
+  <span>Victor · Driggs · Teton Valley, Idaho</span>
+  <a href="/about/#sponsor" rel="sponsored">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></a>
 </div>
-  <header class="header">
-<a class="brand" href="/" aria-label="Teton Valley home">
-<Icon name="mountain" />
-<span>TETON VALLEY<small>IDAHO · THE OTHER SIDE</small>
-</span>
-</a>
-<button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
-<Icon name="menu" />
-</button>
-<nav id="navigation" aria-label="Main navigation">
-<a aria-current={path === "/explore/" ? "page" : undefined} href="/explore/">Explore the valley</a>
-<a aria-current={path === "/hiking/" ? "page" : undefined} href="/hiking/">Trails & outdoors</a>
-<a href="/towns/victor/">Our towns</a>
-<a aria-current={path === "/about/" ? "page" : undefined} href="/about/">About</a>
-</nav>
-<a class="header-cta" href="/suggest/">Add a local spot <span>+</span>
-</a>
+<header class="header nav">
+  <a class="brand nav-brand" href="/" aria-label="Teton Valley home">Teton Valley <small>A field guide</small></a>
+  <button class="menu-toggle btn btn-secondary" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation"><Icon name="menu" /></button>
+  <nav id="navigation" aria-label="Main navigation">
+    <a aria-current={path === '/explore/' ? 'page' : undefined} href="/explore/">Explore the valley</a>
+    <a aria-current={path === '/hiking/' ? 'page' : undefined} href="/hiking/">Trails & outdoors</a>
+    <a aria-current={path.startsWith('/towns/') ? 'page' : undefined} href="/towns/victor/">Our towns</a>
+    <a aria-current={path === '/about/' ? 'page' : undefined} href="/about/">About</a>
+    <a class="btn btn-primary header-cta" aria-current={path === '/suggest/' ? 'page' : undefined} href="/suggest/">Add a local spot</a>
+  </nav>
 </header>

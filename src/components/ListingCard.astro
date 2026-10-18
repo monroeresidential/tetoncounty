@@ -1,21 +1,23 @@
 ---
 import Icon from './Icon.astro';
 import type { Listing } from '../lib/listing-schema.ts';
-import { category, imageFor } from '../lib/listings.ts';
+import { category, imageFor, tag } from '../lib/listings.ts';
 interface Props { item: Listing; feature?: boolean }
 const { item, feature = false } = Astro.props;
 const photo = imageFor(item), c = category(item.category);
 ---
-<article class={`place-card ${feature ? 'featured-card' : ''}`} data-listing={item.id} data-town={item.town} data-category={item.category} data-seasons={item.seasons.join(' ')} data-search={[item.name, item.description, item.town, item.subcategory, ...item.tags].join(' ').toLowerCase()}>
-  {feature && <a class={`card-photo ${!photo ? 'illustrated ' + item.category : ''}`} href={`/places/${item.id}/`} tabindex="-1" aria-hidden="true">
-    {photo ? <img src={photo} alt="" loading="lazy" width="640" height="430" /> : <Icon name={c.icon} />}
-    <span class="photo-tag">{item.subcategory || c.short}</span>
-    <span class="photo-arrow"><Icon name="northeast" /></span>
+<article class={`place-card ${feature ? 'featured-card' : 'card'}`} data-listing={item.id} data-town={item.town} data-category={item.category} data-difficulty={item.trail?.difficulty?.toLowerCase() || ''} data-seasons={item.seasons.join(' ')} data-search={[item.name, item.description, item.town, item.subcategory, ...item.tags].join(' ').toLowerCase()}>
+  {feature && <a class={`card-photo plate ${!photo ? 'illustrated' : ''}`} href={`/places/${item.id}/`} tabindex="-1" aria-hidden="true">
+    {photo ? <img src={photo} alt="" loading="lazy" width="640" height="640" /> : <Icon name={c.icon} />}
   </a>}
   <div class="card-body">
-    <div class="card-meta"><Icon name="pin" />{item.town}<span>{feature ? '' : c.short}</span></div>
+    <div class="card-meta"><span>{!feature && <Icon name="pin" />}{item.town}</span><span>{item.subcategory || c.short}</span></div>
     <h3><a href={`/places/${item.id}/`}>{item.name}{!feature && <Icon name="northeast" />}</a></h3>
     <p>{item.description}</p>
-    {!feature && <span class="small-tag">{item.subcategory || c.short}</span>}
+    {!feature && (item.trail ? <dl class="trail-facts">
+      <div><dt>Distance</dt><dd>{item.trail.distanceLabel || (item.trail.distanceMiles != null ? `${item.trail.distanceMiles} mi` : 'Not listed')}</dd></div>
+      <div><dt>Gain</dt><dd>{item.trail.elevationFeet != null ? `${item.trail.elevationFeet.toLocaleString('en-US')} ft` : 'Not listed'}</dd></div>
+      <div><dt>Difficulty</dt><dd>{item.trail.difficulty ? tag(item.trail.difficulty) : 'Not listed'}</dd></div>
+    </dl> : <span class="tag tag-neutral">{item.subcategory || c.short}</span>)}
   </div>
 </article>

@@ -5,6 +5,7 @@ import { localApi } from './scripts/local-api.mjs';
 export default defineConfig({
   site: siteUrl,
   output: 'static',
+  devToolbar: { enabled: false },
   // Public page links remain slash-terminated; API and data URLs have no trailing slash.
   trailingSlash: 'ignore',
   build: { inlineStylesheets: 'never' },

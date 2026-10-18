@@ -6,7 +6,7 @@ const points = Astro.props.listings.filter(l => Number.isFinite(l.latitude) && N
 const mapData = points.map(({ id, name, town, category, seasons, latitude, longitude }) => ({ id, name, town, category, seasons, latitude, longitude }));
 ---
 <div class="map-panel" id="map-panel" hidden>
-  <div id="places-map" aria-label="Interactive map of source-listed locations"></div>
+  <div class="plate map-frame"><div id="places-map" aria-label="Interactive map of source-listed locations"></div></div>
   <p class="map-note">{points.length} places have source-provided coordinates. Map points are approximate; confirm trailheads and access before travel. Listings without coordinates remain in the list.</p>
   <p class="map-error" role="status"></p>
 </div>

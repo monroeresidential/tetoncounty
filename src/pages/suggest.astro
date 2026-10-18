@@ -8,11 +8,10 @@ const listings = await getListings();
 <SiteLayout title="Suggest a place or correction" description="Help improve the Teton Valley guide. Suggest a new listing, correct a detail, or contact the guide team." path="/suggest/">
 <section class="section form-page">
 <div class="form-intro">
-<span class="eyebrow green">LOCAL KNOWLEDGE GOES A LONG WAY</span>
-<h1>Know a good spot?<br>Let’s put it on the map.</h1>
+<span class="eyebrow">LOCAL KNOWLEDGE GOES A LONG WAY</span>
+<h1>Know a good spot?<br><em>Let’s put it on the map.</em></h1>
 <p>Share a business, a trail, or a correction. Every request goes into our review queue before anything is published.</p>
 <div class="form-aside">
-<Icon name="heart" />
 <h3>Built with the valley.</h3>
 <p>Listing suggestions are free. You don’t need to be a sponsor to be included.</p>
 <a href="/about/">How the guide works <Icon name="arrow" />
@@ -22,12 +21,17 @@ const listings = await getListings();
 <form class="suggest-form" id="suggest-form" method="post" action="/api/submissions">
 <div class="form-status" id="form-status" role="status" aria-live="polite">
 </div>
-<label>What would you like to do?<select name="type" id="request-type" required>
+<span class="field-label" id="request-type-label">What would you like to do?</span>
+<div class="seg request-types" role="group" aria-labelledby="request-type-label">
+<button class="seg-opt" type="button" data-request-type="addition" aria-pressed="true">Suggest a new place</button>
+<button class="seg-opt" type="button" data-request-type="correction" aria-pressed="false">Correct a listing</button>
+<button class="seg-opt" type="button" data-request-type="contact" aria-pressed="false">Contact the team</button>
+</div>
+<select name="type" id="request-type" aria-label="Request type" hidden required>
 <option value="addition">Suggest a new place</option>
 <option value="correction">Correct an existing listing</option>
 <option value="contact">Contact the guide team</option>
 </select>
-</label>
 <label id="listing-field" hidden>Which listing?<select name="listingId" id="listing-id">
 <option value="">Select a place</option>{listings.map(l => <option value={l.id}>{l.name} · {l.town}</option>)}</select>
 </label>

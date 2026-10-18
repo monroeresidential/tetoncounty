@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+---
+<aside class={`sponsor-card ${compact ? 'sponsor-compact' : ''}`} aria-label="Guide sponsor">
+  <span class="eyebrow">Our sponsor</span>
+  {compact ? <h3>Teton Flats</h3> : <h2>Teton Flats keeps this guide free.</h2>}
+  <p>Apartments in Victor and Driggs, for people who want to live a little closer to the mountains.</p>
+  <a class="btn btn-primary" href="https://tetonflats.com/" rel="sponsored">Visit Teton Flats <Icon name="northeast" /></a>
+</aside>
