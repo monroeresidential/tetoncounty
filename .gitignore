@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.local/
+.wrangler/
+.dev.vars
+.env*
+!.env.example
+.DS_Store
+research/raw/
+public/images/*.jpg

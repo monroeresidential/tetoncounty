@@ -1,0 +1,19 @@
+const paths = {
+  mountain:'<path d="m2 19 7-13 4 7 3-5 6 11H2Z"/><path d="m6 11 3 2 3-2"/>',
+  search:'<circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/>',
+  arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',
+  northeast:'<path d="M6 18 18 6M6 6h12v12"/>',
+  pin:'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+  coffee:'<path d="M3 8h13v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Zm13 1h2a3 3 0 0 1 0 6h-2M6 2v2m4-2v2m4-2v2"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/>',
+  bag:'<path d="M4 7h16l1 15H3L4 7Z"/><path d="M8 8V5a4 4 0 0 1 8 0v3"/>',
+  flower:'<path d="M12 12c-8 0-9-8-5-9 3-1 5 4 5 9Zm0 0c0-8 8-9 9-5 1 3-4 5-9 5Zm0 0c8 0 9 8 5 9-3 1-5-4-5-9Zm0 0c0 8-8 9-9 5-1-3 4-5 9-5Z"/>',
+  home:'<path d="m2 11 10-9 10 9M5 9v13h14V9M9 22v-8h6v8"/>',
+  grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  map:'<path d="m2 5 7-3 6 3 7-3v17l-7 3-6-3-7 3V5Zm7-3v17m6-14v17"/>',
+  heart:'<path d="M20 4c-3-3-7-1-8 2-1-3-5-5-8-2-6 6 8 16 8 16S26 10 20 4Z"/>',
+  menu:'<path d="M3 6h18M3 12h18M3 18h18"/>',
+  check:'<path d="m4 12 5 5L20 6"/>',
+  chevron:'<path d="m7 10 5 5 5-5"/>',
+};
+export function icon(name, cls='') { return `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.mountain}</svg>`; }

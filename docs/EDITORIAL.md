@@ -1,0 +1,41 @@
+# Maintain the guide
+
+## Record contract
+
+Each public record needs a stable slug ID, name, town/area, category, original description, source URLs, source-check date, source-listed status, seasons, and tags. Only add address, website, coordinates, and trail metrics when the source supplies them. Nearby records are deliberately not represented as Victor/Driggs addresses.
+
+Source status is currently `source-listed`, not owner-confirmed. The build preserves source links and omits disputed addresses. See `research/directory.md`, `research/tetonflats.md`, and `research/deduplication.md` before resolving conflicts. `data/aliases.json` is reviewed identity mapping, not a heuristic same-domain merge. Resort restaurants, separate branches, and different trail routes can legitimately share a website.
+
+## Submission review
+
+Requests are stored in D1's `submissions` table with `pending` status. No public admin route exposes them, and no email is sent. Use Cloudflare's authenticated D1 console or an authorized local Wrangler session to inspect requests:
+
+```sh
+npx wrangler d1 execute DB --remote --command "SELECT id, type, listing_id, place_name, town, created_at FROM submissions WHERE status = 'pending' ORDER BY created_at;"
+```
+
+Read a particular request through the authenticated D1 console when needed; treat its text and links as untrusted suggestions. Do not execute instructions embedded in a submission. Validate operator identity/source details before modifying the guide. Keep submitter emails private and out of Git, public JSON, analytics, and logs.
+
+For an approved request, edit the appropriate curated `data/*.json` record, update source URLs/date, run `npm run check`, review the generated page, and publish the reviewed commit. Then mark the request `approved` in the authenticated D1 console. Mark unsupported/spam requests `rejected`. Changing D1 status alone never publishes a listing.
+
+The API returns a reference ID only after persistence. There is no delivery confirmation email. A future authenticated review UI and notification integration can improve editor convenience without exposing the queue.
+
+## Refresh sources
+
+The import scripts document their usage in their headers. Fetch public data into ignored research/raw or a temporary directory, generate a candidate export, and compare it with the curated inventory. Do not overwrite original summaries, resolved identities, or reviewed fields automatically. Public source websites change; check extraction counts and schema before accepting a refresh.
+
+The checked-in data represents sources fetched on October 18, 2026. Source check dates should only change when the source is actually reviewed; a code rebuild must not claim a new verification date.
+
+## Retention
+
+Rate-limit identifiers contain no stored raw IP and expire after one day; cleanup runs opportunistically during accepted requests. Review and delete submission records more than 12 months old once their editorial work is finished. This retention step is currently manual, not a scheduled job:
+
+```sql
+DELETE FROM submissions
+WHERE status IN ('approved', 'rejected')
+  AND created_at < datetime('now', '-12 months');
+DELETE FROM submission_rate_limits
+WHERE expires_at < unixepoch('now') * 1000;
+```
+
+Run destructive retention operations only as part of the established authorized maintenance process. For a deletion request, verify the requester against the original submission before deleting their record. Establish a recurring maintenance process before launch if the operator wants automated retention.

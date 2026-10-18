@@ -1,0 +1,6804 @@
+[
+  {
+    "id": "2nd-act-thrift-store",
+    "slug": "2nd-act-thrift-store",
+    "name": "2nd ACT Thrift Store",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "7168 S Hwy 33",
+    "website": "https://actfoundationtvi.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "a-k-concrete",
+    "slug": "a-k-concrete",
+    "name": "A-K Concrete",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Tetonia, listed by Discover Teton Valley.",
+    "address": "6329 N 5th St",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential"
+    ]
+  },
+  {
+    "id": "ace-hardware",
+    "slug": "ace-hardware",
+    "name": "Ace Hardware",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "120 S Main St",
+    "website": "https://broulimsacehardware.com/driggs/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "agave-family-mexican-restaurant",
+    "slug": "agave-family-mexican-restaurant",
+    "name": "Agave Family Mexican Restaurant",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Mexican restaurant",
+    "description": "Mexican cooking for lunch and dinner in Driggs.",
+    "address": "310 North Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "alliance-title-and-escrow-corp",
+    "slug": "alliance-title-and-escrow-corp",
+    "name": "Alliance Title & Escrow Corp",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "39 W Little Avenue Ste 1",
+    "website": "https://www.alliancetitle.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "alpine-air-cafe-and-roastery",
+    "slug": "alpine-air-cafe-and-roastery",
+    "name": "Alpine Air Cafe & Roastery",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Coffee & breakfast",
+    "description": "Coffee, pastries and breakfast burritos on West Center Street in Victor.",
+    "address": "175 West Center Street",
+    "website": "https://alpineaircoffee.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "breakfast",
+      "lunch"
+    ]
+  },
+  {
+    "id": "alpine-air-coffee-hut-drive-thru",
+    "slug": "alpine-air-coffee-hut-drive-thru",
+    "name": "Alpine Air Coffee Hut Drive Thru",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Drive-through coffee",
+    "description": "Drive-through drinks and breakfast pastries in Victor.",
+    "address": "11 West Center Street",
+    "website": "https://alpineaircoffee.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch",
+      "libations"
+    ]
+  },
+  {
+    "id": "alpine-dermatology-clinic",
+    "slug": "alpine-dermatology-clinic",
+    "name": "Alpine Dermatology Clinic",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "150 S Main St Suite 2",
+    "website": "https://alpinedermclinic.com/driggs-office/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "ameriasia-bistro",
+    "slug": "ameriasia-bistro",
+    "name": "AmeriAsia Bistro",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Asian restaurant",
+    "description": "Asian dishes and Korean barbecue in Victor.",
+    "address": "185 West E Center Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "anytime-fitness",
+    "slug": "anytime-fitness",
+    "name": "Anytime Fitness",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "39 W Little Avenue Ste 2",
+    "website": "https://www.anytimefitness.com/gyms/494/driggs-id-83422/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "apex-acupuncture-and-holistic-health",
+    "slug": "apex-acupuncture-and-holistic-health",
+    "name": "Apex Acupuncture & Holistic Health",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "20 E Little Ave, Driggs, ID 83422",
+    "website": "https://www.acuapex.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "artisan-market",
+    "slug": "artisan-market",
+    "name": "Artisan Market",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Artisan market",
+    "description": "A market for locally made work at Driggs City Center Plaza. Check the organizer for this season’s dates.",
+    "address": "60 South Main Street",
+    "website": "https://www.facebook.com/driggssummerartisanmarket/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "events",
+      "arts & culture",
+      "family fun"
+    ]
+  },
+  {
+    "id": "ascend-radon-mitigation",
+    "slug": "ascend-radon-mitigation",
+    "name": "Ascend Radon Mitigation",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "8431 Red hawk Trail",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "badger-creek-cafe",
+    "slug": "badger-creek-cafe",
+    "name": "Badger Creek Cafe",
+    "town": "Teton Valley",
+    "category": "food-drink",
+    "subcategory": "Breakfast & lunch",
+    "description": "A breakfast and lunch cafe in Tetonia.",
+    "address": "110 N Main St",
+    "website": "http://badgercreekcafe.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch"
+    ]
+  },
+  {
+    "id": "bangkok-kitchen",
+    "slug": "bangkok-kitchen",
+    "name": "Bangkok Kitchen",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Thai restaurant",
+    "description": "A Thai restaurant on North Main Street in Driggs.",
+    "address": "260 North Main Street",
+    "website": "https://www.goldenasiaid.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lunch",
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "bank-of-commerce",
+    "slug": "bank-of-commerce",
+    "name": "Bank of Commerce",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Banking",
+    "description": "Banking in Driggs, listed by Downtown Driggs Association.",
+    "address": "65 E Wallace Ave",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "barefoot-fitness-and-pilates",
+    "slug": "barefoot-fitness-and-pilates",
+    "name": "Barefoot Fitness & Pilates",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Fitness & Pilates",
+    "description": "Gym access, group fitness and Pilates in Driggs.",
+    "website": "https://www.barefootdriggs.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "fitness"
+    ]
+  },
+  {
+    "id": "barrels-and-bins-natural-market",
+    "slug": "barrels-and-bins-natural-market",
+    "name": "Barrels & Bins Natural Market",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "36 S Main St",
+    "website": "https://barrelsandbins.market/curb-side-home-delivery/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "berkshire-hathaway",
+    "slug": "berkshire-hathaway",
+    "name": "Berkshire Hathaway",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "47 S Main Street",
+    "website": "http://haackbrawnerrealestate.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate",
+      "residential"
+    ]
+  },
+  {
+    "id": "big-hole-bagel-and-bistro",
+    "slug": "big-hole-bagel-and-bistro",
+    "name": "Big Hole Bagel & Bistro",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Bagels & breakfast",
+    "description": "Bagels, sandwiches and coffee in Driggs.",
+    "address": "285 N Main Street",
+    "website": "https://www.facebook.com/BigHoleBagels/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch"
+    ]
+  },
+  {
+    "id": "borbay-studios-and-gallery",
+    "slug": "borbay-studios-and-gallery",
+    "name": "Borbay Studios & Gallery",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Art gallery",
+    "description": "An artist studio and gallery in Victor.",
+    "address": "10 South Main Street",
+    "website": "http://www.borbay.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts & culture"
+    ]
+  },
+  {
+    "id": "bronze-buffalo-lodge-at-teton-springs",
+    "slug": "bronze-buffalo-lodge-at-teton-springs",
+    "name": "Bronze Buffalo Lodge at Teton Springs",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Lodge",
+    "description": "Lodge in Victor, listed by Discover Teton Valley.",
+    "address": "10 Warm Creek Lane",
+    "website": "https://tetonspringslodge.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "lodge",
+      "pool/hot tub",
+      "wifi",
+      "fitness"
+    ]
+  },
+  {
+    "id": "broulims-fresh-foods",
+    "slug": "broulims-fresh-foods",
+    "name": "Broulim's Fresh Foods",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Grocery market",
+    "description": "A grocery store serving Driggs and the surrounding valley.",
+    "website": "https://www.broulims.com/shop-online",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "groceries"
+    ]
+  },
+  {
+    "id": "butter-cafe",
+    "slug": "butter-cafe",
+    "name": "Butter Cafe",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Breakfast & lunch",
+    "description": "A cafe serving morning and midday meals in Victor.",
+    "address": "57 S. Main St Victor",
+    "website": "https://butterinvictor.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "restaurant",
+      "breakfast",
+      "lunch",
+      "beer",
+      "wine",
+      "catering"
+    ]
+  },
+  {
+    "id": "caldera-creative",
+    "slug": "caldera-creative",
+    "name": "Caldera Creative",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1300 Arrowhead Plaza",
+    "website": "https://caldera-creative.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "office"
+    ]
+  },
+  {
+    "id": "captain-rons-smokehouse",
+    "slug": "captain-rons-smokehouse",
+    "name": "Captain Ron's Smokehouse",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "website": "https://www.facebook.com/RRCateringTeton/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "century-21-teton-valley",
+    "slug": "century-21-teton-valley",
+    "name": "Century 21 Teton Valley",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Victor, listed by Discover Teton Valley.",
+    "address": "1 Springs Parkway",
+    "website": "https://c21tetonvalley.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate",
+      "residential"
+    ]
+  },
+  {
+    "id": "chiang-mai-thai-kitchen",
+    "slug": "chiang-mai-thai-kitchen",
+    "name": "Chiang Mai Thai Kitchen",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Thai restaurant",
+    "description": "Northern Thai dishes, beer and wine in Victor.",
+    "address": "182 North Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "chircop-and-associates-pllc",
+    "slug": "chircop-and-associates-pllc",
+    "name": "Chircop & Associates PLLC",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "189 N Main St #111",
+    "website": "https://chircopcolyer.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "cirque-online",
+    "slug": "cirque-online",
+    "name": "Cirque Online",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.cirque.online/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "retail"
+    ]
+  },
+  {
+    "id": "citizen-33-brewery",
+    "slug": "citizen-33-brewery",
+    "name": "Citizen 33 Brewery",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Brewery & restaurant",
+    "description": "Beer brewed in Driggs, with a restaurant on North Main Street.",
+    "address": "364 N Main St",
+    "website": "http://citizen33.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "dinner"
+    ]
+  },
+  {
+    "id": "city-of-driggs",
+    "slug": "city-of-driggs",
+    "name": "City of Driggs",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community resources",
+    "description": "Community resources in Driggs, listed by Discover Teton Valley.",
+    "address": "60 S Main St",
+    "website": "https://driggsidaho.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "city or library"
+    ]
+  },
+  {
+    "id": "city-of-tetonia",
+    "slug": "city-of-tetonia",
+    "name": "City of Tetonia",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Community resources",
+    "description": "Community resources in Tetonia, listed by Discover Teton Valley.",
+    "address": "3192 Perry Ave",
+    "website": "https://tetoniaidaho.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "city or library"
+    ]
+  },
+  {
+    "id": "city-of-victor",
+    "slug": "city-of-victor",
+    "name": "City of Victor",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Community resources",
+    "description": "Community resources in Victor, listed by Discover Teton Valley.",
+    "address": "138 N Main St",
+    "website": "https://victoridaho.gov/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "city or library"
+    ]
+  },
+  {
+    "id": "citypass",
+    "slug": "citypass",
+    "name": "CityPASS®",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Travel services",
+    "description": "A Victor-based attraction-pass company. Its passes cover destinations beyond Teton Valley.",
+    "address": "27 Arrow Root Ln",
+    "website": "https://www.citypass.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "family fun"
+    ]
+  },
+  {
+    "id": "cobblestone-hotel-and-suites",
+    "slug": "cobblestone-hotel-and-suites",
+    "name": "Cobblestone Hotel & Suites",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Victor, listed by Discover Teton Valley.",
+    "address": "12 West Dogwood Street",
+    "website": "https://www.staycobblestone.com/id/victor/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "pets allowed",
+      "wifi",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "cold-smoke",
+    "slug": "cold-smoke",
+    "name": "Cold Smoke",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "92 W center St",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "community-foundation-of-teton-valley",
+    "slug": "community-foundation-of-teton-valley",
+    "name": "Community Foundation of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "189 N. Main, Suite 112",
+    "website": "https://www.cftetonvalley.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "corner-drug",
+    "slug": "corner-drug",
+    "name": "Corner Drug",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "address": "10 S. Main St",
+    "website": "https://www.driggspharmacy.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "cryo-therapy-idaho",
+    "slug": "cryo-therapy-idaho",
+    "name": "Cryo Therapy Idaho",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "25 E Wallace Ave",
+    "website": "https://cryotherapyidaho.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "das-optics",
+    "slug": "das-optics",
+    "name": "Das Optics",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "website": "https://dasoptics.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "daves-pubb",
+    "slug": "daves-pubb",
+    "name": "Dave's Pubb",
+    "town": "Teton Valley",
+    "category": "food-drink",
+    "subcategory": "Bar & live music",
+    "description": "A Tetonia bar with games and live music.",
+    "address": "6290 N Main St",
+    "website": "https://davestetonia.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "libations"
+    ]
+  },
+  {
+    "id": "davison-spas",
+    "slug": "davison-spas",
+    "name": "Davison Spas",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "12 E Johnson Ave",
+    "website": "https://www.davisonspas.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential",
+      "professional services"
+    ]
+  },
+  {
+    "id": "daydreams-espresso",
+    "slug": "daydreams-espresso",
+    "name": "Daydreams Espresso",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "65 S Main St",
+    "website": "https://www.facebook.com/daydreamsespresso",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "dog-west",
+    "slug": "dog-west",
+    "name": "DOG West",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Breakfast burritos",
+    "description": "Breakfast burritos inside the Mobil convenience store in Victor.",
+    "address": "40 North Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast"
+    ]
+  },
+  {
+    "id": "dominos-pizza",
+    "slug": "dominos-pizza",
+    "name": "Domino's Pizza",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Pizza",
+    "description": "Pizza pickup and delivery in Driggs.",
+    "address": "75 West Bates Road",
+    "website": "https://www.dominospizza.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "downtown-driggs-association",
+    "slug": "downtown-driggs-association",
+    "name": "Downtown Driggs Association",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Community events",
+    "description": "The local organization behind downtown Driggs arts, music and community events.",
+    "address": "60 East Little Avenue",
+    "website": "http://www.downtowndriggs.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts & culture",
+      "family fun",
+      "events",
+      "summer",
+      "fall",
+      "winter",
+      "non-profit/civic",
+      "residential",
+      "city or library"
+    ]
+  },
+  {
+    "id": "drawknife-billiards",
+    "slug": "drawknife-billiards",
+    "name": "Drawknife Billiards",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "3540 Black Bear Dr",
+    "website": "https://www.drawknife.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential"
+    ]
+  },
+  {
+    "id": "driggs-dreamshare",
+    "slug": "driggs-dreamshare",
+    "name": "Driggs Dreamshare",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Vacation rentals",
+    "description": "Vacation rentals in Driggs, listed by Discover Teton Valley.",
+    "address": "185 N 2nd Street",
+    "website": "https://intrepidpropertygroup.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "short term rental",
+      "pets allowed"
+    ]
+  },
+  {
+    "id": "dry-ridge-steamway",
+    "slug": "dry-ridge-steamway",
+    "name": "Dry Ridge Steamway",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "83 N Hwy 33",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "dulce-baking-company",
+    "slug": "dulce-baking-company",
+    "name": "Dulce Baking Company",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Bakery",
+    "description": "A Driggs bakery with gluten-free and other dietary options.",
+    "address": "105 Depot Street Suite #102 Driggs, ID 83422",
+    "website": "https://dulcebaking.wixsite.com/dulce",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "catering",
+      "groceries"
+    ]
+  },
+  {
+    "id": "earth-and-air-holistic-health",
+    "slug": "earth-and-air-holistic-health",
+    "name": "Earth & Air Holistic Health",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "60 E Little Ave #202",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "education-foundation-of-teton-valley",
+    "slug": "education-foundation-of-teton-valley",
+    "name": "Education Foundation of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "481 N Main St",
+    "website": "https://www.tetoneducation.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "el-guadalajara-mexican-food",
+    "slug": "el-guadalajara-mexican-food",
+    "name": "El Guadalajara Mexican Food",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Mexican restaurant",
+    "description": "Mexican meals for breakfast, lunch and dinner in Victor.",
+    "address": "20 North Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "el-valle-del-sol-restaurant",
+    "slug": "el-valle-del-sol-restaurant",
+    "name": "El Valle del Sol Restaurant",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Mexican restaurant",
+    "description": "Mexican food for dine-in or takeout in Driggs.",
+    "address": "220 North Main Street",
+    "website": "https://www.facebook.com/ValleDelSolDriggs/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "elements-of-health",
+    "slug": "elements-of-health",
+    "name": "Elements of Health",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "55 So. Main Street",
+    "website": "https://www.eoh-chinese-medicine.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "elevate-beauty-salon",
+    "slug": "elevate-beauty-salon",
+    "name": "Elevate Beauty Salon",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "275 E Little",
+    "website": "http://facebook.com/ElevateSalon",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "endopeaks-bike-rental",
+    "slug": "endopeaks-bike-rental",
+    "name": "Endopeaks Bike Rental",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Bike rentals",
+    "description": "Bicycle rentals in Driggs.",
+    "address": "107 West Little Ave Driggs, ID 83422",
+    "website": "https://www.endopeaks.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "energy-heals",
+    "slug": "energy-heals",
+    "name": "Energy Heals",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "60 Ashley Avenue, Suite A",
+    "website": "https://www.energyheals.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "health & wellness",
+      "professional services"
+    ]
+  },
+  {
+    "id": "environmental-health-trust",
+    "slug": "environmental-health-trust",
+    "name": "Environmental Health Trust",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization serving Teton Valley, listed by Discover Teton Valley.",
+    "website": "https://ehtrust.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "excel-physical-therapy",
+    "slug": "excel-physical-therapy",
+    "name": "Excel Physical Therapy",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "39 West Little Avenue, Driggs, ID. 83422",
+    "website": "https://excelptjackson.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "fall-river-electric-cooperative",
+    "slug": "fall-river-electric-cooperative",
+    "name": "Fall River Electric Cooperative",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1605 S. Highway 33",
+    "website": "https://www.fallriverelectric.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential"
+    ]
+  },
+  {
+    "id": "farm-bureau-insurance-matt-anderson",
+    "slug": "farm-bureau-insurance-matt-anderson",
+    "name": "Farm Bureau Insurance - Matt Anderson",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1290 Arrowhead Plaza Way",
+    "website": "https://mattandersoninsurance.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "farmhouse-208",
+    "slug": "farmhouse-208",
+    "name": "Farmhouse 208",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "address": "535 Moraine CT",
+    "website": "https://www.farmhouse208.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "figgies-deli-and-market",
+    "slug": "figgies-deli-and-market",
+    "name": "Figgie's Deli & Market",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "528 Valley Centre Drive Driggs, ID 83422",
+    "website": "https://www.figgiesdeli.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "fireweed-shop-and-studios",
+    "slug": "fireweed-shop-and-studios",
+    "name": "Fireweed Shop & Studios",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "website": "https://fireweedshopandstudios.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "fisher-creative",
+    "slug": "fisher-creative",
+    "name": "Fisher Creative",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "176 N Main St",
+    "website": "https://fishercreative.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "food-for-good-by-crctv",
+    "slug": "food-for-good-by-crctv",
+    "name": "Food For Good by CRCTV",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "1420 N. Highway 33",
+    "website": "https://crctv.org/food-resources/what-is-food-for-good/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "food-shed-idaho",
+    "slug": "food-shed-idaho",
+    "name": "Food Shed Idaho",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Specialty food market",
+    "description": "Specialty ingredients, local foods and edible gifts in Victor.",
+    "address": "139 West Center St",
+    "website": "https://foodshedidaho.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "groceries",
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "forage-bistro-and-lounge",
+    "slug": "forage-bistro-and-lounge",
+    "name": "Forage Bistro & Lounge",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Bistro",
+    "description": "A Driggs bistro serving meals and drinks on Warbird Lane.",
+    "address": "253 Warbird Lane",
+    "website": "http://forageandlounge.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "lunch",
+      "libations"
+    ]
+  },
+  {
+    "id": "fox-creek-heating",
+    "slug": "fox-creek-heating",
+    "name": "Fox Creek Heating",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "53 N Main St.",
+    "website": "https://www.foxcreekheating.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "foxtrot-gallery",
+    "slug": "foxtrot-gallery",
+    "name": "Foxtrot Gallery",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Art gallery",
+    "description": "A fine-art gallery on East Little Avenue in Driggs.",
+    "address": "160 E Little Ave",
+    "website": "https://www.foxtrotfineart.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts & culture"
+    ]
+  },
+  {
+    "id": "friends-of-teton-valley-sports-and-wellness",
+    "slug": "friends-of-teton-valley-sports-and-wellness",
+    "name": "Friends of Teton Valley Sports and Wellness",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "website": "http://sportsandwellness.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "frontier-credit-union",
+    "slug": "frontier-credit-union",
+    "name": "Frontier Credit Union",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Banking",
+    "description": "Banking in Driggs, listed by Discover Teton Valley.",
+    "address": "1105 N Yellowstone Highway",
+    "website": "https://frontiercreditunion.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "banking",
+      "professional services"
+    ]
+  },
+  {
+    "id": "furry-bellies-pet-boutique",
+    "slug": "furry-bellies-pet-boutique",
+    "name": "Furry Bellies Pet Boutique",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "225 South Main Street, Suite B",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "furry-bellies-pet-services-and-k9-massage",
+    "slug": "furry-bellies-pet-services-and-k9-massage",
+    "name": "Furry Bellies Pet Services & K9 Massage",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.furrybellies.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "fuze-av-llc",
+    "slug": "fuze-av-llc",
+    "name": "Fuze-av LLC",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1420 Idaho 33, Suite 105, Driggs",
+    "website": "http://www.fuze-av.co/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "gearhead-garage",
+    "slug": "gearhead-garage",
+    "name": "Gearhead Garage",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Auto services",
+    "description": "Auto services in Victor, listed by Discover Teton Valley.",
+    "address": "295 S Agate",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "auto"
+    ]
+  },
+  {
+    "id": "get-baked-prepared-food-emporium",
+    "slug": "get-baked-prepared-food-emporium",
+    "name": "Get Baked Prepared Food Emporium",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Take-and-bake pizza",
+    "description": "Pizza and prepared meals to finish at home in Driggs.",
+    "website": "https://getbakedemporium.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "catering"
+    ]
+  },
+  {
+    "id": "grand-targhee-resort",
+    "slug": "grand-targhee-resort",
+    "name": "Grand Targhee Resort",
+    "town": "Nearby",
+    "category": "outdoors",
+    "subcategory": "Mountain resort",
+    "description": "Skiing, mountain biking and mountain activities at Grand Targhee in Alta, Wyoming.",
+    "address": "3300 Ski Hill Rd",
+    "website": "https://grandtarghee.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "biking",
+      "skiing & snowboarding",
+      "nordic",
+      "skiing",
+      "mountain biking"
+    ]
+  },
+  {
+    "id": "grand-targhee-resort-lodging",
+    "slug": "grand-targhee-resort-lodging",
+    "name": "Grand Targhee Resort Lodging",
+    "town": "Nearby",
+    "category": "stays",
+    "subcategory": "Lodge",
+    "description": "Lodge in Alta, listed by Discover Teton Valley.",
+    "address": "3300 Ski Hill Rd",
+    "website": "https://www.grandtarghee.com/plan-your-trip/lodging-options/slopeside-lodging",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "lodge",
+      "pool/hot tub",
+      "breakfast",
+      "wifi"
+    ]
+  },
+  {
+    "id": "grand-teton-brewing",
+    "slug": "grand-teton-brewing",
+    "name": "Grand Teton Brewing",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Brewery",
+    "description": "Victor brewery with an on-site taproom.",
+    "address": "430 Old Jackson Hwy",
+    "website": "https://grandtetonbrewing.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "libations"
+    ]
+  },
+  {
+    "id": "grand-teton-distillery",
+    "slug": "grand-teton-distillery",
+    "name": "Grand Teton Distillery",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Distillery",
+    "description": "A Driggs producer of vodka and whiskey.",
+    "address": "1755 ID-33",
+    "website": "https://www.tetondistillery.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "libations"
+    ]
+  },
+  {
+    "id": "grand-teton-floor-and-window-coverings",
+    "slug": "grand-teton-floor-and-window-coverings",
+    "name": "Grand Teton Floor & Window Coverings",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "108 W Center St",
+    "website": "https://www.tetonfloors.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "grand-valley-lodging",
+    "slug": "grand-valley-lodging",
+    "name": "Grand Valley Lodging",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Driggs, listed by Downtown Driggs Association.",
+    "address": "18 N Main St, Suite 105 Driggs, ID",
+    "website": "https://www.grandvalleylodging.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "grand-view-general-store",
+    "slug": "grand-view-general-store",
+    "name": "Grand View General Store",
+    "town": "Teton Valley",
+    "category": "food-drink",
+    "subcategory": "Market & deli",
+    "description": "A Tetonia convenience store with a deli and fuel.",
+    "address": "6170 S. Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch",
+      "groceries"
+    ]
+  },
+  {
+    "id": "grandmas-candy-shop",
+    "slug": "grandmas-candy-shop",
+    "name": "Grandma's Candy Shop",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "140 N Main St",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "grandview-blind-and-design",
+    "slug": "grandview-blind-and-design",
+    "name": "GrandView Blind & Design",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "75 West Little Avenue, Suite B",
+    "website": "https://www.grandviewblindanddesign.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "guidepost-brewing-company",
+    "slug": "guidepost-brewing-company",
+    "name": "Guidepost Brewing Company",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Brewery & restaurant",
+    "description": "A Victor brewery with food, a bar and community events.",
+    "address": "175 West Center Street",
+    "website": "https://www.guidepostbrewing.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "habitat",
+    "slug": "habitat",
+    "name": "Habitat",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "18 N Main St",
+    "website": "https://ridethetetons.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "hacienda-cuajimalpa",
+    "slug": "hacienda-cuajimalpa",
+    "name": "Hacienda Cuajimalpa",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Mexican restaurant",
+    "description": "A family-run Mexican restaurant in Driggs.",
+    "address": "355 North Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "libations"
+    ]
+  },
+  {
+    "id": "harmony-design-and-engineering",
+    "slug": "harmony-design-and-engineering",
+    "name": "Harmony Design & Engineering",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "18 N Main St",
+    "website": "https://www.harmonydesigninc.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "heron-glass-and-studio",
+    "slug": "heron-glass-and-studio",
+    "name": "Heron Glass & Studio",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Arts & culture",
+    "description": "Arts & culture in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.heronglass.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "hertz-contracting",
+    "slug": "hertz-contracting",
+    "name": "Hertz Contracting",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "415 E 1000 S",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential"
+    ]
+  },
+  {
+    "id": "highpoint-cider",
+    "slug": "highpoint-cider",
+    "name": "Highpoint Cider",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Cidery & taproom",
+    "description": "A hard-cider taproom in Victor.",
+    "address": "7565 Lupine Lane",
+    "website": "http://www.highpointcider.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "brewery/distillery",
+      "beer",
+      "wine"
+    ]
+  },
+  {
+    "id": "hispanic-resource-center",
+    "slug": "hispanic-resource-center",
+    "name": "Hispanic Resource Center",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "76 N Main Street, Suite 204",
+    "website": "https://www.facebook.com/tetonvalleyHRC",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "hlh-business-solutions",
+    "slug": "hlh-business-solutions",
+    "name": "HLH Business Solutions",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "website": "https://hlhbusiness.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "office"
+    ]
+  },
+  {
+    "id": "holiday-propane",
+    "slug": "holiday-propane",
+    "name": "Holiday Propane",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "175 North Main Street",
+    "website": "https://holidaypropane.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential",
+      "professional services"
+    ]
+  },
+  {
+    "id": "idaho-teton-yoga-co-op-non-profit-inc",
+    "slug": "idaho-teton-yoga-co-op-non-profit-inc",
+    "name": "Idaho Teton Yoga Co-op Non-Profit Inc.",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Victor, listed by Discover Teton Valley.",
+    "address": "170 N Main Street",
+    "website": "https://www.idahoyogacoop.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "immigrant-hope-wyoming-idaho",
+    "slug": "immigrant-hope-wyoming-idaho",
+    "name": "Immigrant Hope - Wyoming Idaho",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization serving Teton Valley, listed by Discover Teton Valley.",
+    "website": "https://www.immigranthopewyomingidaho.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "incontro-events",
+    "slug": "incontro-events",
+    "name": "Incontro Events",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services serving Teton Valley, listed by Discover Teton Valley.",
+    "website": "https://www.incontroevents.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "jared-power-somatic-bodywork",
+    "slug": "jared-power-somatic-bodywork",
+    "name": "Jared Power Somatic Bodywork",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "285 E Little Ave",
+    "website": "http://www.jaredpower.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "jesss-pampered-pups",
+    "slug": "jesss-pampered-pups",
+    "name": "Jess's Pampered Pups",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "74 N Main Street",
+    "website": "https://www.jesspups.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "kaspers-kountryside-inn",
+    "slug": "kaspers-kountryside-inn",
+    "name": "Kasper's Kountryside Inn",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Bed & breakfast",
+    "description": "Bed & breakfast in Victor, listed by Discover Teton Valley.",
+    "website": "https://kasperskountrysideinn.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "bed & breakfast",
+      "breakfast",
+      "short term rental",
+      "wifi"
+    ]
+  },
+  {
+    "id": "kates-real-food",
+    "slug": "kates-real-food",
+    "name": "Kate's Real Food",
+    "town": "Nearby",
+    "category": "food-drink",
+    "subcategory": "Outdoor food",
+    "description": "A Jackson-based maker of organic snack bars.",
+    "address": "960 Alpine Ln",
+    "website": "https://katesrealfood.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "groceries"
+    ]
+  },
+  {
+    "id": "keller-williams-teton-valley",
+    "slug": "keller-williams-teton-valley",
+    "name": "Keller Williams Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "1 South Main Street, Driggs ID",
+    "website": "https://kwjacksonhole.com/neighborhoods/teton-valley/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "key-bank",
+    "slug": "key-bank",
+    "name": "Key Bank",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Banking",
+    "description": "Banking in Driggs, listed by Downtown Driggs Association.",
+    "address": "15 N Main",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "king-sushi",
+    "slug": "king-sushi",
+    "name": "King Sushi",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Sushi restaurant",
+    "description": "A sushi restaurant in Driggs.",
+    "address": "98 East Little Avenue",
+    "website": "https://www.kingsushijh.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "knotty-pine",
+    "slug": "knotty-pine",
+    "name": "Knotty Pine",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Restaurant & live music",
+    "description": "A Victor restaurant and bar that hosts live music.",
+    "address": "58 S Main St.",
+    "website": "http://knottypinesupperclub.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "restaurant",
+      "dinner",
+      "beer",
+      "wine",
+      "liquor",
+      "catering"
+    ]
+  },
+  {
+    "id": "la-conchita-bakery",
+    "slug": "la-conchita-bakery",
+    "name": "La Conchita Bakery",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "285 E Little Avenue Driggs, ID 83422",
+    "website": "https://www.facebook.com/profile.php?id=61567418587673",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "linn-canyon-ranch",
+    "slug": "linn-canyon-ranch",
+    "name": "Linn Canyon Ranch",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Bed & breakfast",
+    "description": "Bed & breakfast in Victor, listed by Discover Teton Valley.",
+    "address": "1300 E 6000 South",
+    "website": "https://linncanyonranch.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodge",
+      "bed & breakfast",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "liquor-market",
+    "slug": "liquor-market",
+    "name": "Liquor Market",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "65 S Main St",
+    "website": "https://www.facebook.com/LiquorMarket",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "live-water-properties",
+    "slug": "live-water-properties",
+    "name": "Live Water Properties",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "74 N Main St",
+    "website": "https://www.livewaterproperties.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "local-galleria",
+    "slug": "local-galleria",
+    "name": "Local Galleria",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "25 S Main St",
+    "website": "https://tetonvalleylocalart.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "lucky-dog-thrift-store",
+    "slug": "lucky-dog-thrift-store",
+    "name": "Lucky Dog Thrift Store",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Discover Teton Valley.",
+    "address": "290 N Main St.",
+    "website": "https://www.facebook.com/luckydogthriftstoreandmore",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic",
+      "retail"
+    ]
+  },
+  {
+    "id": "lula-wine-bar",
+    "slug": "lula-wine-bar",
+    "name": "Lula Wine Bar",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "75 W Bates Rd Suite F Driggs, ID 83422",
+    "website": "https://lulawinebar.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "maison-bottles-and-bites",
+    "slug": "maison-bottles-and-bites",
+    "name": "Maison Bottles & Bites",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Wine & small plates",
+    "description": "Wine and small plates in downtown Driggs.",
+    "address": "85 East Little Ave",
+    "website": "https://www.maisondriggs.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "dinner",
+      "groceries"
+    ]
+  },
+  {
+    "id": "makerspace",
+    "slug": "makerspace",
+    "name": "Makerspace",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Makerspace",
+    "description": "Hands-on creative resources through Valley of the Tetons Library in Driggs.",
+    "address": "7 N Main St, Driggs, ID 83422",
+    "website": "https://valleyofthetetonslibrary.org/vtl-makerspace-2/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "mike-harris-campground",
+    "slug": "mike-harris-campground",
+    "name": "Mike Harris Campground",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Campground",
+    "description": "Campground in Victor, listed by Discover Teton Valley.",
+    "address": "Forest Road 330",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "monte-sinai",
+    "slug": "monte-sinai",
+    "name": "Monte Sinai",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Mexican market",
+    "description": "A Victor market selling Mexican ingredients and spices.",
+    "address": "149 South Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "groceries"
+    ]
+  },
+  {
+    "id": "moonshine-liquor-beer-and-wine",
+    "slug": "moonshine-liquor-beer-and-wine",
+    "name": "Moonshine Liquor Beer & Wine",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Bottle shop",
+    "description": "Beer, wine and spirits retail in Victor.",
+    "address": "170 N. Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "moose-creek-ranch",
+    "slug": "moose-creek-ranch",
+    "name": "Moose Creek Ranch",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Lodge",
+    "description": "Lodge in Victor, listed by Discover Teton Valley.",
+    "website": "https://www.moosecreekranch.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodge",
+      "resorts/hotel"
+    ]
+  },
+  {
+    "id": "moulton-law-office",
+    "slug": "moulton-law-office",
+    "name": "Moulton Law Office",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "60 E Wallace Ave",
+    "website": "http://www.tetonvalleylaw.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "mountain-bike-the-tetons",
+    "slug": "mountain-bike-the-tetons",
+    "name": "Mountain Bike the Tetons",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Mountain biking",
+    "description": "A local nonprofit supporting mountain-bike trails and riding resources.",
+    "address": "60 E Little Ave",
+    "website": "http://www.mountainbiketetons.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "outdoors & sports",
+      "family fun",
+      "biking"
+    ]
+  },
+  {
+    "id": "mountain-high-mounted-shooters",
+    "slug": "mountain-high-mounted-shooters",
+    "name": "Mountain High Mounted Shooters",
+    "town": "Teton Valley",
+    "category": "outdoors",
+    "subcategory": "Equestrian club",
+    "description": "A mounted-shooting club listed in the regional directory. Contact the club for event locations.",
+    "website": "http://www.usms2020.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "hunting & fishing",
+      "family fun"
+    ]
+  },
+  {
+    "id": "mountain-home-treasures",
+    "slug": "mountain-home-treasures",
+    "name": "Mountain Home Treasures",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Home & gifts",
+    "description": "A Driggs shop for home furnishings, gifts and souvenirs.",
+    "website": "https://www.mountainhometreasures.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "mountain-roots-education",
+    "slug": "mountain-roots-education",
+    "name": "Mountain Roots Education",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Victor, listed by Discover Teton Valley.",
+    "website": "https://mountainrootseducation.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "movewell",
+    "slug": "movewell",
+    "name": "Movewell",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "30 N First St",
+    "website": "https://www.movewelljh.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "mtn-lab-performance-coaching",
+    "slug": "mtn-lab-performance-coaching",
+    "name": "MTN LAB Performance Coaching",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "18 N Main St #210",
+    "website": "http://www.mtnperformancelab.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "new-west-knifeworks",
+    "slug": "new-west-knifeworks",
+    "name": "New West KnifeWorks",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "7667 Lupine Lane",
+    "website": "https://www.newwestknifeworks.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail",
+      "professional services"
+    ]
+  },
+  {
+    "id": "orourkes-bar-and-grille",
+    "slug": "orourkes-bar-and-grille",
+    "name": "O'Rourke's Bar and Grille",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Bar & grill",
+    "description": "A Driggs sports bar serving American meals and drinks.",
+    "address": "42 East Little Ave",
+    "website": "http://www.facebook.com/ORourkes-Sports-Bar-and-Grill-114029031972815/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "lunch",
+      "libations"
+    ]
+  },
+  {
+    "id": "occupational-therapy-unlimited-llc",
+    "slug": "occupational-therapy-unlimited-llc",
+    "name": "Occupational Therapy Unlimited, LLC",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "30 East Little Avenue",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "ollies-mountain-pet-supply-and-wash",
+    "slug": "ollies-mountain-pet-supply-and-wash",
+    "name": "Ollie's Mountain Pet Supply & Wash",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "105 Depot Street Suite 106 Driggs, ID 83422",
+    "website": "https://www.olliesmountainpetsupplywash.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "paws-of-teton-valley",
+    "slug": "paws-of-teton-valley",
+    "name": "PAWS of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "15 South 1750 East",
+    "website": "http://pawsoftv.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "peak-printing",
+    "slug": "peak-printing",
+    "name": "Peak Printing",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.peakprinting.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "peaked-sports",
+    "slug": "peaked-sports",
+    "name": "Peaked Sports",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Outdoor gear & rentals",
+    "description": "Outdoor equipment, clothing and ski, bicycle and boat rentals in Driggs.",
+    "address": "70 E Little Ave",
+    "website": "https://www.peakedsports.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail",
+      "biking",
+      "hiking",
+      "fitness",
+      "nordic",
+      "skiing & snowboarding"
+    ]
+  },
+  {
+    "id": "pearl-street-bagels",
+    "slug": "pearl-street-bagels",
+    "name": "Pearl Street Bagels",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "80 N Main St, Driggs, ID 83422",
+    "website": "https://www.pearlstreetbagels.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "pelvic-floored-physical-therapy",
+    "slug": "pelvic-floored-physical-therapy",
+    "name": "Pelvic Floored Physical Therapy",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "53 Depot Ave",
+    "website": "https://www.pelvicfloored.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "pierres-theatre",
+    "slug": "pierres-theatre",
+    "name": "Pierre's Theatre",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Theatre & movies",
+    "description": "A historic Victor venue for theatre, films and workshops.",
+    "address": "37 N Main St",
+    "website": "https://pierrestheatre.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts & culture",
+      "family fun"
+    ]
+  },
+  {
+    "id": "pine-creek-campground",
+    "slug": "pine-creek-campground",
+    "name": "Pine Creek Campground",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Campground",
+    "description": "Campground in Victor, listed by Discover Teton Valley.",
+    "address": "1080 ID-31",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "pine-needle-embroidery",
+    "slug": "pine-needle-embroidery",
+    "name": "Pine Needle Embroidery",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "107 West Little Avenue Driggs, ID 83422",
+    "website": "https://www.pineneedleembroidering.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "pines-motel-guest-haus",
+    "slug": "pines-motel-guest-haus",
+    "name": "Pines Motel-Guest Haus",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Motel",
+    "description": "Motel in Driggs, listed by Discover Teton Valley.",
+    "address": "105 South Main Street",
+    "website": "https://www.thepinestetonvalley.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "motel"
+    ]
+  },
+  {
+    "id": "pinky-gs-pizza",
+    "slug": "pinky-gs-pizza",
+    "name": "Pinky G's Pizza",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Pizzeria",
+    "description": "Pizza by the slice or whole pie in Victor.",
+    "address": "37 South Main",
+    "website": "https://www.pinkygs.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lunch",
+      "dinner",
+      "libations",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "pizzeria-alpino",
+    "slug": "pizzeria-alpino",
+    "name": "Pizzeria Alpino",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Pizza & pasta",
+    "description": "Pizza and pasta in Driggs.",
+    "address": "165 North Main Street",
+    "website": "http://pizzeriaalpino.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "restaurant",
+      "dinner",
+      "beer",
+      "wine"
+    ]
+  },
+  {
+    "id": "place-landscape-architects",
+    "slug": "place-landscape-architects",
+    "name": "Place Landscape Architects",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "65 S Main Street",
+    "website": "https://www.placelas.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "powder-mountain-press",
+    "slug": "powder-mountain-press",
+    "name": "Powder Mountain Press",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "189 N. Main Street, #205",
+    "website": "https://tetonvalleymagazine.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "provisions-local-kitchen",
+    "slug": "provisions-local-kitchen",
+    "name": "Provisions Local Kitchen",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Breakfast & lunch",
+    "description": "A downtown Driggs kitchen serving breakfast and lunch.",
+    "address": "95 South Main Street",
+    "website": "https://www.provisionskitchen.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch"
+    ]
+  },
+  {
+    "id": "rad-curbside",
+    "slug": "rad-curbside",
+    "name": "RAD Curbside",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "455 S Main St",
+    "website": "https://radcurbside.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "remedy-coaching-services",
+    "slug": "remedy-coaching-services",
+    "name": "Remedy Coaching Services",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "39 W Little Ave Suite 3",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "resilience-yoga",
+    "slug": "resilience-yoga",
+    "name": "Resilience Yoga",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "47 South Main Street, Suite 6 Driggs, ID. 83422",
+    "website": "https://resilienceyoga.org/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "reunion-flat-campground",
+    "slug": "reunion-flat-campground",
+    "name": "Reunion Flat Campground",
+    "town": "Nearby",
+    "category": "stays",
+    "subcategory": "Campground",
+    "description": "Campground in Alta, listed by Discover Teton Valley.",
+    "address": "Teton Canyon Rd",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "rise-coffee-house",
+    "slug": "rise-coffee-house",
+    "name": "Rise Coffee House",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Coffee house",
+    "description": "Coffee and breakfast on Depot Street in Driggs.",
+    "address": "40 Depot Street",
+    "website": "https://www.risedriggs.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "beer",
+      "wine"
+    ]
+  },
+  {
+    "id": "rotary-club-of-teton-valley",
+    "slug": "rotary-club-of-teton-valley",
+    "name": "Rotary Club of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "14 E Little Avenue",
+    "website": "https://www.tetonvalleyrotary.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "royal-wolf",
+    "slug": "royal-wolf",
+    "name": "Royal Wolf",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Bar & grill",
+    "description": "A Driggs gathering place for food and drinks.",
+    "address": "63 Depot St",
+    "website": "https://www.theroyalwolf.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "lunch",
+      "dinner",
+      "libations"
+    ]
+  },
+  {
+    "id": "sabine-soft-furnishings",
+    "slug": "sabine-soft-furnishings",
+    "name": "Sabine Soft Furnishings",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "971 N Hwy 33",
+    "website": "http://sabinesf.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "salon-blaq",
+    "slug": "salon-blaq",
+    "name": "Salon Blaq",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "180 South Main Street B1",
+    "website": "https://facebook.com/SalonBlaq",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "hair & salon"
+    ]
+  },
+  {
+    "id": "seasons-salon",
+    "slug": "seasons-salon",
+    "name": "Seasons Salon",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "45 E Little Ave",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "hair & salon"
+    ]
+  },
+  {
+    "id": "second-home-sidekick",
+    "slug": "second-home-sidekick",
+    "name": "Second Home Sidekick",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.secondhomesidekick.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate",
+      "professional services"
+    ]
+  },
+  {
+    "id": "sergios-cocina-mexicana",
+    "slug": "sergios-cocina-mexicana",
+    "name": "Sergio's Cocina Mexicana",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Mexican restaurant",
+    "description": "Mexican cooking and drinks in Victor.",
+    "address": "145 South Main Street",
+    "website": "http://www.sergioscocina.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "catering",
+      "lunch",
+      "dinner",
+      "libations",
+      "wine"
+    ]
+  },
+  {
+    "id": "servpro",
+    "slug": "servpro",
+    "name": "Servpro",
+    "town": "Nearby",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Idaho Falls, listed by Discover Teton Valley.",
+    "website": "https://servproidahofalls.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "silver-star-communications",
+    "slug": "silver-star-communications",
+    "name": "Silver Star Communications",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1670 N Highway 33",
+    "website": "https://www.silverstar.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential",
+      "office"
+    ]
+  },
+  {
+    "id": "sleigh-rides-at-double-diamond-bar-ranch",
+    "slug": "sleigh-rides-at-double-diamond-bar-ranch",
+    "name": "Sleigh Rides at Double Diamond Bar Ranch",
+    "town": "Nearby",
+    "category": "outdoors",
+    "subcategory": "Horse-drawn rides",
+    "description": "Carriage and sleigh outings at Double Diamond Bar Ranch in Alta, Wyoming.",
+    "address": "130 Alta North Road",
+    "website": "https://www.doublediamondbarranchevents.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "smithlogic-inc",
+    "slug": "smithlogic-inc",
+    "name": "Smithlogic Inc",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "916 E Ross Ave",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "soulstice-consignment-and-collectibles",
+    "slug": "soulstice-consignment-and-collectibles",
+    "name": "Soulstice Consignment & Collectibles",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "32 West Little Avenue Driggs, ID 83422",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "spitzer-realty",
+    "slug": "spitzer-realty",
+    "name": "Spitzer Realty",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Victor, listed by Discover Teton Valley.",
+    "address": "252 South Main Street",
+    "website": "https://spitzerrealty.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate",
+      "residential"
+    ]
+  },
+  {
+    "id": "stay-and-ski-targhee",
+    "slug": "stay-and-ski-targhee",
+    "name": "Stay and Ski Targhee",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Vacation rentals",
+    "description": "Vacation rentals in Driggs, listed by Discover Teton Valley.",
+    "address": "112 Aspen Meadows Road #35",
+    "website": "https://stayandskitarghee.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "short term rental",
+      "pets allowed",
+      "wifi"
+    ]
+  },
+  {
+    "id": "summit-school-of-the-arts",
+    "slug": "summit-school-of-the-arts",
+    "name": "Summit School of the Arts",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Dance classes",
+    "description": "Dance instruction for a range of ages and skill levels in Driggs.",
+    "address": "180 S Main Street",
+    "website": "https://summitschoolofthearts.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "summit-self-storage-driggs-outdoor-storage",
+    "slug": "summit-self-storage-driggs-outdoor-storage",
+    "name": "Summit Self-Storage: Driggs Outdoor Storage",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "191 Rodeo Drive",
+    "website": "https://www.summitself-storage.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "summit-self-storage-victor-hwy-33",
+    "slug": "summit-self-storage-victor-hwy-33",
+    "name": "Summit Self-Storage: Victor/Hwy 33",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "535 Peak View Estates Road",
+    "website": "https://www.summitself-storage.com/location/USA/ID/Victor/summit-victor-highway/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "super-8-by-wyndham",
+    "slug": "super-8-by-wyndham",
+    "name": "Super 8 by Wyndham",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Motel",
+    "description": "Motel in Driggs, listed by Discover Teton Valley.",
+    "address": "1361 North Highway 33",
+    "website": "https://www.wyndhamhotels.com/super-8/driggs-idaho",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "motel",
+      "pool/hot tub"
+    ]
+  },
+  {
+    "id": "swopes-mountain-photography",
+    "slug": "swopes-mountain-photography",
+    "name": "Swope's Mountain Photography",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "website": "https://swopephoto.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "targhee-athletics",
+    "slug": "targhee-athletics",
+    "name": "Targhee Athletics",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "440 North Main Street",
+    "website": "https://www.targheeathletics.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "targhee-village-golf-course",
+    "slug": "targhee-village-golf-course",
+    "name": "Targhee Village Golf Course",
+    "town": "Nearby",
+    "category": "outdoors",
+    "subcategory": "Golf",
+    "description": "A golf course near Alta, Wyoming.",
+    "address": "530 Perimeter Dr",
+    "website": "https://www.targheegolf.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "golfing",
+      "family fun"
+    ]
+  },
+  {
+    "id": "tatanka-tavern",
+    "slug": "tatanka-tavern",
+    "name": "Tatanka Tavern",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Pizza & craft beer",
+    "description": "Pizza and beer with rooftop seating in Driggs.",
+    "address": "18 North Main Street,",
+    "website": "https://www.tatankatavern.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "tetos-tire-and-service",
+    "slug": "tetos-tire-and-service",
+    "name": "Teto's Tire & Service",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Auto services",
+    "description": "Auto services in Tetonia, listed by Discover Teton Valley.",
+    "address": "3031 Central Ave",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "auto"
+    ]
+  },
+  {
+    "id": "teton-aviation-center",
+    "slug": "teton-aviation-center",
+    "name": "Teton Aviation Center",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Scenic flights",
+    "description": "An aviation center in Driggs offering scenic flights and pilot services.",
+    "address": "253 Warbird Lane",
+    "website": "https://tetonaviation.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-canyon-campground",
+    "slug": "teton-canyon-campground",
+    "name": "Teton Canyon Campground",
+    "town": "Nearby",
+    "category": "stays",
+    "subcategory": "Campground",
+    "description": "Campground in Alta, listed by Discover Teton Valley.",
+    "address": "Teton Canyon Rd",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "teton-county-idaho",
+    "slug": "teton-county-idaho",
+    "name": "Teton County Idaho",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community resources",
+    "description": "Community resources in Driggs, listed by Discover Teton Valley.",
+    "address": "150 Courthouse Drive",
+    "website": "https://www.tetoncountyidaho.gov/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "city or library"
+    ]
+  },
+  {
+    "id": "teton-county-title",
+    "slug": "teton-county-title",
+    "name": "Teton County Title",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "18 N Main St",
+    "website": "https://www.facebook.com/Tetoncountytitle/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "real estate"
+    ]
+  },
+  {
+    "id": "teton-creative",
+    "slug": "teton-creative",
+    "name": "Teton Creative",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "60 E. Ashley #B",
+    "website": "https://tetoncreative.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-geo-center",
+    "slug": "teton-geo-center",
+    "name": "Teton Geo Center",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Visitor center",
+    "description": "Local visitor information and educational exhibits in downtown Driggs.",
+    "address": "60 S Main St, Driggs, ID 83422",
+    "website": "https://downtowndriggs.org/teton-geo-center",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-gravity-research",
+    "slug": "teton-gravity-research",
+    "name": "Teton Gravity Research",
+    "town": "Nearby",
+    "category": "arts-culture",
+    "subcategory": "Outdoor films",
+    "description": "A Jackson-area action-sports media company with films and events.",
+    "address": "1260 North West St, Wilson",
+    "website": "https://www.tetongravity.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "arts & culture",
+      "events",
+      "family fun"
+    ]
+  },
+  {
+    "id": "teton-homestead",
+    "slug": "teton-homestead",
+    "name": "Teton Homestead",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Vacation rentals",
+    "description": "Vacation rentals in Driggs, listed by Discover Teton Valley.",
+    "address": "18 North Main Street",
+    "website": "http://www.tetonhomestead.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "short term rental",
+      "pool/hot tub",
+      "wifi",
+      "pets allowed"
+    ]
+  },
+  {
+    "id": "teton-hostel-hideaway",
+    "slug": "teton-hostel-hideaway",
+    "name": "Teton Hostel Hideaway",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Driggs, listed by Downtown Driggs Association.",
+    "address": "2155 S Stateline Rd Driggs, ID",
+    "website": "https://www.tetonhostelhideaway.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-indoor-sports-academy",
+    "slug": "teton-indoor-sports-academy",
+    "name": "Teton Indoor Sports Academy",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Indoor sports",
+    "description": "An indoor sports facility in Driggs.",
+    "address": "Community Center Building, 60 S Main St, Driggs, ID 83422",
+    "website": "https://www.tetonindoorsportsacademy.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-jade-and-gem",
+    "slug": "teton-jade-and-gem",
+    "name": "Teton Jade & Gem",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "140 N Main",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-leadership-center",
+    "slug": "teton-leadership-center",
+    "name": "Teton Leadership Center",
+    "town": "Nearby",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Jackson, listed by Discover Teton Valley.",
+    "website": "https://www.tetonleadershipcenter.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic",
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-mountain-elk-ranch",
+    "slug": "teton-mountain-elk-ranch",
+    "name": "Teton Mountain Elk Ranch",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Vacation rentals",
+    "description": "Vacation rentals in Victor, listed by Discover Teton Valley.",
+    "address": "2695 W 8000 S",
+    "website": "https://www.elkadventures.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodge",
+      "short term rental"
+    ]
+  },
+  {
+    "id": "teton-nordic-ski-school",
+    "slug": "teton-nordic-ski-school",
+    "name": "Teton Nordic Ski School",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Nordic ski lessons",
+    "description": "Classic and skate-ski instruction serving the Driggs area.",
+    "website": "https://www.tetonxc.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-peaks-resort",
+    "slug": "teton-peaks-resort",
+    "name": "Teton Peaks Resort",
+    "town": "Teton Valley",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Tetonia, listed by Discover Teton Valley.",
+    "address": "2901 Egbert Avenue",
+    "website": "https://jethospitality.com/teton-peaks-resort/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "rvs & camping",
+      "wifi",
+      "pets allowed"
+    ]
+  },
+  {
+    "id": "teton-regional-economic-coalition",
+    "slug": "teton-regional-economic-coalition",
+    "name": "Teton Regional Economic Coalition",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "60 S Main St",
+    "website": "https://discovertetonvalley.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic",
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-regional-land-trust",
+    "slug": "teton-regional-land-trust",
+    "name": "Teton Regional Land Trust",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "1520 South 500 West",
+    "website": "http://www.tetonlandtrust.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-river-supply",
+    "slug": "teton-river-supply",
+    "name": "Teton River Supply",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "River rentals",
+    "description": "Raft, kayak and paddleboard rentals with Teton River shuttle options.",
+    "website": "https://www.tetonriversupply.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "outdoors & sports",
+      "family fun",
+      "water sports"
+    ]
+  },
+  {
+    "id": "teton-rock-gym",
+    "slug": "teton-rock-gym",
+    "name": "Teton Rock Gym",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Indoor climbing",
+    "description": "An indoor climbing gym in Driggs.",
+    "address": "60 S Main St #350, Driggs, ID 83422",
+    "website": "https://tetonrockgym.org/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-synapse-and-neurophysics",
+    "slug": "teton-synapse-and-neurophysics",
+    "name": "Teton Synapse & Neurophysics",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "47 S Main",
+    "website": "https://www.tetonsynapse.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-technology-solutions",
+    "slug": "teton-technology-solutions",
+    "name": "Teton Technology Solutions",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "website": "https://tetontech.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-teepee-lodge",
+    "slug": "teton-teepee-lodge",
+    "name": "Teton Teepee Lodge",
+    "town": "Nearby",
+    "category": "stays",
+    "subcategory": "Lodge",
+    "description": "Lodge in Alta, listed by Discover Teton Valley.",
+    "website": "https://www.tetonteepee.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodge"
+    ]
+  },
+  {
+    "id": "teton-thai",
+    "slug": "teton-thai",
+    "name": "Teton Thai",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Thai restaurant",
+    "description": "Thai and other Asian dishes in downtown Driggs.",
+    "address": "18 N Main St.",
+    "website": "https://tetonthai.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "dinner"
+    ]
+  },
+  {
+    "id": "teton-therapeutic-massage",
+    "slug": "teton-therapeutic-massage",
+    "name": "Teton Therapeutic Massage",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "address": "275 E Little Ave",
+    "website": "http://facebook.com/TetonTherapeuticMassage",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-valley-adventures",
+    "slug": "teton-valley-adventures",
+    "name": "Teton Valley Adventures",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Adventure outfitter",
+    "description": "An outdoor adventure business in Driggs. Contact the operator for available trips.",
+    "address": "47 S Main St",
+    "website": "http://tetonvalleyadventures.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-valley-aquatics",
+    "slug": "teton-valley-aquatics",
+    "name": "Teton Valley Aquatics",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Swimming",
+    "description": "A local aquatics organization providing summer swimming opportunities. Check current pool access with the organizer.",
+    "website": "http://www.tetonvalleyaquatics.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "water sports",
+      "family fun",
+      "fitness"
+    ]
+  },
+  {
+    "id": "teton-valley-cabins",
+    "slug": "teton-valley-cabins",
+    "name": "Teton Valley Cabins",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Driggs, listed by Discover Teton Valley.",
+    "address": "1 Mountain Vista Dr.",
+    "website": "https://www.tetonvalleycabins.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "pool/hot tub",
+      "pets allowed"
+    ]
+  },
+  {
+    "id": "teton-valley-collaborative-for-early-learning",
+    "slug": "teton-valley-collaborative-for-early-learning",
+    "name": "Teton Valley Collaborative for Early Learning",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.facebook.com/TetonValleyCEL/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-valley-community-recycling",
+    "slug": "teton-valley-community-recycling",
+    "name": "Teton Valley Community Recycling",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization serving Teton Valley, listed by Discover Teton Valley.",
+    "website": "https://tetonrecycling.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-valley-food-pantry",
+    "slug": "teton-valley-food-pantry",
+    "name": "Teton Valley Food Pantry",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "481 N Main Street (South side)",
+    "website": "https://www.tvfoodpantry.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-valley-hardwood-flooring-llc",
+    "slug": "teton-valley-hardwood-flooring-llc",
+    "name": "Teton Valley Hardwood Flooring, LLC",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.facebook.com/tvhflooring",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "teton-valley-health-cache-clinic",
+    "slug": "teton-valley-health-cache-clinic",
+    "name": "Teton Valley Health: Cache Clinic",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "852 Valley Centre Drive",
+    "website": "https://tvhcare.org/clinic/cache-clinic/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "health & wellness"
+    ]
+  },
+  {
+    "id": "teton-valley-health-driggs-clinic",
+    "slug": "teton-valley-health-driggs-clinic",
+    "name": "Teton Valley Health: Driggs Clinic",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "283 North First St",
+    "website": "https://tvhcare.org/clinic/driggs-clinic/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "health & wellness"
+    ]
+  },
+  {
+    "id": "teton-valley-health-victor-clinic",
+    "slug": "teton-valley-health-victor-clinic",
+    "name": "Teton Valley Health: Victor Clinic",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Victor, listed by Discover Teton Valley.",
+    "address": "83 N Main St.",
+    "website": "https://tvhcare.org/clinic/victor-clinic/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "health & wellness"
+    ]
+  },
+  {
+    "id": "teton-valley-hospital",
+    "slug": "teton-valley-hospital",
+    "name": "Teton Valley Hospital",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "address": "120 E Howard Ave",
+    "website": "https://www.tvhcare.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "health & wellness"
+    ]
+  },
+  {
+    "id": "teton-valley-lodge",
+    "slug": "teton-valley-lodge",
+    "name": "Teton Valley Lodge",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Lodge",
+    "description": "Lodge in Driggs, listed by Discover Teton Valley.",
+    "address": "3733 Adams Rd",
+    "website": "https://tetonvalleylodge.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lodge",
+      "wifi"
+    ]
+  },
+  {
+    "id": "teton-valley-meats",
+    "slug": "teton-valley-meats",
+    "name": "Teton Valley Meats",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "80 N Main St Driggs, ID",
+    "website": "http://www.tetonvalleymeats.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "teton-valley-motel",
+    "slug": "teton-valley-motel",
+    "name": "Teton Valley Motel",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Motel",
+    "description": "Motel in Victor, listed by Discover Teton Valley.",
+    "address": "381 North Agate Avenue",
+    "website": "https://www.tetonvalleymotel.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "motel",
+      "wifi"
+    ]
+  },
+  {
+    "id": "teton-valley-news",
+    "slug": "teton-valley-news",
+    "name": "Teton Valley News",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "75 N Main St",
+    "website": "https://tetonvalleynews.net/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-valley-property-management",
+    "slug": "teton-valley-property-management",
+    "name": "Teton Valley Property Management",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "253 S. Main Street",
+    "website": "https://www.tetonvalleyrealty.com/property-management/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "short term rental",
+      "pool/hot tub",
+      "pets allowed",
+      "wifi",
+      "professional services",
+      "real estate"
+    ]
+  },
+  {
+    "id": "teton-valley-realty",
+    "slug": "teton-valley-realty",
+    "name": "Teton Valley Realty",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "253 South Main St",
+    "website": "https://www.tetonvalleyrealty.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential",
+      "real estate",
+      "professional services"
+    ]
+  },
+  {
+    "id": "teton-valley-resort",
+    "slug": "teton-valley-resort",
+    "name": "Teton Valley Resort",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Lodging",
+    "description": "Lodging in Victor, listed by Discover Teton Valley.",
+    "website": "https://www.tetonvalleyresort.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "rvs & camping",
+      "short term rental",
+      "resorts/hotel",
+      "wifi"
+    ]
+  },
+  {
+    "id": "teton-valley-rodeo",
+    "slug": "teton-valley-rodeo",
+    "name": "Teton Valley Rodeo",
+    "town": "Driggs",
+    "category": "arts-culture",
+    "subcategory": "Rodeo",
+    "description": "Rodeo events at the Teton County fairgrounds near Driggs. Confirm current event dates with the organizer.",
+    "address": "1413 ID-33",
+    "website": "https://tetonvalleyrodeo.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer"
+    ],
+    "tags": [
+      "family fun",
+      "events",
+      "arts & culture"
+    ]
+  },
+  {
+    "id": "teton-valley-ski-education-foundation",
+    "slug": "teton-valley-ski-education-foundation",
+    "name": "Teton Valley Ski Education Foundation",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Ski & snowboard programs",
+    "description": "Local youth ski and snowboard programs.",
+    "address": "60 E Little Ave.",
+    "website": "https://tvsef.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-valley-trails-and-pathways",
+    "slug": "teton-valley-trails-and-pathways",
+    "name": "Teton Valley Trails & Pathways",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Trails & pathways",
+    "description": "A local nonprofit with trail maps, pathway information and Nordic grooming reports.",
+    "address": "189 North Main Street",
+    "website": "http://tvtap.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "teton-west-hotel",
+    "slug": "teton-west-hotel",
+    "name": "Teton West Hotel",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Motel",
+    "description": "Motel in Driggs, listed by Discover Teton Valley.",
+    "address": "476 North Main Street",
+    "website": "http://www.tetonwesthotels.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "motel"
+    ]
+  },
+  {
+    "id": "teton-yoga-festival",
+    "slug": "teton-yoga-festival",
+    "name": "Teton Yoga Festival",
+    "town": "Victor",
+    "category": "wellness",
+    "subcategory": "Yoga festival",
+    "description": "A yoga gathering listed for Victor. The source contains an undated past schedule; confirm any upcoming edition directly.",
+    "website": "https://www.tetonyogafestival.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "events",
+      "fitness"
+    ]
+  },
+  {
+    "id": "tetonia-club",
+    "slug": "tetonia-club",
+    "name": "Tetonia Club",
+    "town": "Teton Valley",
+    "category": "food-drink",
+    "subcategory": "Bar",
+    "description": "A Tetonia bar serving beer, wine and spirits.",
+    "address": "6266 South Main Street",
+    "website": "https://www.facebook.com/tetoniaclub/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "beer/wine",
+      "libations"
+    ]
+  },
+  {
+    "id": "the-barbershop",
+    "slug": "the-barbershop",
+    "name": "The Barbershop",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "the-barntenders",
+    "slug": "the-barntenders",
+    "name": "The Barntenders",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Pet & animal services",
+    "description": "Pet & animal services in Victor, listed by Discover Teton Valley.",
+    "website": "https://www.thebarntenders.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "veterinary"
+    ]
+  },
+  {
+    "id": "the-brakeman-american-grill",
+    "slug": "the-brakeman-american-grill",
+    "name": "The Brakeman American Grill",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Burgers & grill",
+    "description": "Burgers and American grill dishes in Victor.",
+    "address": "27 North Main Street",
+    "website": "https://www.brakemangrill.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "lunch",
+      "dinner"
+    ]
+  },
+  {
+    "id": "the-brandstalk",
+    "slug": "the-brandstalk",
+    "name": "The Brandstalk",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "1 South Main, Suite 201",
+    "website": "https://www.thebrandstalk.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "the-cottage-at-heron-glass",
+    "slug": "the-cottage-at-heron-glass",
+    "name": "The Cottage at Heron Glass",
+    "town": "Driggs",
+    "category": "stays",
+    "subcategory": "Vacation rentals",
+    "description": "Vacation rentals in Driggs, listed by Discover Teton Valley.",
+    "address": "246 5th Street East",
+    "website": "http://www.heronglass.com/cottage.htm",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "short term rental",
+      "wifi"
+    ]
+  },
+  {
+    "id": "the-fin-and-feather-inn",
+    "slug": "the-fin-and-feather-inn",
+    "name": "The Fin and Feather Inn",
+    "town": "Victor",
+    "category": "stays",
+    "subcategory": "Bed & breakfast",
+    "description": "Bed & breakfast in Victor, listed by Discover Teton Valley.",
+    "address": "9444 S Hwy 31",
+    "website": "http://finandfeatherinn.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "bed & breakfast",
+      "pets allowed",
+      "wifi",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "the-grille-at-bronze-buffalo-ranch",
+    "slug": "the-grille-at-bronze-buffalo-ranch",
+    "name": "The Grille at Bronze Buffalo Ranch",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Restaurant",
+    "description": "Dining at Bronze Buffalo Ranch in the Teton Springs community near Victor.",
+    "address": "10 Headwaters Drive",
+    "website": "https://www.bronzebuffaloranch.com/dining/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "libations",
+      "beer/wine"
+    ]
+  },
+  {
+    "id": "the-larkspur",
+    "slug": "the-larkspur",
+    "name": "The Larkspur",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "375 Larkspur Ave, Victor, ID 83455",
+    "website": "https://www.larkspurvictor.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential"
+    ]
+  },
+  {
+    "id": "the-learning-academy-of-teton-valley",
+    "slug": "the-learning-academy-of-teton-valley",
+    "name": "The Learning Academy of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "1480 South 500 West",
+    "website": "https://www.learningacademyschool.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "the-mental-health-coalition-of-teton-valley",
+    "slug": "the-mental-health-coalition-of-teton-valley",
+    "name": "The Mental Health Coalition of Teton Valley",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "76 N Main St, Ste 206",
+    "website": "https://tetonvalleymentalhealth.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "the-social-media-secrets-clubtm",
+    "slug": "the-social-media-secrets-clubtm",
+    "name": "The Social Media Secrets ClubTM",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services serving Teton Valley, listed by Discover Teton Valley.",
+    "website": "http://www.socialmediasecretsclub.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "the-velvet-moose",
+    "slug": "the-velvet-moose",
+    "name": "The Velvet Moose",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "76 N Main Street",
+    "website": "https://www.facebook.com/ShoptheVelvetMoose",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "the-wardrobe-company",
+    "slug": "the-wardrobe-company",
+    "name": "The Wardrobe Company",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "98 S Main St",
+    "website": "https://thewardrobeco.wordpress.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "the-yoga-source",
+    "slug": "the-yoga-source",
+    "name": "The Yoga Source",
+    "town": "Driggs",
+    "category": "wellness",
+    "subcategory": "Health & wellness",
+    "description": "Health & wellness in Driggs, listed by Discover Teton Valley.",
+    "website": "https://www.theyogasource.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic",
+      "professional services"
+    ]
+  },
+  {
+    "id": "three-peaks-restaurant-and-catering",
+    "slug": "three-peaks-restaurant-and-catering",
+    "name": "Three Peaks Restaurant and Catering",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Restaurant & catering",
+    "description": "A Driggs restaurant that also offers catering.",
+    "address": "15 South Main Street",
+    "website": "https://www.threepeaksdinnertable.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "beer/wine",
+      "catering"
+    ]
+  },
+  {
+    "id": "timberline-weddings",
+    "slug": "timberline-weddings",
+    "name": "Timberline Weddings",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Downtown Driggs Association.",
+    "address": "796 Palisade Trail",
+    "website": "https://www.timberlineweddings.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "trail-creek-campground",
+    "slug": "trail-creek-campground",
+    "name": "Trail Creek Campground",
+    "town": "Teton Valley",
+    "category": "stays",
+    "subcategory": "Campground",
+    "description": "Campground serving Teton Valley, listed by Discover Teton Valley.",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "transcend-ideas",
+    "slug": "transcend-ideas",
+    "name": "Transcend Ideas",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "website": "https://transcendideas.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services"
+    ]
+  },
+  {
+    "id": "tribe-artist-collective",
+    "slug": "tribe-artist-collective",
+    "name": "Tribe Artist Collective",
+    "town": "Teton Valley",
+    "category": "arts-culture",
+    "subcategory": "Art & makers",
+    "description": "An artist collective and shop in Tetonia.",
+    "address": "6263 S Main St",
+    "website": "https://www.tribeartistcollective.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "tributary",
+    "slug": "tributary",
+    "name": "Tributary",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "501 Huntsman Springs Dr",
+    "website": "https://tributaryidaho.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate"
+    ]
+  },
+  {
+    "id": "trr-outfitters-driggs-fly-shop",
+    "slug": "trr-outfitters-driggs-fly-shop",
+    "name": "TRR Outfitters - Driggs Fly Shop",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "76 N Main St",
+    "website": "https://trroutfitters.com/driggs-fly-shop/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "tss-mountain-academy",
+    "slug": "tss-mountain-academy",
+    "name": "TSS Mountain Academy",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Victor, listed by Discover Teton Valley.",
+    "address": "192 W Birch St",
+    "website": "https://www.tetonscience.org/locations/teton-valley/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "university-of-idaho-extension-teton-county",
+    "slug": "university-of-idaho-extension-teton-county",
+    "name": "University of Idaho Extension, Teton County",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "445 North Main",
+    "website": "https://www.uidaho.edu/extension/county/teton",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "us-bank",
+    "slug": "us-bank",
+    "name": "US Bank",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Banking",
+    "description": "Banking in Driggs, listed by Downtown Driggs Association.",
+    "address": "200 S Main St",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "valley-advocates-for-responsible-development",
+    "slug": "valley-advocates-for-responsible-development",
+    "name": "Valley Advocates for Responsible Development",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Community organization",
+    "description": "Community organization in Driggs, listed by Discover Teton Valley.",
+    "address": "285 East Little",
+    "website": "https://tetonvalleyadvocates.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "valley-lumber-and-rental",
+    "slug": "valley-lumber-and-rental",
+    "name": "Valley Lumber & Rental",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "9 Sagebrush Dr",
+    "website": "https://valleylumberrental.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "valley-of-the-tetons-library",
+    "slug": "valley-of-the-tetons-library",
+    "name": "Valley of the Tetons Library",
+    "town": "Teton Valley",
+    "category": "arts-culture",
+    "subcategory": "Library",
+    "description": "Public library services and community programming in Driggs, Victor and Tetonia.",
+    "address": "79 N. Main St., Driggs, Idaho 83422",
+    "website": "https://valleyofthetetonslibrary.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "city or library",
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "valley-voices",
+    "slug": "valley-voices",
+    "name": "Valley Voices",
+    "town": "Victor",
+    "category": "arts-culture",
+    "subcategory": "Storytelling",
+    "description": "Community storytelling events in Teton Valley.",
+    "website": "https://www.instagram.com/ValleyVoices_33/?hl=en",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "non-profit/civic"
+    ]
+  },
+  {
+    "id": "victor-drug",
+    "slug": "victor-drug",
+    "name": "Victor Drug",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "81 N Main St",
+    "website": "https://www.victordrug.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "victor-valley-market",
+    "slug": "victor-valley-market",
+    "name": "Victor Valley Market",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Market & deli",
+    "description": "A grocery market and deli at the center of Victor.",
+    "address": "5 South Main Street",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "libations",
+      "lunch",
+      "groceries"
+    ]
+  },
+  {
+    "id": "victor-veterinary-hospital",
+    "slug": "victor-veterinary-hospital",
+    "name": "Victor Veterinary Hospital",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Pet & animal services",
+    "description": "Pet & animal services in Victor, listed by Discover Teton Valley.",
+    "address": "1980 W Highway 31",
+    "website": "https://victorveterinary.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "veterinary"
+    ]
+  },
+  {
+    "id": "wagitude-a-loved-dog-hotel-and-pet-sitting-services",
+    "slug": "wagitude-a-loved-dog-hotel-and-pet-sitting-services",
+    "name": "Wagitude- A Loved-Dog Hotel & Pet Sitting Services",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Pet & animal services",
+    "description": "Pet & animal services in Driggs, listed by Discover Teton Valley.",
+    "website": "http://www.wagitudeloveddoghotel.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential",
+      "veterinary",
+      "professional services"
+    ]
+  },
+  {
+    "id": "wai-mauna-paddleboard-rentals",
+    "slug": "wai-mauna-paddleboard-rentals",
+    "name": "Wai Mauna Paddleboard Rentals",
+    "town": "Driggs",
+    "category": "outdoors",
+    "subcategory": "Paddleboard rentals",
+    "description": "Stand-up paddleboard rentals and Teton River shuttle services in Driggs.",
+    "address": "90 N. Main Street",
+    "website": "https://paddleboarddriggs.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "outdoors & sports",
+      "family fun",
+      "water sports"
+    ]
+  },
+  {
+    "id": "warbirds-cafe",
+    "slug": "warbirds-cafe",
+    "name": "Warbirds Cafe",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Food & drink",
+    "description": "Food & drink in Driggs, listed by Downtown Driggs Association.",
+    "address": "675 Airport Rd Driggs, ID",
+    "website": "https://www.warbirdscafe.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "wells-fargo-bank",
+    "slug": "wells-fargo-bank",
+    "name": "Wells Fargo Bank",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Banking",
+    "description": "Banking in Driggs, listed by Downtown Driggs Association.",
+    "address": "185 S Main",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "west-side-yard",
+    "slug": "west-side-yard",
+    "name": "West Side Yard",
+    "town": "Victor",
+    "category": "food-drink",
+    "subcategory": "Restaurant & bar",
+    "description": "Food and drinks with a summer outdoor dining area in Victor.",
+    "address": "31 W Center Street",
+    "website": "https://thewestsideyard.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "dinner",
+      "lunch",
+      "beer/wine",
+      "libations",
+      "liquor"
+    ]
+  },
+  {
+    "id": "westwell-media",
+    "slug": "westwell-media",
+    "name": "Westwell Media",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Video production",
+    "description": "A Teton Valley video-production business.",
+    "website": "https://westwell.media/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay",
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "wild-nourish-earth-apothecary",
+    "slug": "wild-nourish-earth-apothecary",
+    "name": "Wild Nourish Earth Apothecary",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "105 Depot Street, Suite 108 Driggs, ID. 83422",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "wildline-architecture",
+    "slug": "wildline-architecture",
+    "name": "Wildline Architecture",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "111 Creekside Meadows Ave",
+    "website": "https://wildlinearchitecture.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "residential",
+      "professional services"
+    ]
+  },
+  {
+    "id": "wilkinson-montesano-builders",
+    "slug": "wilkinson-montesano-builders",
+    "name": "Wilkinson-Montesano Builders",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Real estate",
+    "description": "Real estate in Driggs, listed by Discover Teton Valley.",
+    "address": "784 Rocky Rd Industrial Loop",
+    "website": "http://www.wilkinson-montesano.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "real estate",
+      "residential",
+      "professional services"
+    ]
+  },
+  {
+    "id": "winter-winds-farm",
+    "slug": "winter-winds-farm",
+    "name": "Winter Winds Farm",
+    "town": "Victor",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Victor, listed by Discover Teton Valley.",
+    "address": "375 W 4000 S",
+    "website": "https://www.winterwindsfarm.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "retail"
+    ]
+  },
+  {
+    "id": "wydaho-construction-services",
+    "slug": "wydaho-construction-services",
+    "name": "Wydaho Construction Services",
+    "town": "Victor",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Victor, listed by Discover Teton Valley.",
+    "address": "9431 Foutz Drive",
+    "website": "https://www.wydahoconstruction.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/live"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "professional services",
+      "residential"
+    ]
+  },
+  {
+    "id": "wydaho-property-management",
+    "slug": "wydaho-property-management",
+    "name": "Wydaho Property Management",
+    "town": "Driggs",
+    "category": "services",
+    "subcategory": "Local services",
+    "description": "Local services in Driggs, listed by Discover Teton Valley.",
+    "address": "465 S. Main Street, Driggs, ID 83422",
+    "website": "https://wydahoproperties.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  },
+  {
+    "id": "wydaho-rendezvous-teton-bike-festival",
+    "slug": "wydaho-rendezvous-teton-bike-festival",
+    "name": "Wydaho Rendezvous Teton Bike Festival",
+    "town": "Nearby",
+    "category": "outdoors",
+    "subcategory": "Bike festival",
+    "description": "A mountain-bike festival at Grand Targhee in Alta, Wyoming. Check the organizer for the next edition.",
+    "address": "Grand Targhee Resort",
+    "website": "https://tetonbikefest.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "summer",
+      "fall"
+    ],
+    "tags": [
+      "events"
+    ]
+  },
+  {
+    "id": "wydaho-roasters-coffee-house",
+    "slug": "wydaho-roasters-coffee-house",
+    "name": "Wydaho Roasters Coffee House",
+    "town": "Driggs",
+    "category": "food-drink",
+    "subcategory": "Coffee & pastries",
+    "description": "Coffee drinks and house-made pastries in Driggs.",
+    "address": "465 S. Main Street, Driggs, ID 83422",
+    "website": "https://www.wydahoroaster.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/eat",
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "breakfast",
+      "lunch",
+      "libations"
+    ]
+  },
+  {
+    "id": "yellowstone-teton-territory",
+    "slug": "yellowstone-teton-territory",
+    "name": "Yellowstone Teton Territory",
+    "town": "Teton Valley",
+    "category": "services",
+    "subcategory": "Regional visitor information",
+    "description": "Regional visitor information covering eastern Idaho.",
+    "website": "https://yellowstoneteton.org/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/stay"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "resorts/hotel",
+      "motel",
+      "short term rental",
+      "bed & breakfast",
+      "lodge",
+      "rvs & camping"
+    ]
+  },
+  {
+    "id": "yellowstone-teton-tours",
+    "slug": "yellowstone-teton-tours",
+    "name": "Yellowstone Teton Tours",
+    "town": "Teton Valley",
+    "category": "outdoors",
+    "subcategory": "Guided tours",
+    "description": "A regional guide service for Yellowstone and the Tetons.",
+    "website": "https://yellowstonetetontours.com/",
+    "sourceUrls": [
+      "https://discovertetonvalley.com/play"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": [
+      "scenic tours",
+      "family fun"
+    ]
+  },
+  {
+    "id": "yostmark",
+    "slug": "yostmark",
+    "name": "Yostmark",
+    "town": "Driggs",
+    "category": "shopping",
+    "subcategory": "Local shopping",
+    "description": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+    "address": "110 E Little Ave",
+    "website": "https://yostmark.com/",
+    "sourceUrls": [
+      "https://downtowndriggs.org/maps-resources"
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "sourceStatus": "source-listed",
+    "seasons": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "tags": []
+  }
+]
