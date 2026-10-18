@@ -1,9 +1,10 @@
 // Development-only middleware. Production uses the unchanged Cloudflare Worker.
 // SQLite and the local verification bypass are never bundled into dist/ or the Worker.
 import { DatabaseSync } from 'node:sqlite';
-import { mkdir, readFile } from 'node:fs/promises';
+import { mkdir } from 'node:fs/promises';
 import { adaptDb } from './sqlite-adapter.mjs';
 import { handleApi } from '../src/worker.mjs';
+import { migrateLocal } from './local-migrations.mjs';
 
 export function localApi() {
   return {
@@ -11,7 +12,7 @@ export function localApi() {
     configureServer: async (server) => {
       await mkdir('.local', { recursive: true });
       const database = new DatabaseSync('.local/submissions.sqlite');
-      database.exec(await readFile('migrations/0001_submissions.sql', 'utf8'));
+      await migrateLocal(database);
       server.httpServer?.once('close', () => database.close());
       server.middlewares.use(async (req, res, next) => {
         if (!req.url?.startsWith('/api/')) return next();

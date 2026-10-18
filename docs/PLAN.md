@@ -24,7 +24,7 @@ Initial scope: 426 records, including 31 trail points. Categories cover outdoors
 - Confirm map coordinates, distinguish trailheads from approximate source map points, and add route lengths with clear one-way/loop/round-trip semantics.
 - Add a weekly editorial review habit for new submissions; periodically refresh public source data into candidate files and review changes before replacing curated records.
 - Verify mobile usability, accessibility, forms, real Cloudflare headers, and production Core Web Vitals. Connect Search Console if desired; submit the generated sitemap.
-- Define a review owner and retention process. Requests currently land in D1, not an inbox; email notifications or an authenticated admin interface can be added next.
+- Define a review owner and retention process. Requests are stored in D1 and forwarded to the Formspree inbox for editor notifications. An authenticated review interface can be added later; review status in D1 remains authoritative.
 
 “Everything in the market” is an ongoing coverage objective. Current listings are source-listed, not a completeness or operating-status guarantee. The initial guide deliberately omits unverified opening hours, ticket prices, upcoming event dates, and live trail-condition claims.
 

@@ -32,6 +32,7 @@ This type-checks the Astro and TypeScript source, builds every page, runs conten
 - Dedicated Victor, Driggs, category, trail, and individual place pages.
 - Interactive, on-demand Leaflet/OpenStreetMap map using source-provided coordinates.
 - Addition, correction, and contact requests, validated and saved into a private D1 review queue.
+- Formspree inbox and email notifications, with persisted delivery status and automatic retries.
 - Production Turnstile verification, same-origin checks, size limits, honeypot, and hourly rate limits.
 - Canonicals, social metadata, JSON-LD, sitemap, robots.txt, `llms.txt`, full text inventory, and public JSON records.
 - Transparent sponsorship, privacy text, source citations, and verification status.
@@ -49,6 +50,7 @@ This type-checks the Astro and TypeScript source, builds every page, runs conten
 | `src/scripts/app.ts` | Typed search, map, navigation, and form behavior |
 | `public/assets/styles.css` | Responsive design |
 | `src/worker.mjs` | Cloudflare submission API |
+| `src/lib/form-notifications.ts` | Formspree delivery and retry processing |
 | `migrations/` | Private review database schema |
 | `astro.config.ts`, `tsconfig.json` | Static Astro build and strict TypeScript configuration |
 | `scripts/prepare.mjs` | Generates the submission API's published-listing allowlist |
@@ -66,7 +68,9 @@ This type-checks the Astro and TypeScript source, builds every page, runs conten
 
 Production runs on **Cloudflare Workers with Static Assets**, with `https://tetoncounty.us` as its canonical domain. Source is maintained at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Worker, D1 database, initial migration, Turnstile widget, and runtime secret are configured. See [deployment operations](docs/DEPLOYMENT.md) for build settings and release steps.
 
-Cloudflare Builds is configured for `main`, with repository access granted to the existing Cloudflare Workers & Pages GitHub App. Each push runs the build, tests, and site checks before publishing. Submissions enter a private D1 review queue. They do not send email or appear publicly until reviewed and incorporated into the source data.
+Cloudflare Builds is configured for `main`, with repository access granted to the existing Cloudflare Workers & Pages GitHub App. Each push runs the build, tests, and site checks before publishing. Submissions enter a private D1 review queue, then go to Formspree form `meaedrjo` for inbox storage and editor email notifications. Configure `drew@monroeresidential.com` as that form's notification recipient in Formspree. Nothing appears publicly until reviewed and incorporated into the source data.
+
+Delivery is attempted immediately after saving. A five-minute Worker cron retries temporary failures, with backoff and a maximum of eight attempts. The `submission_notifications` table records acceptance or failure separately from editorial review. Local previews never send to Formspree.
 
 The source inventory omits disputed addresses and does not invent operating hours, event dates, ratings, prices, or live trail conditions. Some source-linked websites are social pages, Maps, or trail guides rather than operator websites. Source dates describe extraction, not verification by an owner.
 

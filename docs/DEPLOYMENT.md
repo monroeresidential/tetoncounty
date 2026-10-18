@@ -10,6 +10,7 @@ Astro builds static HTML and hashed browser assets into `dist/`. Use Node 24 or 
 - Worker: `tetoncounty-us`; diagnostic URL: `https://tetoncounty-us.0x3639.workers.dev`.
 - D1: `tetonvalley-submissions`, bound as `DB`; initial migration applied.
 - Turnstile: managed widget restricted to `tetoncounty.us`; public key in `wrangler.jsonc`, secret stored only in Cloudflare.
+- Formspree: `https://formspree.io/f/meaedrjo`; the form ID is public and configured in `FORMSPREE_FORM_ID`. Notification recipients are managed in Formspree; the intended editor is `drew@monroeresidential.com`.
 - Production configuration is checked into Git. Credentials, local submissions, and build output are ignored.
 
 The setup steps below document provisioning and recovery. Do not create duplicate production resources when deploying updates.
@@ -72,7 +73,11 @@ Initial deployment checks on October 18, 2026: HTTPS homepage, directory, Victor
 
 Verify the homepage, a listing, a category, `/hiking/`, `/sitemap.xml`, `/llms.txt`, `/data/listings.json`, and an unknown URL (real 404). Check CSP and local font/image delivery. Exercise a new listing, correction, and contact request on the live form; verify each row in D1 and check no contact information appears in public exports. Confirm spam verification and rate limits with separate controlled test data.
 
-No email is sent by the current form handler. D1 is the review queue. Establish an editor and follow `EDITORIAL.md` before advertising the contact form publicly.
+Formspree delivers editor notifications and maintains its own private inbox. D1 remains the durable review queue. The sender's `email` field supplies Formspree's Reply-To address; it does not choose the notification recipient. Confirm the recipient and email action in Formspree. No acknowledgement or marketing email is sent to visitors.
+
+Before deploying the notification integration, run `npm run db:migrate` to apply `0002_submission_notifications.sql`. Its trigger atomically queues new saved requests; pre-existing records are not sent retroactively. The five-minute Worker cron retries temporary delivery errors. A row marked `sent` means Formspree accepted it, not that the recipient read it or that inbox delivery is independently confirmed. See `EDITORIAL.md` for failed-delivery recovery.
+
+Cloudflare Turnstile remains the public form's spam check. If Formspree rejects forwarded requests because of additional CAPTCHA or domain rules, inspect the form's configuration and delivery error before changing protections. Do not bypass a CAPTCHA or publish a browser-facing administrative API key.
 
 ## References
 

@@ -1,4 +1,5 @@
 import {listingIds} from './listing-ids.mjs';
+import {deliverNotifications} from './lib/form-notifications.ts';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const maxBody=16000;
 export function validateSubmission(body){
@@ -23,7 +24,7 @@ async function readBoundedJson(request){
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
   try{return JSON.parse(new TextDecoder().decode(bytes));}catch{throw new Error('invalid-json');}
 }
-export async function handleApi(request,env){
+export async function handleApi(request,env,ctx){
   const url=new URL(request.url),local=env.LOCAL_PREVIEW===true;
   const enabled=!!(env.DB&&(local||env.TURNSTILE_SECRET&&env.TURNSTILE_SITE_KEY));
   if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':'production'});
@@ -53,10 +54,17 @@ export async function handleApi(request,env){
     if(limit.count>5)return json({error:'Too many requests. Please try again in an hour.'},429);
     const id=crypto.randomUUID();
     await env.DB.prepare('INSERT INTO submissions (id, type, listing_id, name, email, place_name, town, website, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').bind(id,body.type,body.type==='correction'?body.listingId:null,body.name.trim(),body.email.trim(),body.type==='addition'?body.placeName.trim():'',body.type==='addition'?(body.town||''):'',body.type==='addition'?(body.website?.trim()||''):'',body.message.trim(),new Date(now).toISOString()).run();
-    // No personal data in logs, public listing files, or email notifications.
+    // Contact details stay out of logs and public exports. Formspree delivers private notifications.
     // Cleanup failure must never turn an already-saved request into a failed response.
     try {await env.DB.prepare('DELETE FROM submission_rate_limits WHERE expires_at < ?').bind(now).run();} catch {}
+    if(!local&&env.FORMSPREE_FORM_ID){
+      const delivery=deliverNotifications(env,{submissionId:id,limit:1}).catch(()=>console.error('Submission notification deferred; the saved request remains in D1.'));
+      if(ctx?.waitUntil)ctx.waitUntil(delivery);else await delivery;
+    }
     return json({ok:true,id},201);
   }catch{return json({error:'Your request could not be saved. Please try again.'},503);}
 }
-export default {async fetch(request,env){if(new URL(request.url).pathname.startsWith('/api/'))return handleApi(request,env);return env.ASSETS.fetch(request);}};
+export default {
+  async fetch(request,env,ctx){if(new URL(request.url).pathname.startsWith('/api/'))return handleApi(request,env,ctx);return env.ASSETS.fetch(request);},
+  async scheduled(_event,env){await deliverNotifications(env);},
+};

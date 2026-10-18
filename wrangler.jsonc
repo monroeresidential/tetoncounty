@@ -16,8 +16,10 @@
   },
   "vars": {
     "SITE_URL": "https://tetoncounty.us",
-    "TURNSTILE_SITE_KEY": "0x4AAAAAAFaYeLDGByrsxlbY"
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFaYeLDGByrsxlbY",
+    "FORMSPREE_FORM_ID": "meaedrjo"
   },
+  "triggers": { "crons": ["*/5 * * * *"] },
   "d1_databases": [
     {
       "binding": "DB",
