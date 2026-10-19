@@ -1,4 +1,5 @@
 import './analytics.ts';
+import './pass-badge.ts';
 import type * as Leaflet from 'leaflet';
 declare const L: typeof Leaflet;
 type FormConfig = {

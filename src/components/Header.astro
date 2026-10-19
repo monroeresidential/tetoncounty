@@ -6,7 +6,7 @@ interface Props { path: string }
 const { path } = Astro.props;
 ---
 <div class="topline">
-  <span>Victor · Driggs · Teton Valley, Idaho</span>
+  <span class="topline-place"><span class="topline-towns">Victor · Driggs · Teton Valley, Idaho</span><a class="pass-badge" href="/teton-pass/" data-pass-badge hidden><span class="pass-badge-dot" aria-hidden="true"></span><span data-pass-badge-text>Teton Pass</span></a></span>
   <SponsorLink placement="header_sponsor">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></SponsorLink>
 </div>
 <header class="header nav">

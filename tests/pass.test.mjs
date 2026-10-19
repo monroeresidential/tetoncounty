@@ -59,3 +59,10 @@ test('Teton Pass page is linked, listed, and links to tetonpasscam.com with trac
   assert.match(html, /href="https:\/\/tetonpasscam\.com\/\?utm_source=[^"]+utm_campaign=tetoncounty_teton_pass&amp;utm_content=cta_button"/);
   assert(html.includes('https://www.wyoroad.info/highway/conditions/RoadClosures.html'));
 });
+
+test('every page carries a hidden-until-loaded Teton Pass badge linking to the pass page', async () => {
+  for (const file of ['index.html', 'explore/index.html', 'webcams/index.html']) {
+    const html = await readFile(`dist/${file}`, 'utf8');
+    assert.match(html, /<a class="pass-badge" href="\/teton-pass\/" data-pass-badge hidden>/, file);
+  }
+});
