@@ -1,5 +1,6 @@
 import {listingIds} from './listing-ids.mjs';
 import {deliverNotifications} from './lib/form-notifications.ts';
+import {parseWebcams,webcamFeedUrl} from './lib/webcams.ts';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const maxBody=16000;
 export function validateSubmission(body){
@@ -24,10 +25,21 @@ async function readBoundedJson(request){
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
   try{return JSON.parse(new TextDecoder().decode(bytes));}catch{throw new Error('invalid-json');}
 }
+// The feed's CORS policy only admits the production origin, so every environment reads it through the Worker.
+async function webcams(){
+  try{
+    const response=await fetch(webcamFeedUrl,{cf:{cacheTtl:60,cacheEverything:true},signal:AbortSignal.timeout(8000)});
+    if(!response.ok)throw new Error('upstream');
+    const cameras=parseWebcams(await response.json());
+    if(!cameras.length)throw new Error('empty');
+    return new Response(JSON.stringify({cameras}),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=60','X-Content-Type-Options':'nosniff'}});
+  }catch{return json({error:'Webcams are temporarily unavailable.'},503);}
+}
 export async function handleApi(request,env,ctx){
   const url=new URL(request.url),local=env.LOCAL_PREVIEW===true;
   const enabled=!!(env.DB&&(local||env.TURNSTILE_SECRET&&env.TURNSTILE_SITE_KEY));
   if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':env.ENVIRONMENT==='development'?'development':'production'});
+  if(url.pathname==='/api/webcams'&&request.method==='GET')return webcams();
   if(url.pathname!=='/api/submissions')return json({error:'Not found.'},404);
   if(request.method!=='POST')return new Response(null,{status:405,headers:{Allow:'POST','Cache-Control':'no-store'}});
   const allowedOrigin=env.SITE_URL||'https://tetoncounty.us';
