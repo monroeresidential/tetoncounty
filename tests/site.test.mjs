@@ -42,6 +42,23 @@ test('each listing is rendered as readable HTML with its canonical URL and struc
   }
 });
 
+test('listing descriptions are unique and search metadata agrees with social cards', async () => {
+  const descriptions = new Set();
+  for (const listing of listings) {
+    const html = await read(`places/${listing.id}/index.html`);
+    const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
+    assert(description, `${listing.id}: missing description`);
+    assert(!descriptions.has(description), `${listing.id}: duplicate description`);
+    descriptions.add(description);
+    assert.equal(html.match(/<meta property="og:description" content="([^"]+)"/)?.[1], description);
+    assert.equal(html.match(/<meta name="twitter:description" content="([^"]+)"/)?.[1], description);
+    assert.equal(
+      html.match(/<meta name="twitter:title" content="([^"]+)"/)?.[1],
+      html.match(/<meta property="og:title" content="([^"]+)"/)?.[1],
+    );
+  }
+});
+
 test('Astro emits external executable scripts compatible with the production CSP', async () => {
   for (const path of ['index.html', 'explore/index.html', 'suggest/index.html']) {
     const html = await read(path);

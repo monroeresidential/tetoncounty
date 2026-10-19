@@ -6,6 +6,7 @@ import Icon from '../../components/Icon.astro';
 import Photo from '../../components/Photo.astro';
 import { getListings, category, tag } from '../../lib/listings.ts';
 import { listingImageFor } from '../../lib/listing-images.ts';
+import { listingTitle, listingDescription } from '../../lib/metadata.ts';
 import { reviewedDate, siteUrl } from '../../config.ts';
 export const getStaticPaths = (async () => (await getListings()).map(item => ({ params: { id: item.id }, props: { item } }))) satisfies GetStaticPaths;
 const { item } = Astro.props;
@@ -32,7 +33,7 @@ if (photograph) Object.assign(schema[0], { image: {
   creditText: photograph.credit, isBasedOn: photograph.sourcePage,
 } });
 ---
-<SiteLayout title={`${item.name} — ${item.town}`} description={item.description} path={`/places/${item.id}/`} schema={schema}>
+<SiteLayout title={listingTitle(item)} description={listingDescription(item)} path={`/places/${item.id}/`} schema={schema}>
   <div class="detail section">
     <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href={`/categories/${c.id}/`}>{c.short}</a><span>/</span>{item.name}</div>
     <div class="detail-grid">

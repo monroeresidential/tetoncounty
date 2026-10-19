@@ -7,7 +7,7 @@ import { categories, seasons, towns, siteUrl } from '../config.ts';
 import { category, tag } from '../lib/listings.ts';
 import type { Listing } from '../lib/listing-schema.ts';
 interface Props {
-  listings: Listing[]; title?: string; description?: string; path?: string;
+  listings: Listing[]; title?: string; description?: string; metaDescription?: string; path?: string;
   defaultCategory?: string; defaultTown?: string; hiking?: boolean;
 }
 const { listings, title = 'Find your kind of day.', description = 'Good food, fresh air, and local places worth knowing. Start here, then see where the day takes you.', path = '/explore/', defaultCategory = '', defaultTown = '', hiking = false } = Astro.props;
@@ -17,7 +17,7 @@ const filters = [{ id: '', short: 'Everything' }, ...categories];
 const pageTitle = hiking ? 'Hiking trails near Victor & Driggs, Idaho' : defaultTown ? `Things to do in ${defaultTown}, Idaho` : defaultCategory ? `${category(defaultCategory).short} in Victor & Driggs` : 'Explore Victor & Driggs';
 const schema = { '@type': 'CollectionPage', name: title, url: siteUrl + path, mainEntity: { '@type': 'ItemList', numberOfItems: initial.length, itemListElement: initial.map((l, i) => ({ '@type': 'ListItem', position: i + 1, name: l.name, url: `${siteUrl}/places/${l.id}/` })) } };
 ---
-<SiteLayout title={pageTitle} description={description} path={path} schema={schema}>
+<SiteLayout title={pageTitle} description={Astro.props.metaDescription ?? description} path={path} schema={schema}>
   <div class="page-intro section">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">{hiking ? 'Trails & outdoors' : defaultTown || (defaultCategory ? category(defaultCategory).short : 'Explore')}</span></nav>
     <div class="page-title-grid">
