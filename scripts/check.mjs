@@ -23,7 +23,11 @@ for (const file of htmlFiles) {
 }
 const appFiles=files.filter(f=>f.startsWith('dist/_astro/')&&f.endsWith('.js'));
 assert(appFiles.length>0,'Astro must emit the client script as an external file for CSP');
-const appBytes=(await Promise.all(appFiles.map(async f=>gzipSync(await readFile(f)).length))).reduce((a,b)=>a+b,0),cssBytes=gzipSync(await readFile('dist/assets/styles.css')).length;
-assert(appBytes<9000,`Client script too large: ${appBytes}`);assert(cssBytes<12000,`CSS too large: ${cssBytes}`);
+// Budget the scripts each page actually loads; page-specific scripts (webcams, pass, live) never load together.
+const scriptBytes=new Map(await Promise.all(appFiles.map(async f=>[f.slice(4),gzipSync(await readFile(f)).length])));
+let appBytes=0,heaviest='';
+for(const file of htmlFiles){const bytes=[...new Set((await readFile(file,'utf8')).match(/\/_astro\/[^"]+\.js/g)||[])].reduce((sum,src)=>sum+(scriptBytes.get(src)||0),0);if(bytes>appBytes){appBytes=bytes;heaviest=file;}}
+const cssBytes=gzipSync(await readFile('dist/assets/styles.css')).length;
+assert(appBytes<9000,`Client script too large on ${heaviest}: ${appBytes}`);assert(cssBytes<12000,`CSS too large: ${cssBytes}`);
 console.log(`Verified ${htmlFiles.length} HTML pages, ${checked} internal references, ${listings.length} unique records, 31 trails and structured data.`);
-console.log(`Compressed core payload: JS ${appBytes.toLocaleString()} bytes + CSS ${cssBytes.toLocaleString()} bytes. Maps load on demand.`);
+console.log(`Compressed payload: heaviest page JS ${appBytes.toLocaleString()} bytes (${heaviest.slice(5)}) + CSS ${cssBytes.toLocaleString()} bytes. Maps load on demand.`);

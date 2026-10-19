@@ -1,0 +1,70 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Icon from '../components/Icon.astro';
+import SponsorLink from '../components/SponsorLink.astro';
+import { siteUrl } from '../config.ts';
+import { passSite, wyoming511 } from '../lib/pass.ts';
+import { trackedLink } from '../lib/sponsor.ts';
+import '../styles/pass.css';
+
+const description = 'Is Teton Pass open? See WYDOT status, live drive times from Victor and Driggs to Jackson, Teton Village, and the airport in both directions, and when to leave.';
+const passLink = (path: string, placement: string) => trackedLink(passSite + path, Astro.url.pathname, placement);
+const schema = { '@type': 'WebPage', name: 'Teton Pass status & drive times', url: `${siteUrl}/teton-pass/`, description };
+const routes = [['victor', 'Victor'], ['driggs', 'Driggs']].flatMap(([town, townName]) => [['jackson', 'Jackson'], ['tetonvillage', 'Teton Village'], ['airport', 'Airport']].flatMap(([place, placeName]) => [[`${town}-${place}-eb`, `${townName} → ${placeName}`], [`${town}-${place}-wb`, `${placeName} → ${townName}`]]));
+---
+<SiteLayout title="Teton Pass status & drive times" description={description} path="/teton-pass/" schema={schema}>
+  <div class="page-intro section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Teton Pass</span></nav>
+    <div class="page-title-grid">
+      <div><span class="eyebrow">Over the hill to Jackson</span><h1>Teton Pass</h1></div><p>{description}</p>
+    </div>
+  </div>
+  <section class="section pass" aria-label="Teton Pass conditions" data-pass>
+    <div class="pass-banner" data-status="unknown" data-pass-banner role="status" aria-live="polite">
+      <p class="pass-state" data-pass-state>Checking…</p>
+      <p class="pass-warning" data-pass-warning hidden></p>
+      <p class="pass-detail" data-pass-detail>Loading the latest WYDOT status.</p>
+      <ul class="pass-advisories" data-pass-advisories hidden></ul>
+    </div>
+    <noscript><p class="notice pass-noscript">Turn on JavaScript to load the live status, or check <a href={passLink('/', 'noscript')}>tetonpasscam.com</a> and <a href={wyoming511}>Wyoming 511</a>.</p></noscript>
+
+    <section class="pass-card" aria-labelledby="drive-title">
+      <div class="pass-card-heading"><h2 id="drive-title">Drive times right now</h2><p class="pass-updated" data-pass-updated></p></div>
+      <p class="pass-withheld" data-pass-withheld hidden></p>
+      <div class="pass-directions" data-pass-directions hidden>
+        <div><h3>To Wyoming</h3><ul class="pass-times" data-pass-times="eb"></ul></div>
+        <div><h3>Back to Teton Valley</h3><ul class="pass-times" data-pass-times="wb"></ul></div>
+      </div>
+    </section>
+
+    <section class="pass-card" aria-labelledby="leave-title">
+      <div class="pass-card-heading">
+        <h2 id="leave-title">When should you leave?</h2>
+        <label class="pass-route">Route<select data-pass-route>{routes.map(([slug, name]) => <option value={slug}>{name}</option>)}</select></label>
+      </div>
+      <ul class="pass-legend" aria-hidden="true"><li class="today">Today</li><li class="typical">Typical day</li><li class="range">Typical range</li></ul>
+      <div class="pass-chart" data-pass-chart></div>
+      <p class="pass-chart-note" data-pass-chart-note aria-live="polite"></p>
+    </section>
+
+    <section class="pass-card pass-weather" aria-labelledby="weather-title" data-pass-weather hidden>
+      <h2 id="weather-title">At the summit</h2>
+      <dl data-pass-weather-list></dl>
+      <p class="pass-updated" data-pass-weather-updated></p>
+    </section>
+  </section>
+
+  <section class="section pass-more" aria-labelledby="pass-more-title">
+    <div>
+      <span class="handwritten">Checking before the commute?</span>
+      <h2 id="pass-more-title">More on tetonpasscam.com</h2>
+      <p>The three pass cameras, community road reports, the hourly forecast, and full drive-time history live on tetonpasscam.com, a free Teton Pass tracker that is also supported by <SponsorLink placement="inline_text">Teton Flats</SponsorLink>.</p>
+    </div>
+    <div class="pass-more-actions">
+      <a class="btn btn-primary" href={passLink('/', 'cta_button')}>Open tetonpasscam.com <Icon name="northeast" /></a>
+      <a class="text-link" href={passLink('/history', 'history_link')}>Full drive-time history <Icon name="arrow" /></a>
+    </div>
+    <p class="pass-source">Pass status comes from WYDOT and drive times from Google traffic data, both collected by tetonpasscam.com about every 10 minutes. Neither site is affiliated with WYDOT. Always confirm closures with <a href={wyoming511}>Wyoming 511</a>.</p>
+  </section>
+  <script src="../scripts/pass.ts"></script>
+</SiteLayout>
