@@ -15,6 +15,7 @@ test('webcam feed keeps only same-bucket JPEG cameras and groups them by corrido
     feature('Teton_Pass/latest/east.jpg'),
     feature('Teton_Valley_ID/latest/tetoncam-driggs.jpg', { name: 'TetonCam (Driggs)', source: 'direct', approximate: true }),
     feature('Somewhere_New/latest/cam.jpg'),
+    feature('Teton_Valley_ID/latest/faa-north.jpg', { source: 'faa' }),
     feature('Teton_Pass/latest/east.jpg'),
     feature('x/latest/cam.jpg', { image_url: 'https://elsewhere.example/x.jpg' }),
     feature('x/latest/cam.jpg', { image_url: `${webcamImageOrigin.replace('https', 'http')}/x.jpg` }),
@@ -25,8 +26,10 @@ test('webcam feed keeps only same-bucket JPEG cameras and groups them by corrido
   assert.deepEqual(cameras.map(c => [c.id, c.area]), [
     ['Teton_Pass/latest/east.jpg', 'teton-pass'],
     ['Teton_Valley_ID/latest/tetoncam-driggs.jpg', 'teton-valley'],
+    ['Teton_Valley_ID/latest/faa-north.jpg', 'teton-valley'],
     ['Somewhere_New/latest/cam.jpg', 'more'],
   ]);
+  assert.equal(cameras[2].credit, 'Federal Aviation Administration');
   assert.equal(cameras[0].credit, 'Wyoming Department of Transportation');
   assert.equal(cameras[1].credit, 'TetonCam');
   assert.equal(cameras[1].approximate, true);

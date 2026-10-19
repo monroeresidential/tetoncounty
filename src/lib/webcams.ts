@@ -24,6 +24,7 @@ export interface Webcam {
 
 function creditFor(source: unknown, folder: string, name: string) {
   if (source === 'wydot') return 'Wyoming Department of Transportation';
+  if (source === 'faa') return 'Federal Aviation Administration';
   if (folder === 'airport') return 'Jackson Hole Airport';
   if (folder === 'Teton_Village_JHMR') return 'Jackson Hole Mountain Resort';
   if (/^TetonCam\b/.test(name)) return 'TetonCam';
@@ -57,5 +58,8 @@ export function parseWebcams(feed: unknown): Webcam[] {
       credit: creditFor(properties.source, folder, name),
     });
   }
-  return cameras;
+  // Keep each feed folder together (e.g. FAA and parking cameras at the airport) while preserving feed order.
+  const folderOrder = new Map<string, number>();
+  for (const camera of cameras) { const folder = camera.id.split('/')[0]; if (!folderOrder.has(folder)) folderOrder.set(folder, folderOrder.size); }
+  return cameras.sort((a, b) => folderOrder.get(a.id.split('/')[0])! - folderOrder.get(b.id.split('/')[0])!);
 }
