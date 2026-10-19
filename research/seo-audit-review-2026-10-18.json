@@ -1,0 +1,620 @@
+{
+  "reviewedAt": "2026-10-18",
+  "input": "audit-issues.json",
+  "site": "https://tetoncounty.us",
+  "findingsReviewed": 47,
+  "summary": {
+    "fixed": 3,
+    "no-change": 14,
+    "improved": 30,
+    "uniqueListingDescriptions": 458
+  },
+  "references": [
+    "https://developers.google.com/search/docs/appearance/snippet",
+    "https://developers.google.com/search/docs/appearance/title-link",
+    "https://www.w3.org/WAI/tutorials/page-structure/headings/"
+  ],
+  "validation": "npm run check: 29 tests passed; 475 pages and 19,093 internal references verified. All 11 reported heading sequences checked in both current production HTML and the new build.",
+  "items": [
+    {
+      "url": "https://tetoncounty.us/places/alpine-dermatology-clinic/",
+      "issueType": "duplicate-meta-description",
+      "severity": "warning",
+      "decision": "fixed",
+      "reason": "The shared listing metadata now includes the place name alongside its sourced summary. This removes duplicate descriptions across all 458 listings.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Alpine Dermatology Clinic: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 94
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/anytime-fitness/",
+      "issueType": "duplicate-meta-description",
+      "severity": "warning",
+      "decision": "fixed",
+      "reason": "The shared listing metadata now includes the place name alongside its sourced summary. This removes duplicate descriptions across all 458 listings.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Anytime Fitness: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 84
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/apex-acupuncture-and-holistic-health/",
+      "issueType": "duplicate-meta-description",
+      "severity": "warning",
+      "decision": "fixed",
+      "reason": "The shared listing metadata now includes the place name alongside its sourced summary. This removes duplicate descriptions across all 458 listings.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Apex Acupuncture & Holistic Health: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 103
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/explore/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/hiking/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/outdoors/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/food-drink/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/arts-culture/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/shopping/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/wellness/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/stays/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/services/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/towns/victor/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/towns/driggs/",
+      "issueType": "heading-order-skip",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The current page has H1 → H2 → H3. The H2 uses the accessible sr-only pattern; it is not display:none or aria-hidden. No heading level is missing.",
+      "originalAuditValue": null,
+      "reviewedLiveValue": "H1 → H2 (sr-only) → H3",
+      "result": {
+        "headingOrder": "H1 → H2 → H3"
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/outdoors/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Trails, rivers, powder days, and a little fresh air.",
+      "reviewedLiveValue": "Trails, rivers, powder days, and a little fresh air.",
+      "result": {
+        "description": "Explore hiking, biking, skiing, river trips, and outdoor activities around Victor and Driggs, Idaho. Find places and source links for your next day out.",
+        "characters": 152
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/food-drink/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Your first coffee, your next favorite table.",
+      "reviewedLiveValue": "Your first coffee, your next favorite table.",
+      "result": {
+        "description": "Find restaurants, coffee shops, breweries, and places to eat in Victor, Driggs, and Teton Valley, Idaho. Browse local listings and links to plan a stop.",
+        "characters": 152
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/arts-culture/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Music, makers, and the people who bring the valley together.",
+      "reviewedLiveValue": "Music, makers, and the people who bring the valley together.",
+      "result": {
+        "description": "Discover galleries, museums, music venues, and community arts around Victor and Driggs, Idaho. Explore local culture with source-linked listings.",
+        "characters": 145
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/shopping/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Independent shops and mountain-town essentials.",
+      "reviewedLiveValue": "Independent shops and mountain-town essentials.",
+      "result": {
+        "description": "Browse shops in Victor and Driggs, Idaho, from outdoor gear and gifts to books and everyday essentials. Find local stores and links for your visit.",
+        "characters": 147
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/wellness/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Make a little room to move, recover, and recharge.",
+      "reviewedLiveValue": "Make a little room to move, recover, and recharge.",
+      "result": {
+        "description": "Find gyms, yoga studios, spas, and health and wellness services in Victor and Driggs, Idaho. Browse local listings and follow links to providers.",
+        "characters": 145
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/stays/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "Find your base for exploring the valley.",
+      "reviewedLiveValue": "Find your base for exploring the valley.",
+      "result": {
+        "description": "Explore hotels, lodges, cabins, and places to stay in Victor, Driggs, and Teton Valley, Idaho. Find a base for your visit with links to lodging providers.",
+        "characters": 154
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/categories/services/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Added a specific category summary with location and useful examples; the short visible tagline is preserved.",
+      "originalAuditValue": "The practical side of life in Victor and Driggs.",
+      "reviewedLiveValue": "The practical side of life in Victor and Driggs.",
+      "result": {
+        "description": "Find local services, community organizations, banking, and real estate resources in Victor, Driggs, and Teton Valley, Idaho. Browse the local directory.",
+        "characters": 152
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/badger-creek-cafe/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims. The result remains under 70 characters because it clearly identifies the place, location, and offering. No filler was added to satisfy an arbitrary minimum.",
+      "originalAuditValue": "Tetonia cafe serving breakfast and lunch dishes.",
+      "reviewedLiveValue": "Tetonia cafe serving breakfast and lunch dishes.",
+      "result": {
+        "description": "Badger Creek Cafe: Tetonia cafe serving breakfast and lunch dishes.",
+        "characters": 67
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/bangkok-kitchen/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims. The result remains under 70 characters because it clearly identifies the place, location, and offering. No filler was added to satisfy an arbitrary minimum.",
+      "originalAuditValue": "A Thai restaurant on North Main Street in Driggs.",
+      "reviewedLiveValue": "A Thai restaurant on North Main Street in Driggs.",
+      "result": {
+        "description": "Bangkok Kitchen: A Thai restaurant on North Main Street in Driggs.",
+        "characters": 66
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/bank-of-commerce/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Banking in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Banking in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Bank of Commerce: Banking in Driggs, listed by Downtown Driggs Association.",
+        "characters": 75
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/barefoot-fitness-and-pilates/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Gym access, group fitness and Pilates in Driggs.",
+      "reviewedLiveValue": "Gym access, group fitness and Pilates in Driggs.",
+      "result": {
+        "description": "Barefoot Fitness & Pilates: Gym access, group fitness and Pilates in Driggs.",
+        "characters": 76
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/berkshire-hathaway/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Real estate in Driggs, listed by Discover Teton Valley.",
+      "reviewedLiveValue": "Real estate in Driggs, listed by Discover Teton Valley.",
+      "result": {
+        "description": "Berkshire Hathaway: Real estate in Driggs, listed by Discover Teton Valley.",
+        "characters": 75
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/blue-agave/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Victor Mexican restaurant serving traditional dishes and margaritas.",
+      "reviewedLiveValue": "Victor Mexican restaurant serving traditional dishes and margaritas.",
+      "result": {
+        "description": "Blue Agave: Victor Mexican restaurant serving traditional dishes and margaritas.",
+        "characters": 80
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/borbay-studios-and-gallery/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims. The result remains under 70 characters because it clearly identifies the place, location, and offering. No filler was added to satisfy an arbitrary minimum.",
+      "originalAuditValue": "An artist studio and gallery in Victor.",
+      "reviewedLiveValue": "An artist studio and gallery in Victor.",
+      "result": {
+        "description": "Borbay Studios & Gallery: An artist studio and gallery in Victor.",
+        "characters": 65
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/bronze-buffalo-lodge-at-teton-springs/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Lodge in Victor, listed by Discover Teton Valley.",
+      "reviewedLiveValue": "Lodge in Victor, listed by Discover Teton Valley.",
+      "result": {
+        "description": "Bronze Buffalo Lodge at Teton Springs: Lodge in Victor, listed by Discover Teton Valley.",
+        "characters": 88
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/2nd-act-thrift-store/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Local shopping in Victor, listed by Discover Teton Valley.",
+      "reviewedLiveValue": "Local shopping in Victor, listed by Discover Teton Valley.",
+      "result": {
+        "description": "2nd ACT Thrift Store: Local shopping in Victor, listed by Discover Teton Valley.",
+        "characters": 80
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/5th-street-park-skate-park-disc-golf/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Driggs park with a skate park, disc golf, and bicycle features.",
+      "reviewedLiveValue": "Driggs park with a skate park, disc golf, and bicycle features.",
+      "result": {
+        "description": "5th Street Park (Skate Park & Disc Golf): Driggs park with a skate park, disc golf, and bicycle features.",
+        "characters": 105
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/a-k-concrete/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Local services in Tetonia, listed by Discover Teton Valley.",
+      "reviewedLiveValue": "Local services in Tetonia, listed by Discover Teton Valley.",
+      "result": {
+        "description": "A-K Concrete: Local services in Tetonia, listed by Discover Teton Valley.",
+        "characters": 73
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/ace-hardware/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Local shopping in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Ace Hardware: Local shopping in Driggs, listed by Downtown Driggs Association.",
+        "characters": 78
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/alliance-title-and-escrow-corp/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Local services in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Local services in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Alliance Title & Escrow Corp: Local services in Driggs, listed by Downtown Driggs Association.",
+        "characters": 94
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/alpine-air-cafe-and-roastery/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Victor coffee roaster and cafe with espresso drinks and light food.",
+      "reviewedLiveValue": "Victor coffee roaster and cafe with espresso drinks and light food.",
+      "result": {
+        "description": "Alpine Air Cafe & Roastery: Victor coffee roaster and cafe with espresso drinks and light food.",
+        "characters": 95
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/alpine-air-coffee-hut-drive-thru/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Drive-through drinks and breakfast pastries in Victor.",
+      "reviewedLiveValue": "Drive-through drinks and breakfast pastries in Victor.",
+      "result": {
+        "description": "Alpine Air Coffee Hut Drive Thru: Drive-through drinks and breakfast pastries in Victor.",
+        "characters": 88
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/alpine-dermatology-clinic/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Alpine Dermatology Clinic: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 94
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/anytime-fitness/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Anytime Fitness: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 84
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/apex-acupuncture-and-holistic-health/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "reviewedLiveValue": "Health & wellness in Driggs, listed by Downtown Driggs Association.",
+      "result": {
+        "description": "Apex Acupuncture & Holistic Health: Health & wellness in Driggs, listed by Downtown Driggs Association.",
+        "characters": 103
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/ascend-radon-mitigation/",
+      "issueType": "meta-description-too-short",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Included the place name to make the sourced summary specific to this listing without adding unsupported claims.",
+      "originalAuditValue": "Local services in Victor, listed by Discover Teton Valley.",
+      "reviewedLiveValue": "Local services in Victor, listed by Discover Teton Valley.",
+      "result": {
+        "description": "Ascend Radon Mitigation: Local services in Victor, listed by Discover Teton Valley.",
+        "characters": 83
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/big-springs-national-recreation-water-trail-float-to-mack-s-inn/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Removed redundant or vague location text, or used a concise search title for a long route name. The full name remains in the H1, directory, and structured data.",
+      "originalAuditValue": "Big Springs National Recreation Water Trail (Float to Mack's Inn) — Nearby | Teton Valley",
+      "reviewedLiveValue": "Big Springs National Recreation Water Trail (Float to Mack's Inn) — Nearby | Teton County",
+      "result": {
+        "title": "Big Springs Float to Mack's Inn — Island Park | Teton County",
+        "characters": 60
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/big-game-hunting-in-idfg-unit-65-teton-valley/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Removed redundant or vague location text, or used a concise search title for a long route name. The full name remains in the H1, directory, and structured data. The meaningful remaining title is retained even though it exceeds 60 characters.",
+      "originalAuditValue": "Big-Game Hunting in IDFG Unit 65 (Teton Valley) — Teton Valley | Teton Valley",
+      "reviewedLiveValue": "Big-Game Hunting in IDFG Unit 65 (Teton Valley) — Teton Valley | Teton County",
+      "result": {
+        "title": "Big-Game Hunting in IDFG Unit 65 (Teton Valley) | Teton County",
+        "characters": 62
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/birding-the-teton-river-idaho-birding-trail-teton-valley-subloop/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Removed redundant or vague location text, or used a concise search title for a long route name. The full name remains in the H1, directory, and structured data.",
+      "originalAuditValue": "Birding the Teton River (Idaho Birding Trail – Teton Valley Subloop) — Teton Valley | Teton Valley",
+      "reviewedLiveValue": "Birding the Teton River (Idaho Birding Trail – Teton Valley Subloop) — Teton Valley | Teton County",
+      "result": {
+        "title": "Birding the Teton River — Teton Valley | Teton County",
+        "characters": 53
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/boy-scout-falls-ice-climbing-teton-canyon/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "improved",
+      "reason": "Removed redundant or vague location text, or used a concise search title for a long route name. The full name remains in the H1, directory, and structured data.",
+      "originalAuditValue": "Boy Scout Falls Ice Climbing (Teton Canyon) — Nearby | Teton Valley",
+      "reviewedLiveValue": "Boy Scout Falls Ice Climbing (Teton Canyon) — Nearby | Teton County",
+      "result": {
+        "title": "Boy Scout Falls Ice Climbing (Teton Canyon) | Teton County",
+        "characters": 58
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/bronze-buffalo-lodge-at-teton-springs/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The full name and location are useful and the title is only slightly over the audit threshold. Google has no fixed 60-character title limit.",
+      "originalAuditValue": "Bronze Buffalo Lodge at Teton Springs — Victor | Teton Valley",
+      "reviewedLiveValue": "Bronze Buffalo Lodge at Teton Springs — Victor | Teton County",
+      "result": {
+        "title": "Bronze Buffalo Lodge at Teton Springs — Victor | Teton County",
+        "characters": 61
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/5th-street-park-skate-park-disc-golf/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The full name and location are useful and the title is only slightly over the audit threshold. Google has no fixed 60-character title limit.",
+      "originalAuditValue": "5th Street Park (Skate Park & Disc Golf) — Driggs | Teton Valley",
+      "reviewedLiveValue": "5th Street Park (Skate Park & Disc Golf) — Driggs | Teton County",
+      "result": {
+        "title": "5th Street Park (Skate Park & Disc Golf) — Driggs | Teton County",
+        "characters": 64
+      }
+    },
+    {
+      "url": "https://tetoncounty.us/places/ashton-tetonia-trail-state-park/",
+      "issueType": "title-too-long",
+      "severity": "info",
+      "decision": "no-change",
+      "reason": "The full name and location are useful and the title is only slightly over the audit threshold. Google has no fixed 60-character title limit.",
+      "originalAuditValue": "Ashton-Tetonia Trail State Park — Teton Valley | Teton Valley",
+      "reviewedLiveValue": "Ashton-Tetonia Trail State Park — Teton Valley | Teton County",
+      "result": {
+        "title": "Ashton-Tetonia Trail State Park — Teton Valley | Teton County",
+        "characters": 61
+      }
+    }
+  ]
+}

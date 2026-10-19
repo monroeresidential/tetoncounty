@@ -7,4 +7,4 @@ export const getStaticPaths = (() => categories.map(category => ({ params: { cat
 const { category } = Astro.props;
 const listings = await getListings();
 ---
-<Directory listings={listings} title={category.name + '.'} description={category.description} path={`/categories/${category.id}/`} defaultCategory={category.id} />
+<Directory listings={listings} title={category.name + '.'} description={category.description} metaDescription={category.metaDescription} path={`/categories/${category.id}/`} defaultCategory={category.id} />
