@@ -29,8 +29,12 @@ function card(camera: Webcam, stamp: number) {
   image.height = 360;
   image.dataset.webcamImage = camera.imageUrl;
   image.addEventListener('error', () => figure.classList.add('is-unavailable'));
-  image.addEventListener('load', () => figure.classList.remove('is-unavailable'));
-  link.append(image, element('span', 'webcam-unavailable', 'Image unavailable right now'));
+  // Feed images range from 4:3 to wide panoramas; size each frame to its image instead of cropping.
+  image.addEventListener('load', () => {
+    figure.classList.remove('is-unavailable');
+    if (image.naturalWidth && image.naturalHeight) link.style.aspectRatio = `${image.naturalWidth} / ${image.naturalHeight}`;
+  });
+  link.append(image, element('span', 'webcam-unavailable', 'Camera temporarily unavailable'));
   const caption = element('figcaption');
   caption.append(element('span', 'webcam-name', camera.name));
   const meta = element('span', 'webcam-meta', camera.credit);
