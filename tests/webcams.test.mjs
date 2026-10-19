@@ -48,9 +48,10 @@ test('the webcam API proxies the feed and fails closed', async t => {
   }
 });
 
-test('webcam page is a noindex preview allowed to load camera images', async () => {
+test('webcam page is public, linked, and allowed to load camera images', async () => {
   const html = await readFile('dist/webcams/index.html', 'utf8');
-  assert(html.includes('<meta name="robots" content="noindex'));
-  assert(!(await readFile('dist/sitemap.xml', 'utf8')).includes('/webcams/'));
+  if (!html.includes('Development preview')) assert(!html.includes('<meta name="robots"'));
+  assert(html.includes('<a aria-current="page" href="/webcams/">Webcams</a>'));
+  assert((await readFile('dist/sitemap.xml', 'utf8')).includes('/webcams/</loc>'));
   assert((await readFile('public/_headers', 'utf8')).match(/img-src [^;]*/)[0].includes(webcamImageOrigin));
 });

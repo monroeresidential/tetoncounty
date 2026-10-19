@@ -1,6 +1,6 @@
-# Webcams preview
+# Webcams
 
-`/webcams/` shows the latest image from each camera in the Teton Flats webcam feed, grouped by travel corridor. It is a development preview: the page is noindex, out of the sitemap, and linked only from the development footer.
+`/webcams/` shows the latest image from each camera in the Teton Flats webcam feed, grouped by travel corridor. It is public: linked from the header and footer, listed in the sitemap, and indexable.
 
 ## How it works
 
@@ -10,9 +10,8 @@
 - `src/scripts/webcams.ts` renders the cards with DOM text nodes (no HTML from the feed) and reloads images every five minutes while the tab is visible. Images load directly from the bucket; `public/_headers` allows that origin in `img-src` only.
 - The feed has no capture timestamps and the images are served without CORS, so the page cannot show when each frame was taken. It says "last checked," not "updated at." WYDOT frames carry their own burned-in time.
 
-## Before production
+## Open items
 
-1. Confirm reuse rights and the required credit wording for WYDOT, Jackson Hole Airport, Jackson Hole Mountain Resort (Roundshot), and TetonCam images.
+1. Keep reuse rights and credit wording current for WYDOT, Jackson Hole Airport, Jackson Hole Mountain Resort (Roundshot), and TetonCam images.
 2. Decide whether Raymond (about 140 miles south) and the airport parking cameras belong in a Teton Valley guide.
-3. Add the page to the header or footer navigation and to the sitemap routes in `src/pages/[...resource].ts`, and remove `noindex`.
-4. Optional: add a per-image capture time to the feed so cards can flag stale frames, and show camera points on the existing Leaflet map.
+3. Optional: add a per-image capture time to the feed so cards can flag stale frames, and show camera points on the existing Leaflet map.
