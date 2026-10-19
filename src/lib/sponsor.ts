@@ -16,7 +16,11 @@ export function sponsorCampaign(pathname: string) {
 
 /** Adds the shared UTM set to Teton Flats URLs and leaves every other URL untouched. */
 export function sponsorLink(url: string, pathname: string, placement: string) {
-  if (!isSponsorUrl(url)) return url;
+  return isSponsorUrl(url) ? trackedLink(url, pathname, placement) : url;
+}
+
+/** The same UTM set for partner sites we link to deliberately, such as tetonpasscam.com. */
+export function trackedLink(url: string, pathname: string, placement: string) {
   const link = new URL(url);
   const { campaign, term } = sponsorCampaign(pathname);
   link.searchParams.set('utm_source', new URL(siteUrl).host);

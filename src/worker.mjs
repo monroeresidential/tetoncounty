@@ -1,6 +1,7 @@
 import {listingIds} from './listing-ids.mjs';
 import {deliverNotifications} from './lib/form-notifications.ts';
 import {parseWebcams,webcamFeedUrl} from './lib/webcams.ts';
+import {parsePassStatus,parsePassHistory,passStatusUrl,passHistoryUrl,passRouteSlug} from './lib/pass.ts';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const maxBody=16000;
 export function validateSubmission(body){
@@ -35,11 +36,25 @@ async function webcams(){
     return new Response(JSON.stringify({cameras}),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=60','X-Content-Type-Options':'nosniff'}});
   }catch{return json({error:'Webcams are temporarily unavailable.'},503);}
 }
+// tetonpasscam.com sends no CORS headers, so the page reads its public API through this Worker.
+async function passApi(url,parse,ttl){
+  try{
+    const response=await fetch(url,{cf:{cacheTtl:ttl,cacheEverything:true},signal:AbortSignal.timeout(8000)});
+    if(!response.ok)throw new Error('upstream');
+    return new Response(JSON.stringify(parse(await response.json())),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':`public, max-age=${ttl}`,'X-Content-Type-Options':'nosniff'}});
+  }catch{return json({error:'Teton Pass data is temporarily unavailable.'},503);}
+}
 export async function handleApi(request,env,ctx){
   const url=new URL(request.url),local=env.LOCAL_PREVIEW===true;
   const enabled=!!(env.DB&&(local||env.TURNSTILE_SECRET&&env.TURNSTILE_SITE_KEY));
   if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':env.ENVIRONMENT==='development'?'development':'production'});
   if(url.pathname==='/api/webcams'&&request.method==='GET')return webcams();
+  if(url.pathname==='/api/pass'&&request.method==='GET')return passApi(passStatusUrl,parsePassStatus,60);
+  if(url.pathname==='/api/pass-history'&&request.method==='GET'){
+    const slug=url.searchParams.get('route')||'';
+    if(!passRouteSlug.test(slug))return json({error:'Unknown route.'},400);
+    return passApi(passHistoryUrl(slug),data=>parsePassHistory(data,slug),300);
+  }
   if(url.pathname!=='/api/submissions')return json({error:'Not found.'},404);
   if(request.method!=='POST')return new Response(null,{status:405,headers:{Allow:'POST','Cache-Control':'no-store'}});
   const allowedOrigin=env.SITE_URL||'https://tetoncounty.us';
