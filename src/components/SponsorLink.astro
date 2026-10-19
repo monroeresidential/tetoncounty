@@ -1,0 +1,7 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { sponsorHome, sponsorLink } from '../lib/sponsor.ts';
+interface Props extends Omit<HTMLAttributes<'a'>, 'href' | 'rel'> { href?: string; placement: string }
+const { href = sponsorHome, placement, ...attributes } = Astro.props;
+---
+<a href={sponsorLink(href, Astro.url.pathname, placement)} rel="sponsored" {...attributes}><slot /></a>

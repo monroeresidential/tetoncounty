@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Icon from '../components/Icon.astro';
+import SponsorLink from '../components/SponsorLink.astro';
 import { siteUrl } from '../config.ts';
 import { webcamAreas } from '../lib/webcams.ts';
 import '../styles/webcams.css';
@@ -27,7 +28,7 @@ const schema = { '@type': 'WebPage', name: 'Teton Pass & valley webcams', url: `
   </section>
   <section class="section webcam-sources" aria-labelledby="webcam-sources-title">
     <h2 id="webcam-sources-title">About these cameras</h2>
-    <p>Images come from Wyoming Department of Transportation road cameras, FAA weather cameras and parking cameras at Jackson Hole Airport, Jackson Hole Mountain Resort, and TetonCam, and are served from an image feed maintained by Teton Flats. Each card names its source. Cameras marked “approximate location” have estimated coordinates in the feed.</p>
+    <p>Images come from Wyoming Department of Transportation road cameras, FAA weather cameras and parking cameras at Jackson Hole Airport, Jackson Hole Mountain Resort, and TetonCam, and are served from an image feed maintained by <SponsorLink placement="inline_text">Teton Flats</SponsorLink>. Each card names its source. Cameras marked “approximate location” have estimated coordinates in the feed.</p>
   </section>
   <dialog class="webcam-lightbox" aria-labelledby="webcam-lightbox-title" data-webcam-lightbox>
     <div class="webcam-lightbox-bar">

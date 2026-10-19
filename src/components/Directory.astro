@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import SponsorLink from './SponsorLink.astro';
 import ListingCard from './ListingCard.astro';
 import MapPanel from './MapPanel.astro';
 import Icon from './Icon.astro';
@@ -23,7 +24,7 @@ const schema = { '@type': 'CollectionPage', name: title, url: siteUrl + path, ma
     <div class="page-title-grid">
       <div><span class="eyebrow">{hiking ? 'The trail starts here' : defaultTown ? 'A little local knowledge' : 'A field guide to the good stuff'}</span><h1 class:list={{ 'long-title': title.length > 24 }}>{title}</h1></div><p>{description}</p>
     </div>
-    {hiking && <p class="trail-advisory notice">Routes and map points are sourced from the <a href="https://tetonflats.com/victor-id-hiking-guide">Teton Flats hiking guide</a>. Mileage and difficulty are planning references. Check current access, weather, and land-manager guidance before heading out.</p>}
+    {hiking && <p class="trail-advisory notice">Routes and map points are sourced from the <SponsorLink href="https://tetonflats.com/victor-id-hiking-guide" placement="inline_text">Teton Flats hiking guide</SponsorLink>. Mileage and difficulty are planning references. Check current access, weather, and land-manager guidance before heading out.</p>}
     {defaultTown && <div class="town-links" aria-label="Explore our towns"><a href="/towns/victor/" aria-current={defaultTown === 'Victor' ? 'page' : undefined}>Victor</a><span> / </span><a href="/towns/driggs/" aria-current={defaultTown === 'Driggs' ? 'page' : undefined}>Driggs</a></div>}
   </div>
   <section class="section directory" data-directory data-base-category={defaultCategory} data-base-town={defaultTown}>

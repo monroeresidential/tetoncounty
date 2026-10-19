@@ -27,6 +27,16 @@ if (import.meta.env.PROD && import.meta.env.PUBLIC_SITE_ENV !== 'development' &&
         if ('requestIdleCallback' in window) window.requestIdleCallback(loadAnalytics, { timeout: 1500 });
         else setTimeout(loadAnalytics, 0);
     };
+    // Sponsor links carry their placement in utm_content; report it so GA4 can break clicks down by placement.
+    const trackSponsorClick = (event: MouseEvent) => {
+        if (event.button > 1) return;
+        const link = (event.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null;
+        if (!link || !/(^|\.)tetonflats\.com$/.test(link.hostname)) return;
+        window.gtag('event', 'teton_flats_click', { link_placement: new URL(link.href).searchParams.get('utm_content') ?? 'unknown', link_url: link.href, page_path: location.pathname });
+    };
+    document.addEventListener('click', trackSponsorClick);
+    document.addEventListener('auxclick', trackSponsorClick);
+
     if (document.readyState === 'complete') scheduleAnalytics();
     else window.addEventListener('load', scheduleAnalytics, { once: true });
 }
