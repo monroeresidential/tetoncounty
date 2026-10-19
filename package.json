@@ -19,7 +19,8 @@
     "build:dev": "node scripts/development.mjs build",
     "check:dev": "node scripts/development.mjs check",
     "deploy:dev": "npm run check:dev && node scripts/preflight.mjs --env dev && wrangler deploy --env dev",
-    "db:migrate:dev": "wrangler d1 migrations apply DB --env dev --remote"
+    "db:migrate:dev": "wrangler d1 migrations apply DB --env dev --remote",
+    "rents:import": "node scripts/import-rental-market.mjs"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",

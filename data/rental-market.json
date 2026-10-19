@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "status": "draft",
+  "sourceFile": "teton_flats_vs_market.csv",
+  "sourceSha256": "83083bf16d7ba8af344b1d4830fab1c1b8c3ce03790a6ce78258a61d595151e7",
+  "observedAt": null,
+  "importedAt": "2026-10-19T01:04:18.971Z",
+  "sponsor": [
+    {
+      "plan": "1x1",
+      "records": 3,
+      "medianBase": 1650,
+      "monthlyCam": 216.5
+    },
+    {
+      "plan": "2x2",
+      "records": 2,
+      "medianBase": 2350,
+      "monthlyCam": 216.5
+    }
+  ],
+  "comparisons": [
+    {
+      "town": "Victor",
+      "plan": "1x1",
+      "group": "communities",
+      "records": 4,
+      "properties": 1,
+      "min": 1900,
+      "median": 1900,
+      "max": 2050,
+      "examples": [
+        {
+          "name": "The Larkspur",
+          "baseRent": 1900
+        },
+        {
+          "name": "The Larkspur",
+          "baseRent": 2050
+        }
+      ]
+    },
+    {
+      "town": "Victor",
+      "plan": "2x2",
+      "group": "communities",
+      "records": 1,
+      "properties": 1,
+      "min": 2750,
+      "median": 2750,
+      "max": 2750,
+      "examples": [
+        {
+          "name": "The Larkspur",
+          "baseRent": 2750
+        }
+      ]
+    },
+    {
+      "town": "Driggs",
+      "plan": "1x1",
+      "group": "communities",
+      "records": 1,
+      "properties": 1,
+      "min": 1890,
+      "median": 1890,
+      "max": 1890,
+      "examples": [
+        {
+          "name": "Clubmoss Apartments (Groups 1 & 2)",
+          "baseRent": 1890
+        }
+      ]
+    },
+    {
+      "town": "Jackson",
+      "plan": "1x1",
+      "group": "communities",
+      "records": 5,
+      "properties": 3,
+      "min": 3150,
+      "median": 3514,
+      "max": 3949,
+      "examples": [
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 3250
+        },
+        {
+          "name": "The Gables (Teton Gables)",
+          "baseRent": 3150
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3514
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3919
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3949
+        }
+      ]
+    },
+    {
+      "town": "Jackson",
+      "plan": "2x2",
+      "group": "communities",
+      "records": 3,
+      "properties": 2,
+      "min": 4250,
+      "median": 5314,
+      "max": 5334,
+      "examples": [
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 4250
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 5314
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 5334
+        }
+      ]
+    },
+    {
+      "town": "Victor",
+      "plan": "1x1",
+      "group": "all-direct",
+      "records": 6,
+      "properties": 3,
+      "min": 1750,
+      "median": 1900,
+      "max": 2050,
+      "examples": [
+        {
+          "name": "1558 Bryan Drive (accessory)",
+          "baseRent": 1750
+        },
+        {
+          "name": "8640 Flint Dr (accessory)",
+          "baseRent": 1950
+        },
+        {
+          "name": "The Larkspur",
+          "baseRent": 1900
+        },
+        {
+          "name": "The Larkspur",
+          "baseRent": 2050
+        }
+      ]
+    },
+    {
+      "town": "Victor",
+      "plan": "2x2",
+      "group": "all-direct",
+      "records": 3,
+      "properties": 3,
+      "min": 2350,
+      "median": 2750,
+      "max": 2800,
+      "examples": [
+        {
+          "name": "7552 Mountain Laurel Drive (condo townhome)",
+          "baseRent": 2800
+        },
+        {
+          "name": "CRCTV listing: 2BR apartment, Mountain Laurel Dr",
+          "baseRent": 2350
+        },
+        {
+          "name": "The Larkspur",
+          "baseRent": 2750
+        }
+      ]
+    },
+    {
+      "town": "Driggs",
+      "plan": "1x1",
+      "group": "all-direct",
+      "records": 2,
+      "properties": 2,
+      "min": 1800,
+      "median": 1845,
+      "max": 1890,
+      "examples": [
+        {
+          "name": "CRCTV listing: 1BR apartment, Chris Ln",
+          "baseRent": 1800
+        },
+        {
+          "name": "Clubmoss Apartments (Groups 1 & 2)",
+          "baseRent": 1890
+        }
+      ]
+    },
+    {
+      "town": "Driggs",
+      "plan": "2x2",
+      "group": "all-direct",
+      "records": 3,
+      "properties": 3,
+      "min": 2100,
+      "median": 2400,
+      "max": 2500,
+      "examples": [
+        {
+          "name": "CRCTV listing: 2BR accessory, Shark Fin Ln",
+          "baseRent": 2400
+        },
+        {
+          "name": "CRCTV listing: 2BR condo townhome, Shark Fin Ln",
+          "baseRent": 2500
+        },
+        {
+          "name": "CRCTV listing: 2BR duplex, Little Ave",
+          "baseRent": 2100
+        }
+      ]
+    },
+    {
+      "town": "Jackson",
+      "plan": "1x1",
+      "group": "all-direct",
+      "records": 13,
+      "properties": 4,
+      "min": 2663,
+      "median": 3140,
+      "max": 3949,
+      "examples": [
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 2663
+        },
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 3250
+        },
+        {
+          "name": "Sagebrush Apartments",
+          "baseRent": 3045
+        },
+        {
+          "name": "Sagebrush Apartments",
+          "baseRent": 3140
+        },
+        {
+          "name": "The Gables (Teton Gables)",
+          "baseRent": 2850
+        },
+        {
+          "name": "The Gables (Teton Gables)",
+          "baseRent": 3150
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3514
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3719
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3919
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 3949
+        }
+      ]
+    },
+    {
+      "town": "Jackson",
+      "plan": "2x2",
+      "group": "all-direct",
+      "records": 8,
+      "properties": 4,
+      "min": 3123,
+      "median": 4425,
+      "max": 5334,
+      "examples": [
+        {
+          "name": "370 E. Sagebrush (condo townhome)",
+          "baseRent": 3800
+        },
+        {
+          "name": "585 N Cache Street #7 (condo townhome)",
+          "baseRent": 4600
+        },
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 3123
+        },
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 3453
+        },
+        {
+          "name": "Hidden Hollow",
+          "baseRent": 4250
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 5099
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 5314
+        },
+        {
+          "name": "The Loop",
+          "baseRent": 5334
+        }
+      ]
+    }
+  ]
+}

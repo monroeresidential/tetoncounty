@@ -2,11 +2,13 @@ import type { APIRoute, GetStaticPaths } from 'astro';
 import aliases from '../../data/aliases.json';
 import { getListings } from '../lib/listings.ts';
 import { categories, reviewedDate, siteUrl, isDevelopment } from '../config.ts';
+import { rentalSnapshot } from '../data/rental-market.ts';
 const esc = (value: string) => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
 export const getStaticPaths = (async () => {
     const listings = await getListings();
     const routes = ['/', '/explore/', '/hiking/', ...categories.map(c => `/categories/${c.id}/`), '/towns/victor/', '/towns/driggs/', ...listings.map(l => `/places/${l.id}/`), '/suggest/', '/about/', '/privacy/'];
     const resources: Record<string, string> = {};
+    resources['data/rental-market.json'] = JSON.stringify({ ...rentalSnapshot, notice: 'Undated draft comparison. Not current availability or a complete monthly cost. Teton Flats is the featured sponsor; other properties’ fees are unknown.' });
     resources['data/listings.json'] = JSON.stringify({ version: 1, sourceCheckedAt: reviewedDate, scope: 'Victor, Driggs, Teton Valley, and explicitly labeled nearby trips', status: 'Source-listed; not owner-confirmed. No current operating-status guarantee.', count: listings.length, listings: listings.map(l => ({ ...l, url: siteUrl + '/places/' + l.id + '/' })) });
     resources['sitemap.xml'] = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(p => `<url><loc>${esc(siteUrl + p)}</loc><lastmod>${reviewedDate}</lastmod></url>`).join('')}</urlset>`;
     resources['robots.txt'] = isDevelopment ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${siteUrl}/sitemap.xml\n`;
