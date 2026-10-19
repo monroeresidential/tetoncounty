@@ -15,7 +15,11 @@
     "deploy": "npm run check && node scripts/preflight.mjs && wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply DB --remote",
     "typecheck": "astro check",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "build:dev": "node scripts/development.mjs build",
+    "check:dev": "node scripts/development.mjs check",
+    "deploy:dev": "npm run check:dev && node scripts/preflight.mjs --env dev && wrangler deploy --env dev",
+    "db:migrate:dev": "wrangler d1 migrations apply DB --env dev --remote"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",

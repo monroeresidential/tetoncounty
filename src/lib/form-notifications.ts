@@ -8,6 +8,7 @@ interface NotificationEnvironment {
   FORMSPREE_FORM_ID?: string;
   SITE_URL?: string;
   LOCAL_PREVIEW?: boolean;
+  ENVIRONMENT?: string;
 }
 interface Submission {
   id: string;
@@ -50,7 +51,7 @@ export function notificationPayload(row: Submission, siteUrl = 'https://tetoncou
 
 /** Save-first delivery with a short lease to prevent concurrent requests/cron runs sending twice. */
 export async function deliverNotifications(env: NotificationEnvironment, options: DeliveryOptions = {}) {
-  if (env.LOCAL_PREVIEW === true || !env.FORMSPREE_FORM_ID) return;
+  if (env.LOCAL_PREVIEW === true || env.ENVIRONMENT === 'development' || !env.FORMSPREE_FORM_ID) return;
   if (!/^[a-zA-Z0-9]{6,32}$/.test(env.FORMSPREE_FORM_ID)) throw new Error('Invalid Formspree form ID.');
   const { submissionId = '', limit = 10, fetcher = fetch, now = Date.now } = options;
   const endpoint = `https://formspree.io/f/${env.FORMSPREE_FORM_ID}`;

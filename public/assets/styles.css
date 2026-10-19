@@ -35,3 +35,6 @@
 @media(max-width:760px){.source-list a{display:block;width:100%}.source-list a>span:last-child{margin-top:6px}}
 
 .source-list a:focus-visible>span:last-child{color:var(--ink-70)}:is(.topline,.sponsor-card) :focus-visible{outline-color:var(--parchment)}
+
+/* The private development build is always visibly distinct from production. */
+.development-banner{position:relative;z-index:10;display:flex;align-items:center;justify-content:center;gap:12px 24px;flex-wrap:wrap;padding:12px 24px;background:#efab7e;color:#233d2c;font-size:13px;line-height:1.5;text-align:center}.development-banner strong{text-transform:uppercase;letter-spacing:.08em}.development-banner a{color:inherit;text-decoration:underline;font-weight:800}
