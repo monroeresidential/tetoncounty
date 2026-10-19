@@ -1,0 +1,32 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { siteUrl } from '../config.ts';
+import { webcamAreas } from '../lib/webcams.ts';
+import '../styles/webcams.css';
+
+const description = 'Check the latest webcam images over Teton Pass, along WY-22, and around Jackson and Teton Village before you drive from Victor or Driggs.';
+const schema = { '@type': 'WebPage', name: 'Teton Pass & valley webcams', url: `${siteUrl}/webcams/`, description };
+---
+<SiteLayout title="Teton Pass & valley webcams" description={description} path="/webcams/" schema={schema} noindex>
+  <div class="page-intro section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Webcams</span></nav>
+    <div class="page-title-grid">
+      <div><span class="eyebrow">Look before you leave</span><h1>Webcams</h1></div><p>{description}</p>
+    </div>
+    <p class="notice webcam-advisory">Images show the latest frame each camera has shared, not live video. Conditions change quickly. Check <a href="https://www.wyoroad.info/">WYDOT road reports</a> for closures and travel advisories.</p>
+  </div>
+  <section class="section webcams" aria-labelledby="webcams-heading" data-webcams>
+    <h2 class="sr-only" id="webcams-heading">Camera images</h2>
+    <div class="webcam-toolbar">
+      <nav class="webcam-areas" aria-label="Camera areas" data-webcam-areas hidden>{webcamAreas.map(area => <a href={`#${area.id}`} data-area-link={area.id} hidden>{area.name}</a>)}</nav>
+      <p class="webcam-status" data-webcam-status aria-live="polite">Loading cameras…</p>
+    </div>
+    <div data-webcam-groups></div>
+    <noscript><p class="notice">Turn on JavaScript to load the latest camera images.</p></noscript>
+  </section>
+  <section class="section webcam-sources" aria-labelledby="webcam-sources-title">
+    <h2 id="webcam-sources-title">About these cameras</h2>
+    <p>Images come from Wyoming Department of Transportation road cameras, Jackson Hole Airport, Jackson Hole Mountain Resort, and TetonCam, and are served from an image feed maintained by Teton Flats. Each card names its source. Cameras marked “approximate location” have estimated coordinates in the feed.</p>
+  </section>
+  <script src="../scripts/webcams.ts"></script>
+</SiteLayout>
