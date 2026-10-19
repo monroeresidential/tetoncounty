@@ -16,4 +16,5 @@ export const paths: Record<string, string> = {
     menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
     check: '<path d="m20 6-11 11-5-5"/>',
     chevron: '<path d="m6 9 6 6 6-6"/>',
+    close: '<path d="M6 6l12 12M18 6 6 18"/>',
 };
