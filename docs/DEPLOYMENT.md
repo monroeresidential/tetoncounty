@@ -71,6 +71,7 @@ The `dev` branch deploys to **https://dev.tetoncounty.us** using Wrangler enviro
 | Deploy command | `npx wrangler deploy --env dev` |
 | Node version | `NODE_VERSION=24` |
 | D1 database | `tetoncounty-dev-submissions` |
+| Cloudflare build environment | `CLOUDFLARE_ENV=dev` |
 | Turnstile | Separate managed widget restricted to `dev.tetoncounty.us` |
 | Access application | `Teton County development` (`f995bdf2-cc66-4e4f-a943-6353c6367c2e`) |
 | Allowed identity | `drew@monroeresidential.com` |
