@@ -10,5 +10,6 @@ export default defineConfig({
   trailingSlash: 'ignore',
   build: { inlineStylesheets: 'never' },
   server: { host: '127.0.0.1', port: 4321 },
-  vite: { plugins: [localApi()] },
+  // Keep even small page scripts external: the site CSP disallows inline JS.
+  vite: { plugins: [localApi()], build: { assetsInlineLimit: 0 } },
 });

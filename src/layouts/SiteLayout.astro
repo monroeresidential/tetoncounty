@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { siteUrl, siteName } from '../config.ts';
+import { siteUrl, siteName, isDevelopment } from '../config.ts';
 import { safeJson } from '../lib/listings.ts';
 import { imageSources, heroSizes } from '../lib/images.ts';
 interface Props {
@@ -45,7 +45,7 @@ const structuredData = {
     <meta name="apple-mobile-web-app-title" content={siteName} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex,follow" />}
+    {(noindex || isDevelopment) && <meta name="robots" content={isDevelopment ? 'noindex,nofollow,noarchive' : 'noindex,follow'} />}
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -77,6 +77,7 @@ const structuredData = {
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
+    {isDevelopment && <aside class="development-banner" aria-label="Development environment"><strong>Development preview</strong><span>Test site · submissions stay in development · no emails sent</span><a href="https://tetoncounty.us/">Visit the live site ↗</a></aside>}
     <Header path={path} />
     <main id="main"><slot /></main>
     <Footer />

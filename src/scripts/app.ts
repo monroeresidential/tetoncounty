@@ -217,6 +217,7 @@ function initSuggestion(suggestion: SuggestionForm) {
                 show('The live submission service is not connected yet. Please check back when the guide launches.', 'error');
                 return;
             }
+            if (config.mode === 'development') show('Development preview: requests are saved only to the test database. No emails are sent.');
             await new Promise<void>((resolve, reject) => { const script = document.createElement('script'); script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; script.onload = () => resolve(); script.onerror = reject; document.head.append(script); });
             widget = window.turnstile!.render('#turnstile', { sitekey: config.siteKey, action: 'suggest', callback: value => { token = value; readiness(); }, 'expired-callback': () => { token = ''; readiness(); }, 'error-callback': () => { token = ''; readiness(); show('Verification could not load. Check your connection and try again.', 'error'); } });
         }
@@ -237,7 +238,7 @@ function initSuggestion(suggestion: SuggestionForm) {
             const result = await response.json();
             if (!response.ok)
                 throw new Error(result.error || 'Your request could not be saved. Please try again.');
-            show(`${config.mode === 'local-preview' ? 'Saved locally for testing.' : 'Thanks — your request is saved for review.'} Reference: ${result.id}. ${config.mode === 'local-preview' ? 'No email was sent.' : 'Nothing is published until it has been reviewed.'}`, 'success');
+            show(`${config.mode === 'local-preview' ? 'Saved locally for testing.' : config.mode === 'development' ? 'Saved to the development test database.' : 'Thanks — your request is saved for review.'} Reference: ${result.id}. ${config.mode !== 'production' ? 'No email was sent.' : 'Nothing is published until it has been reviewed.'}`, 'success');
             suggestion.reset();
             setType();
             status.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });

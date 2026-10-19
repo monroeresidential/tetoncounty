@@ -91,6 +91,7 @@ test('local preview and missing configuration never send email', async t => {
   insert(sqlite);
   const fetcher = async () => assert.fail('Unexpected outbound email');
   await deliverNotifications({ ...env, LOCAL_PREVIEW: true }, { fetcher });
+  await deliverNotifications({ ...env, ENVIRONMENT: 'development' }, { fetcher });
   await deliverNotifications({ ...env, FORMSPREE_FORM_ID: undefined }, { fetcher });
   assert.equal(notification(sqlite).attempts, 0);
   await assert.rejects(deliverNotifications({ ...env, FORMSPREE_FORM_ID: 'https://elsewhere.example/' }, { fetcher }));
@@ -138,4 +139,28 @@ test('a valid production request is saved before notification and email failure 
   await Promise.all(background);
   assert.equal(notification(sqlite, id).status, 'pending');
   assert.equal(sqlite.prepare('SELECT status FROM submissions WHERE id = ?').get(id).status, 'pending');
+});
+
+test('development requires its own verified hostname and never sends even with a production form ID', async t => {
+  const { sqlite, env } = await fixture(t);
+  env.ENVIRONMENT = 'development';
+  env.SITE_URL = 'https://dev.tetoncounty.us';
+  const original = globalThis.fetch;
+  t.after(() => { globalThis.fetch = original; });
+  let hostname = 'tetoncounty.us';
+  globalThis.fetch = async url => {
+    assert(url.startsWith('https://challenges.cloudflare.com/'), 'Development tried to send an email');
+    return Response.json({ success: true, hostname, action: 'suggest' });
+  };
+  const submit = () => handleApi(new Request(env.SITE_URL + '/api/submissions', {
+    method: 'POST', headers: { origin: env.SITE_URL, 'content-type': 'application/json' }, body: JSON.stringify(valid),
+  }), env);
+  assert.equal((await submit()).status, 400);
+  assert.equal(sqlite.prepare('SELECT count(*) AS n FROM submissions').get().n, 0);
+  hostname = 'dev.tetoncounty.us';
+  const response = await submit();
+  assert.equal(response.status, 201);
+  const { id } = await response.json();
+  assert.equal(notification(sqlite, id).attempts, 0);
+  assert.equal((await (await handleApi(new Request(env.SITE_URL + '/api/config'), env)).json()).mode, 'development');
 });

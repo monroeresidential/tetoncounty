@@ -5,6 +5,7 @@ import { listingSchema } from '../src/lib/listing-schema.ts';
 import { loadListings } from '../src/data.ts';
 import { listingIds } from '../src/listing-ids.mjs';
 import sharp from 'sharp';
+import { siteUrl } from '../src/config.ts';
 
 const listings = await loadListings();
 const read = path => readFile(`dist/${path}`, 'utf8');
@@ -91,7 +92,7 @@ test('listing photos are approved, local, responsive, and attached to exact list
   for (const listing of listings) {
     const html = await read(`places/${listing.id}/index.html`);
     const place = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(item => item['@type'] === 'Place');
-    assert.equal(place.image?.contentUrl, photos.has(listing.id) ? `https://tetoncounty.us${photos.get(listing.id).src}` : undefined);
+    assert.equal(place.image?.contentUrl, photos.has(listing.id) ? `${siteUrl}${photos.get(listing.id).src}` : undefined);
   }
   const directory = await read('explore/index.html');
   for (const [image] of directory.matchAll(/<img[^>]+src="\/images\/listings\/[^>]+>/g)) {

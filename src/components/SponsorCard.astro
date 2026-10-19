@@ -5,6 +5,6 @@ const { compact = false } = Astro.props;
 ---
 <aside class={`sponsor-card ${compact ? 'sponsor-compact' : ''}`} aria-label="Guide sponsor">
   <span class="eyebrow">{compact ? 'Our sponsor' : 'Supported by Teton Flats'}</span>
-  {compact ? <><h2>Teton Flats</h2><p>Apartments in Victor and Driggs, for people who want to live a little closer to the mountains.</p></> : <h2>Apartments in Victor & Driggs. Live a little closer to the mountains.</h2>}
+  {compact ? <><h2>Teton Flats</h2><p>Apartments in Victor, for people who want to live a little closer to the mountains.</p></> : <h2>Apartments in Victor. A home base for Teton Valley.</h2>}
   <a class="btn btn-primary" href="https://tetonflats.com/" rel="sponsored">Visit Teton Flats <Icon name="northeast" /></a>
 </aside>

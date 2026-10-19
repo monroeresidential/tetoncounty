@@ -27,7 +27,7 @@ async function readBoundedJson(request){
 export async function handleApi(request,env,ctx){
   const url=new URL(request.url),local=env.LOCAL_PREVIEW===true;
   const enabled=!!(env.DB&&(local||env.TURNSTILE_SECRET&&env.TURNSTILE_SITE_KEY));
-  if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':'production'});
+  if(url.pathname==='/api/config'&&request.method==='GET')return json({enabled,siteKey:env.TURNSTILE_SITE_KEY||'',mode:local?'local-preview':env.ENVIRONMENT==='development'?'development':'production'});
   if(url.pathname!=='/api/submissions')return json({error:'Not found.'},404);
   if(request.method!=='POST')return new Response(null,{status:405,headers:{Allow:'POST','Cache-Control':'no-store'}});
   const allowedOrigin=env.SITE_URL||'https://tetoncounty.us';
@@ -57,7 +57,7 @@ export async function handleApi(request,env,ctx){
     // Contact details stay out of logs and public exports. Formspree delivers private notifications.
     // Cleanup failure must never turn an already-saved request into a failed response.
     try {await env.DB.prepare('DELETE FROM submission_rate_limits WHERE expires_at < ?').bind(now).run();} catch {}
-    if(!local&&env.FORMSPREE_FORM_ID){
+    if(!local&&env.ENVIRONMENT!=='development'&&env.FORMSPREE_FORM_ID){
       const delivery=deliverNotifications(env,{submissionId:id,limit:1}).catch(()=>console.error('Submission notification deferred; the saved request remains in D1.'));
       if(ctx?.waitUntil)ctx.waitUntil(delivery);else await delivery;
     }

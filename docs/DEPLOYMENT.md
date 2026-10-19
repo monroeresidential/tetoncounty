@@ -58,7 +58,38 @@ Cloudflare Builds targets `monroeresidential/tetoncounty`, with validation and d
 | Node version | `NODE_VERSION=24` |
 | Worker name | `tetoncounty-us` |
 
-`TURNSTILE_SECRET` is already stored in the Worker's runtime secrets and persists across deploys. It is not a build variable. Keep migrations an explicit release step, separate from pull-request builds. Disable builds for non-production branches. Use a separate environment/database and appropriate origin/Turnstile hostname settings if adding previews later.
+`TURNSTILE_SECRET` is stored in each Worker's runtime secrets and persists across deploys. It is not a build variable. Keep migrations an explicit release step, separate from pull-request builds. Keep non-production branch builds disabled on the production Worker; the `dev` branch has its own Worker and build connection below.
+
+## Private development environment
+
+The `dev` branch deploys to **https://dev.tetoncounty.us** using Wrangler environment `dev` and Worker `tetoncounty-us-dev`. `main` continues to deploy only to the public production Worker.
+
+| Setting | Development value |
+| --- | --- |
+| Repository / branch | `monroeresidential/tetoncounty` / `dev` |
+| Build command | `npm run check:dev && node scripts/preflight.mjs --env dev` |
+| Deploy command | `npx wrangler deploy --env dev` |
+| Node version | `NODE_VERSION=24` |
+| D1 database | `tetoncounty-dev-submissions` |
+| Cloudflare build environment | `CLOUDFLARE_ENV=dev` |
+| Turnstile | Separate managed widget restricted to `dev.tetoncounty.us` |
+| Access application | `Teton County development` (`f995bdf2-cc66-4e4f-a943-6353c6367c2e`) |
+| Allowed identity | `drew@monroeresidential.com` |
+
+Cloudflare Access covers the entire development hostname, including APIs, data exports, and assets. The application uses an email-specific Allow policy and defaults to denying everyone else. There are no public bypass paths. The development Worker's `workers.dev` and version preview URLs are disabled. Create or verify Access protection before publishing this custom domain.
+
+`npm run check:dev` builds with the development origin and `PUBLIC_SITE_ENV=development`, verifies every page's development banner and noindex tags, blocks crawlers in robots.txt, adds `X-Robots-Tag`, and verifies the production Analytics ID is absent from browser bundles. `npm run check` builds and validates production. Deployment preflight rejects a build for the wrong origin and a development configuration that references production storage or email delivery.
+
+Development forms use the development D1 database and a separate runtime Turnstile secret. They still require hostname/action verification; there is no hosted verification bypass. `ENVIRONMENT=development` prevents notification delivery even if a Formspree ID is accidentally supplied, and development has no notification cron. Test requests are never copied to production.
+
+```sh
+npm run db:migrate:dev
+npm run deploy:dev
+```
+
+After provisioning its separate widget, set the development secret with `npx wrangler secret put TURNSTILE_SECRET --env dev`. Never copy production secrets or submissions into development. No bot access credentials have been created; add narrowly scoped machine access separately when the rental collector is implemented.
+
+Start feature branches from `dev`, open pull requests into `dev`, and review the deployed result behind Access. Promote reviewed changes with a pull request from `dev` to `main`. Both build variants run in GitHub checks. Production deployment remains tied to `main`; merging into `dev` cannot release the public site.
 
 ## 4. Domain
 

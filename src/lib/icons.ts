@@ -1,4 +1,5 @@
 export const paths: Record<string, string> = {
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/>',
     mountain: '<path d="m2 19 7-13 4 7 3-5 6 11H2Z"/><path d="m6 11 3 2 3-2"/>',
     search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
     arrow: '<path d="M5 12h14m-7-7 7 7-7 7"/>',

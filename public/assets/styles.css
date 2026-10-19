@@ -35,3 +35,8 @@
 @media(max-width:760px){.source-list a{display:block;width:100%}.source-list a>span:last-child{margin-top:6px}}
 
 .source-list a:focus-visible>span:last-child{color:var(--ink-70)}:is(.topline,.sponsor-card) :focus-visible{outline-color:var(--parchment)}
+
+/* The private development build is always visibly distinct from production. */
+.development-banner{position:relative;z-index:10;display:flex;align-items:center;justify-content:center;gap:12px 24px;flex-wrap:wrap;padding:12px 24px;background:#efab7e;color:#233d2c;font-size:13px;line-height:1.5;text-align:center}.development-banner strong{text-transform:uppercase;letter-spacing:.08em}.development-banner a{color:inherit;text-decoration:underline;font-weight:800}
+@media(min-width:1021px){.header{gap:24px}.header nav{gap:clamp(12px,2vw,30px)}}
+@media(min-width:761px) and (max-width:1020px){.header{justify-content:space-between}.menu-toggle{display:flex;background:transparent;color:var(--parchment);padding:9px;border-color:var(--ink-40);border-radius:5px}.header nav{display:none;position:absolute;top:calc(100% - 4px);left:0;right:0;padding:16px 22px;flex-direction:column;align-items:stretch;gap:10px;margin:0;border-radius:6px 16px 6px 16px;background:var(--parchment);color:var(--pine);box-shadow:var(--shadow)}.header nav.open{display:flex}.header nav>a:not(.btn){font-size:16px;padding:10px 0}.header nav :focus-visible{outline-color:var(--pine)}.header nav .header-cta{text-align:center;font-size:12px}}

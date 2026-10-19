@@ -6,7 +6,7 @@ declare global {
 }
 
 // Keep development, previews, and the workers.dev diagnostic host out of reports.
-if (import.meta.env.PROD && window.location.origin === 'https://tetoncounty.us') {
+if (import.meta.env.PROD && import.meta.env.PUBLIC_SITE_ENV !== 'development' && window.location.origin === 'https://tetoncounty.us') {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function (..._args: unknown[]) {
         window.dataLayer.push(arguments);
