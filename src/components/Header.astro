@@ -1,12 +1,13 @@
 ---
 import Icon from './Icon.astro';
+import SponsorLink from './SponsorLink.astro';
 import { siteName } from '../config.ts';
 interface Props { path: string }
 const { path } = Astro.props;
 ---
 <div class="topline">
   <span>Victor · Driggs · Teton Valley, Idaho</span>
-  <a href="/about/#sponsor" rel="sponsored">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></a>
+  <SponsorLink placement="header_sponsor">A community guide supported by <span>Teton Flats</span><Icon name="northeast" /></SponsorLink>
 </div>
 <header class="header nav">
   <a class="brand nav-brand" href="/" aria-label={`${siteName} home`}><Icon name="mountain" /><span>{siteName} <small>Idaho · The other side</small></span></a>

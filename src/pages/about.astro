@@ -3,6 +3,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 import SponsorCard from "../components/SponsorCard.astro";
 import Icon from "../components/Icon.astro";
 import Photo from "../components/Photo.astro";
+import SponsorLink from "../components/SponsorLink.astro";
 import { getListings } from "../lib/listings.ts";
 const listings = await getListings();
 const local = listings.filter(l => l.town === "Victor" || l.town === "Driggs").length;
@@ -13,25 +14,25 @@ const local = listings.filter(l => l.town === "Victor" || l.town === "Driggs").l
 <span class="eyebrow">A LITTLE LOCAL KNOWLEDGE</span>
 <h1>A guide worth<br>getting out for.</h1>
 <p class="lead">Teton Valley is more than a stop on the way somewhere else. This guide helps you discover Victor, Driggs, and the places that make life here a little richer.</p>
-<p>Teton County is an independent community guide to the Idaho side of the Tetons, supported by Teton Flats.</p>
+<p>Teton County is an independent community guide to the Idaho side of the Tetons, supported by <SponsorLink placement="inline_text">Teton Flats</SponsorLink>.</p>
 <h2>Good information. Clear sources.</h2>
-<p>Our starting inventory brings together {listings.length} places and experiences from regional directories, the Teton Flats guides, local governments, and business websites. {local} are classified in Victor or Driggs; the rest are valley-wide or nearby trips. This is a growing inventory, not a claim that every business is included or currently operating.</p>
+<p>Our starting inventory brings together {listings.length} places and experiences from regional directories, the <SponsorLink href="https://tetonflats.com/victor-id-hiking-guide" placement="inline_text">Teton Flats guides</SponsorLink>, local governments, and business websites. {local} are classified in Victor or Driggs; the rest are valley-wide or nearby trips. This is a growing inventory, not a claim that every business is included or currently operating.</p>
 <div class="source-list">
 <a href="https://discovertetonvalley.com/"><span>Discover Teton Valley</span><span>Regional places, businesses, and activities <Icon name="northeast" /></span></a>
 <a href="https://downtowndriggs.org/maps-resources"><span>Downtown Driggs</span><span>Downtown businesses and community resources <Icon name="northeast" /></span></a>
-<a href="https://tetonflats.com/victor-id-hiking-guide"><span>Teton Flats</span><span>Hiking-map points, restaurant guides, and things to do <Icon name="northeast" /></span></a>
+<SponsorLink href="https://tetonflats.com/victor-id-hiking-guide" placement="source_link"><span>Teton Flats</span><span>Hiking-map points, restaurant guides, and things to do <Icon name="northeast" /></span></SponsorLink>
 </div>
 <p>Listings use original short summaries, link to their sources, and carry a source-check date. “Source-listed” means the place appears in a source; it does not mean an owner has confirmed current hours, prices, or availability. We deliberately leave out details we cannot establish.</p>
 <h2>Help the guide get better.</h2>
 <p>Use <a href="/suggest/">Suggest a place</a> for additions, or “Suggest a change” on any listing for corrections. Requests go into a private review queue. We check supporting information and publish approved changes through the website’s editorial process.</p>
 <h2 id="sponsor">Supported by Teton Flats.</h2>
 <p>
-<a href="https://tetonflats.com/" rel="sponsored">Teton Flats</a>, an apartment community in Victor, sponsors this guide. The guide is free to use, and businesses do not need to be sponsors to be listed. Featured places are starting points chosen for variety, not a rating or ranking.</p>
-<p>Apartment inquiries happen on the Teton Flats website. Guide-submission emails are not apartment leads and are not added to a marketing list.</p>
+<SponsorLink placement="inline_text">Teton Flats</SponsorLink>, an apartment community in Victor, sponsors this guide. The guide is free to use, and businesses do not need to be sponsors to be listed. Featured places are starting points chosen for variety, not a rating or ranking.</p>
+<p>Apartment inquiries happen on the <SponsorLink placement="inline_text">Teton Flats website</SponsorLink>. Guide-submission emails are not apartment leads and are not added to a marketing list.</p>
 <h2>Useful for people and tools.</h2>
 <p>Every listing has a permanent, readable page. The <a href="/data/listings.json">public JSON directory</a>, <a href="/llms.txt">LLM reading guide</a>, and <a href="/sitemap.xml">sitemap</a> make the same information easier to discover and reference. Source attributions remain attached to records.</p>
 <h2>Photography</h2>
-<p>The homepage landscape is from the National Park Service and depicts the neighboring Teton Range from Wyoming. Listing images come from the sponsoring Teton Flats website, with reuse authorized by the site owner. We review each image for its subject and listing match; a photo does not confirm current menus, conditions, or facilities. See <a href="/data/image-sources.json">editorial image sources</a> and <a href="/data/listing-images.json">listing image sources and credits</a>. Images from other businesses are added after permission is confirmed.</p>
+<p>The homepage landscape is from the National Park Service and depicts the neighboring Teton Range from Wyoming. Listing images come from the sponsoring <SponsorLink placement="inline_text">Teton Flats website</SponsorLink>, with reuse authorized by the site owner. We review each image for its subject and listing match; a photo does not confirm current menus, conditions, or facilities. See <a href="/data/image-sources.json">editorial image sources</a> and <a href="/data/listing-images.json">listing image sources and credits</a>. Images from other businesses are added after permission is confirmed.</p>
 </article>
 <div class="about-aside"><figure class="plate about-photo"><Photo src="/images/valley.webp" alt="A view across Teton Valley toward the mountains" /><figcaption class="photo-caption">Teton Scenic Byway</figcaption></figure><SponsorCard compact /></div>
 </section>

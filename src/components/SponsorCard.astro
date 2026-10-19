@@ -1,10 +1,12 @@
 ---
 import Icon from './Icon.astro';
+import SponsorLink from './SponsorLink.astro';
 interface Props { compact?: boolean }
 const { compact = false } = Astro.props;
+const placement = compact ? 'sponsor_card' : 'footer_sponsor';
 ---
 <aside class={`sponsor-card ${compact ? 'sponsor-compact' : ''}`} aria-label="Guide sponsor">
-  <span class="eyebrow">{compact ? 'Our sponsor' : 'Supported by Teton Flats'}</span>
-  {compact ? <><h2>Teton Flats</h2><p>Apartments in Victor, for people who want to live a little closer to the mountains.</p></> : <h2>Apartments in Victor. A home base for Teton Valley.</h2>}
-  <a class="btn btn-primary" href="https://tetonflats.com/" rel="sponsored">Visit Teton Flats <Icon name="northeast" /></a>
+  <span class="eyebrow">{compact ? 'Our sponsor' : <>Supported by <SponsorLink class="sponsor-name" placement={placement}>Teton Flats</SponsorLink></>}</span>
+  {compact ? <><h2><SponsorLink class="sponsor-name" placement={placement}>Teton Flats</SponsorLink></h2><p>Apartments in Victor, for people who want to live a little closer to the mountains.</p></> : <h2>Apartments in Victor. A home base for Teton Valley.</h2>}
+  <SponsorLink class="btn btn-primary" placement="visit_button">Visit Teton Flats <Icon name="northeast" /></SponsorLink>
 </aside>
