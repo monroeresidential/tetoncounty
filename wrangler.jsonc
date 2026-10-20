@@ -17,7 +17,8 @@
   "vars": {
     "SITE_URL": "https://tetoncounty.us",
     "TURNSTILE_SITE_KEY": "0x4AAAAAAFaYeLDGByrsxlbY",
-    "FORMSPREE_FORM_ID": "meaedrjo"
+    "FORMSPREE_FORM_ID": "meaedrjo",
+    "FORMSPREE_HOUSING_FORM_ID": "xkjoayyr"
   },
   "triggers": {
     "crons": [
@@ -47,7 +48,8 @@
         "SITE_URL": "https://dev.tetoncounty.us",
         "ENVIRONMENT": "development",
         "TURNSTILE_SITE_KEY": "0x4AAAAAAFaxy0LI9a0mvKm_",
-        "FORMSPREE_FORM_ID": ""
+        "FORMSPREE_FORM_ID": "",
+        "FORMSPREE_HOUSING_FORM_ID": ""
       },
       "triggers": {
         "crons": []

@@ -1,0 +1,260 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Photo from '../components/Photo.astro';
+import Icon from '../components/Icon.astro';
+import Lightbox from '../components/Lightbox.astro';
+import SponsorLink from '../components/SponsorLink.astro';
+import { siteUrl } from '../config.ts';
+import { imageSources } from '../lib/images.ts';
+import { passSite, wyoming511 } from '../lib/pass.ts';
+import { sponsorHome, trackedLink } from '../lib/sponsor.ts';
+import '../styles/pass.css';
+import '../styles/housing.css';
+
+const title = 'Corporate & contract housing near Jackson';
+const description = 'Housing in Victor, Idaho for traveling nurses, contractors, and Jackson employers, with lease terms matched to the length of your contract.';
+const path = '/corporate-housing/';
+// The largest generated rendition, so "enlarge" never hot-links tetonflats.com.
+const fullSize = async (src: string) => (await imageSources(src)).webp.srcSet.attribute.split(', ').at(-1)!.split(' ')[0];
+
+const floorPlans = await Promise.all([
+  { src: '/images/floorplan-2-bed-2-bath.webp', alt: 'Floor plan of the Teton Flats two-bedroom, two-bath apartment', name: 'Two bedroom', layout: '2 bed · 2 bath', bedrooms: 2, bathrooms: 2, area: 980, note: 'Two bedrooms and two baths: room for a pair of coworkers, or for one person who wants an office.' },
+  { src: '/images/floorplan-1-bed-1-bath.webp', alt: 'Floor plan of the Teton Flats one-bedroom, one-bath apartment', name: 'One bedroom', layout: '1 bed · 1 bath', bedrooms: 1, bathrooms: 1, area: 640, note: 'A separate bedroom off an open living space and kitchen.', tour: true },
+  { src: '/images/floorplan-1-bed-1-bath-duplex.webp', alt: 'Two-level floor plan of the Teton Flats one-bedroom, one-bath duplex apartment', name: 'One-bedroom duplex', layout: '1 bed · 1 bath', bedrooms: 1, bathrooms: 1, area: 622, note: 'A one-bedroom on two levels with its own ground-floor entry.' },
+].map(async plan => ({ ...plan, full: await fullSize(plan.src) })));
+
+const features = ['Quartz counters', 'Stainless appliances', 'In-unit washer & dryer', 'Air conditioning', '9-foot ceilings', 'Dedicated secure storage', 'Teton views', '1 Gbps fiber internet included'];
+const exteriors = [
+  ['/images/teton-flats-exterior-1.webp', 'Street-side view of a two-story Teton Flats building with gabled entries, wood and dark metal siding, and lawn at sunset'],
+  ['/images/teton-flats-exterior-2.webp', 'Teton Flats buildings with gabled roofs seen across tall dry grass'],
+  ['/images/teton-flats-exterior-3.webp', 'Close view of Teton Flats wood and dark metal siding and windows, framed by evergreen branches'],
+  ['/images/teton-flats-exterior-4.webp', 'Teton Flats building entries and landscaped walkway with a streetlight'],
+];
+const interiors = [
+  ['/images/teton-flats-interior.webp', 'Staged model living room and kitchen at Teton Flats'],
+  ['/images/teton-flats-unit-1br-4.webp', 'Staged one-bedroom model kitchen with stainless appliances and a breakfast bar'],
+  ['/images/teton-flats-unit-1br-5.webp', 'Staged one-bedroom model with in-unit washer and dryer beside the refrigerator, bathroom beyond'],
+  ['/images/teton-flats-unit-1br-6.webp', 'Staged one-bedroom model living room with sofa, chair, and a window onto the courtyard'],
+  ['/images/teton-flats-unit-1br-8.webp', 'Staged one-bedroom model living room with a wall-mounted television and entry door'],
+  ['/images/teton-flats-unit-1br-2.webp', 'Staged one-bedroom model bedroom with a bed and nightstands'],
+  ['/images/teton-flats-unit-1br-3.webp', 'Staged one-bedroom model bedroom with a dresser and window'],
+  ['/images/teton-flats-unit-1br-1.webp', 'Staged one-bedroom model bathroom with glass shower, wood vanity, and quartz counter'],
+];
+const gridSizes = '(max-width: 760px) calc(100vw - 44px), (max-width: 1100px) 45vw, 340px';
+const heroSrc = '/images/teton-flats-exterior.webp';
+const heroAlt = 'Wood and dark metal apartment buildings at Teton Flats in Victor, with golden grasses and wooded hills';
+const heroFull = await fullSize(heroSrc);
+const withFull = (photos: string[][]) => Promise.all(photos.map(async ([src, alt]) => ({ src, alt, full: await fullSize(src) })));
+const exteriorPhotos = await withFull(exteriors);
+const interiorPhotos = await withFull(interiors);
+const staged = 'Staged model — apartments are leased unfurnished.';
+
+const complex = `${siteUrl}${path}#teton-flats`;
+const schema = [
+  { '@type': 'WebPage', name: title, url: siteUrl + path, description, about: { '@id': complex } },
+  {
+    '@type': 'ApartmentComplex', '@id': complex, name: 'Teton Flats', url: sponsorHome, numberOfAccommodationUnits: 72,
+    address: { '@type': 'PostalAddress', streetAddress: '100 Homestead Road', addressLocality: 'Victor', addressRegion: 'ID', postalCode: '83455', addressCountry: 'US' },
+    accommodationFloorPlan: floorPlans.map(plan => ({ '@type': 'FloorPlan', name: plan.name, numberOfBedrooms: plan.bedrooms, numberOfBathroomsTotal: plan.bathrooms, floorSize: { '@type': 'QuantitativeValue', value: plan.area, unitCode: 'FTK' } })),
+  },
+];
+---
+<SiteLayout title={title} description={description} path={path} schema={schema}>
+  <section class="section page-intro housing-hero" aria-labelledby="housing-title">
+    <div class="housing-hero-copy">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Corporate housing</span></nav>
+      <span class="eyebrow">Working in Jackson · living in Victor</span>
+      <h1 id="housing-title" class="long-title">Corporate &amp; contract housing near Jackson</h1>
+      <p class="housing-lede">Here on a travel-nurse assignment, a construction contract, or a season of work in Jackson? <SponsorLink placement="inline_text">Teton Flats</SponsorLink>, the guide’s sponsor, has new apartments in Victor and offers flexible lease terms that match the length of your contract. Employers placing a crew can ask about several apartments at once.</p>
+      <div class="housing-actions">
+        <a class="btn btn-primary" href="#inquire">Ask about a lease <Icon name="arrow" /></a>
+        <SponsorLink class="text-link" href={`${sponsorHome}availability`} placement="hero_cta">See current availability <Icon name="northeast" /></SponsorLink>
+      </div>
+    </div>
+    <figure class="housing-hero-photo">
+      <a class="housing-zoom" href={heroFull} data-gallery-item data-title="Teton Flats, 100 Homestead Road, Victor"><Photo src={heroSrc} alt={heroAlt} sizes="(max-width: 760px) calc(100vw - 64px), (max-width: 1100px) 45vw, 600px" priority /></a>
+      <figcaption>100 Homestead Road · Victor, Idaho</figcaption>
+    </figure>
+  </section>
+
+  <section class="section housing-section" id="lease" aria-labelledby="lease-title">
+    <div class="housing-heading">
+      <div><span class="eyebrow">The short version</span><h2 id="lease-title">A lease as long as the job.</h2></div>
+      <p>Your housing shouldn’t outlast your contract. Lease terms are flexible and match the length of your contract, so start with your dates.</p>
+    </div>
+    <div class="housing-audiences">
+      <article>
+        <span class="housing-kicker">Traveling nurses &amp; clinicians</span>
+        <h3>One lease for the assignment.</h3>
+        <p>Match the lease to your contract, from the first shift to the last. Teton Valley Hospital in Driggs is about 8 miles away, and Jackson is over the pass.</p>
+      </article>
+      <article>
+        <span class="housing-kicker">Contractors</span>
+        <h3>Home base for the project.</h3>
+        <p>On a build that runs a few months or a full season? Set the lease to the project schedule and keep your evenings in a quiet valley town.</p>
+      </article>
+      <article>
+        <span class="housing-kicker">Jackson employers</span>
+        <h3>Several apartments, one conversation.</h3>
+        <p>Placing seasonal staff or a project crew? Ask about multiple apartments with terms lined up to your season or project dates.</p>
+      </article>
+    </div>
+    <div class="housing-unfurnished">
+      <p><strong>Units are leased unfurnished.</strong> The interior photos below show a staged model, so plan to bring or arrange your own furniture.</p>
+      <a class="btn btn-primary" href="#inquire">Start an inquiry <Icon name="arrow" /></a>
+    </div>
+  </section>
+
+  <section class="section housing-section" id="commute" aria-labelledby="commute-title">
+    <div class="housing-heading">
+      <div><span class="eyebrow">Victor to Jackson</span><h2 id="commute-title">The commute, honestly.</h2></div>
+      <p>The drive crosses Teton Pass, and winter weather can slow or close it. Here is the live picture, and what to plan for.</p>
+    </div>
+    <div class="housing-commute">
+      <section class="pass housing-pass" aria-label="Teton Pass conditions" data-pass data-pass-routes="victor-jackson,victor-tetonvillage">
+        <div class="pass-banner" data-status="unknown" data-pass-banner role="status" aria-live="polite">
+          <p class="pass-state" data-pass-state>Checking…</p>
+          <p class="pass-warning" data-pass-warning hidden></p>
+          <p class="pass-detail" data-pass-detail>Loading the latest WYDOT status.</p>
+          <ul class="pass-advisories" data-pass-advisories hidden></ul>
+        </div>
+        <noscript><p class="notice pass-noscript">Turn on JavaScript to load the live pass status and drive times, or check <a href={wyoming511}>Wyoming 511</a> before you drive.</p></noscript>
+        <div class="pass-card">
+          <div class="pass-card-heading"><h3>Drive times right now</h3><p class="pass-updated" data-pass-updated></p></div>
+          <p class="pass-withheld" data-pass-withheld hidden></p>
+          <div class="pass-directions" data-pass-directions hidden>
+            <div><h4>To Wyoming</h4><ul class="pass-times" data-pass-times="eb"></ul></div>
+            <div><h4>Back to Victor</h4><ul class="pass-times" data-pass-times="wb"></ul></div>
+          </div>
+        </div>
+        <p class="housing-source">Pass status from WYDOT and drive times from Google traffic data, both collected by <a href={trackedLink(`${passSite}/`, path, 'source_link')}>tetonpasscam.com</a>. Always confirm closures with <a href={wyoming511}>Wyoming 511</a>.</p>
+      </section>
+      <aside class="housing-facts" aria-label="Commute facts">
+        <dl>
+          <div><dt>Distance</dt><dd>About 25 miles to Jackson on WY-22, over Teton Pass.</dd></div>
+          <div><dt>The pass</dt><dd>The summit sits at 8,431 feet, with grades up to 10% on the Wyoming side.</dd></div>
+          <div><dt>Winter</dt><dd>Snow tires or all-wheel drive are standard from November through April.</dd></div>
+          <div><dt>Closures</dt><dd>When the pass closes, the detour runs over Pine Creek Pass, through Swan Valley, and along US-26: about 85 miles.</dd></div>
+          <div><dt>Bus</dt><dd>START runs a Teton Valley commuter bus to Jackson. Check <a href="https://www.startbus.com/">startbus.com</a> for current routes and times.</dd></div>
+        </dl>
+        <a class="text-link" href="/teton-pass/">Full pass status &amp; history <Icon name="arrow" /></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section housing-section" id="apartments" aria-labelledby="apartments-title">
+    <div class="housing-heading">
+      <div><span class="eyebrow">Inside &amp; out</span><h2 id="apartments-title">The apartments.</h2></div>
+      <p>72 one- and two-bedroom apartments in four buildings, finished in 2025, about half a mile from downtown Victor.</p>
+    </div>
+    <div class="housing-plans">
+      {floorPlans.map(plan => (
+        <article class="housing-plan">
+          <a class="housing-plan-image" href={plan.full} aria-label={`Open the full-size ${plan.name.toLowerCase()} floor plan`} data-gallery-item data-title={`${plan.name} floor plan`} data-note={`${plan.layout} · ${plan.area} sq ft`}>
+            <Photo src={plan.src} alt={plan.alt} sizes="(max-width: 760px) calc(100vw - 92px), (max-width: 1100px) 30vw, 400px" />
+            <span>Click to enlarge</span>
+          </a>
+          <div class="housing-plan-body">
+            <span class="housing-kicker">{plan.layout}</span>
+            <h3>{plan.name}</h3>
+            <p class="housing-area">{plan.area}<span>sq ft</span></p>
+            <p>{plan.note}</p>
+            {plan.tour && <SponsorLink class="text-link" href={`${sponsorHome}floorplans/1bd-1ba/tour`} placement="tour_link">Take the virtual tour <Icon name="northeast" /></SponsorLink>}
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="housing-features">
+      <h3>Listed features</h3>
+      <ul>{features.map(feature => <li><Icon name="check" />{feature}</li>)}</ul>
+      <p class="housing-source">Floor plans, sizes, and features as listed on tetonflats.com, checked October 2026. Confirm details for a specific apartment before you sign. <SponsorLink href={`${sponsorHome}floorplans`} placement="floorplans_link">All floor plans on tetonflats.com</SponsorLink>.</p>
+    </div>
+
+    <h3 class="housing-gallery-title">Around the buildings</h3>
+    <div class="housing-gallery">
+      {exteriorPhotos.map(photo => <figure><a class="housing-zoom" href={photo.full} data-gallery-item><Photo src={photo.src} alt={photo.alt} sizes={gridSizes} /></a></figure>)}
+    </div>
+
+    <h3 class="housing-gallery-title">Inside a staged model</h3>
+    <div class="housing-gallery">
+      {interiorPhotos.map(photo => <figure class="housing-staged"><a class="housing-zoom" href={photo.full} data-gallery-item data-note={staged}><Photo src={photo.src} alt={photo.alt} sizes={gridSizes} /></a><figcaption>{staged}</figcaption></figure>)}
+    </div>
+  </section>
+
+  <section class="section form-page housing-inquire" id="inquire" aria-labelledby="inquire-title">
+    <div class="form-intro">
+      <span class="eyebrow">Ask about a lease</span>
+      <h2 id="inquire-title">Tell us about the contract.</h2>
+      <p>Share your dates and what you need. You’ll hear back by email about apartments and lease terms that fit.</p>
+      <div class="form-aside">
+        <h3 class="handwritten">no application yet</h3>
+        <p>This is a question, not a commitment. Inquiries go only to the leasing contact for <SponsorLink placement="inquiry_text">Teton Flats</SponsorLink>, separate from the guide’s listing suggestions.</p>
+        <a href="/privacy/">How inquiries are handled <Icon name="arrow" /></a>
+      </div>
+    </div>
+    <form class="suggest-form housing-form" id="housing-form" method="post" action="/api/housing-inquiries">
+      <div class="form-status" id="housing-status" role="status" aria-live="polite"></div>
+      <fieldset class="housing-requester">
+        <legend class="field-label">I’m asking as</legend>
+        <label><input type="radio" name="requester" value="individual" checked required /><span>An individual</span></label>
+        <label><input type="radio" name="requester" value="employer" /><span>An employer</span></label>
+      </fieldset>
+      <div class="form-row">
+        <label>Your name<input name="name" autocomplete="name" required maxlength="100" /></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required maxlength="254" /></label>
+      </div>
+      <div class="form-row">
+        <label><span class="form-label-text">Phone <small>(optional)</small></span><input type="tel" name="phone" autocomplete="tel" maxlength="40" /></label>
+        <div data-employer-only hidden><label>Company<input name="company" autocomplete="organization" maxlength="120" disabled /></label></div>
+      </div>
+      <div class="form-row">
+        <label>Apartments needed<input type="number" name="units" min="1" max="2" value="1" inputmode="numeric" required /></label>
+        <label>Bedrooms<select name="bedrooms" required>
+          <option value="1">1 bedroom</option>
+          <option value="2">2 bedrooms</option>
+          <option value="either">Either</option>
+        </select></label>
+      </div>
+      <div class="form-row">
+        <label>Desired move-in<input type="date" name="moveIn" required /></label>
+        <label>Approximate stay<input name="stayLength" required maxlength="120" placeholder="e.g. 13 weeks, or May–October" /></label>
+      </div>
+      <label><span class="form-label-text">Anything else? <small>(optional)</small></span><textarea name="message" rows="4" maxlength="2000" placeholder="Contract dates, who will be living there, questions about the apartments."></textarea>
+        <span>Please don’t include sensitive personal information.</span>
+      </label>
+      <div class="honeypot" aria-hidden="true">
+        <label>Leave this blank<input name="companyUrl" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" value="yes" required />
+        <span>I agree that these details may be used to reply to me by email about renting an apartment from the guide’s sponsor. <a href="/privacy/">Privacy details</a>.</span>
+      </label>
+      <div id="housing-turnstile"></div>
+      <noscript><p>JavaScript is required to verify and send this form.</p></noscript>
+      <button class="button submit-button" type="submit" disabled>Send inquiry <Icon name="arrow" /></button>
+      <p class="fine-print">Your details stay private. Sending an inquiry does not add you to a marketing list.</p>
+    </form>
+  </section>
+
+  <section class="section housing-section housing-faq" aria-labelledby="faq-title">
+    <div class="housing-heading"><div><span class="eyebrow">Good questions</span><h2 id="faq-title">Before you ask.</h2></div></div>
+    <details>
+      <summary>Are the apartments furnished?</summary>
+      <p>No. Apartments are leased unfurnished. The interior photos show a staged model.</p>
+    </details>
+    <details>
+      <summary>How long does a lease have to be?</summary>
+      <p>Lease terms are flexible and set to match the length of your contract. Include your dates in the inquiry.</p>
+    </details>
+    <details>
+      <summary>Can an employer lease more than one apartment?</summary>
+      <p>Employers can ask about several apartments in one inquiry, with terms lined up to a season or project.</p>
+    </details>
+    <details>
+      <summary>Where can I see rents and what’s available?</summary>
+      <p>This guide doesn’t list rents. Current availability is on <SponsorLink href={`${sponsorHome}availability`} placement="availability_link">tetonflats.com</SponsorLink>.</p>
+    </details>
+  </section>
+  <Lightbox item="photo" />
+  <script src="../scripts/housing.ts"></script>
+</SiteLayout>

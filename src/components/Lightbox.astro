@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro';
+import '../styles/lightbox.css';
+interface Props { item: string; unavailable?: string }
+// One modal for a page's images; src/scripts/lightbox.ts fills it in and steps through them.
+const { item, unavailable } = Astro.props;
+---
+<dialog class="lightbox" aria-labelledby="lightbox-title" data-lightbox>
+  <div class="lightbox-bar">
+    <p class="lightbox-count" data-lightbox-count></p>
+    <button class="lightbox-close" type="button" data-lightbox-close><Icon name="close" /><span class="sr-only">Close</span></button>
+  </div>
+  <figure class="lightbox-figure">
+    <div class="lightbox-frame">
+      <img alt="" data-lightbox-image />
+      {unavailable && <span class="lightbox-unavailable">{unavailable}</span>}
+    </div>
+    <figcaption><h2 id="lightbox-title" data-lightbox-title></h2><span class="lightbox-meta" data-lightbox-meta></span><a class="text-link" target="_blank" rel="noopener" data-lightbox-full>Open full size <Icon name="northeast" /></a></figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-step="-1"><Icon name="arrow" /><span class="sr-only">Previous {item}</span></button>
+  <button class="lightbox-nav lightbox-next" type="button" data-lightbox-step="1"><Icon name="arrow" /><span class="sr-only">Next {item}</span></button>
+</dialog>

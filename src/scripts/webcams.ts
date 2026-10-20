@@ -1,11 +1,11 @@
 import { webcamAreas, type Webcam } from '../lib/webcams.ts';
+import { isPlainClick, setUpLightbox } from './lightbox.ts';
 
 const root = document.querySelector<HTMLElement>('[data-webcams]');
-const lightbox = document.querySelector<HTMLDialogElement>('[data-webcam-lightbox]');
+const dialog = document.querySelector<HTMLDialogElement>('[data-lightbox]');
 const refreshMs = 5 * 60 * 1000;
 let stamp = Math.floor(Date.now() / 60000);
-let ordered: Webcam[] = [];
-let current = -1;
+const ordered: Webcam[] = [];
 
 function element<K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string) {
   const node = document.createElement(tag);
@@ -29,11 +29,10 @@ function card(camera: Webcam, index: number) {
   link.target = '_blank';
   link.rel = 'noopener';
   link.setAttribute('aria-label', `View the ${camera.name} image`);
-  // Modified clicks keep the browser's open-in-new-tab behavior; plain clicks open the lightbox.
   link.addEventListener('click', event => {
-    if (!lightbox || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!lightbox || !isPlainClick(event)) return;
     event.preventDefault();
-    show(index);
+    lightbox.show(index);
   });
   const image = element('img');
   image.src = frameUrl(camera);
@@ -59,44 +58,20 @@ function card(camera: Webcam, index: number) {
   return figure;
 }
 
-function show(index: number) {
-  if (!lightbox || !ordered.length) return;
-  current = (index + ordered.length) % ordered.length;
-  const camera = ordered[current];
-  const image = lightbox.querySelector<HTMLImageElement>('[data-lightbox-image]')!;
-  lightbox.classList.remove('is-unavailable');
-  image.src = frameUrl(camera);
-  image.alt = `Latest image from the ${camera.name} camera`;
-  lightbox.querySelector<HTMLElement>('[data-lightbox-title]')!.textContent = camera.name;
-  lightbox.querySelector<HTMLElement>('[data-lightbox-count]')!.textContent = `${current + 1} of ${ordered.length} · ${webcamAreas.find(area => area.id === camera.area)!.name}`;
-  meta(lightbox.querySelector<HTMLElement>('[data-lightbox-meta]')!, camera);
-  lightbox.querySelector<HTMLAnchorElement>('[data-lightbox-full]')!.href = camera.imageUrl;
-  for (const step of [-1, 1]) new Image().src = frameUrl(ordered[(current + step + ordered.length) % ordered.length]);
-  if (!lightbox.open) lightbox.showModal();
-}
-
-function setUpLightbox() {
-  if (!lightbox) return;
-  const image = lightbox.querySelector<HTMLImageElement>('[data-lightbox-image]')!;
-  image.addEventListener('error', () => lightbox.classList.add('is-unavailable'));
-  image.addEventListener('load', () => lightbox.classList.remove('is-unavailable'));
-  lightbox.querySelector('[data-lightbox-close]')!.addEventListener('click', () => lightbox.close());
-  for (const button of lightbox.querySelectorAll<HTMLElement>('[data-lightbox-step]')) button.addEventListener('click', () => show(current + Number(button.dataset.lightboxStep)));
-  // A click on the backdrop lands on the dialog itself rather than its contents.
-  lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
-  lightbox.addEventListener('keydown', event => {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); show(current + (event.key === 'ArrowLeft' ? -1 : 1)); }
-  });
-  let touchX: number | null = null;
-  lightbox.addEventListener('touchstart', event => { touchX = event.touches.length === 1 ? event.touches[0].clientX : null; }, { passive: true });
-  lightbox.addEventListener('touchend', event => {
-    if (touchX === null) return;
-    const distance = event.changedTouches[0].clientX - touchX;
-    touchX = null;
-    if (Math.abs(distance) > 50) show(current + (distance < 0 ? 1 : -1));
-  });
-  lightbox.addEventListener('close', () => root?.querySelectorAll<HTMLElement>('.webcam-frame')[current]?.focus());
-}
+const lightbox = dialog && setUpLightbox(dialog, {
+  length: () => ordered.length,
+  render(index, parts) {
+    const camera = ordered[index];
+    parts.image.src = frameUrl(camera);
+    parts.image.alt = `Latest image from the ${camera.name} camera`;
+    parts.title.textContent = camera.name;
+    parts.count.textContent = `${index + 1} of ${ordered.length} · ${webcamAreas.find(area => area.id === camera.area)!.name}`;
+    meta(parts.meta, camera);
+    parts.full.href = camera.imageUrl;
+  },
+  preload: index => { new Image().src = frameUrl(ordered[index]); },
+  opener: index => root?.querySelectorAll<HTMLElement>('.webcam-frame')[index],
+});
 
 async function load() {
   if (!root) return;
@@ -126,7 +101,6 @@ async function load() {
     root.querySelector<HTMLElement>(`[data-area-link="${area.id}"]`)!.hidden = false;
   }
   root.querySelector<HTMLElement>('[data-webcam-areas]')!.hidden = false;
-  setUpLightbox();
   const updated = () => { status.textContent = `${cameras.length} cameras · images refresh every 5 minutes · last checked ${new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`; };
   updated();
   // Refresh only while the tab is visible so background tabs don't keep pulling images.
@@ -136,7 +110,7 @@ async function load() {
     last = Date.now();
     stamp = Math.floor(last / 60000);
     for (const image of groups.querySelectorAll<HTMLImageElement>('[data-webcam-image]')) image.src = `${image.dataset.webcamImage}?t=${stamp}`;
-    if (lightbox?.open) show(current);
+    lightbox?.refresh();
     updated();
   };
   setInterval(refresh, 30000);

@@ -14,6 +14,7 @@ if (environment === 'dev') {
   assert.notEqual(target.d1_databases[0].database_id, config.d1_databases[0].database_id, 'Development cannot use the production database.');
   assert.equal(target.vars.ENVIRONMENT, 'development');
   assert.equal(target.vars.FORMSPREE_FORM_ID, '', 'Development email delivery must be disabled.');
+  assert.equal(target.vars.FORMSPREE_HOUSING_FORM_ID, '', 'Development housing email delivery must be disabled.');
   assert.equal(target.workers_dev, false, 'Disable the alternate public Worker hostname.');
   assert.equal(target.preview_urls, false, 'Disable public version preview URLs.');
   assert.deepEqual(target.triggers.crons, [], 'Development must not run production notification jobs.');
@@ -21,6 +22,7 @@ if (environment === 'dev') {
   assert(html.includes('Development preview') && html.includes('content="noindex,nofollow,noarchive"'));
   assert((await readFile('dist/_headers', 'utf8')).includes('X-Robots-Tag: noindex, nofollow, noarchive'));
 } else {
+  assert.equal(target.vars.FORMSPREE_HOUSING_FORM_ID, 'xkjoayyr');
   assert(!html.includes('Development preview'), 'A development build cannot be deployed to production.');
 }
 console.log(`Deployment preflight passed for ${environment}: ${target.name}.`);

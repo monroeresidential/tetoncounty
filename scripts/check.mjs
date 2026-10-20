@@ -25,8 +25,10 @@ const appFiles=files.filter(f=>f.startsWith('dist/_astro/')&&f.endsWith('.js'));
 assert(appFiles.length>0,'Astro must emit the client script as an external file for CSP');
 // Budget the scripts each page actually loads; page-specific scripts (webcams, pass, live) never load together.
 const scriptBytes=new Map(await Promise.all(appFiles.map(async f=>[f.slice(4),gzipSync(await readFile(f)).length])));
+// Shared chunks (form-service, pass-status) load via static imports: follow `from"./x.js"` and `import"./x.js"`, never dynamic `import("./x.js")`.
+async function scriptGraph(src,seen){if(seen.has(src))return;seen.add(src);for(const m of(await readFile('dist'+src,'utf8')).matchAll(/(?:\bfrom|\bimport)\s*["'](\.[^"']+\.js)["']/g))await scriptGraph(new URL(m[1],'http://x'+src).pathname,seen);}
 let appBytes=0,heaviest='';
-for(const file of htmlFiles){const bytes=[...new Set((await readFile(file,'utf8')).match(/\/_astro\/[^"]+\.js/g)||[])].reduce((sum,src)=>sum+(scriptBytes.get(src)||0),0);if(bytes>appBytes){appBytes=bytes;heaviest=file;}}
+for(const file of htmlFiles){const seen=new Set();for(const src of new Set((await readFile(file,'utf8')).match(/\/_astro\/[^"]+\.js/g)||[]))await scriptGraph(src,seen);const bytes=[...seen].reduce((sum,src)=>sum+(scriptBytes.get(src)||0),0);if(bytes>appBytes){appBytes=bytes;heaviest=file;}}
 const cssBytes=gzipSync(await readFile('dist/assets/styles.css')).length;
 assert(appBytes<9000,`Client script too large on ${heaviest}: ${appBytes}`);assert(cssBytes<12000,`CSS too large: ${cssBytes}`);
 console.log(`Verified ${htmlFiles.length} HTML pages, ${checked} internal references, ${listings.length} unique records, 31 trails and structured data.`);

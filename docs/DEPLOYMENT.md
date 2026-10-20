@@ -111,6 +111,8 @@ Before deploying the notification integration, run `npm run db:migrate` to apply
 
 Cloudflare Turnstile remains the public form's spam check. If Formspree rejects forwarded requests because of additional CAPTCHA or domain rules, inspect the form's configuration and delivery error before changing protections. Do not bypass a CAPTCHA or publish a browser-facing administrative API key.
 
+Housing inquiries use a second Formspree form, `https://formspree.io/f/xkjoayyr`, configured in `FORMSPREE_HOUSING_FORM_ID` (production only; `env.dev` sets it to an empty string, so development never forwards them). Before deploying, run `npm run db:migrate` and `npm run db:migrate:dev` to apply `0003_housing_inquiries.sql`. Preflight asserts both form IDs. In Formspree, confirm the recipient is `drew@monroeresidential.com` and that reCAPTCHA and domain restriction are off for `xkjoayyr`, since the Worker forwards server-side. After the production release, send one real test inquiry and confirm it reaches the inbox. See `EDITORIAL.md` for review, recovery, and retention.
+
 ## References
 
 - [Google tag setup](https://developers.google.com/tag-platform/gtagjs)

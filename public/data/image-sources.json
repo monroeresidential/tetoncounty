@@ -61,8 +61,106 @@
     "file": "/images/teton-flats-interior.webp",
     "source": "https://tetonflats.com/images/gallery/unit-1br-7.jpg",
     "credit": "Teton Flats",
-    "depicts": "Furnished model living room and kitchen at Teton Flats",
-    "note": "Reuse authorized by the site owner. Model furnishings do not imply a furnished lease."
+    "depicts": "Staged model living room and kitchen at Teton Flats",
+    "note": "Reuse authorized by the site owner. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-exterior-1.webp",
+    "source": "https://tetonflats.com/images/gallery/exterior-1.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Street-side view of a two-story Teton Flats building with gabled entries, wood and dark metal siding, and lawn at sunset",
+    "note": "Reuse authorized by the site owner on 2026-10-18."
+  },
+  {
+    "file": "/images/teton-flats-exterior-2.webp",
+    "source": "https://tetonflats.com/images/gallery/exterior-2.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Teton Flats buildings with gabled roofs seen across tall dry grass",
+    "note": "Reuse authorized by the site owner on 2026-10-18."
+  },
+  {
+    "file": "/images/teton-flats-exterior-3.webp",
+    "source": "https://tetonflats.com/images/gallery/exterior-3.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Close view of Teton Flats wood and dark metal siding and windows, framed by evergreen branches",
+    "note": "Reuse authorized by the site owner on 2026-10-18."
+  },
+  {
+    "file": "/images/teton-flats-exterior-4.webp",
+    "source": "https://tetonflats.com/images/gallery/exterior-4.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Teton Flats building entries and landscaped walkway with a streetlight",
+    "note": "Reuse authorized by the site owner on 2026-10-18."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-1.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-1.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model bathroom with glass shower, wood vanity, and quartz counter",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-2.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-2.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model bedroom with a bed and nightstands",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-3.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-3.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model bedroom with a dresser and window",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-4.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-4.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model kitchen with stainless appliances and a breakfast bar",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-5.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-5.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model with in-unit washer and dryer beside the refrigerator, bathroom beyond",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-6.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-6.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model living room with sofa, chair, and a window onto the courtyard",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/teton-flats-unit-1br-8.webp",
+    "source": "https://tetonflats.com/images/gallery/unit-1br-8.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Staged one-bedroom model living room with a wall-mounted television and entry door",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Staged model; apartments are leased unfurnished."
+  },
+  {
+    "file": "/images/floorplan-2-bed-2-bath.webp",
+    "source": "https://tetonflats.com/images/floorplans/teton-flats-2-bedroom-2-bath-floor-plan-v3.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Floor plan of the Teton Flats two-bedroom, two-bath apartment",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Floor plan as published by the source."
+  },
+  {
+    "file": "/images/floorplan-1-bed-1-bath.webp",
+    "source": "https://tetonflats.com/images/floorplans/teton-flats-1-bedroom-1-bath-floor-plan-v3.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Floor plan of the Teton Flats one-bedroom, one-bath apartment",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Floor plan as published by the source."
+  },
+  {
+    "file": "/images/floorplan-1-bed-1-bath-duplex.webp",
+    "source": "https://tetonflats.com/images/floorplans/teton-flats-1-bedroom-1-bath-duplex-floor-plan-v3.jpg",
+    "credit": "Teton Flats",
+    "depicts": "Two-level floor plan of the Teton Flats one-bedroom, one-bath duplex apartment",
+    "note": "Reuse authorized by the site owner on 2026-10-18. Floor plan as published by the source."
   },
   {
     "file": "/images/social/teton-valley-v1.jpg",

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { parsePassStatus, parsePassHistory, deltaCopy, denverDay } from '../src/lib/pass.ts';
+import { visibleTimes } from '../src/scripts/pass-status.ts';
 import { handleApi } from '../src/worker.mjs';
 
 const live = { status: 'open', pollerDead: false, isStale: false, lastConfirmed: { status: 'open', at: '2026-10-19T18:40:25Z' }, advisories: ['Falling Rock'], restrictions: [], wydotReportTime: '2026-10-19T17:11:00Z',
@@ -65,4 +66,16 @@ test('every page carries a hidden-until-loaded Teton Pass badge linking to the p
     const html = await readFile(`dist/${file}`, 'utf8');
     assert.match(html, /<a class="pass-badge" href="\/teton-pass\/" data-pass-badge hidden>/, file);
   }
+});
+
+test('pass status renderer shows drive times only over a passable pass and filters by route', () => {
+  const rows = ['victor-jackson-eb', 'victor-jackson-wb', 'victor-tetonvillage-eb', 'driggs-jackson-eb'].map(slug => ({ slug, name: slug, durationSec: 2000, typicalSec: 2000, capturedAt: '2026-10-19T18:40:25Z', stale: false }));
+  const report = status => ({ ...parsePassStatus(live), status, travelTimes: rows });
+  assert.deepEqual(visibleTimes(null, null), []);
+  assert.deepEqual(visibleTimes(report('closed'), null), []);
+  assert.deepEqual(visibleTimes(report('unknown'), null), []);
+  assert.equal(visibleTimes(report('open'), null).length, 4);
+  assert.equal(visibleTimes(report('restricted'), []).length, 0);
+  assert.deepEqual(visibleTimes(report('open'), ['victor-jackson']).map(t => t.slug), ['victor-jackson-eb', 'victor-jackson-wb']);
+  assert.deepEqual(visibleTimes(report('open'), ['victor-jackson', 'driggs-jackson']).map(t => t.slug), ['victor-jackson-eb', 'victor-jackson-wb', 'driggs-jackson-eb']);
 });
