@@ -1,3 +1,6 @@
+import { readFile, readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyOverrides } from '../src/lib/overrides.ts';
@@ -62,4 +65,85 @@ test('throws on a malformed phone or an empty phoneSource', () => {
   for (const phone of ['(208) 354-2344', '208-354-23', 2083542344])
     assert.throws(() => applyOverrides(fixture(), { listings: { alpha: { phone, ...decided } }, removed: {} }), /invalid phone/);
   assert.throws(() => applyOverrides(fixture(), { listings: { alpha: { phoneSource: ' ', ...decided } }, removed: {} }), /invalid phoneSource/);
+});
+
+const auditRemovedLinks = [
+  'cryo-therapy-idaho', 'three-peaks-restaurant-and-catering', 'warbirds-cafe', 'grand-teton-floor-and-window-coverings',
+  'mountain-high-mounted-shooters', 'berkshire-hathaway', 'chircop-and-associates-pllc', 'davison-spas', 'elements-of-health',
+  'foxtrot-gallery', 'grand-valley-lodging', 'movewell', 'mtn-lab-performance-coaching', 'sleigh-rides-at-double-diamond-bar-ranch',
+  'super-8-by-wyndham', 'teton-valley-meats', 'the-barntenders', 'the-social-media-secrets-clubtm', 'west-side-yard',
+  'yellowstone-teton-tours',
+];
+
+const auditReplacements = {
+  'corner-drug': 'https://tetonvalleypharmacy.com/',
+  'victor-drug': 'https://tetonvalleypharmacy.com/',
+  'dominos-pizza': 'https://www.dominos.com/',
+  'fuze-av-llc': 'https://fuzehometech.com/',
+  'paws-of-teton-valley': 'https://www.pawshelpspets.org/',
+  'teton-rock-gym': 'https://tetonrockgym.com/',
+  'teton-valley-food-pantry': 'https://www.tvfoodpantry.org/',
+  'teton-valley-hospital': 'https://tvhcare.org/',
+  'wydaho-rendezvous-teton-bike-festival': 'https://tvtap.org/',
+  'dulce-baking-company': 'https://dulcebaking.co/',
+  'makerspace': 'https://valleyofthetetonslibrary.org/',
+  'valley-of-the-tetons-library': 'https://valleyofthetetonslibrary.org/',
+  'ollies-mountain-pet-supply-and-wash': 'https://driggsdogwash.com/',
+  'pine-needle-embroidery': 'https://pineneedleembroideryandprint.com/',
+  'teton-valley-health-cache-clinic': 'https://tvhcare.org/locations/',
+  'farmhouse-208': 'https://farmhouse208.com/',
+  'badger-creek-cafe': 'https://www.badgercreekcafe.com/',
+  'borbay-studios-and-gallery': 'https://www.borbay.com/',
+  'downtown-driggs-association': 'https://www.downtowndriggs.org/',
+  'elevate-beauty-salon': 'https://facebook.com/ElevateSalon',
+  'friends-of-teton-valley-sports-and-wellness': 'https://sportsandwellness.org/',
+  'jared-power-somatic-bodywork': 'https://www.jaredpower.com/',
+  'moulton-law-office': 'https://www.tetonvalleylaw.com/',
+  'mountain-bike-the-tetons': 'https://www.mountainbiketetons.org/',
+  'sabine-soft-furnishings': 'https://sabinesf.com/',
+  'teton-homestead': 'https://www.tetonhomestead.com/',
+  'teton-regional-land-trust': 'https://www.tetonlandtrust.org/',
+  'teton-therapeutic-massage': 'https://facebook.com/TetonTherapeuticMassage',
+  'teton-valley-aquatics': 'https://www.tetonvalleyaquatics.org/',
+  'the-cottage-at-heron-glass': 'https://www.heronglass.com/cottage.htm',
+  'the-fin-and-feather-inn': 'https://finandfeatherinn.com/',
+  'wagitude-a-loved-dog-hotel-and-pet-sitting-services': 'https://www.wagitudeloveddoghotel.com/',
+  'wilkinson-montesano-builders': 'https://www.wilkinson-montesano.com/',
+};
+
+test('audit spam and dead links are gone', async () => {
+  const raw = JSON.parse(await readFile(new URL('../data/overrides.json', import.meta.url), 'utf8'));
+  for (const id of auditRemovedLinks) {
+    assert.equal(raw.listings[id]?.website, null, `${id} override clears website`);
+  }
+  const listings = await loadListings();
+  const byId = new Map(listings.map(l => [l.id, l]));
+  for (const id of auditRemovedLinks) {
+    const listing = byId.get(id);
+    if (listing) assert.equal('website' in listing, false, `${id} still has a website`);
+  }
+  const dist = fileURLToPath(new URL('../dist', import.meta.url));
+  const pattern = /cryotherapyidaho|tetonfloors|threepeaksdinnertable|warbirdscafe/i;
+  const walk = async dir => {
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      const path = join(dir, entry.name);
+      if (entry.isDirectory()) await walk(path);
+      else if (/\.(html|json|txt|xml)$/.test(entry.name)) assert.doesNotMatch(await readFile(path, 'utf8'), pattern, path);
+    }
+  };
+  await walk(dist);
+});
+
+test('audit replacements are applied', async () => {
+  const listings = await loadListings();
+  const byId = new Map(listings.map(l => [l.id, l]));
+  for (const [id, website] of Object.entries(auditReplacements)) {
+    assert.equal(byId.get(id)?.website, website, id);
+  }
+});
+
+test('pages for listings without a website render no website button', async () => {
+  const html = await readFile(new URL('../dist/places/warbirds-cafe/index.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(html, /listing_website/);
+  assert.doesNotMatch(html, /href="null"/);
 });

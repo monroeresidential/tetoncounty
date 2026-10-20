@@ -1,1 +1,270 @@
-{"listings":{},"removed":{}}
+{
+  "listings": {
+    "cryo-therapy-idaho": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "three-peaks-restaurant-and-catering": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "warbirds-cafe": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-teton-floor-and-window-coverings": {
+      "website": null,
+      "reason": "domain redirects to an unrelated site",
+      "decidedAt": "2026-10-20"
+    },
+    "mountain-high-mounted-shooters": {
+      "website": null,
+      "reason": "expired domain now redirects to a national association",
+      "decidedAt": "2026-10-20"
+    },
+    "berkshire-hathaway": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "chircop-and-associates-pllc": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "davison-spas": {
+      "website": null,
+      "reason": "no A record",
+      "decidedAt": "2026-10-20"
+    },
+    "elements-of-health": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "foxtrot-gallery": {
+      "website": null,
+      "reason": "404 \"Squarespace - Website Expired\"",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-valley-lodging": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "movewell": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "mtn-lab-performance-coaching": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "sleigh-rides-at-double-diamond-bar-ranch": {
+      "website": null,
+      "reason": "404 ConnectYourDomain",
+      "decidedAt": "2026-10-20"
+    },
+    "super-8-by-wyndham": {
+      "website": null,
+      "reason": "404",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-meats": {
+      "website": null,
+      "reason": "SERVFAIL / TLS fail",
+      "decidedAt": "2026-10-20"
+    },
+    "the-barntenders": {
+      "website": null,
+      "reason": "404 Squarespace expired",
+      "decidedAt": "2026-10-20"
+    },
+    "the-social-media-secrets-clubtm": {
+      "website": null,
+      "reason": "no response",
+      "decidedAt": "2026-10-20"
+    },
+    "west-side-yard": {
+      "website": null,
+      "reason": "TLS fail, \"Site Not Configured\"",
+      "decidedAt": "2026-10-20"
+    },
+    "yellowstone-teton-tours": {
+      "website": null,
+      "reason": "timeout / TLS fail",
+      "decidedAt": "2026-10-20"
+    },
+    "corner-drug": {
+      "website": "https://tetonvalleypharmacy.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonvalleypharmacy.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "victor-drug": {
+      "website": "https://tetonvalleypharmacy.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonvalleypharmacy.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "dominos-pizza": {
+      "website": "https://www.dominos.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.dominos.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "fuze-av-llc": {
+      "website": "https://fuzehometech.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://fuzehometech.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "paws-of-teton-valley": {
+      "website": "https://www.pawshelpspets.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.pawshelpspets.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-rock-gym": {
+      "website": "https://tetonrockgym.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonrockgym.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-food-pantry": {
+      "website": "https://www.tvfoodpantry.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tvfoodpantry.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-hospital": {
+      "website": "https://tvhcare.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvhcare.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "wydaho-rendezvous-teton-bike-festival": {
+      "website": "https://tvtap.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvtap.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "dulce-baking-company": {
+      "website": "https://dulcebaking.co/",
+      "reason": "site moved or verified replacement 2026-10-20: https://dulcebaking.co/",
+      "decidedAt": "2026-10-20"
+    },
+    "makerspace": {
+      "website": "https://valleyofthetetonslibrary.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://valleyofthetetonslibrary.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "valley-of-the-tetons-library": {
+      "website": "https://valleyofthetetonslibrary.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://valleyofthetetonslibrary.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "ollies-mountain-pet-supply-and-wash": {
+      "website": "https://driggsdogwash.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://driggsdogwash.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "pine-needle-embroidery": {
+      "website": "https://pineneedleembroideryandprint.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://pineneedleembroideryandprint.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-health-cache-clinic": {
+      "website": "https://tvhcare.org/locations/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvhcare.org/locations/",
+      "decidedAt": "2026-10-20"
+    },
+    "farmhouse-208": {
+      "website": "https://farmhouse208.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://farmhouse208.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "badger-creek-cafe": {
+      "website": "https://www.badgercreekcafe.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.badgercreekcafe.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "borbay-studios-and-gallery": {
+      "website": "https://www.borbay.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.borbay.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "downtown-driggs-association": {
+      "website": "https://www.downtowndriggs.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.downtowndriggs.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "elevate-beauty-salon": {
+      "website": "https://facebook.com/ElevateSalon",
+      "reason": "site moved or verified replacement 2026-10-20: https://facebook.com/ElevateSalon",
+      "decidedAt": "2026-10-20"
+    },
+    "friends-of-teton-valley-sports-and-wellness": {
+      "website": "https://sportsandwellness.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://sportsandwellness.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "jared-power-somatic-bodywork": {
+      "website": "https://www.jaredpower.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.jaredpower.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "moulton-law-office": {
+      "website": "https://www.tetonvalleylaw.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonvalleylaw.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "mountain-bike-the-tetons": {
+      "website": "https://www.mountainbiketetons.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.mountainbiketetons.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "sabine-soft-furnishings": {
+      "website": "https://sabinesf.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://sabinesf.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-homestead": {
+      "website": "https://www.tetonhomestead.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonhomestead.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-regional-land-trust": {
+      "website": "https://www.tetonlandtrust.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonlandtrust.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-therapeutic-massage": {
+      "website": "https://facebook.com/TetonTherapeuticMassage",
+      "reason": "site moved or verified replacement 2026-10-20: https://facebook.com/TetonTherapeuticMassage",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-aquatics": {
+      "website": "https://www.tetonvalleyaquatics.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonvalleyaquatics.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "the-cottage-at-heron-glass": {
+      "website": "https://www.heronglass.com/cottage.htm",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.heronglass.com/cottage.htm",
+      "decidedAt": "2026-10-20"
+    },
+    "the-fin-and-feather-inn": {
+      "website": "https://finandfeatherinn.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://finandfeatherinn.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "wagitude-a-loved-dog-hotel-and-pet-sitting-services": {
+      "website": "https://www.wagitudeloveddoghotel.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.wagitudeloveddoghotel.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "wilkinson-montesano-builders": {
+      "website": "https://www.wilkinson-montesano.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.wilkinson-montesano.com/",
+      "decidedAt": "2026-10-20"
+    }
+  },
+  "removed": {}
+}
