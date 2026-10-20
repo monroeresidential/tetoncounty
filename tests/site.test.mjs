@@ -123,3 +123,23 @@ test('listing photos are approved, local, responsive, and attached to exact list
     assert(!photos.has(candidate.listingId), `Unapproved image must stay unpublished: ${candidate.listingId}`);
   }
 });
+
+test('every corporate-housing photo has a source record', async () => {
+  const records = JSON.parse(await readFile('public/data/image-sources.json', 'utf8'));
+  const names = [
+    ...[1, 2, 3, 4].map(n => `teton-flats-exterior-${n}`),
+    ...[1, 2, 3, 4, 5, 6, 8].map(n => `teton-flats-unit-1br-${n}`),
+    'teton-flats-interior',
+    'floorplan-2-bed-2-bath', 'floorplan-1-bed-1-bath', 'floorplan-1-bed-1-bath-duplex',
+  ];
+  for (const name of names) {
+    const record = records.find(item => item.file === `/images/${name}.webp`);
+    assert(record, `${name} needs a source record`);
+    assert(record.source.startsWith('https://tetonflats.com/images/'), name);
+    assert.equal(record.credit, 'Teton Flats', name);
+    assert(record.depicts, name);
+    assert(record.note.includes('Reuse authorized by the site owner'), name);
+    if (/unit-1br|interior/.test(name)) assert(record.note.includes('unfurnished'), name);
+    await readFile(`src/assets/photos/${name}.webp`);
+  }
+});
