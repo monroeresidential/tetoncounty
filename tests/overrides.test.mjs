@@ -47,3 +47,19 @@ test('the shipped overrides file applies to the real listings', async () => {
   const ids = new Set(listings.map(l => l.id));
   for (const { id } of redirects) assert.equal(ids.has(id), false);
 });
+
+test('applies a reviewed phone and its source', () => {
+  const { listings } = applyOverrides(fixture(), {
+    listings: { alpha: { phone: '208-354-2344', phoneSource: 'https://alpha.example/contact', ...decided } },
+    removed: {},
+  });
+  const alpha = listings.find(l => l.id === 'alpha');
+  assert.equal(alpha.phone, '208-354-2344');
+  assert.equal(alpha.phoneSource, 'https://alpha.example/contact');
+});
+
+test('throws on a malformed phone or an empty phoneSource', () => {
+  for (const phone of ['(208) 354-2344', '208-354-23', 2083542344])
+    assert.throws(() => applyOverrides(fixture(), { listings: { alpha: { phone, ...decided } }, removed: {} }), /invalid phone/);
+  assert.throws(() => applyOverrides(fixture(), { listings: { alpha: { phoneSource: ' ', ...decided } }, removed: {} }), /invalid phoneSource/);
+});

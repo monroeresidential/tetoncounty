@@ -19,6 +19,28 @@ test('content schema accepts the inventory and rejects invalid public records', 
   ]) assert.equal(listingSchema.safeParse({ ...listings[0], ...patch }).success, false);
 });
 
+test('schema accepts a well-formed phone and rejects others', () => {
+  assert(listingSchema.safeParse({ ...listings[0], phone: '208-354-2344', phoneSource: 'https://example.com/' }).success);
+  for (const phone of ['(208) 354-2344', '208-354-23', '2083542344'])
+    assert.equal(listingSchema.safeParse({ ...listings[0], phone }).success, false, phone);
+});
+
+test('listing pages show a phone only when one is set', async t => {
+  const withPhone = listings.filter(item => item.phone);
+  for (const listing of listings.filter(item => !item.phone)) {
+    const html = await read(`places/${listing.id}/index.html`);
+    assert(!html.includes('href="tel:'), listing.id);
+    assert(!html.includes('<dt>Phone</dt>'), listing.id);
+  }
+  if (!withPhone.length) return t.skip('no phones until Task 5');
+  for (const listing of withPhone) {
+    const html = await read(`places/${listing.id}/index.html`);
+    const place = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(item => item['@type'] === 'Place');
+    assert(html.includes(`href="tel:+1${listing.phone.replaceAll('-', '')}"`), listing.id);
+    assert.equal(place.telephone, listing.phone);
+  }
+});
+
 test('public JSON and the form allowlist match every curated listing', async () => {
   const exported = JSON.parse(await read('data/listings.json'));
   assert.equal(exported.count, listings.length);

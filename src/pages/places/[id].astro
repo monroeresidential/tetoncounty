@@ -24,8 +24,9 @@ if (item.trail) {
     if (item.trail[key] != null) facts.push([label, key === 'distanceMiles' ? (item.trail.distanceLabel || item.trail[key] + suffix) : item.trail[key] + suffix]);
   }
 }
+const phoneHref = item.phone ? `tel:+1${item.phone.replaceAll('-', '')}` : '';
 const schema = [
-  { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
+  { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.phone ? { telephone: item.phone } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
   { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Explore', item: siteUrl + '/explore/' }, { '@type': 'ListItem', position: 2, name: item.name, item: `${siteUrl}/places/${item.id}/` }] },
 ];
 if (photograph) Object.assign(schema[0], { image: {
@@ -42,7 +43,7 @@ if (photograph) Object.assign(schema[0], { image: {
         <span class="eyebrow">{c.short} · {item.town}</span><h1 class:list={{ 'long-title': item.name.length > 24 }}>{item.name}</h1><p class="detail-lead">{item.description}</p>
         {photograph && <figure class="plate detail-photo"><Photo src={photograph.src} alt={photograph.alt} priority /><figcaption class="photo-caption">{item.name}<span class="photo-credit">Image via <a href={sponsorLink(photograph.sourcePage, Astro.url.pathname, 'photo_credit')} rel={isSponsorUrl(photograph.sourcePage) ? 'sponsored' : 'noopener'}>{photograph.credit}</a></span></figcaption></figure>}
         <h2>A little more to go on.</h2>
-        <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
+        <dl class="facts">{facts.map(([key, value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}{item.phone && <div><dt>Phone</dt><dd><a href={phoneHref}>{item.phone}</a></dd></div>}</dl>
         {item.trail && <p class="notice">Trail figures come from the source guide and can vary by route and measuring method. This page does not report live conditions or confirm current access. Use an authoritative route map and current land-manager information for your trip.</p>}
         {item.tags.length > 0 && <div class="tags">{item.tags.slice(0, 8).map(t => <span>{t}</span>)}</div>}
         <div class="source-box"><span class="eyebrow">WHERE THIS COMES FROM</span><p>Source-listed · Sources checked {item.sourceCheckedAt || reviewedDate}. Business-owner confirmation is still pending.</p>
@@ -52,6 +53,7 @@ if (photograph) Object.assign(schema[0], { image: {
       </article>
       <aside class="visit-panel"><span class="eyebrow">MAKE A PLAN</span><h2>Go see for yourself.</h2><p>{item.address || `${item.town} area`}</p>
         {item.website && <a class="button" href={sponsorLink(item.website, Astro.url.pathname, 'listing_website')} rel={isSponsorUrl(item.website) ? 'sponsored' : 'noopener'}>Visit linked website <Icon name="northeast" /></a>}
+        {item.phone && <a class="button secondary" href={phoneHref}>Call {item.phone}</a>}
         <a class="button secondary" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`} rel="noopener"><Icon name="map" /> Open in Maps</a>
         <p class="fine-print">Confirm location, hours, reservations, and seasonal availability with the operator before visiting.</p><hr /><a class="text-link" href={`/suggest/?type=correction&listing=${item.id}`}>Suggest a change <Icon name="arrow" /></a>
       </aside>

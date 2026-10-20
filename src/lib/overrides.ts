@@ -1,8 +1,9 @@
 import type { Listing } from './listing-schema.ts';
 type Decision = { reason: string; decidedAt: string };
-export type ListingOverride = Decision & { website?: string | null };
+export type ListingOverride = Decision & { website?: string | null; phone?: string | null; phoneSource?: string | null };
 export type Overrides = { listings: Record<string, ListingOverride>; removed: Record<string, Decision & { redirect: string }> };
-const overridableFields = ['website'] as const;
+const overridableFields = ['website', 'phone', 'phoneSource'] as const;
+const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
 const categoryRedirect = /^\/categories\/(outdoors|food-drink|arts-culture|shopping|wellness|stays|services)\/$/;
 const checkDecision = (id: string, entry: Decision) => {
     if (typeof entry.reason !== 'string' || !entry.reason.trim() || !/^\d{4}-\d{2}-\d{2}$/.test(entry.decidedAt))
@@ -22,6 +23,10 @@ export function applyOverrides(listings: Listing[], overrides: Overrides): { lis
                 throw new Error(`Override for ${id} sets unsupported field: ${field}`);
         if (entry.website !== undefined && entry.website !== null && typeof entry.website !== 'string')
             throw new Error(`Override for ${id} has an invalid website`);
+        if (entry.phone !== undefined && entry.phone !== null && !(typeof entry.phone === 'string' && phonePattern.test(entry.phone)))
+            throw new Error(`Override for ${id} has an invalid phone`);
+        if (entry.phoneSource !== undefined && entry.phoneSource !== null && !(typeof entry.phoneSource === 'string' && entry.phoneSource.trim()))
+            throw new Error(`Override for ${id} has an invalid phoneSource`);
     }
     const removed = Object.entries(overrides.removed).map(([id, entry]) => {
         checkDecision(id, entry);
