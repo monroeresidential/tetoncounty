@@ -43,6 +43,8 @@ test('all request types reach only the configured form with reply-to and the sav
   await deliverNotifications(env, { fetcher: async (url, options) => {
     assert.equal(url, 'https://formspree.io/f/meaedrjo');
     assert.equal(options.redirect, 'manual');
+    assert.equal(options.headers.Origin, origin);
+    assert.equal(options.headers.Referer, `${origin}/suggest/`);
     assert.equal(options.headers.Accept, 'application/json');
     const body = JSON.parse(options.body);
     assert.equal(body.email, valid.email);

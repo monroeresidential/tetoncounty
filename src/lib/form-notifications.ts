@@ -117,10 +117,12 @@ export async function deliverNotifications(env: NotificationEnvironment, options
     let accepted = false;
     if (row) {
       try {
+        const body = payload(row as never, env.SITE_URL);
         const response = await fetcher(endpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload(row as never, env.SITE_URL)),
+          // Formspree's domain restriction reads Origin/Referer, which a server-side request lacks; send the form page.
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: new URL(body.source).origin, Referer: body.source },
+          body: JSON.stringify(body),
           // Workers reject redirect: 'error'; with 'manual' a redirect is a non-2xx status recorded as http_3xx.
           redirect: 'manual',
           signal: AbortSignal.timeout(8000),
