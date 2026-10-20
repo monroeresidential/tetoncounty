@@ -1,12 +1,8 @@
 import './analytics.ts';
 import './pass-badge.ts';
+import { connectFormService, type FormConfig } from './form-service.ts';
 import type * as Leaflet from 'leaflet';
 declare const L: typeof Leaflet;
-type FormConfig = {
-    enabled: boolean;
-    mode: string;
-    siteKey: string;
-};
 type MapPoint = {
     id: string;
     name: string;
@@ -30,20 +26,6 @@ type SuggestionForm = HTMLFormElement & {
         website: HTMLInputElement;
     };
 };
-declare global {
-    interface Window {
-        turnstile?: {
-            render(selector: string, options: {
-                sitekey: string;
-                action: string;
-                callback: (token: string) => void;
-                'expired-callback': () => void;
-                'error-callback': () => void;
-            }): string;
-            reset(id: string): void;
-        };
-    }
-}
 const $ = <T extends HTMLElement = HTMLElement>(selector: string, root: ParentNode = document): T => {
     const element = root.querySelector<T>(selector);
     if (!element)
@@ -203,29 +185,11 @@ function initSuggestion(suggestion: SuggestionForm) {
     $$('[data-request-type]', suggestion).forEach(b => b.addEventListener('click', () => { type.value = b.dataset.requestType || 'addition'; setType(); }));
     function show(message: string, kind = '') { status.textContent = message; status.className = 'form-status ' + kind; }
     function readiness() { button.disabled = !(config?.mode === 'local-preview' || token); }
-    (async () => {
-        try {
-            const response = await fetch('/api/config');
-            if (!response.ok)
-                throw new Error();
-            config = await response.json();
-            if (config.mode === 'local-preview') {
-                show('Local preview: submissions are saved on this computer for testing and are not sent to the live guide.');
-                readiness();
-                return;
-            }
-            if (!config.enabled || !config.siteKey) {
-                show('The live submission service is not connected yet. Please check back when the guide launches.', 'error');
-                return;
-            }
-            if (config.mode === 'development') show('Development preview: requests are saved only to the test database. No emails are sent.');
-            await new Promise<void>((resolve, reject) => { const script = document.createElement('script'); script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; script.onload = () => resolve(); script.onerror = reject; document.head.append(script); });
-            widget = window.turnstile!.render('#turnstile', { sitekey: config.siteKey, action: 'suggest', callback: value => { token = value; readiness(); }, 'expired-callback': () => { token = ''; readiness(); }, 'error-callback': () => { token = ''; readiness(); show('Verification could not load. Check your connection and try again.', 'error'); } });
-        }
-        catch {
-            show('The submission service could not be reached. Please reload and try again.', 'error');
-        }
-    })();
+    connectFormService({ action: 'suggest', container: '#turnstile', onToken: value => { token = value; readiness(); }, show }).then(result => {
+        ({ config, widget } = result);
+        if (config.mode === 'local-preview')
+            readiness();
+    });
     suggestion.addEventListener('submit', async (e) => {
         e.preventDefault();
         if (!suggestion.reportValidity())
