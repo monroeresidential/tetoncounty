@@ -42,7 +42,7 @@ test('all request types reach only the configured form with reply-to and the sav
   const sent = [];
   await deliverNotifications(env, { fetcher: async (url, options) => {
     assert.equal(url, 'https://formspree.io/f/meaedrjo');
-    assert.equal(options.redirect, 'error');
+    assert.equal(options.redirect, 'manual');
     assert.equal(options.headers.Accept, 'application/json');
     const body = JSON.parse(options.body);
     assert.equal(body.email, valid.email);
@@ -163,4 +163,13 @@ test('development requires its own verified hostname and never sends even with a
   const { id } = await response.json();
   assert.equal(notification(sqlite, id).attempts, 0);
   assert.equal((await (await handleApi(new Request(env.SITE_URL + '/api/config'), env)).json()).mode, 'development');
+});
+
+test('a Formspree redirect is recorded as a failed delivery, never followed', async t => {
+  const { sqlite, env } = await fixture(t);
+  insert(sqlite);
+  await deliverNotifications(env, { fetcher: async () => new Response(null, { status: 302, headers: { Location: 'https://formspree.io/elsewhere' } }) });
+  const row = notification(sqlite);
+  assert.equal(row.status, 'failed');
+  assert.equal(row.last_error, 'http_302');
 });

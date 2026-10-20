@@ -121,7 +121,8 @@ export async function deliverNotifications(env: NotificationEnvironment, options
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(payload(row as never, env.SITE_URL)),
-          redirect: 'error',
+          // Workers reject redirect: 'error'; with 'manual' a redirect is a non-2xx status recorded as http_3xx.
+          redirect: 'manual',
           signal: AbortSignal.timeout(8000),
         });
         if (response.ok) {
