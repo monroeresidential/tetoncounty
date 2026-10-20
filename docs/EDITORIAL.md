@@ -47,6 +47,29 @@ WHERE submission_id = 'REPLACE_WITH_REVIEWED_REFERENCE' AND status = 'failed';
 
 Existing requests from before the notification migration remain in D1 and are not emailed retroactively.
 
+## Housing inquiries
+
+Inquiries from `/corporate-housing/` are stored in D1's `housing_inquiries` table and forwarded to the private Formspree inbox for form `xkjoayyr`, separate from suggestions. Set `drew@monroeresidential.com` as the email recipient in that form's settings. Emails include the requester type, contact details, request details, and the D1 reference ID. These are rental leads for Teton Flats, never listing suggestions; nothing is published. Inspect them in the authenticated D1 console:
+
+```sh
+npx wrangler d1 execute DB --remote --command "SELECT id, requester, name, company, units, bedrooms, move_in, created_at FROM housing_inquiries ORDER BY created_at DESC;"
+```
+
+Treat message text as untrusted and keep names, emails, and phone numbers out of Git, public JSON, analytics, and logs.
+
+`housing_notifications` tracks delivery the same way as `submission_notifications` (see above), and the five-minute cron drains both queues. To find and requeue a failed delivery:
+
+```sql
+SELECT inquiry_id, status, attempts, last_error, sent_at
+FROM housing_notifications
+WHERE status != 'sent'
+ORDER BY next_attempt_at;
+
+UPDATE housing_notifications
+SET status = 'pending', attempts = 0, next_attempt_at = 0, last_error = NULL
+WHERE inquiry_id = 'REPLACE_WITH_REVIEWED_REFERENCE' AND status = 'failed';
+```
+
 ## Refresh sources
 
 ### Listing photos
@@ -73,6 +96,13 @@ WHERE status IN ('approved', 'rejected')
   AND created_at < datetime('now', '-12 months');
 DELETE FROM submission_rate_limits
 WHERE expires_at < unixepoch('now') * 1000;
+```
+
+Housing inquiries are deleted 12 months after receipt, including the corresponding Formspree entries and notification emails. Notification rows cascade. This is also manual:
+
+```sql
+DELETE FROM housing_inquiries
+WHERE created_at < datetime('now', '-12 months');
 ```
 
 Run destructive retention operations only as part of the established authorized maintenance process. For a deletion request, verify the requester against the original submission before deleting their record. Establish a recurring maintenance process before launch if the operator wants automated retention.

@@ -16,7 +16,7 @@ Implemented from the October 18, 2026 handoff, `Teton County website redesign.zi
 
 `Header`, `Footer`, and `SponsorCard` provide shared navigation and sponsor credits. Home adds the category photo index, live inventory counts, favorites, trail feature, towns, and seasonal links. `Directory` and `ListingCard` serve all categories, hiking, towns, and related records. Hiking filters support `difficulty=easy|moderate|hard`, combined with existing search, season, and map state in the URL. Card figures come from the curated inventory, not the prototype's sample data.
 
-The request-type buttons update the existing hidden select. Addition, correction, and contact values, conditional validation, honeypot, Turnstile verification, Worker API, D1 review queue, and Formspree notifications are preserved. The form never turns suggestions into apartment leads. Analytics remains production-only and does not receive form fields. Page-view setup is queued immediately; the Google library downloads at low priority after the load event, using idle time with a bounded fallback.
+The request-type buttons update the existing hidden select. Addition, correction, and contact values, conditional validation, honeypot, Turnstile verification, Worker API, D1 review queue, and Formspree notifications are preserved. The form never turns suggestions into apartment leads; housing inquiries use a separate form, endpoint, queue, and inbox. Analytics remains production-only and does not receive form fields. Page-view setup is queued immediately; the Google library downloads at low priority after the load event, using idle time with a bounded fallback.
 
 ## Validation
 

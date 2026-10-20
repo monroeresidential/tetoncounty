@@ -183,3 +183,8 @@ test('commute block withholds times without JavaScript', async () => {
   assert.match(html, /<div[^>]*data-pass-directions[^>]*\bhidden\b/);
   assert.match(html.match(/<noscript>[\s\S]*?<\/noscript>/g)?.join('') ?? '', /Wyoming 511/);
 });
+
+test('privacy page covers housing inquiries', async () => {
+  const text = pageText(await readFile('dist/privacy/index.html', 'utf8'));
+  for (const phrase of ['housing inquir', 'phone', '12 months', 'Teton Flats']) assert(text.includes(phrase), phrase);
+});
