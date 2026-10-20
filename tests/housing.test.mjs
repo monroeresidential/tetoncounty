@@ -5,6 +5,8 @@ import { adaptDb } from '../scripts/sqlite-adapter.mjs';
 import { migrateLocal } from '../scripts/local-migrations.mjs';
 import { handleApi } from '../src/worker.mjs';
 import { deliverNotifications } from '../src/lib/form-notifications.ts';
+import { readFile } from 'node:fs/promises';
+import { isDevelopment } from '../src/config.ts';
 
 const origin = 'https://tetoncounty.us';
 const valid = { requester: 'employer', name: 'HR Tester', email: 'hr@example.com', phone: '', company: 'Test Resort', units: '4', bedrooms: 'either', moveIn: '2026-12-01', stayLength: 'Ski season, about 5 months', message: '', consent: 'yes', companyUrl: '' };
@@ -138,4 +140,46 @@ test('development never forwards housing inquiries', async t => {
   await deliverNotifications({ ...env, LOCAL_PREVIEW: false, ENVIRONMENT: 'development', FORMSPREE_HOUSING_FORM_ID: 'xkjoayyr' }, { queue: 'housing', fetcher: async () => { called = true; return Response.json({ ok: true }); } });
   assert.equal(called, false);
   assert.equal(housingStatus(sqlite).status, 'pending');
+});
+
+// Built-page checks; run `npm run build` first.
+const page = () => readFile('dist/corporate-housing/index.html', 'utf8');
+const pageText = html => html.replace(/<(script|style)\b[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&#36;/g, '$');
+
+test('corporate housing page is public, linked, and in the sitemap', async () => {
+  const html = await page();
+  assert(html.includes('<a aria-current="page" href="/corporate-housing/">Corporate housing</a>'));
+  assert((await readFile('dist/sitemap.xml', 'utf8')).includes('/corporate-housing/</loc>'));
+  const llms = await readFile('dist/llms.txt', 'utf8');
+  assert(llms.includes('/corporate-housing/'));
+  assert(!llms.includes('Apartment lead generation is not part of this release.'));
+  if (!isDevelopment) assert(!/<meta name="robots"[^>]*noindex/.test(html));
+});
+
+test('corporate housing never implies furnished units', async () => {
+  const html = await page();
+  const staged = html.match(/<figure class="[^"]*\bhousing-staged\b[\s\S]*?<\/figure>/g) ?? [];
+  assert(staged.length >= 8, `expected every interior photo, found ${staged.length}`);
+  for (const figure of staged) assert(figure.includes('leased unfurnished'), figure);
+  const text = pageText(html).toLowerCase();
+  assert(!text.includes('furnished apartment'));
+  assert(!text.includes('fully furnished'));
+});
+
+test('corporate housing shows no prices or invented terms', async () => {
+  const text = pageText(await page());
+  assert(!/\$\s*\d/.test(text));
+  assert(!text.includes('/mo'));
+});
+
+test('corporate housing form posts to its own endpoint', async () => {
+  const html = await page();
+  for (const marker of ['id="housing-form"', 'name="companyUrl"', 'name="consent"', 'id="housing-turnstile"']) assert(html.includes(marker), marker);
+  assert(!html.includes('/api/submissions'));
+});
+
+test('commute block withholds times without JavaScript', async () => {
+  const html = await page();
+  assert.match(html, /<div[^>]*data-pass-directions[^>]*\bhidden\b/);
+  assert.match(html.match(/<noscript>[\s\S]*?<\/noscript>/g)?.join('') ?? '', /Wyoming 511/);
 });
