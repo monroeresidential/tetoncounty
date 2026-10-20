@@ -1,4 +1,4 @@
-.housing-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center}
+.housing-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center}.housing-zoom{display:block;cursor:zoom-in}
 .housing-hero .eyebrow{margin-bottom:22px}
 .housing-hero h1{font-size:68px}
 .housing-lede{font-size:18px;line-height:1.65;margin-top:28px;max-width:52ch}

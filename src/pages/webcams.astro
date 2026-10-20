@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Icon from '../components/Icon.astro';
+import Lightbox from '../components/Lightbox.astro';
 import SponsorLink from '../components/SponsorLink.astro';
 import { siteUrl } from '../config.ts';
 import { webcamAreas } from '../lib/webcams.ts';
@@ -30,20 +31,6 @@ const schema = { '@type': 'WebPage', name: 'Teton Pass & valley webcams', url: `
     <h2 id="webcam-sources-title">About these cameras</h2>
     <p>Images come from Wyoming Department of Transportation road cameras, FAA weather cameras and parking cameras at Jackson Hole Airport, Jackson Hole Mountain Resort, and TetonCam, and are served from an image feed maintained by <SponsorLink placement="inline_text">Teton Flats</SponsorLink>. Each card names its source. Cameras marked “approximate location” have estimated coordinates in the feed.</p>
   </section>
-  <dialog class="webcam-lightbox" aria-labelledby="webcam-lightbox-title" data-webcam-lightbox>
-    <div class="webcam-lightbox-bar">
-      <p class="webcam-lightbox-count" data-lightbox-count></p>
-      <button class="webcam-lightbox-close" type="button" data-lightbox-close><Icon name="close" /><span class="sr-only">Close</span></button>
-    </div>
-    <figure class="webcam-lightbox-figure">
-      <div class="webcam-lightbox-frame">
-        <img alt="" data-lightbox-image />
-        <span class="webcam-unavailable">Camera temporarily unavailable</span>
-      </div>
-      <figcaption><h2 id="webcam-lightbox-title" data-lightbox-title></h2><span class="webcam-meta" data-lightbox-meta></span><a class="text-link" target="_blank" rel="noopener" data-lightbox-full>Open full size <Icon name="northeast" /></a></figcaption>
-    </figure>
-    <button class="webcam-lightbox-nav webcam-lightbox-prev" type="button" data-lightbox-step="-1"><Icon name="arrow" /><span class="sr-only">Previous camera</span></button>
-    <button class="webcam-lightbox-nav webcam-lightbox-next" type="button" data-lightbox-step="1"><Icon name="arrow" /><span class="sr-only">Next camera</span></button>
-  </dialog>
+  <Lightbox item="camera" unavailable="Camera temporarily unavailable" />
   <script src="../scripts/webcams.ts"></script>
 </SiteLayout>

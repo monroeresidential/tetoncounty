@@ -1,6 +1,7 @@
 import './analytics.ts';
 import { connectFormService, type FormConfig } from './form-service.ts';
 import { mountPassStatus } from './pass-status.ts';
+import { isPlainClick, setUpLightbox } from './lightbox.ts';
 
 type HousingForm = HTMLFormElement & {
     elements: HTMLFormControlsCollection & {
@@ -12,6 +13,31 @@ type HousingForm = HTMLFormElement & {
 
 const form = document.querySelector<HousingForm>('#housing-form');
 if (form) initHousing(form);
+
+// Every photo and floor plan links to its full-size file; plain clicks open them in one lightbox instead.
+const photos = [...document.querySelectorAll<HTMLAnchorElement>('[data-gallery-item]')];
+const dialog = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+if (dialog && photos.length) {
+    const lightbox = setUpLightbox(dialog, {
+        length: () => photos.length,
+        render(index, parts) {
+            const link = photos[index], alt = link.querySelector('img')?.alt ?? '';
+            parts.image.src = link.href;
+            parts.image.alt = alt;
+            parts.title.textContent = link.dataset.title ?? alt;
+            parts.count.textContent = `${index + 1} of ${photos.length}`;
+            parts.meta.textContent = link.dataset.note ?? '';
+            parts.full.href = link.href;
+        },
+        preload: index => { new Image().src = photos[index].href; },
+        opener: index => photos[index],
+    });
+    photos.forEach((link, index) => link.addEventListener('click', event => {
+        if (!isPlainClick(event)) return;
+        event.preventDefault();
+        lightbox.show(index);
+    }));
+}
 
 const pass = document.querySelector<HTMLElement>('[data-pass]');
 if (pass) {

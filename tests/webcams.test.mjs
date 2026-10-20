@@ -55,7 +55,7 @@ test('webcam page is public, linked, and allowed to load camera images', async (
   const html = await readFile('dist/webcams/index.html', 'utf8');
   if (!html.includes('Development preview')) assert(!html.includes('<meta name="robots"'));
   assert(html.includes('<a aria-current="page" href="/webcams/">Webcams</a>'));
-  assert(/<dialog class="webcam-lightbox"[^>]*aria-labelledby="webcam-lightbox-title"/.test(html), 'Lightbox dialog is labelled');
+  assert(/<dialog class="lightbox"[^>]*aria-labelledby="lightbox-title"/.test(html), 'Lightbox dialog is labelled');
   for (const label of ['Previous camera', 'Next camera', 'Close']) assert(html.includes(`<span class="sr-only">${label}</span>`), label);
   assert((await readFile('dist/sitemap.xml', 'utf8')).includes('/webcams/</loc>'));
   assert((await readFile('public/_headers', 'utf8')).match(/img-src [^;]*/)[0].includes(webcamImageOrigin));

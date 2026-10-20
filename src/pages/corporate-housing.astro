@@ -2,6 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Photo from '../components/Photo.astro';
 import Icon from '../components/Icon.astro';
+import Lightbox from '../components/Lightbox.astro';
 import SponsorLink from '../components/SponsorLink.astro';
 import { siteUrl } from '../config.ts';
 import { imageSources } from '../lib/images.ts';
@@ -40,6 +41,13 @@ const interiors = [
   ['/images/teton-flats-unit-1br-1.webp', 'Staged one-bedroom model bathroom with glass shower, wood vanity, and quartz counter'],
 ];
 const gridSizes = '(max-width: 760px) calc(100vw - 44px), (max-width: 1100px) 45vw, 340px';
+const heroSrc = '/images/teton-flats-exterior.webp';
+const heroAlt = 'Wood and dark metal apartment buildings at Teton Flats in Victor, with golden grasses and wooded hills';
+const heroFull = await fullSize(heroSrc);
+const withFull = (photos: string[][]) => Promise.all(photos.map(async ([src, alt]) => ({ src, alt, full: await fullSize(src) })));
+const exteriorPhotos = await withFull(exteriors);
+const interiorPhotos = await withFull(interiors);
+const staged = 'Staged model — apartments are leased unfurnished.';
 
 const complex = `${siteUrl}${path}#teton-flats`;
 const schema = [
@@ -64,7 +72,7 @@ const schema = [
       </div>
     </div>
     <figure class="housing-hero-photo">
-      <Photo src="/images/teton-flats-exterior.webp" alt="Wood and dark metal apartment buildings at Teton Flats in Victor, with golden grasses and wooded hills" sizes="(max-width: 760px) calc(100vw - 64px), (max-width: 1100px) 45vw, 600px" priority />
+      <a class="housing-zoom" href={heroFull} data-gallery-item data-title="Teton Flats, 100 Homestead Road, Victor"><Photo src={heroSrc} alt={heroAlt} sizes="(max-width: 760px) calc(100vw - 64px), (max-width: 1100px) 45vw, 600px" priority /></a>
       <figcaption>100 Homestead Road · Victor, Idaho</figcaption>
     </figure>
   </section>
@@ -142,7 +150,7 @@ const schema = [
     <div class="housing-plans">
       {floorPlans.map(plan => (
         <article class="housing-plan">
-          <a class="housing-plan-image" href={plan.full} aria-label={`Open the full-size ${plan.name.toLowerCase()} floor plan`}>
+          <a class="housing-plan-image" href={plan.full} aria-label={`Open the full-size ${plan.name.toLowerCase()} floor plan`} data-gallery-item data-title={`${plan.name} floor plan`} data-note={`${plan.layout} · ${plan.area} sq ft`}>
             <Photo src={plan.src} alt={plan.alt} sizes="(max-width: 760px) calc(100vw - 92px), (max-width: 1100px) 30vw, 400px" />
             <span>Click to enlarge</span>
           </a>
@@ -164,12 +172,12 @@ const schema = [
 
     <h3 class="housing-gallery-title">Around the buildings</h3>
     <div class="housing-gallery">
-      {exteriors.map(([src, alt]) => <figure><Photo src={src} alt={alt} sizes={gridSizes} /></figure>)}
+      {exteriorPhotos.map(photo => <figure><a class="housing-zoom" href={photo.full} data-gallery-item><Photo src={photo.src} alt={photo.alt} sizes={gridSizes} /></a></figure>)}
     </div>
 
     <h3 class="housing-gallery-title">Inside a staged model</h3>
     <div class="housing-gallery">
-      {interiors.map(([src, alt]) => <figure class="housing-staged"><Photo src={src} alt={alt} sizes={gridSizes} /><figcaption>Staged model — apartments are leased unfurnished.</figcaption></figure>)}
+      {interiorPhotos.map(photo => <figure class="housing-staged"><a class="housing-zoom" href={photo.full} data-gallery-item data-note={staged}><Photo src={photo.src} alt={photo.alt} sizes={gridSizes} /></a><figcaption>{staged}</figcaption></figure>)}
     </div>
   </section>
 
@@ -247,5 +255,6 @@ const schema = [
       <p>This guide doesn’t list rents. Current availability is on <SponsorLink href={`${sponsorHome}availability`} placement="availability_link">tetonflats.com</SponsorLink>.</p>
     </details>
   </section>
+  <Lightbox item="photo" />
   <script src="../scripts/housing.ts"></script>
 </SiteLayout>

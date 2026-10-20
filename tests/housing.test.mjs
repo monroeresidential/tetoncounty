@@ -201,3 +201,12 @@ test('privacy page covers housing inquiries', async () => {
   const text = pageText(await readFile('dist/privacy/index.html', 'utf8'));
   for (const phrase of ['housing inquir', 'phone', '12 months', 'Teton Flats']) assert(text.includes(phrase), phrase);
 });
+
+test('every corporate housing photo opens in one shared lightbox', async () => {
+  const html = await page();
+  assert.match(html, /<dialog class="lightbox"[^>]*aria-labelledby="lightbox-title"[^>]*data-lightbox/);
+  const items = [...html.matchAll(/<a [^>]*data-gallery-item[^>]*>/g)].map(match => match[0]);
+  assert.equal(items.length, 16, 'hero, three floor plans, four exteriors, and eight interiors');
+  for (const item of items) assert.match(item, /href="\/_astro\/[^"]+\.webp"/, `local full-size image: ${item}`);
+  assert.equal(items.filter(item => item.includes('data-note="Staged model — apartments are leased unfurnished."')).length, 8);
+});
