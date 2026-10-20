@@ -26,7 +26,7 @@ if (item.trail) {
 }
 const phoneHref = item.phone ? `tel:+1${item.phone.replaceAll('-', '')}` : '';
 const schema = [
-  { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.phone ? { telephone: item.phone } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
+  { '@type': 'Place', '@id': `${siteUrl}/places/${item.id}/#place`, name: item.name, description: item.description, url: `${siteUrl}/places/${item.id}/`, ...(item.website ? { sameAs: item.website } : {}), ...(item.phone ? { telephone: `+1-${item.phone}` } : {}), ...(item.address ? { address: { '@type': 'PostalAddress', streetAddress: item.address } } : {}), ...(geo ? { geo: { '@type': 'GeoCoordinates', latitude: item.latitude, longitude: item.longitude } } : {}), subjectOf: item.sourceUrls.map(url => ({ '@type': 'WebPage', url })) },
   { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Explore', item: siteUrl + '/explore/' }, { '@type': 'ListItem', position: 2, name: item.name, item: `${siteUrl}/places/${item.id}/` }] },
 ];
 if (photograph) Object.assign(schema[0], { image: {

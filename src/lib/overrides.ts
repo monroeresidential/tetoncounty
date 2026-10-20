@@ -25,6 +25,8 @@ export function applyOverrides(listings: Listing[], overrides: Overrides): { lis
             throw new Error(`Override for ${id} has an invalid website`);
         if (entry.phone !== undefined && entry.phone !== null && !(typeof entry.phone === 'string' && phonePattern.test(entry.phone)))
             throw new Error(`Override for ${id} has an invalid phone`);
+        if (typeof entry.phone === 'string' && !(typeof entry.phoneSource === 'string' && entry.phoneSource.trim()))
+            throw new Error(`Override for ${id} sets a phone without a phoneSource`);
         if (entry.phoneSource !== undefined && entry.phoneSource !== null && !(typeof entry.phoneSource === 'string' && entry.phoneSource.trim()))
             throw new Error(`Override for ${id} has an invalid phoneSource`);
     }

@@ -131,7 +131,7 @@ Then sweep the remaining external `http://` website values in the merged listing
 - Values come from the audit's `phone_hours_address[].new_phone`, normalized to `208-555-0123` form. Drop all rows whose number appears on more than one listing (the nine shared numbers), and drop rows for removed listings.
 - No hours, and no addresses.
 - Each page shows Phone as a `tel:` link in the facts list and the visit panel, and `telephone` in the Place JSON-LD. The existing "Confirm … with the operator" fine print stays.
-- Provenance: overrides record `phoneSource: "Oct 18 directory CSV (research/directory-csv-review.json)"`.
+- Provenance: overrides record `phoneSource: "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"`.
 
 ## Deferred (list in `research/audit-2026-10-20.md`; owner decides later)
 - **Teton Creative, Teton Leadership Center, Teton Mountain Elk Ranch:** rename, relink, or remove.

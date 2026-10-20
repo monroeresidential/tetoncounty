@@ -4,21 +4,12 @@ import { categories, towns, seasons } from './config.ts';
 import { applyOverrides, type Overrides } from './lib/overrides.ts';
 export const slugify = (s: string) => String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const identity = (s: string) => slugify(s).replace(/-(llc|inc|idaho|driggs|victor)$/, '').replace(/-and-/g, '-').replace(/s-/g, '-');
-async function readOverrides(): Promise<Overrides> {
-    try {
-        return JSON.parse(await readFile(new URL('../data/overrides.json', import.meta.url), 'utf8'));
-    }
-    catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT')
-            throw error;
-        return { listings: {}, removed: {} };
-    }
+// The file is committed, so a missing one is always a bug; let ENOENT surface.
+export async function readOverrides(url: URL = new URL('../data/overrides.json', import.meta.url)): Promise<Overrides> {
+    return JSON.parse(await readFile(url, 'utf8'));
 }
 export async function loadListings() {
     return (await loadDirectory()).listings;
-}
-export async function loadRemovedRedirects() {
-    return (await loadDirectory()).removed;
 }
 async function loadDirectory() {
     let aliases: Record<string, string> = {};

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyOverrides } from '../src/lib/overrides.ts';
-import { loadListings, loadRemovedRedirects } from '../src/data.ts';
+import { loadListings, readOverrides } from '../src/data.ts';
 
 const fixture = () => [
   { id: 'alpha', name: 'Alpha', category: 'food-drink', website: 'https://alpha.example/' },
@@ -45,10 +45,27 @@ test('throws on a redirect outside the category pages', () => {
 test('the shipped overrides file applies to the real listings', async () => {
   const listings = await loadListings();
   assert.ok(listings.length > 0);
-  const redirects = await loadRemovedRedirects();
-  assert.ok(Array.isArray(redirects));
+  const { removed } = applyOverrides(listings, { listings: {}, removed: {} });
+  assert.deepEqual(removed, []);
+  const shipped = await readOverrides();
   const ids = new Set(listings.map(l => l.id));
-  for (const { id } of redirects) assert.equal(ids.has(id), false);
+  for (const id of Object.keys(shipped.removed)) assert.equal(ids.has(id), false, id);
+});
+
+test('fails hard when the overrides file is missing', async () => {
+  await assert.rejects(readOverrides(new URL('./no-such-overrides.json', import.meta.url)), { code: 'ENOENT' });
+});
+
+test('every shipped override phone appears in the audit phone extract', async () => {
+  const shipped = await readOverrides();
+  const extract = JSON.parse(await readFile(new URL('../research/audit-2026-10-20-phones.json', import.meta.url), 'utf8'));
+  const bySlug = new Map(extract.map(row => [row.slug, row]));
+  const phones = Object.entries(shipped.listings).filter(([, entry]) => entry.phone);
+  assert.equal(extract.length, phones.length);
+  for (const [id, entry] of phones) {
+    assert.equal(bySlug.get(id)?.phone, entry.phone, id);
+    assert.equal(entry.phoneSource, 'Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)', id);
+  }
 });
 
 test('applies a reviewed phone and its source', () => {
@@ -59,6 +76,11 @@ test('applies a reviewed phone and its source', () => {
   const alpha = listings.find(l => l.id === 'alpha');
   assert.equal(alpha.phone, '208-354-2344');
   assert.equal(alpha.phoneSource, 'https://alpha.example/contact');
+});
+
+test('throws when a phone has no phoneSource', () => {
+  for (const extra of [{}, { phoneSource: ' ' }])
+    assert.throws(() => applyOverrides(fixture(), { listings: { alpha: { phone: '208-354-2344', ...extra, ...decided } }, removed: {} }), /phoneSource/);
 });
 
 test('throws on a malformed phone or an empty phoneSource', () => {

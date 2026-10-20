@@ -25,19 +25,18 @@ test('schema accepts a well-formed phone and rejects others', () => {
     assert.equal(listingSchema.safeParse({ ...listings[0], phone }).success, false, phone);
 });
 
-test('listing pages show a phone only when one is set', async t => {
+test('listing pages show a phone only when one is set', async () => {
   const withPhone = listings.filter(item => item.phone);
   for (const listing of listings.filter(item => !item.phone)) {
     const html = await read(`places/${listing.id}/index.html`);
     assert(!html.includes('href="tel:'), listing.id);
     assert(!html.includes('<dt>Phone</dt>'), listing.id);
   }
-  if (!withPhone.length) return t.skip('no phones until Task 5');
   for (const listing of withPhone) {
     const html = await read(`places/${listing.id}/index.html`);
     const place = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(item => item['@type'] === 'Place');
     assert(html.includes(`href="tel:+1${listing.phone.replaceAll('-', '')}"`), listing.id);
-    assert.equal(place.telephone, listing.phone);
+    assert.equal(place.telephone, `+1-${listing.phone}`);
   }
 });
 
@@ -46,7 +45,8 @@ test('public JSON and the form allowlist match every curated listing', async () 
   assert.equal(exported.count, listings.length);
   assert.equal(exported.listings.filter(item => item.trail).length, 31);
   assert.deepEqual(new Set(exported.listings.map(item => item.id)), listingIds);
-  assert.deepEqual(exported.listings.map(({ url, ...item }) => item), listings);
+  assert.deepEqual(exported.listings.map(({ url, ...item }) => item), listings.map(({ phoneSource, ...item }) => item));
+  assert(!JSON.stringify(exported).includes('phoneSource'));
 });
 
 test('each listing is rendered as readable HTML with its canonical URL and structured data', async () => {
