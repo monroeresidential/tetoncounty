@@ -2235,37 +2235,6 @@
       ]
     },
     {
-      "listingId": "jackson-town-square",
-      "status": "approved",
-      "src": "/images/listings/jackson-town-square-640-625242cf6a.webp",
-      "alt": "Downtown Jackson with an antler arch and mountain backdrop",
-      "width": 640,
-      "height": 426,
-      "sourceUrl": "https://tetonflats.com/images/activities/jackson-town-square.jpg",
-      "sourcePage": "https://tetonflats.com/things-to-do-victor-idaho",
-      "credit": "Teton Flats",
-      "rightsBasis": "Site owner authorized reuse of images on tetonflats.com in this conversation on 2026-10-18.",
-      "checkedAt": "2026-10-18",
-      "variants": [
-        {
-          "width": 320,
-          "height": 213,
-          "webp": "/images/listings/jackson-town-square-320-8323834147.webp",
-          "webpBytes": 14988,
-          "avif": "/images/listings/jackson-town-square-320-53609d62e6.avif",
-          "avifBytes": 8382
-        },
-        {
-          "width": 640,
-          "height": 426,
-          "webp": "/images/listings/jackson-town-square-640-625242cf6a.webp",
-          "webpBytes": 49084,
-          "avif": "/images/listings/jackson-town-square-640-00060bbfba.avif",
-          "avifBytes": 27724
-        }
-      ]
-    },
-    {
       "listingId": "jenny-lake-grand-teton-national-park",
       "status": "approved",
       "src": "/images/listings/jenny-lake-grand-teton-national-park-640-fc224cb33f.webp",

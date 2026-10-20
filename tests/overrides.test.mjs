@@ -147,3 +147,46 @@ test('pages for listings without a website render no website button', async () =
   assert.doesNotMatch(html, /listing_website/);
   assert.doesNotMatch(html, /href="null"/);
 });
+
+const auditRemoved = {
+  'cryo-therapy-idaho': 'wellness',
+  'three-peaks-restaurant-and-catering': 'food-drink',
+  'jackson-hole-gun-club': 'outdoors',
+  'jackson-town-square': 'outdoors',
+  servpro: 'services',
+  'teton-gravity-research': 'arts-culture',
+};
+
+test('removed listings are gone and redirect to their category', async () => {
+  const listings = await loadListings();
+  const ids = new Set(listings.map(l => l.id));
+  const { listingIds } = await import('../src/listing-ids.mjs');
+  const redirects = await readFile(new URL('../dist/_redirects', import.meta.url), 'utf8');
+  for (const [id, category] of Object.entries(auditRemoved)) {
+    assert.equal(ids.has(id), false, `${id} still loaded`);
+    assert.equal(listingIds.has(id), false, `${id} still in listing-ids`);
+    await assert.rejects(readFile(new URL(`../dist/places/${id}/index.html`, import.meta.url)), `${id} page still built`);
+    assert.match(redirects, new RegExp(`^/places/${id}/ /categories/${category}/ 301$`, 'm'));
+  }
+});
+
+test('tributary merges into the tetonflats record', async () => {
+  const listings = await loadListings();
+  const byId = new Map(listings.map(l => [l.id, l]));
+  assert.equal(byId.has('tributary'), false);
+  const merged = byId.get('tributary-formerly-huntsman-springs');
+  assert.equal(merged.category, 'outdoors');
+  assert.ok(merged.sourceUrls.includes('https://discovertetonvalley.com/live'));
+  const images = JSON.parse(await readFile(new URL('../public/data/listing-images.json', import.meta.url), 'utf8'));
+  assert.ok(images.images.some(image => image.listingId === 'tributary-formerly-huntsman-springs'));
+  const redirects = await readFile(new URL('../dist/_redirects', import.meta.url), 'utf8');
+  assert.match(redirects, /^\/places\/tributary\/ \/places\/tributary-formerly-huntsman-springs\/ 301$/m);
+});
+
+test('jackson-town-square photo is withdrawn, not orphaned', async () => {
+  const images = JSON.parse(await readFile(new URL('../public/data/listing-images.json', import.meta.url), 'utf8'));
+  assert.equal(images.images.some(image => image.listingId === 'jackson-town-square'), false);
+  const review = JSON.parse(await readFile(new URL('../research/listing-image-review.json', import.meta.url), 'utf8'));
+  const entry = review.items.find(item => item.listingId === 'jackson-town-square');
+  assert.equal(entry.decision, 'withdrawn');
+});

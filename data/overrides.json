@@ -266,5 +266,36 @@
       "decidedAt": "2026-10-20"
     }
   },
-  "removed": {}
+  "removed": {
+    "cryo-therapy-idaho": {
+      "redirect": "/categories/wellness/",
+      "reason": "spam domain; directory says possibly closed",
+      "decidedAt": "2026-10-20"
+    },
+    "three-peaks-restaurant-and-catering": {
+      "redirect": "/categories/food-drink/",
+      "reason": "spam domain; directory says likely closed",
+      "decidedAt": "2026-10-20"
+    },
+    "jackson-hole-gun-club": {
+      "redirect": "/categories/outdoors/",
+      "reason": "out of area (Jackson, WY)",
+      "decidedAt": "2026-10-20"
+    },
+    "jackson-town-square": {
+      "redirect": "/categories/outdoors/",
+      "reason": "out of area (Jackson, WY)",
+      "decidedAt": "2026-10-20"
+    },
+    "servpro": {
+      "redirect": "/categories/services/",
+      "reason": "Idaho Falls franchise of a national chain",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-gravity-research": {
+      "redirect": "/categories/arts-culture/",
+      "reason": "Jackson-based media company",
+      "decidedAt": "2026-10-20"
+    }
+  }
 }
