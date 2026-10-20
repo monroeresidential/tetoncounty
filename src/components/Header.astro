@@ -14,12 +14,12 @@ const { path } = Astro.props;
   <button class="menu-toggle btn btn-secondary" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation"><Icon name="menu" /></button>
   <nav id="navigation" aria-label="Main navigation">
     <a aria-current={path === '/explore/' ? 'page' : undefined} href="/explore/">Explore</a>
+    <a aria-current={path.startsWith('/towns/') ? 'page' : undefined} href="/towns/victor/">Victor & Driggs</a>
     <a aria-current={path === '/hiking/' ? 'page' : undefined} href="/hiking/">Trails</a>
     <a aria-current={path === '/live/' ? 'page' : undefined} href="/live/">Live here</a>
     <a aria-current={path === '/corporate-housing/' ? 'page' : undefined} href="/corporate-housing/">Corporate housing</a>
     <a aria-current={path === '/teton-pass/' ? 'page' : undefined} href="/teton-pass/">Teton Pass</a>
     <a aria-current={path === '/webcams/' ? 'page' : undefined} href="/webcams/">Webcams</a>
-    <a aria-current={path.startsWith('/towns/') ? 'page' : undefined} href="/towns/victor/">Victor & Driggs</a>
     <a aria-current={path === '/about/' ? 'page' : undefined} href="/about/">About</a>
     <a class="btn btn-primary header-cta" aria-current={path === '/suggest/' ? 'page' : undefined} href="/suggest/">+ Add a spot</a>
   </nav>
