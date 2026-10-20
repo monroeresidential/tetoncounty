@@ -4,6 +4,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { adaptDb } from '../scripts/sqlite-adapter.mjs';
 import { migrateLocal } from '../scripts/local-migrations.mjs';
 import { handleApi } from '../src/worker.mjs';
+import { deliverNotifications } from '../src/lib/form-notifications.ts';
 
 const origin = 'https://tetoncounty.us';
 const valid = { requester: 'employer', name: 'HR Tester', email: 'hr@example.com', phone: '', company: 'Test Resort', units: '4', bedrooms: 'either', moveIn: '2026-12-01', stayLength: 'Ski season, about 5 months', message: '', consent: 'yes', companyUrl: '' };
@@ -80,4 +81,61 @@ test('cross-origin and non-JSON housing requests are refused', async t => {
   assert.equal((await handleApi(housing(valid, { 'content-type': 'text/plain' }), env)).status, 415);
   assert.equal((await handleApi(new Request(origin + '/api/housing-inquiries'), env)).status, 405);
   assert.equal(count(sqlite, 'housing_inquiries'), 0);
+});
+
+function insertInquiry(sqlite, id = 'housing-reference') {
+  sqlite.prepare('INSERT INTO housing_inquiries (id, requester, name, email, phone, company, units, bedrooms, move_in, stay_length, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
+    .run(id, 'employer', valid.name, valid.email, '', valid.company, 4, 'either', valid.moveIn, valid.stayLength, '', '2026-10-20T17:00:00Z');
+}
+function insertSuggestion(sqlite) {
+  sqlite.prepare('INSERT INTO submissions (id, type, listing_id, name, email, place_name, town, website, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
+    .run('suggestion-reference', 'contact', null, suggestion.name, suggestion.email, '', '', '', suggestion.message, '2026-10-20T17:00:00Z');
+}
+const housingStatus = sqlite => sqlite.prepare('SELECT * FROM housing_notifications').get();
+
+test('housing rows are delivered only to the housing form', async t => {
+  const { sqlite, env } = await fixture(t);
+  const live = { ...env, LOCAL_PREVIEW: false, FORMSPREE_FORM_ID: 'meaedrjo', FORMSPREE_HOUSING_FORM_ID: 'xkjoayyr' };
+  insertSuggestion(sqlite);
+  insertInquiry(sqlite);
+  const calls = [];
+  const fetcher = async (url, options) => { calls.push({ url, body: JSON.parse(options.body) }); return Response.json({ ok: true }); };
+  await deliverNotifications(live, { fetcher });
+  await deliverNotifications(live, { fetcher, queue: 'housing' });
+  assert.deepEqual(calls.map(c => c.url).sort(), ['https://formspree.io/f/meaedrjo', 'https://formspree.io/f/xkjoayyr']);
+  const body = calls.find(c => c.url.endsWith('xkjoayyr')).body;
+  assert.equal(body.units, 4);
+  assert.equal(body.company, 'Test Resort');
+  assert.equal(body.moveIn, '2026-12-01');
+  assert.match(body.subject, /^TetonCounty\.us: Housing inquiry — Test Resort, 4 unit\(s\)/);
+  assert.equal(body.source, origin + '/corporate-housing/');
+  assert.equal(housingStatus(sqlite).status, 'sent');
+});
+
+test('an empty housing form ID leaves inquiries pending and still sends suggestions', async t => {
+  const { sqlite, env } = await fixture(t);
+  const live = { ...env, LOCAL_PREVIEW: false, FORMSPREE_FORM_ID: 'meaedrjo', FORMSPREE_HOUSING_FORM_ID: '' };
+  insertSuggestion(sqlite);
+  insertInquiry(sqlite);
+  const urls = [];
+  const fetcher = async url => { urls.push(url); return Response.json({ ok: true }); };
+  await deliverNotifications(live, { fetcher });
+  await deliverNotifications(live, { fetcher, queue: 'housing' });
+  assert.deepEqual(urls, ['https://formspree.io/f/meaedrjo']);
+  assert.equal(housingStatus(sqlite).status, 'pending');
+  assert.equal(housingStatus(sqlite).attempts, 0);
+});
+
+test('invalid housing form ID throws', async t => {
+  const { env } = await fixture(t);
+  await assert.rejects(deliverNotifications({ ...env, LOCAL_PREVIEW: false, FORMSPREE_HOUSING_FORM_ID: 'https://elsewhere.example/' }, { queue: 'housing' }), /Invalid Formspree form ID/);
+});
+
+test('development never forwards housing inquiries', async t => {
+  const { sqlite, env } = await fixture(t);
+  insertInquiry(sqlite);
+  let called = false;
+  await deliverNotifications({ ...env, LOCAL_PREVIEW: false, ENVIRONMENT: 'development', FORMSPREE_HOUSING_FORM_ID: 'xkjoayyr' }, { queue: 'housing', fetcher: async () => { called = true; return Response.json({ ok: true }); } });
+  assert.equal(called, false);
+  assert.equal(housingStatus(sqlite).status, 'pending');
 });

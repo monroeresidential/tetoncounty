@@ -92,7 +92,11 @@ const routes={
     }},
   '/api/housing-inquiries':{action:'housing',validate:validateHousingInquiry,
     save:(db,id,body,createdAt)=>db.prepare('INSERT INTO housing_inquiries (id, requester, name, email, phone, company, units, bedrooms, move_in, stay_length, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').bind(id,body.requester,body.name.trim(),body.email.trim(),(body.phone??'').trim(),(body.company??'').trim(),Number(body.units),body.bedrooms,body.moveIn,body.stayLength.trim(),(body.message??'').trim(),createdAt).run(),
-    // Task 2: once deliverNotifications accepts a queue, gate on env.FORMSPREE_HOUSING_FORM_ID and call it with {queue:'housing',submissionId:id,limit:1}.
+    notify:(env,ctx,id,local)=>{
+      if(local||env.ENVIRONMENT==='development'||!env.FORMSPREE_HOUSING_FORM_ID)return;
+      const delivery=deliverNotifications(env,{queue:'housing',submissionId:id,limit:1}).catch(()=>console.error('Housing notification deferred; the saved inquiry remains in D1.'));
+      if(ctx?.waitUntil)ctx.waitUntil(delivery);else return delivery;
+    },
   },
 };
 export async function handleApi(request,env,ctx){
@@ -127,5 +131,5 @@ export async function handleApi(request,env,ctx){
 }
 export default {
   async fetch(request,env,ctx){if(new URL(request.url).pathname.startsWith('/api/'))return handleApi(request,env,ctx);return env.ASSETS.fetch(request);},
-  async scheduled(_event,env){await deliverNotifications(env);},
+  async scheduled(_event,env){await deliverNotifications(env);await deliverNotifications(env,{queue:'housing'});},
 };
