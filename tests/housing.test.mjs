@@ -101,11 +101,12 @@ test('housing rows are delivered only to the housing form', async t => {
   insertSuggestion(sqlite);
   insertInquiry(sqlite);
   const calls = [];
-  const fetcher = async (url, options) => { calls.push({ url, body: JSON.parse(options.body) }); return Response.json({ ok: true }); };
+  const fetcher = async (url, options) => { calls.push({ url, headers: options.headers, body: JSON.parse(options.body) }); return Response.json({ ok: true }); };
   await deliverNotifications(live, { fetcher });
   await deliverNotifications(live, { fetcher, queue: 'housing' });
   assert.deepEqual(calls.map(c => c.url).sort(), ['https://formspree.io/f/meaedrjo', 'https://formspree.io/f/xkjoayyr']);
   const body = calls.find(c => c.url.endsWith('xkjoayyr')).body;
+  assert.equal(calls.find(c => c.url.endsWith('xkjoayyr')).headers.Referer, `${live.SITE_URL}/corporate-housing/`);
   assert.equal(body.units, 4);
   assert.equal(body.company, 'Test Resort');
   assert.equal(body.moveIn, '2026-12-01');
