@@ -131,5 +131,5 @@ export async function handleApi(request,env,ctx){
 }
 export default {
   async fetch(request,env,ctx){if(new URL(request.url).pathname.startsWith('/api/'))return handleApi(request,env,ctx);return env.ASSETS.fetch(request);},
-  async scheduled(_event,env){await deliverNotifications(env);await deliverNotifications(env,{queue:'housing'});},
+  async scheduled(_event,env){const r=await Promise.allSettled([deliverNotifications(env),deliverNotifications(env,{queue:'housing'})]);const f=r.find(x=>x.status==='rejected');if(f)throw f.reason;},
 };

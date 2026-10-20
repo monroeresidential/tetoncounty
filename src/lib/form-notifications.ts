@@ -74,7 +74,7 @@ export function notificationPayload(row: Submission, siteUrl = 'https://tetoncou
 /** Housing inquiries are forwarded to their own Formspree form with only reviewed fields. */
 export function housingPayload(row: HousingInquiry, siteUrl = 'https://tetoncounty.us') {
   return {
-    subject: `TetonCounty.us: Housing inquiry — ${row.requester === 'employer' ? row.company : 'individual'}, ${row.units} unit(s) [${row.id.slice(0, 8)}]`,
+    subject: `TetonCounty.us: Housing inquiry — ${row.requester === 'employer' ? `employer · ${row.company}` : 'individual'}, ${row.units} unit(s) [${row.id.slice(0, 8)}]`,
     name: row.name,
     email: row.email, // Formspree uses this as Reply-To.
     phone: row.phone,

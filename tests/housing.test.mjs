@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { adaptDb } from '../scripts/sqlite-adapter.mjs';
 import { migrateLocal } from '../scripts/local-migrations.mjs';
-import { handleApi } from '../src/worker.mjs';
+import worker, { handleApi } from '../src/worker.mjs';
 import { deliverNotifications } from '../src/lib/form-notifications.ts';
 import { readFile } from 'node:fs/promises';
 import { isDevelopment } from '../src/config.ts';
@@ -109,7 +109,7 @@ test('housing rows are delivered only to the housing form', async t => {
   assert.equal(body.units, 4);
   assert.equal(body.company, 'Test Resort');
   assert.equal(body.moveIn, '2026-12-01');
-  assert.match(body.subject, /^TetonCounty\.us: Housing inquiry — Test Resort, 4 unit\(s\)/);
+  assert.match(body.subject, /^TetonCounty\.us: Housing inquiry — employer · Test Resort, 4 unit\(s\)/);
   assert.equal(body.source, origin + '/corporate-housing/');
   assert.equal(housingStatus(sqlite).status, 'sent');
 });
@@ -126,6 +126,19 @@ test('an empty housing form ID leaves inquiries pending and still sends suggesti
   assert.deepEqual(urls, ['https://formspree.io/f/meaedrjo']);
   assert.equal(housingStatus(sqlite).status, 'pending');
   assert.equal(housingStatus(sqlite).attempts, 0);
+});
+
+test('a failing submissions queue never skips the housing queue in the cron', async t => {
+  const { sqlite, env } = await fixture(t);
+  insertInquiry(sqlite);
+  const calls = [];
+  const original = globalThis.fetch;
+  globalThis.fetch = async (url, options) => { calls.push({ url, body: JSON.parse(options.body) }); return Response.json({ ok: true }); };
+  t.after(() => { globalThis.fetch = original; });
+  const live = { ...env, LOCAL_PREVIEW: false, FORMSPREE_FORM_ID: 'https://elsewhere.example/', FORMSPREE_HOUSING_FORM_ID: 'xkjoayyr' };
+  await assert.rejects(worker.scheduled({}, live), /Invalid Formspree form ID/);
+  assert.deepEqual(calls.map(c => c.url), ['https://formspree.io/f/xkjoayyr']);
+  assert.equal(housingStatus(sqlite).status, 'sent');
 });
 
 test('invalid housing form ID throws', async t => {

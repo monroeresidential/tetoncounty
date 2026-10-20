@@ -14,7 +14,21 @@ const form = document.querySelector<HousingForm>('#housing-form');
 if (form) initHousing(form);
 
 const pass = document.querySelector<HTMLElement>('[data-pass]');
-if (pass) void mountPassStatus(pass).load();
+if (pass) {
+    const passStatus = mountPassStatus(pass);
+    const refreshMs = 5 * 60 * 1000;
+    let last = Date.now();
+    void passStatus.load();
+    // Refresh only while visible, like /teton-pass/.
+    const refresh = () => {
+        if (document.visibilityState !== 'visible' || Date.now() - last < refreshMs)
+            return;
+        last = Date.now();
+        void passStatus.load();
+    };
+    setInterval(refresh, 30000);
+    document.addEventListener('visibilitychange', refresh);
+}
 
 function initHousing(form: HousingForm) {
     const status = form.ownerDocument.querySelector<HTMLElement>('#housing-status')!, button = form.querySelector<HTMLButtonElement>('.submit-button')!;
@@ -50,7 +64,6 @@ function initHousing(form: HousingForm) {
         const label = button.textContent;
         button.textContent = 'Sending…';
         const data = Object.fromEntries(new FormData(form)) as Record<string, FormDataEntryValue>;
-        const sent = String(data.requester);
         data.turnstileToken = token;
         try {
             const response = await fetch('/api/housing-inquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
@@ -60,7 +73,7 @@ function initHousing(form: HousingForm) {
             show(config.mode === 'local-preview' ? `Saved locally for testing. Reference: ${result.id}. No email was sent.`
                 : config.mode === 'development' ? `Saved to the development test database. Reference: ${result.id}. No email was sent.`
                 : `Thanks — your inquiry is in. Reference: ${result.id}. We'll reply by email.`, 'success');
-            window.gtag?.('event', 'housing_inquiry', { requester: sent });
+            window.gtag?.('event', 'housing_inquiry');
             form.reset();
             setRequester();
             status.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
