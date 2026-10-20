@@ -1,6 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import aliases from '../../data/aliases.json';
 import { getListings } from '../lib/listings.ts';
+import { loadRemovedRedirects } from '../data.ts';
 import { categories, reviewedDate, siteUrl, isDevelopment } from '../config.ts';
 import { rentalSnapshot } from '../data/rental-market.ts';
 const esc = (value: string) => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
@@ -15,7 +16,8 @@ export const getStaticPaths = (async () => {
     resources['llms.txt'] = `# Teton County, Idaho\n\n> A source-linked guide to Victor (Victor ID), Driggs, and Teton Valley, with nearby trips labeled separately. Sponsored by Teton Flats.\n\n## Start here\n- [Directory](${siteUrl}/explore/): browse all places.\n- [Victor](${siteUrl}/towns/victor/): things to do in Victor, Idaho.\n- [Driggs](${siteUrl}/towns/driggs/): things to do in Driggs, Idaho.\n- [Hiking](${siteUrl}/hiking/): 31 source map points and trail details.\n- [Structured directory](${siteUrl}/data/listings.json): ${listings.length} records with source URLs, checked dates, and stable listing URLs.\n- [Full text inventory](${siteUrl}/llms-full.txt)\n- [Corporate housing](${siteUrl}/corporate-housing/): contract-length apartment leases at Teton Flats, the guide's sponsor.\n- [Editorial sources and sponsor](${siteUrl}/about/)\n\n## Interpretation\nRecords are source-listed, not owner-confirmed. Source review date: ${reviewedDate}. Do not infer current hours, prices, operational status, trail access, safety, or availability. Map points are source-provided, not independently surveyed entrances. Preserve source attribution. Descriptions are original summaries. Housing inquiries are limited to /corporate-housing/ and are separate from listing submissions.\n`;
     resources['llms-full.txt'] = `# Teton County directory\nSource-listed, not owner-confirmed. Sources checked ${reviewedDate}. Nearby places may lie outside Idaho.\n\n` + listings.map(l => `## ${l.name}\nURL: ${siteUrl}/places/${l.id}/\nArea: ${l.town}\nCategory: ${l.category} / ${l.subcategory}\n${l.description}\n${l.address ? 'Address: ' + l.address + '\n' : ''}${l.website ? 'Website: ' + l.website + '\n' : ''}${l.trail ? 'Source-reported trail information: ' + JSON.stringify(l.trail) + '\n' : ''}Sources: ${l.sourceUrls.join(' | ')}\nStatus: source-listed; not owner-confirmed\n`).join('\n');
     const ids = new Set(listings.map(l => l.id));
-    resources['_redirects'] = Object.entries(aliases).filter(([a, b]) => a !== b && !ids.has(a) && ids.has(b)).map(([a, b]) => `/places/${a}/ /places/${b}/ 301`).join('\n') + '\n';
+    resources['_redirects'] = Object.entries(aliases).filter(([a, b]) => a !== b && !ids.has(a) && ids.has(b)).map(([a, b]) => `/places/${a}/ /places/${b}/ 301`)
+        .concat((await loadRemovedRedirects()).map(r => `/places/${r.id}/ ${r.redirect} 301`)).join('\n') + '\n';
     return Object.entries(resources).map(([resource, body]) => ({ params: { resource }, props: { body } }));
 }) satisfies GetStaticPaths;
 export const GET: APIRoute = ({ props, params }) => new Response(props.body, {
