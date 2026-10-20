@@ -56,7 +56,7 @@ export function validateHousingInquiry(body){
   if(body.requester==='employer'&&!body.company?.trim())return 'Enter your company name.';
   const units=typeof body.units==='number'?String(body.units):body.units;
   if(typeof units!=='string'||!/^\d{1,2}$/.test(units)||Number(units)<1||Number(units)>50)return 'Enter a number of homes from 1 to 50.';
-  if(body.requester==='individual'&&Number(units)!==1)return 'Individual requests are for one home.';
+  if(body.requester==='individual'&&Number(units)>2)return 'Individual requests are for one or two homes.';
   if(!['1','2','either'].includes(body.bedrooms))return 'Choose a bedroom count.';
   const moveIn=new Date(`${body.moveIn}T00:00:00Z`);
   if(!/^\d{4}-\d{2}-\d{2}$/.test(body.moveIn)||Number.isNaN(moveIn.getTime())||moveIn.toISOString().slice(0,10)!==body.moveIn)return 'Enter a valid move-in date.';

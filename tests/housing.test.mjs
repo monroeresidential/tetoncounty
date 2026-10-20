@@ -45,6 +45,7 @@ test('rejects invalid inquiries without storage', async t => {
 test('individual inquiry without company is accepted', async t => {
   const { env } = await fixture(t);
   assert.equal((await handleApi(housing({ ...valid, requester: 'individual', company: '', units: '1' }), env)).status, 201);
+  assert.equal((await handleApi(housing({ ...valid, requester: 'individual', company: '', units: '2' }), env)).status, 201);
 });
 
 test('production requires the housing Turnstile action', async t => {
