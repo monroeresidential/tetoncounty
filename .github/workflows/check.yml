@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          # The runner's cached 24.x can lag security releases; always resolve the newest patch.
+          check-latest: true
           cache: npm
       - run: npm ci
       - run: npm run check
