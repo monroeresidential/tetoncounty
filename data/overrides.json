@@ -1,0 +1,1203 @@
+{
+  "listings": {
+    "cryo-therapy-idaho": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "three-peaks-restaurant-and-catering": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "warbirds-cafe": {
+      "website": null,
+      "reason": "spam domain",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-teton-floor-and-window-coverings": {
+      "website": null,
+      "reason": "domain redirects to an unrelated site",
+      "decidedAt": "2026-10-20",
+      "phone": "307-200-4195",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "mountain-high-mounted-shooters": {
+      "website": null,
+      "reason": "expired domain now redirects to a national association",
+      "decidedAt": "2026-10-20"
+    },
+    "berkshire-hathaway": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "chircop-and-associates-pllc": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "davison-spas": {
+      "website": null,
+      "reason": "no A record",
+      "decidedAt": "2026-10-20"
+    },
+    "elements-of-health": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "foxtrot-gallery": {
+      "website": null,
+      "reason": "404 \"Squarespace - Website Expired\"",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-valley-lodging": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "movewell": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "mtn-lab-performance-coaching": {
+      "website": null,
+      "reason": "NXDOMAIN",
+      "decidedAt": "2026-10-20"
+    },
+    "sleigh-rides-at-double-diamond-bar-ranch": {
+      "website": null,
+      "reason": "404 ConnectYourDomain",
+      "decidedAt": "2026-10-20"
+    },
+    "super-8-by-wyndham": {
+      "website": null,
+      "reason": "404",
+      "decidedAt": "2026-10-20",
+      "phone": "208-953-1919",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-valley-meats": {
+      "website": null,
+      "reason": "SERVFAIL / TLS fail",
+      "decidedAt": "2026-10-20"
+    },
+    "the-barntenders": {
+      "website": null,
+      "reason": "404 Squarespace expired",
+      "decidedAt": "2026-10-20"
+    },
+    "the-social-media-secrets-clubtm": {
+      "website": null,
+      "reason": "no response",
+      "decidedAt": "2026-10-20"
+    },
+    "west-side-yard": {
+      "website": null,
+      "reason": "TLS fail, \"Site Not Configured\"",
+      "decidedAt": "2026-10-20"
+    },
+    "yellowstone-teton-tours": {
+      "website": null,
+      "reason": "timeout / TLS fail",
+      "decidedAt": "2026-10-20"
+    },
+    "corner-drug": {
+      "website": "https://tetonvalleypharmacy.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonvalleypharmacy.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "victor-drug": {
+      "website": "https://tetonvalleypharmacy.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonvalleypharmacy.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-787-3784",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "dominos-pizza": {
+      "website": "https://www.dominos.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.dominos.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "888-307-4930",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "fuze-av-llc": {
+      "website": "https://fuzehometech.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://fuzehometech.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-606-3391",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "paws-of-teton-valley": {
+      "website": "https://www.pawshelpspets.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.pawshelpspets.org/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-354-3499",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-rock-gym": {
+      "website": "https://tetonrockgym.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tetonrockgym.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-261-1303",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-valley-food-pantry": {
+      "website": "https://www.tvfoodpantry.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tvfoodpantry.org/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-354-1658",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-valley-hospital": {
+      "website": "https://tvhcare.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvhcare.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "wydaho-rendezvous-teton-bike-festival": {
+      "website": "https://tvtap.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvtap.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "dulce-baking-company": {
+      "website": "https://dulcebaking.co/",
+      "reason": "site moved or verified replacement 2026-10-20: https://dulcebaking.co/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-497-2438",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "makerspace": {
+      "website": "https://valleyofthetetonslibrary.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://valleyofthetetonslibrary.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "valley-of-the-tetons-library": {
+      "website": "https://valleyofthetetonslibrary.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://valleyofthetetonslibrary.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "ollies-mountain-pet-supply-and-wash": {
+      "website": "https://driggsdogwash.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://driggsdogwash.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "307-264-5086",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "pine-needle-embroidery": {
+      "website": "https://pineneedleembroideryandprint.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://pineneedleembroideryandprint.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-354-7648",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-valley-health-cache-clinic": {
+      "website": "https://tvhcare.org/locations/",
+      "reason": "site moved or verified replacement 2026-10-20: https://tvhcare.org/locations/",
+      "decidedAt": "2026-10-20"
+    },
+    "farmhouse-208": {
+      "website": "https://farmhouse208.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://farmhouse208.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "badger-creek-cafe": {
+      "website": "https://www.badgercreekcafe.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.badgercreekcafe.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-456-2588",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "borbay-studios-and-gallery": {
+      "website": "https://www.borbay.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.borbay.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "downtown-driggs-association": {
+      "website": "https://www.downtowndriggs.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.downtowndriggs.org/",
+      "decidedAt": "2026-10-20",
+      "phone": "216-235-7532",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "elevate-beauty-salon": {
+      "website": "https://facebook.com/ElevateSalon",
+      "reason": "site moved or verified replacement 2026-10-20: https://facebook.com/ElevateSalon",
+      "decidedAt": "2026-10-20"
+    },
+    "friends-of-teton-valley-sports-and-wellness": {
+      "website": "https://sportsandwellness.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://sportsandwellness.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "jared-power-somatic-bodywork": {
+      "website": "https://www.jaredpower.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.jaredpower.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "530-386-8343",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "moulton-law-office": {
+      "website": "https://www.tetonvalleylaw.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonvalleylaw.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "mountain-bike-the-tetons": {
+      "website": "https://www.mountainbiketetons.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.mountainbiketetons.org/",
+      "decidedAt": "2026-10-20"
+    },
+    "sabine-soft-furnishings": {
+      "website": "https://sabinesf.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://sabinesf.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-homestead": {
+      "website": "https://www.tetonhomestead.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonhomestead.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "800-746-5518",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-regional-land-trust": {
+      "website": "https://www.tetonlandtrust.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonlandtrust.org/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-354-8939",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "teton-therapeutic-massage": {
+      "website": "https://facebook.com/TetonTherapeuticMassage",
+      "reason": "site moved or verified replacement 2026-10-20: https://facebook.com/TetonTherapeuticMassage",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-aquatics": {
+      "website": "https://www.tetonvalleyaquatics.org/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.tetonvalleyaquatics.org/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-607-8975",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "the-cottage-at-heron-glass": {
+      "website": "https://www.heronglass.com/cottage.htm",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.heronglass.com/cottage.htm",
+      "decidedAt": "2026-10-20"
+    },
+    "the-fin-and-feather-inn": {
+      "website": "https://finandfeatherinn.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://finandfeatherinn.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-787-1007",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "wagitude-a-loved-dog-hotel-and-pet-sitting-services": {
+      "website": "https://www.wagitudeloveddoghotel.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.wagitudeloveddoghotel.com/",
+      "decidedAt": "2026-10-20"
+    },
+    "wilkinson-montesano-builders": {
+      "website": "https://www.wilkinson-montesano.com/",
+      "reason": "site moved or verified replacement 2026-10-20: https://www.wilkinson-montesano.com/",
+      "decidedAt": "2026-10-20",
+      "phone": "208-456-9581",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)"
+    },
+    "460-bread": {
+      "phone": "208-779-0460",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "ace-hardware": {
+      "phone": "208-354-2344",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "agave-family-mexican-restaurant": {
+      "phone": "208-354-2003",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "alliance-title-and-escrow-corp": {
+      "phone": "208-354-2285",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "alpine-air-cafe-and-roastery": {
+      "phone": "208-970-8999",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "ameriasia-bistro": {
+      "phone": "208-787-5678",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "anytime-fitness": {
+      "phone": "208-354-9675",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "apex-acupuncture-and-holistic-health": {
+      "phone": "310-701-2663",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "backcountry-powersports-rentals": {
+      "phone": "208-351-2560",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "bangkok-kitchen": {
+      "phone": "208-354-6666",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "bank-of-commerce": {
+      "phone": "208-354-8633",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "barefoot-fitness-and-pilates": {
+      "phone": "208-354-2673",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "barrels-and-bins-natural-market": {
+      "phone": "208-354-2307",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "big-hole-bagel-and-bistro": {
+      "phone": "208-354-2245",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "big-hole-bbq": {
+      "phone": "208-270-9919",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "big-hole-golf": {
+      "phone": "307-690-2893",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "bronze-buffalo-lodge-at-teton-springs": {
+      "phone": "208-787-7235",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "broulims-fresh-foods": {
+      "phone": "208-643-3243",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "butter-cafe": {
+      "phone": "208-399-2872",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "captain-rons-smokehouse": {
+      "phone": "307-690-1298",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "century-21-teton-valley": {
+      "phone": "208-787-8000",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "chiang-mai-thai-kitchen": {
+      "phone": "208-701-8466",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "citizen-33-brewery": {
+      "phone": "208-354-2073",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "city-of-tetonia": {
+      "phone": "208-456-2249",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "cobblestone-hotel-and-suites": {
+      "phone": "208-787-4567",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "cold-smoke": {
+      "phone": "208-298-2653",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "daves-pubb": {
+      "phone": "208-456-2789",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "dog-west": {
+      "phone": "208-271-6461",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "driggs-dreamshare": {
+      "phone": "818-309-3420",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "el-guadalajara-mexican-food": {
+      "phone": "208-787-5590",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "el-valle-del-sol-restaurant": {
+      "phone": "208-354-0028",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "endopeaks-bike-rental": {
+      "phone": "208-354-4775",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "energy-heals": {
+      "phone": "208-705-8241",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "estate-collectables": {
+      "phone": "307-690-6777",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "excel-physical-therapy": {
+      "phone": "307-734-9129",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "festive-living": {
+      "phone": "208-787-3378",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "figgies-deli-and-market": {
+      "phone": "307-284-9577",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "fireweed-shop-and-studios": {
+      "phone": "208-317-4858",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "fisher-creative": {
+      "phone": "208-787-8276",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "food-for-good-by-crctv": {
+      "phone": "208-354-0870",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "food-shed-idaho": {
+      "phone": "208-787-7695",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "forage-bistro-and-lounge": {
+      "phone": "208-354-2858",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "fox-creek-heating": {
+      "phone": "208-787-3058",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "frontier-credit-union": {
+      "phone": "800-727-9961",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "furry-bellies-pet-boutique": {
+      "phone": "208-206-8653",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "gearhead-garage": {
+      "phone": "208-787-1197",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "get-baked-prepared-food-emporium": {
+      "phone": "208-354-3663",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-teton-brewing": {
+      "phone": "208-701-8935",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-teton-distillery": {
+      "phone": "208-354-7263",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "grand-view-general-store": {
+      "phone": "208-456-2220",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "grandview-blind-and-design": {
+      "phone": "208-497-5660",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "guidepost-brewing-company": {
+      "phone": "208-254-0558",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "hacienda-cuajimalpa": {
+      "phone": "208-354-0121",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "harmony-design-and-engineering": {
+      "phone": "208-354-1331",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "highpoint-cider": {
+      "phone": "208-648-3300",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "holiday-propane": {
+      "phone": "208-354-4328",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "hops-cyclery": {
+      "phone": "208-787-4677",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "immigrant-hope-wyoming-idaho": {
+      "phone": "208-709-0131",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "jesss-pampered-pups": {
+      "phone": "208-557-1871",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "kaspers-kountryside-inn": {
+      "phone": "208-787-2726",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "keller-williams-teton-valley": {
+      "phone": "307-201-5231",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "key-bank": {
+      "phone": "208-535-3172",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "king-sushi": {
+      "phone": "208-354-5464",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "kotler-ice-arena": {
+      "phone": "208-970-7498",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "la-conchita-bakery": {
+      "phone": "208-354-7776",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "liquor-market": {
+      "phone": "208-354-8414",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "live-water-properties": {
+      "phone": "866-230-2695",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "local-galleria": {
+      "phone": "208-270-0833",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "lula-wine-bar": {
+      "phone": "208-538-1979",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "maison-bottles-and-bites": {
+      "phone": "912-399-3567",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "moonshine-liquor-beer-and-wine": {
+      "phone": "208-787-9463",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "moose-creek-ranch": {
+      "phone": "208-510-0216",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "morales-homemade": {
+      "phone": "307-203-9380",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "mountain-home-treasures": {
+      "phone": "208-541-5514",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "new-west-knifeworks": {
+      "phone": "877-258-0100",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "occupational-therapy-unlimited-llc": {
+      "phone": "208-709-2911",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "peak-printing": {
+      "phone": "208-354-7337",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "peaked-sports": {
+      "phone": "208-354-2354",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "pearl-street-bagels": {
+      "phone": "208-970-2259",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "pierres-theatre": {
+      "phone": "208-787-7469",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "pines-motel-guest-haus": {
+      "phone": "307-264-8210",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "pinky-gs-pizza": {
+      "phone": "208-787-7465",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "pizzeria-alpino": {
+      "phone": "208-354-8829",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "place-landscape-architects": {
+      "phone": "208-354-0900",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "provisions-local-kitchen": {
+      "phone": "208-354-2333",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "rad-curbside": {
+      "phone": "208-220-7721",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "renew-salon-spa": {
+      "phone": "208-313-8832",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "rotary-club-of-teton-valley": {
+      "phone": "702-858-4566",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "royal-wolf": {
+      "phone": "208-354-8365",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "salon-blaq": {
+      "phone": "208-354-2527",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "seasons-salon": {
+      "phone": "208-354-8637",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "sergios-cocina-mexicana": {
+      "phone": "208-787-7529",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "spitzer-realty": {
+      "phone": "307-413-5477",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "straight-blast-gym-teton-valley": {
+      "phone": "307-699-1693",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "studio-core-teton-valley": {
+      "phone": "208-915-0576",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "summit-school-of-the-arts": {
+      "phone": "208-354-1711",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "targhee-athletics": {
+      "phone": "208-203-7877",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "tatanka-tavern": {
+      "phone": "208-227-8744",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-arts-driggs-city-center-gallery-studios": {
+      "phone": "208-243-9249",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-basin-ranger-district-office": {
+      "phone": "208-354-2312",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-county-idaho": {
+      "phone": "208-776-8100",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-county-title": {
+      "phone": "208-354-5050",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-hostel-hideaway": {
+      "phone": "208-270-1039",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-indoor-sports-academy": {
+      "phone": "307-413-6082",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-moose-restaurant": {
+      "phone": "208-354-2398",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-peaks-resort": {
+      "phone": "208-751-1589",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-synapse-and-neurophysics": {
+      "phone": "208-705-0410",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-technology-solutions": {
+      "phone": "307-732-3880",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-thai": {
+      "phone": "208-787-8424",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-cabins": {
+      "phone": "866-687-1522",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-community-recycling": {
+      "phone": "208-557-1193",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-property-management": {
+      "phone": "208-354-3431",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-realty": {
+      "phone": "208-354-2439",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-resort": {
+      "phone": "208-787-2647",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-valley-rodeo": {
+      "phone": "208-354-8005",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-west-hotel": {
+      "phone": "208-757-6630",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "tetonia-club": {
+      "phone": "208-201-5360",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-barbershop": {
+      "phone": "208-709-3775",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-brakeman-american-grill": {
+      "phone": "208-787-2020",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-grille-at-bronze-buffalo-ranch": {
+      "phone": "208-787-7888",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-links-at-teton-peaks": {
+      "phone": "208-456-2777",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-mental-health-coalition-of-teton-valley": {
+      "phone": "208-354-6198",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-velvet-moose": {
+      "phone": "208-354-3030",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "the-wardrobe-company": {
+      "phone": "208-354-2234",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "tribe-artist-collective": {
+      "phone": "307-413-4841",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "university-of-idaho-extension-teton-county": {
+      "phone": "208-776-8235",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "us-bank": {
+      "phone": "208-787-7730",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "valley-advocates-for-responsible-development": {
+      "phone": "208-354-1707",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "valley-lumber-and-rental": {
+      "phone": "208-787-9663",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "victor-emporium": {
+      "phone": "208-787-2221",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "victor-valley-market": {
+      "phone": "208-787-2230",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "victor-veterinary-hospital": {
+      "phone": "208-787-2114",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "violet-volumes": {
+      "phone": "208-497-4718",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wai-mauna-paddleboard-rentals": {
+      "phone": "208-797-0810",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wells-fargo-bank": {
+      "phone": "208-354-2200",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "westside-ski-and-cycle": {
+      "phone": "208-690-0164",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "westwell-media": {
+      "phone": "208-716-9608",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wildfire-fitness": {
+      "phone": "616-212-0042",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wildline-architecture": {
+      "phone": "541-654-3970",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "work-farm": {
+      "phone": "307-690-3674",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "worldcast-anglers": {
+      "phone": "800-654-0676",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wright-training-victor": {
+      "phone": "307-690-8261",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wydaho-property-management": {
+      "phone": "208-999-3387",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    },
+    "wydaho-roasters-coffee-house": {
+      "phone": "208-500-2349",
+      "phoneSource": "Oct 18 directory CSV via Oct 20 audit (research/audit-2026-10-20-phones.json)",
+      "reason": "phone from Oct 18 directory CSV; owner-unconfirmed",
+      "decidedAt": "2026-10-20"
+    }
+  },
+  "removed": {
+    "cryo-therapy-idaho": {
+      "redirect": "/categories/wellness/",
+      "reason": "spam domain; directory says possibly closed",
+      "decidedAt": "2026-10-20"
+    },
+    "three-peaks-restaurant-and-catering": {
+      "redirect": "/categories/food-drink/",
+      "reason": "spam domain; directory says likely closed",
+      "decidedAt": "2026-10-20"
+    },
+    "jackson-hole-gun-club": {
+      "redirect": "/categories/outdoors/",
+      "reason": "out of area (Jackson, WY)",
+      "decidedAt": "2026-10-20"
+    },
+    "jackson-town-square": {
+      "redirect": "/categories/outdoors/",
+      "reason": "out of area (Jackson, WY)",
+      "decidedAt": "2026-10-20"
+    },
+    "servpro": {
+      "redirect": "/categories/services/",
+      "reason": "Idaho Falls franchise of a national chain",
+      "decidedAt": "2026-10-20"
+    },
+    "teton-gravity-research": {
+      "redirect": "/categories/arts-culture/",
+      "reason": "Jackson-based media company",
+      "decidedAt": "2026-10-20"
+    }
+  }
+}

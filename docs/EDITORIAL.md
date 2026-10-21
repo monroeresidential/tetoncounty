@@ -70,6 +70,15 @@ SET status = 'pending', attempts = 0, next_attempt_at = 0, last_error = NULL
 WHERE inquiry_id = 'REPLACE_WITH_REVIEWED_REFERENCE' AND status = 'failed';
 ```
 
+## Reviewed overrides
+
+`data/overrides.json` holds reviewed corrections to imported records, so a re-import of `tetonflats.json` or `directory.json` cannot undo them. `src/data.ts` applies them after the merge, before the address-conflict pass. Use it when a check finds an imported field wrong (for example a dead or mismatched website, cleared with `"website": null`) or a listing that should no longer be published.
+
+- `listings.<id>` changes fields on a published listing; `null` deletes the field.
+- `removed.<id>` unpublishes a listing. Its `redirect` must be a category page such as `/categories/food-drink/`, and the build adds a `/places/<id>/` 301 to `_redirects`.
+- Every entry needs a `reason` and a `decidedAt` date. Don't put hours, prices, or addresses here.
+- An id that doesn't match a merged listing, an unsupported field, or a redirect outside the category pages fails the build, so a stale entry is caught rather than silently ignored.
+
 ## Refresh sources
 
 ### Listing photos

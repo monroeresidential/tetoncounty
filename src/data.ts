@@ -1,9 +1,17 @@
 import type { Listing } from './lib/listing-schema.ts';
 import { readFile } from 'node:fs/promises';
 import { categories, towns, seasons } from './config.ts';
+import { applyOverrides, type Overrides } from './lib/overrides.ts';
 export const slugify = (s: string) => String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const identity = (s: string) => slugify(s).replace(/-(llc|inc|idaho|driggs|victor)$/, '').replace(/-and-/g, '-').replace(/s-/g, '-');
+// The file is committed, so a missing one is always a bug; let ENOENT surface.
+export async function readOverrides(url: URL = new URL('../data/overrides.json', import.meta.url)): Promise<Overrides> {
+    return JSON.parse(await readFile(url, 'utf8'));
+}
 export async function loadListings() {
+    return (await loadDirectory()).listings;
+}
+async function loadDirectory() {
     let aliases: Record<string, string> = {};
     try {
         aliases = JSON.parse(await readFile(new URL('../data/aliases.json', import.meta.url), 'utf8'));
@@ -41,8 +49,9 @@ export async function loadListings() {
         }
         merged.set(key, { ...item, id: canonicalId, town: towns.includes(item.town) ? item.town : 'Nearby', seasons: (item.seasons || seasons).filter(s => seasons.includes(s)), tags: item.tags || [], sourceUrls: item.sourceUrls || [], sourceStatus: 'source-listed' });
     }
+    const { listings, removed } = applyOverrides([...merged.values()], await readOverrides());
     const used = new Set();
-    return [...merged.values()].map(item => {
+    return { removed, listings: listings.map(item => {
         // Keep disputed street details out of the public guide until operator review.
         if (/wydaho-roasters|pearl-street-bagels|ameriasia|broulim|lula-wine|bronze-buffalo|(?:^|-)get-baked(?:-|$)|fireweed|yoga-source|barefoot-fitness|mountain-home-treasures|teton-river-supply|kasper|moose-creek-ranch|teton-teepee|teton-valley-resort|heron-glass|peak-printing|teton-technology/.test(item.id)) {
             delete item.address;
@@ -54,5 +63,5 @@ export async function loadListings() {
             throw new Error(`Duplicate listing ID: ${item.id}`);
         used.add(item.id);
         return item;
-    }).sort((a, b) => a.name.localeCompare(b.name));
+    }).sort((a, b) => a.name.localeCompare(b.name)) };
 }

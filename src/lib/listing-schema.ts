@@ -17,6 +17,8 @@ export const listingSchema = z.object({
     address: z.string().optional(),
     addressStatus: z.literal('source-conflict').optional(),
     website: publicUrl.optional(),
+    phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/).optional(),
+    phoneSource: z.string().min(1).optional(),
     latitude: z.number().min(40).max(46).optional(),
     longitude: z.number().min(-115).max(-108).optional(),
     trail: z.object({
