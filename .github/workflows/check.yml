@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
-          # The runner's cached 24.x can lag security releases; always resolve the newest patch.
-          check-latest: true
+          # Exact patched version, shared with Cloudflare Workers Builds via .nvmrc.
+          # scripts/check-node.mjs fails the build if an unpatched Node is used anyway.
+          node-version-file: '.nvmrc'
           cache: npm
       - run: npm ci
       - run: npm run check
