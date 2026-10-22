@@ -2,7 +2,7 @@
 
 This project uses **Cloudflare Workers with Static Assets**, with source at [monroeresidential/tetoncounty](https://github.com/monroeresidential/tetoncounty). The Sites service is not required.
 
-Astro builds static HTML and hashed browser assets into `dist/`. Use Node 24 or newer. The existing Worker serves the submission API; an Astro Cloudflare server-rendering adapter is not needed. Framework upgrades do not require new D1 resources, DNS changes, or replacement Turnstile credentials.
+Astro builds static HTML and hashed browser assets into `dist/`. Use Node 24.22.1 (pinned in `.nvmrc` / `.node-version`; the October 21, 2026 security release) or 26.12.1 or newer. `scripts/check-node.mjs` runs before every build and fails on anything older. The existing Worker serves the submission API; an Astro Cloudflare server-rendering adapter is not needed. Framework upgrades do not require new D1 resources, DNS changes, or replacement Turnstile credentials.
 
 ## Production resources
 
@@ -55,7 +55,7 @@ Cloudflare Builds targets `monroeresidential/tetoncounty`, with validation and d
 | Deploy command | `npx wrangler deploy` |
 | Root directory | repository root |
 | Production branch | `main` |
-| Node version | `NODE_VERSION=24` |
+| Node version | `NODE_VERSION=24.22.1` (a dashboard `NODE_VERSION` overrides `.nvmrc`; keep it an exact patched version or unset it) |
 | Worker name | `tetoncounty-us` |
 
 `TURNSTILE_SECRET` is stored in each Worker's runtime secrets and persists across deploys. It is not a build variable. Keep migrations an explicit release step, separate from pull-request builds. Keep non-production branch builds disabled on the production Worker; the `dev` branch has its own Worker and build connection below.
@@ -69,7 +69,7 @@ The `dev` branch deploys to **https://dev.tetoncounty.us** using Wrangler enviro
 | Repository / branch | `monroeresidential/tetoncounty` / `dev` |
 | Build command | `npm run check:dev && node scripts/preflight.mjs --env dev` |
 | Deploy command | `npx wrangler deploy --env dev` |
-| Node version | `NODE_VERSION=24` |
+| Node version | `NODE_VERSION=24.22.1` (a dashboard `NODE_VERSION` overrides `.nvmrc`; keep it an exact patched version or unset it) |
 | D1 database | `tetoncounty-dev-submissions` |
 | Cloudflare build environment | `CLOUDFLARE_ENV=dev` |
 | Turnstile | Separate managed widget restricted to `dev.tetoncounty.us` |
