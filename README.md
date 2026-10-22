@@ -10,7 +10,7 @@ The October 18 directory CSV review added 32 source-linked places and resources 
 
 The site uses **Astro 7 + TypeScript**, with reusable Astro components and schema-validated content collections. Astro generates complete HTML pages; a small TypeScript bundle handles interactive search, maps, and forms. Cloudflare serves the prebuilt pages, while a Worker handles form requests and D1 stores the private review queue.
 
-Use Node 24 or newer; production builds use Node 24.
+Use Node 24.22.1 (pinned in `.nvmrc`) or 26.12.1 or newer. Production builds use Node 24.22.1; `scripts/check-node.mjs` refuses older, unpatched releases.
 
 ```sh
 npm ci
